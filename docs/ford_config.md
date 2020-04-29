@@ -4,6 +4,7 @@ exclude_dir: ../docs/_api
              ../models/bgrid_solo/fms_src
              ../observations/obs_converters/NCEP
              ../assimilation_code/programs/system_simulation
+	     ../docs
 exclude: mpisetup.f90
 output_dir: ./ford_output
 page_dir: ./pages
@@ -15,9 +16,9 @@ author: DAReS
 author_description: The NCAR Data Assimilation Research Section
 display: public
 source: false
-graph: true
+graph: false
 coloured_edges: true
-search: true
+search: false
 md_extensions: markdown.extensions.toc
 preprocessor: gfortran
 
