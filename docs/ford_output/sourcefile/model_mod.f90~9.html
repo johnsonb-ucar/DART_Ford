@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>model_mod.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>model_mod.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.2% of total for source files.">316 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/model_mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">model_mod.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/model_mod%7E6.html">model_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/model_mod.f90%7E9.html#src">model_mod.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/model_mod%7E6.html">model_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/model_mod.f90%7E9.html#src">model_mod.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="c">!&gt; @brief Simple Advection model</span>
+<a name="ln-8"></a><span class="c">!&gt; </span>
+<a name="ln-9"></a><span class="c">!&gt;  This model is on a periodic one-dimensional domain. A wind field is</span>
+<a name="ln-10"></a><span class="c">!&gt;  modeled using Burger&#39;s Equation with an upstream semi-lagrangian</span>
+<a name="ln-11"></a><span class="c">!&gt;  differencing. This diffusive numerical scheme is stable and forcing</span>
+<a name="ln-12"></a><span class="c">!&gt;  is provided by adding in random gaussian noise to each wind grid</span>
+<a name="ln-13"></a><span class="c">!&gt;  variable independently at each timestep. The domain mean value of the</span>
+<a name="ln-14"></a><span class="c">!&gt;  wind is relaxed to a constant fixed value set by the namelist parameter</span>
+<a name="ln-15"></a><span class="c">!&gt;  mean_wind. The random forcing magnitude is set by namelist parameter</span>
+<a name="ln-16"></a><span class="c">!&gt;  wind_random_amp and the damping of the mean wind is controlled by</span>
+<a name="ln-17"></a><span class="c">!&gt;  parameter wind_damping_rate. An Eulerian option with centered in</span>
+<a name="ln-18"></a><span class="c">!&gt;  space differencing is also provided and can be used by setting namelist</span>
+<a name="ln-19"></a><span class="c">!&gt;  parameter lagrangian_for_wind to .false. The Eulerian differencing is</span>
+<a name="ln-20"></a><span class="c">!&gt;  both numerically unstable and subject to shock formation. However, it</span>
+<a name="ln-21"></a><span class="c">!&gt;  can sometimes be made stable in assimilation mode (see recent work by</span>
+<a name="ln-22"></a><span class="c">!&gt;  Majda and collaborators).</span>
+<a name="ln-23"></a><span class="c">!&gt;</span>
+<a name="ln-24"></a><span class="c">!&gt;  The model state includes a single passive tracer that is advected by</span>
+<a name="ln-25"></a><span class="c">!&gt;  the wind field using semi-lagrangian upstream differencing. The state</span>
+<a name="ln-26"></a><span class="c">!&gt;  also includes a tracer source value at each gridpoint. At each time</span>
+<a name="ln-27"></a><span class="c">!&gt;  step, the source is added into the concentration at each gridpoint.</span>
+<a name="ln-28"></a><span class="c">!&gt;  There is also a constant global destruction of tracer that is controlled</span>
+<a name="ln-29"></a><span class="c">!&gt;  by the namelist parameter destruction_rate. The appropriate percentage</span>
+<a name="ln-30"></a><span class="c">!&gt;  of tracer is destroyed at each gridpoint at each timestep.</span>
+<a name="ln-31"></a><span class="c">!&gt;</span>
+<a name="ln-32"></a><span class="c">!&gt;  The model also includes an associated model for the tracer source rate.</span>
+<a name="ln-33"></a><span class="c">!&gt;  At each gridpoint, there is a value of the time mean source rate and</span>
+<a name="ln-34"></a><span class="c">!&gt;  a value of the phase offset for a diurnal component of the source rate.</span>
+<a name="ln-35"></a><span class="c">!&gt;  The diurnal source rate has an amplitude that is proportional to the</span>
+<a name="ln-36"></a><span class="c">!&gt;  source rate (this proportion is controlled by namelist parameter</span>
+<a name="ln-37"></a><span class="c">!&gt;  source_diurnal_rel_amp). At each grid point, the source is the sum</span>
+<a name="ln-38"></a><span class="c">!&gt;  of the source rate plus the appropriate diurnally varying component.</span>
+<a name="ln-39"></a><span class="c">!&gt;  The phase_offset at the gridpoint controls the diurnal phase. The</span>
+<a name="ln-40"></a><span class="c">!&gt;  namelist parameter source_phase_noise controls the amplitude of</span>
+<a name="ln-41"></a><span class="c">!&gt;  random gaussian noise that is added into the source phase at each</span>
+<a name="ln-42"></a><span class="c">!&gt;  time step. If source_phase_noise is zero then the phase offset is</span>
+<a name="ln-43"></a><span class="c">!&gt;  fixed. Finally, the time mean source rate is constant in time in the</span>
+<a name="ln-44"></a><span class="c">!&gt;  present model version. The time mean source rate controls the</span>
+<a name="ln-45"></a><span class="c">!&gt;  amplitude of the diurnal cycle of the tracer source.</span>
+<a name="ln-46"></a><span class="c">!&gt;</span>
+<a name="ln-47"></a><span class="c">!&gt;</span>
+<a name="ln-48"></a>
+<a name="ln-49"></a><span class="k">module </span><span class="n">model_mod</span>
+<a name="ln-50"></a>
+<a name="ln-51"></a><span class="k">use        </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">PI</span><span class="p">,</span> <span class="n">i4</span><span class="p">,</span> <span class="n">i8</span>
+<a name="ln-52"></a>
+<a name="ln-53"></a><span class="k">use </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_time</span><span class="p">,</span> <span class="n">get_time</span>
+<a name="ln-54"></a>
+<a name="ln-55"></a><span class="k">use    </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">register_module</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-56"></a>                             <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">find_namelist_in_file</span><span class="p">,</span>           <span class="p">&amp;</span>
+<a name="ln-57"></a>                             <span class="n">check_namelist_read</span><span class="p">,</span> <span class="n">do_output</span><span class="p">,</span>               <span class="p">&amp;</span>
+<a name="ln-58"></a>                             <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span>
+<a name="ln-59"></a>
+<a name="ln-60"></a><span class="k">use  </span><span class="n">mpi_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">sum_across_tasks</span><span class="p">,</span> <span class="n">my_task_id</span>
+<a name="ln-61"></a>
+<a name="ln-62"></a><span class="k">use     </span><span class="n">location_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span><span class="p">,</span> <span class="n">set_location</span><span class="p">,</span> <span class="n">get_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-63"></a>                                  <span class="n">get_close_obs</span><span class="p">,</span> <span class="n">get_close_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-64"></a>                                  <span class="n">convert_vertical_obs</span><span class="p">,</span> <span class="n">convert_vertical_state</span>
+<a name="ln-65"></a>
+<a name="ln-66"></a><span class="k">use </span><span class="n">netcdf_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">nc_add_global_attribute</span><span class="p">,</span> <span class="n">nc_synchronize_file</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-67"></a>                                 <span class="n">nc_add_global_creation_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-68"></a>                                 <span class="n">nc_begin_define_mode</span><span class="p">,</span> <span class="n">nc_end_define_mode</span>
+<a name="ln-69"></a>
+<a name="ln-70"></a><span class="k">use </span><span class="n">location_io_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span>  <span class="n">nc_write_location_atts</span><span class="p">,</span> <span class="n">nc_get_location_varids</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-71"></a>                                  <span class="n">nc_write_location</span>
+<a name="ln-72"></a>
+<a name="ln-73"></a><span class="k">use </span><span class="n">default_model_mod</span><span class="p">,</span>     <span class="n">only</span> <span class="p">:</span> <span class="n">end_model</span><span class="p">,</span> <span class="n">nc_write_model_vars</span><span class="p">,</span> <span class="n">init_time</span>
+<a name="ln-74"></a>
+<a name="ln-75"></a><span class="k">use     </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">QTY_VELOCITY</span><span class="p">,</span> <span class="n">QTY_TRACER_CONCENTRATION</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-76"></a>                             <span class="n">QTY_TRACER_SOURCE</span><span class="p">,</span> <span class="n">QTY_MEAN_SOURCE</span><span class="p">,</span> <span class="n">QTY_SOURCE_PHASE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-77"></a>                             <span class="n">get_name_for_quantity</span>
+<a name="ln-78"></a>
+<a name="ln-79"></a><span class="k">use </span><span class="n">random_seq_mod</span><span class="p">,</span>   <span class="n">only</span> <span class="p">:</span> <span class="n">random_seq_type</span><span class="p">,</span> <span class="n">init_random_seq</span><span class="p">,</span> <span class="n">random_gaussian</span>
+<a name="ln-80"></a>
+<a name="ln-81"></a><span class="k">use </span><span class="n">ensemble_manager_mod</span><span class="p">,</span>  <span class="n">only</span> <span class="p">:</span> <span class="n">ensemble_type</span><span class="p">,</span> <span class="n">init_ensemble_manager</span><span class="p">,</span> <span class="n">end_ensemble_manager</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-82"></a>                                  <span class="n">get_my_num_vars</span><span class="p">,</span> <span class="n">get_my_vars</span>
+<a name="ln-83"></a>
+<a name="ln-84"></a><span class="k">use </span><span class="n">distributed_state_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">get_state</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="k">use </span><span class="n">state_structure_mod</span><span class="p">,</span>   <span class="n">only</span> <span class="p">:</span> <span class="n">add_domain</span><span class="p">,</span> <span class="n">state_structure_info</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-87"></a>                                  <span class="n">add_dimension_to_variable</span><span class="p">,</span> <span class="n">finished_adding_domain</span>
+<a name="ln-88"></a>
+<a name="ln-89"></a><span class="k">use </span><span class="n">dart_time_io_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">read_model_time</span><span class="p">,</span> <span class="n">write_model_time</span>
+<a name="ln-90"></a>
+<a name="ln-91"></a><span class="k">implicit none</span>
+<a name="ln-92"></a><span class="k">private</span>
+<a name="ln-93"></a>
+<a name="ln-94"></a>
+<a name="ln-95"></a><span class="c">! these routines must be public and you cannot change the</span>
+<a name="ln-96"></a><span class="c">! arguments because they will be called *from* other DART code.</span>
+<a name="ln-97"></a>
+<a name="ln-98"></a><span class="c">!&gt; required routines with code in this module</span>
+<a name="ln-99"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">get_model_size</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-100"></a>          <span class="n">get_state_meta_data</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-101"></a>          <span class="n">model_interpolate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-102"></a>          <span class="n">shortest_time_between_assimilations</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-103"></a>          <span class="n">static_init_model</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-104"></a>          <span class="n">init_conditions</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-105"></a>          <span class="n">adv_1step</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-106"></a>          <span class="n">pert_model_copies</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-107"></a>          <span class="n">nc_write_model_atts</span>
+<a name="ln-108"></a>
+<a name="ln-109"></a><span class="c">!&gt; required routines where code is in other modules</span>
+<a name="ln-110"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">nc_write_model_vars</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-111"></a>          <span class="n">init_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-112"></a>          <span class="n">get_close_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-113"></a>          <span class="n">get_close_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-114"></a>          <span class="n">end_model</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-115"></a>          <span class="n">convert_vertical_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-116"></a>          <span class="n">convert_vertical_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-117"></a>          <span class="n">read_model_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-118"></a>          <span class="n">write_model_time</span>
+<a name="ln-119"></a>
+<a name="ln-120"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-121"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-122"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-123"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-124"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-125"></a>
+<a name="ln-126"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">string1</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="c">! Simplest 1D advection model with spatially-constant wind</span>
+<a name="ln-129"></a>
+<a name="ln-130"></a><span class="c">! Module storage for a random sequence for perturbing a single initial state</span>
+<a name="ln-131"></a><span class="k">type</span><span class="p">(</span><span class="n">random_seq_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">random_seq</span>
+<a name="ln-132"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">random_seq_init</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-133"></a>
+<a name="ln-134"></a><span class="c">! Permanent static initialized information about domain width</span>
+<a name="ln-135"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">domain_width_meters</span> 
+<a name="ln-136"></a>
+<a name="ln-137"></a><span class="c">! Base tracer source rate in amount (unitless) / second</span>
+<a name="ln-138"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">mean_source</span><span class="p">(:)</span>
+<a name="ln-139"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">source_phase_offset</span><span class="p">(:)</span>
+<a name="ln-140"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">source_random_amp</span><span class="p">(:)</span>
+<a name="ln-141"></a>
+<a name="ln-142"></a>
+<a name="ln-143"></a><span class="c">! Namelist with default values</span>
+<a name="ln-144"></a><span class="c">!</span>
+<a name="ln-145"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">num_grid_points</span>         <span class="o">=</span> <span class="mi">10</span>
+<a name="ln-146"></a><span class="c">!!!integer  :: grid_spacing_meters     = 100 * 1000</span>
+<a name="ln-147"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">grid_spacing_meters</span>     <span class="o">=</span> <span class="mi">100000</span>
+<a name="ln-148"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">time_step_days</span>          <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-149"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">time_step_seconds</span>       <span class="o">=</span> <span class="mi">3600</span>
+<a name="ln-150"></a>
+<a name="ln-151"></a><span class="c">! if you have a template file, set the name here.</span>
+<a name="ln-152"></a><span class="c">! if you are not starting from a restart, leave this as &#39;&#39;</span>
+<a name="ln-153"></a><span class="c">! and the code should construct a domain from spec.</span>
+<a name="ln-154"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">template_file</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-155"></a>
+<a name="ln-156"></a><span class="c">! Namelist parameters associated with wind</span>
+<a name="ln-157"></a><span class="c">! Base velocity (expected value over time), in meters/second</span>
+<a name="ln-158"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">mean_wind</span>              <span class="o">=</span> <span class="mi">2</span><span class="mf">0.0_r8</span>
+<a name="ln-159"></a><span class="c">! Random walk amplitude for wind in meters / second**2</span>
+<a name="ln-160"></a><span class="c">!!!real(r8)  :: wind_random_amp        = 1.0_r8 / 3600.0_r8</span>
+<a name="ln-161"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">wind_random_amp</span>        <span class="o">=</span> <span class="mf">0.0002777778</span>
+<a name="ln-162"></a><span class="c">! Rate of damping towards mean wind value in fraction/second</span>
+<a name="ln-163"></a><span class="c">!!!real(r8)  :: wind_damping_rate      = 0.01_r8 / 3600.0_r8</span>
+<a name="ln-164"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">wind_damping_rate</span>      <span class="o">=</span> <span class="mf">0.000002777778</span>
+<a name="ln-165"></a><span class="c">! Can use Eulerian (unstable) or lagrangian (stable)</span>
+<a name="ln-166"></a><span class="kt">logical</span>   <span class="kd">::</span> <span class="n">lagrangian_for_wind</span>    <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-167"></a>
+<a name="ln-168"></a><span class="c">! Namelist parameters associated with tracer</span>
+<a name="ln-169"></a><span class="c">! Tracer destruction rate in fraction per second</span>
+<a name="ln-170"></a><span class="c">!!!real(r8)  :: destruction_rate       = 0.2_r8 / 3600.0_r8</span>
+<a name="ln-171"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">destruction_rate</span>       <span class="o">=</span> <span class="mf">0.00005555556</span>
+<a name="ln-172"></a>
+<a name="ln-173"></a><span class="c">! Namelist parameters associated with tracer source model</span>
+<a name="ln-174"></a><span class="c">! Random walk amplitude for source as fraction of mean source in .../second**2</span>
+<a name="ln-175"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">source_random_amp_frac</span> <span class="o">=</span> <span class="mf">0.00001_r8</span>
+<a name="ln-176"></a><span class="c">! Damping toward mean source rate in fraction/second</span>
+<a name="ln-177"></a><span class="c">!!!real(r8)  :: source_damping_rate    = 0.01_r8 / 3600.0_r8</span>
+<a name="ln-178"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">source_damping_rate</span>    <span class="o">=</span> <span class="mf">0.000002777778</span>
+<a name="ln-179"></a><span class="c">! Relative amplitude of diurnal cycle of source (dimensionless)</span>
+<a name="ln-180"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">source_diurnal_rel_amp</span> <span class="o">=</span> <span class="mf">0.05_r8</span>
+<a name="ln-181"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">source_phase_noise</span>     <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-182"></a>
+<a name="ln-183"></a><span class="c">! if you change NVARS or the order of any of</span>
+<a name="ln-184"></a><span class="c">! these, you must change the &#39;add_domain()&#39; call</span>
+<a name="ln-185"></a><span class="c">! in static_init_model() below.</span>
+<a name="ln-186"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NVARS</span> <span class="o">=</span> <span class="mi">5</span>
+<a name="ln-187"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">CONC</span>      <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-188"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">TSOURCE</span>   <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-189"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">WIND</span>      <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-190"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">MEAN_SRC</span>  <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-191"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">SRC_PHASE</span> <span class="o">=</span> <span class="mi">5</span>
+<a name="ln-192"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">conc_offset</span><span class="p">,</span> <span class="n">source_offset</span><span class="p">,</span> <span class="n">wind_offset</span>
+<a name="ln-193"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">mean_src_offset</span><span class="p">,</span> <span class="n">src_phase_offset</span>
+<a name="ln-194"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">model_size</span>
+<a name="ln-195"></a>
+<a name="ln-196"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">model_nml</span><span class="o">/</span> <span class="n">num_grid_points</span><span class="p">,</span> <span class="n">grid_spacing_meters</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-197"></a>                     <span class="n">time_step_days</span><span class="p">,</span> <span class="n">time_step_seconds</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-198"></a>                     <span class="n">mean_wind</span><span class="p">,</span> <span class="n">wind_random_amp</span><span class="p">,</span> <span class="n">wind_damping_rate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-199"></a>                     <span class="n">lagrangian_for_wind</span><span class="p">,</span> <span class="n">destruction_rate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-200"></a>                     <span class="n">source_random_amp_frac</span><span class="p">,</span> <span class="n">source_damping_rate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-201"></a>                     <span class="n">source_diurnal_rel_amp</span><span class="p">,</span> <span class="n">source_phase_noise</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-202"></a>                     <span class="n">template_file</span>
+<a name="ln-203"></a>
+<a name="ln-204"></a>
+<a name="ln-205"></a><span class="c">! Define the location of the state variables in module storage</span>
+<a name="ln-206"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">state_loc</span><span class="p">(:)</span>
+<a name="ln-207"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">time_step</span>
+<a name="ln-208"></a>
+<a name="ln-209"></a>
+<a name="ln-210"></a><span class="k">contains</span>
+<a name="ln-211"></a>
+<a name="ln-212"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-213"></a><span class="c">!&gt; initialize anything needed. this routine is called once at startup.</span>
+<a name="ln-214"></a>
+<a name="ln-215"></a><span class="k">subroutine </span><span class="n">static_init_model</span><span class="p">()</span>
+<a name="ln-216"></a>
+<a name="ln-217"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x_loc</span>
+<a name="ln-218"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">dom_id</span><span class="p">,</span> <span class="n">var_id</span>
+<a name="ln-219"></a>
+<a name="ln-220"></a><span class="c">! Print module information to log file and stdout.</span>
+<a name="ln-221"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-224"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;model_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-225"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">model_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-226"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;model_nml&quot;</span><span class="p">)</span>
+<a name="ln-227"></a>
+<a name="ln-228"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-229"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">model_nml</span><span class="p">)</span>
+<a name="ln-230"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">model_nml</span><span class="p">)</span>
+<a name="ln-231"></a>
+<a name="ln-232"></a><span class="c">! NVARS items at each grid location</span>
+<a name="ln-233"></a><span class="n">model_size</span> <span class="o">=</span> <span class="n">NVARS</span> <span class="o">*</span> <span class="n">num_grid_points</span>
+<a name="ln-234"></a>
+<a name="ln-235"></a><span class="c">! Create storage for locations</span>
+<a name="ln-236"></a><span class="k">allocate</span><span class="p">(</span><span class="n">state_loc</span><span class="p">(</span><span class="n">model_size</span><span class="p">))</span>
+<a name="ln-237"></a>
+<a name="ln-238"></a><span class="c">! Define the locations of the model state variables</span>
+<a name="ln-239"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-240"></a>   <span class="n">x_loc</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_grid_points</span>
+<a name="ln-241"></a>   <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">NVARS</span>
+<a name="ln-242"></a>      <span class="n">state_loc</span><span class="p">(</span><span class="n">num_grid_points</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">set_location</span><span class="p">(</span><span class="n">x_loc</span><span class="p">)</span>
+<a name="ln-243"></a>   <span class="n">enddo</span>
+<a name="ln-244"></a><span class="n">enddo</span>
+<a name="ln-245"></a>
+<a name="ln-246"></a><span class="c">! The time_step in terms of a time type must also be initialized.</span>
+<a name="ln-247"></a><span class="n">time_step</span> <span class="o">=</span> <span class="n">set_time</span><span class="p">(</span><span class="n">time_step_seconds</span><span class="p">,</span> <span class="n">time_step_days</span><span class="p">)</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a><span class="c">! Allocate storage for the base tracer source and initialize it</span>
+<a name="ln-250"></a><span class="c">! Might want to put the source distribution into the namelist somehow?</span>
+<a name="ln-251"></a><span class="k">allocate</span><span class="p">(</span><span class="n">mean_source</span><span class="p">(</span><span class="n">num_grid_points</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-252"></a> <span class="n">source_phase_offset</span><span class="p">(</span><span class="n">num_grid_points</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-253"></a>   <span class="n">source_random_amp</span><span class="p">(</span><span class="n">num_grid_points</span><span class="p">))</span>
+<a name="ln-254"></a>
+<a name="ln-255"></a><span class="c">! Set the base value for the mean source; This case has a single enhanced source</span>
+<a name="ln-256"></a><span class="n">mean_source</span>    <span class="o">=</span> <span class="mf">0.1_r8</span>
+<a name="ln-257"></a><span class="n">mean_source</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.0_r8</span>
+<a name="ln-258"></a>
+<a name="ln-259"></a><span class="c">! A rapidly varying source</span>
+<a name="ln-260"></a><span class="c">!!!mean_source = 0.1_r8</span>
+<a name="ln-261"></a><span class="c">!!!do i = 1, 5, 2</span>
+<a name="ln-262"></a>   <span class="c">!!!mean_source(i) = 1.0_r8</span>
+<a name="ln-263"></a><span class="c">!!!enddo</span>
+<a name="ln-264"></a>
+<a name="ln-265"></a><span class="c">! Set the base value for the diurnal phase offset; initially on diurnal cycle</span>
+<a name="ln-266"></a><span class="n">source_phase_offset</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-267"></a>
+<a name="ln-268"></a><span class="c">! Set the amplitude of the random walk for the source in unit/second^2</span>
+<a name="ln-269"></a><span class="n">source_random_amp</span> <span class="o">=</span> <span class="n">source_random_amp_frac</span> <span class="o">*</span> <span class="n">mean_source</span>
+<a name="ln-270"></a>
+<a name="ln-271"></a><span class="c">! Compute the width of the domain in meters</span>
+<a name="ln-272"></a><span class="n">domain_width_meters</span> <span class="o">=</span> <span class="n">num_grid_points</span> <span class="o">*</span> <span class="n">grid_spacing_meters</span>
+<a name="ln-273"></a>
+<a name="ln-274"></a><span class="c">! For any routines that want to use the random number</span>
+<a name="ln-275"></a><span class="c">! generator later on, initialize it.</span>
+<a name="ln-276"></a><span class="k">if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">random_seq_init</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-277"></a><span class="k">   call </span><span class="n">init_random_seq</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="n">my_task_id</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-278"></a>   <span class="n">random_seq_init</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-279"></a><span class="n">endif</span>
+<a name="ln-280"></a>
+<a name="ln-281"></a><span class="c">! Tell the DART I/O routines how large the model data is so they</span>
+<a name="ln-282"></a><span class="c">! can read/write it.</span>
+<a name="ln-283"></a><span class="k">if</span> <span class="p">(</span><span class="n">template_file</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-284"></a><span class="k">   </span><span class="n">dom_id</span> <span class="o">=</span> <span class="n">add_domain</span><span class="p">(</span><span class="n">template_file</span><span class="p">,</span> <span class="n">NVARS</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-285"></a>                       <span class="p">(</span><span class="o">/</span> <span class="s1">&#39;concentration&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-286"></a>                          <span class="s1">&#39;source       &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-287"></a>                          <span class="s1">&#39;wind         &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-288"></a>                          <span class="s1">&#39;mean_source  &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-289"></a>                          <span class="s1">&#39;source_phase &#39;</span> <span class="o">/</span><span class="p">))</span>
+<a name="ln-290"></a><span class="k">else</span> 
+<a name="ln-291"></a>   <span class="c">!&gt;@todo FIXME : should not need a template file if initializing members from code</span>
+<a name="ln-292"></a>
+<a name="ln-293"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;template file is required for now&#39;</span>
+<a name="ln-294"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;static_init_model&#39;</span><span class="p">,</span><span class="n">string1</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-295"></a>
+<a name="ln-296"></a>   <span class="n">dom_id</span> <span class="o">=</span> <span class="n">add_domain</span><span class="p">(</span><span class="n">NVARS</span><span class="p">,</span> <span class="p">(</span><span class="o">/</span> <span class="s1">&#39;concentration&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-297"></a>                                 <span class="s1">&#39;source       &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-298"></a>                                 <span class="s1">&#39;wind         &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-299"></a>                                 <span class="s1">&#39;mean_source  &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-300"></a>                                 <span class="s1">&#39;source_phase &#39;</span> <span class="o">/</span><span class="p">))</span>
+<a name="ln-301"></a>
+<a name="ln-302"></a>   <span class="k">do </span><span class="n">var_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">NVARS</span>
+<a name="ln-303"></a>      <span class="k">call </span><span class="n">add_dimension_to_variable</span><span class="p">(</span><span class="n">dom_id</span><span class="p">,</span> <span class="n">var_id</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-304"></a>      <span class="k">call </span><span class="n">add_dimension_to_variable</span><span class="p">(</span><span class="n">dom_id</span><span class="p">,</span> <span class="n">var_id</span><span class="p">,</span> <span class="s1">&#39;member&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-305"></a>      <span class="k">call </span><span class="n">add_dimension_to_variable</span><span class="p">(</span><span class="n">dom_id</span><span class="p">,</span> <span class="n">var_id</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_grid_points</span><span class="p">,</span> <span class="n">i4</span><span class="p">))</span>
+<a name="ln-306"></a>   <span class="n">enddo</span>
+<a name="ln-307"></a>   
+<a name="ln-308"></a>   <span class="k">call </span><span class="n">finished_adding_domain</span><span class="p">(</span><span class="n">dom_id</span><span class="p">)</span>
+<a name="ln-309"></a><span class="n">endif</span>
+<a name="ln-310"></a>
+<a name="ln-311"></a><span class="c">! set the offsets to the start of each variable</span>
+<a name="ln-312"></a><span class="c">! in the state vector.  the indices for each variable</span>
+<a name="ln-313"></a><span class="c">! quantity are x(offset+1 : offset+num_grid_points).</span>
+<a name="ln-314"></a>
+<a name="ln-315"></a><span class="n">conc_offset</span>      <span class="o">=</span> <span class="p">(</span><span class="n">CONC</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>      <span class="o">*</span> <span class="n">num_grid_points</span> 
+<a name="ln-316"></a><span class="n">source_offset</span>    <span class="o">=</span> <span class="p">(</span><span class="n">TSOURCE</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>   <span class="o">*</span> <span class="n">num_grid_points</span>
+<a name="ln-317"></a><span class="n">wind_offset</span>      <span class="o">=</span> <span class="p">(</span><span class="n">WIND</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>      <span class="o">*</span> <span class="n">num_grid_points</span>
+<a name="ln-318"></a><span class="n">mean_src_offset</span>  <span class="o">=</span> <span class="p">(</span><span class="n">MEAN_SRC</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="o">*</span> <span class="n">num_grid_points</span>
+<a name="ln-319"></a><span class="n">src_phase_offset</span> <span class="o">=</span> <span class="p">(</span><span class="n">SRC_PHASE</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_grid_points</span>
+<a name="ln-320"></a>
+<a name="ln-321"></a><span class="k">end subroutine </span><span class="n">static_init_model</span>
+<a name="ln-322"></a>
+<a name="ln-323"></a>
+<a name="ln-324"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-325"></a><span class="c">!&gt; Initial conditions for simplest 1d Advection.</span>
+<a name="ln-326"></a>
+<a name="ln-327"></a><span class="k">subroutine </span><span class="n">init_conditions</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a name="ln-328"></a>
+<a name="ln-329"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(:)</span>
+<a name="ln-330"></a>
+<a name="ln-331"></a><span class="c">! Start by zeroing all</span>
+<a name="ln-332"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-333"></a>
+<a name="ln-334"></a><span class="c">! Tracer concentration</span>
+<a name="ln-335"></a><span class="n">x</span><span class="p">(</span><span class="n">conc_offset</span>     <span class="o">+</span><span class="mi">1</span> <span class="p">:</span> <span class="n">conc_offset</span>     <span class="o">+</span><span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-336"></a>
+<a name="ln-337"></a><span class="c">! Initial source </span>
+<a name="ln-338"></a><span class="n">x</span><span class="p">(</span><span class="n">source_offset</span>   <span class="o">+</span><span class="mi">1</span> <span class="p">:</span> <span class="n">source_offset</span>   <span class="o">+</span><span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="n">mean_source</span>
+<a name="ln-339"></a>
+<a name="ln-340"></a><span class="c">! U wind velocity; units are meters/second</span>
+<a name="ln-341"></a><span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span>     <span class="o">+</span><span class="mi">1</span> <span class="p">:</span> <span class="n">wind_offset</span>     <span class="o">+</span><span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="n">mean_wind</span>
+<a name="ln-342"></a>
+<a name="ln-343"></a><span class="c">! Time mean source</span>
+<a name="ln-344"></a><span class="n">x</span><span class="p">(</span><span class="n">mean_src_offset</span> <span class="o">+</span><span class="mi">1</span> <span class="p">:</span> <span class="n">mean_src_offset</span> <span class="o">+</span><span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="n">mean_source</span>
+<a name="ln-345"></a>
+<a name="ln-346"></a><span class="c">! Source phase offset </span>
+<a name="ln-347"></a><span class="n">x</span><span class="p">(</span><span class="n">src_phase_offset</span><span class="o">+</span><span class="mi">1</span> <span class="p">:</span> <span class="n">src_phase_offset</span><span class="o">+</span><span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="n">source_phase_offset</span>
+<a name="ln-348"></a>
+<a name="ln-349"></a><span class="k">end subroutine </span><span class="n">init_conditions</span>
+<a name="ln-350"></a>
+<a name="ln-351"></a>
+<a name="ln-352"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-353"></a><span class="c">!&gt; Single time step advance for simplest 1D advection model.</span>
+<a name="ln-354"></a><span class="c">!&gt; time is for models that need to know it to compute their time tendency. </span>
+<a name="ln-355"></a>
+<a name="ln-356"></a><span class="k">subroutine </span><span class="n">adv_1step</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">time</span><span class="p">)</span>
+<a name="ln-357"></a>
+<a name="ln-358"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(:)</span>
+<a name="ln-359"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="nb">time</span>
+<a name="ln-360"></a>
+<a name="ln-361"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">next</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">seconds</span><span class="p">,</span> <span class="n">days</span>
+<a name="ln-362"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ens_size</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-363"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">source_loc</span>
+<a name="ln-364"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lctn</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">old_u_mean</span><span class="p">,</span> <span class="n">new_u_mean</span>
+<a name="ln-365"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">du_dx</span><span class="p">,</span> <span class="n">dt_seconds</span><span class="p">,</span> <span class="n">t_phase</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">random_src</span>
+<a name="ln-366"></a><span class="k">type</span><span class="p">(</span><span class="n">ensemble_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">temp_handle</span>
+<a name="ln-367"></a>
+<a name="ln-368"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">i</span>
+<a name="ln-369"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-370"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">new_x</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-371"></a>
+<a name="ln-372"></a><span class="c">!&gt; model_interpolate requires an ensemble handle as one of the</span>
+<a name="ln-373"></a><span class="c">!&gt; parameters to the call.  create a dummy one here.</span>
+<a name="ln-374"></a><span class="c">! the data in this handle is never used. the data passed in as</span>
+<a name="ln-375"></a><span class="c">! the final optional &quot;x&quot; argument is used instead.</span>
+<a name="ln-376"></a><span class="k">call </span><span class="n">init_ensemble_manager</span><span class="p">(</span><span class="n">temp_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span><span class="n">i8</span><span class="p">))</span>
+<a name="ln-377"></a>
+<a name="ln-378"></a><span class="c">! State is concentrations (num_grid_points), source(num_grid_points), u(num_grid_points),</span>
+<a name="ln-379"></a><span class="c">! mean_source(num_grid_points), and source_phase_offset(num_grid_points)</span>
+<a name="ln-380"></a><span class="c">! all dimensioned num_grid_points.</span>
+<a name="ln-381"></a>
+<a name="ln-382"></a><span class="c">! For the concentration do a linear interpolated upstream distance</span>
+<a name="ln-383"></a><span class="c">! Also have an option to do upstream for wind (controlled by namelist; see below).</span>
+<a name="ln-384"></a><span class="c">! Velocity is in meters/second. Need time_step in seconds</span>
+<a name="ln-385"></a><span class="n">dt_seconds</span> <span class="o">=</span> <span class="n">time_step_seconds</span> <span class="o">+</span> <span class="n">time_step_days</span> <span class="o">*</span> <span class="mi">2</span><span class="mf">4.0_r8</span> <span class="o">*</span> <span class="mi">360</span><span class="mf">0.0_r8</span>
+<a name="ln-386"></a>
+<a name="ln-387"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-388"></a>
+<a name="ln-389"></a>   <span class="c">! Find the location of the target point</span>
+<a name="ln-390"></a>   <span class="n">lctn</span> <span class="o">=</span> <span class="n">get_location</span><span class="p">(</span><span class="n">state_loc</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-391"></a>
+<a name="ln-392"></a>   <span class="c">! Find source point location: Velocity is in meters/second</span>
+<a name="ln-393"></a>   <span class="c">! Figure out meters to move and then convert to fraction of domain</span>
+<a name="ln-394"></a>    
+<a name="ln-395"></a>   <span class="n">source_location</span> <span class="o">=</span> <span class="n">lctn</span> <span class="o">-</span> <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_seconds</span> <span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-396"></a>      <span class="n">domain_width_meters</span>
+<a name="ln-397"></a>
+<a name="ln-398"></a>   <span class="k">if</span><span class="p">(</span><span class="n">source_location</span> <span class="o">&gt;</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-399"></a>      <span class="n">source_location</span> <span class="o">=</span> <span class="n">source_location</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">source_location</span><span class="p">)</span>
+<a name="ln-400"></a>
+<a name="ln-401"></a>   <span class="k">if</span><span class="p">(</span><span class="n">source_location</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-402"></a>      <span class="n">source_location</span> <span class="o">=</span> <span class="n">source_location</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">source_location</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0_r8</span>
+<a name="ln-403"></a>
+<a name="ln-404"></a>   <span class="n">source_loc</span> <span class="o">=</span> <span class="n">set_location</span><span class="p">(</span><span class="n">source_location</span><span class="p">)</span>
+<a name="ln-405"></a>   <span class="k">call </span><span class="n">model_interpolate</span><span class="p">(</span><span class="n">temp_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">source_loc</span><span class="p">,</span> <span class="n">QTY_TRACER_CONCENTRATION</span><span class="p">,</span> <span class="n">new_x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,:),</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>  
+<a name="ln-406"></a>
+<a name="ln-407"></a>   <span class="c">! Following line does lagangian du</span>
+<a name="ln-408"></a>
+<a name="ln-409"></a>   <span class="k">if</span><span class="p">(</span><span class="n">lagrangian_for_wind</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-410"></a>      <span class="k">call </span><span class="n">model_interpolate</span><span class="p">(</span><span class="n">temp_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">source_loc</span><span class="p">,</span> <span class="n">QTY_VELOCITY</span><span class="p">,</span> <span class="n">new_x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,:),</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>  
+<a name="ln-411"></a><span class="n">enddo</span>
+<a name="ln-412"></a>
+<a name="ln-413"></a>
+<a name="ln-414"></a><span class="c">!----- Next block is eulerian du for wind, controlled by namelist</span>
+<a name="ln-415"></a><span class="k">if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">lagrangian_for_wind</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-416"></a>   <span class="c">! Use centered for du/dx</span>
+<a name="ln-417"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-418"></a>      <span class="c">! Compute centered difference for du/dx</span>
+<a name="ln-419"></a>      <span class="n">next</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-420"></a>      <span class="k">if</span><span class="p">(</span><span class="n">next</span> <span class="o">&gt;</span> <span class="n">num_grid_points</span><span class="p">)</span> <span class="n">next</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-421"></a>      <span class="n">prev</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-422"></a>      <span class="k">if</span><span class="p">(</span><span class="n">prev</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">num_grid_points</span>
+<a name="ln-423"></a>      <span class="n">du_dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">next</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">prev</span><span class="p">))</span> <span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-424"></a>                                       <span class="p">(</span><span class="mf">2.0_r8</span> <span class="o">*</span> <span class="n">grid_spacing_meters</span><span class="p">)</span>
+<a name="ln-425"></a>      <span class="n">new_x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-426"></a>                                 <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">du_dx</span> <span class="o">*</span> <span class="n">dt_seconds</span>
+<a name="ln-427"></a>   <span class="n">enddo</span>
+<a name="ln-428"></a><span class="n">endif</span>
+<a name="ln-429"></a><span class="c">!---- End Eulerian block</span>
+<a name="ln-430"></a>
+<a name="ln-431"></a>
+<a name="ln-432"></a><span class="c">! Now add in the source contribution and put concentration and wind back into inout x</span>
+<a name="ln-433"></a><span class="c">! Source is in units of .../second</span>
+<a name="ln-434"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-435"></a>   <span class="n">x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">new_x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_seconds</span>
+<a name="ln-436"></a>   <span class="c">! Also copy over the new velocity</span>
+<a name="ln-437"></a>   <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">new_x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-438"></a><span class="n">enddo</span>
+<a name="ln-439"></a>
+<a name="ln-440"></a><span class="c">! Now do the destruction rate: Units are fraction destroyed per second</span>
+<a name="ln-441"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-442"></a>   <span class="k">if</span><span class="p">(</span><span class="n">destruction_rate</span> <span class="o">*</span> <span class="n">dt_seconds</span> <span class="o">&gt;</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-443"></a><span class="k">      </span><span class="n">x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-444"></a>   <span class="k">else</span>
+<a name="ln-445"></a><span class="k">      </span><span class="n">x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">conc_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">destruction_rate</span><span class="o">*</span><span class="n">dt_seconds</span><span class="p">)</span>
+<a name="ln-446"></a>   <span class="n">endif</span>
+<a name="ln-447"></a><span class="n">enddo</span>
+<a name="ln-448"></a>
+<a name="ln-449"></a><span class="c">!----- Following block is random walk plus damping to mean for wind</span>
+<a name="ln-450"></a><span class="c">! Random walk for the spatial mean velocity</span>
+<a name="ln-451"></a><span class="n">old_u_mean</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">wind_offset</span> <span class="o">+</span> <span class="n">num_grid_points</span><span class="p">))</span> <span class="o">/</span> <span class="n">num_grid_points</span>
+<a name="ln-452"></a>
+<a name="ln-453"></a><span class="c">! Add in a random walk to the mean</span>
+<a name="ln-454"></a><span class="n">new_u_mean</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="n">old_u_mean</span><span class="p">,</span> <span class="n">wind_random_amp</span> <span class="o">*</span> <span class="n">dt_seconds</span><span class="p">)</span>
+<a name="ln-455"></a>
+<a name="ln-456"></a><span class="c">! Damp the mean back towards base value</span>
+<a name="ln-457"></a><span class="c">! Need an error handler call here or earlier</span>
+<a name="ln-458"></a><span class="k">if</span><span class="p">(</span><span class="n">wind_damping_rate</span><span class="o">*</span><span class="n">dt_seconds</span> <span class="o">&gt;</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="k">stop</span>
+<a name="ln-459"></a><span class="n">new_u_mean</span> <span class="o">=</span> <span class="n">new_u_mean</span> <span class="o">-</span> <span class="n">wind_damping_rate</span> <span class="o">*</span> <span class="n">dt_seconds</span> <span class="o">*</span> <span class="p">(</span><span class="n">new_u_mean</span> <span class="o">-</span> <span class="n">mean_wind</span><span class="p">)</span>
+<a name="ln-460"></a>
+<a name="ln-461"></a><span class="c">! Substitute the new mean wind</span>
+<a name="ln-462"></a><span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">wind_offset</span> <span class="o">+</span> <span class="n">num_grid_points</span><span class="p">)</span> <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-463"></a>   <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">wind_offset</span> <span class="o">+</span> <span class="n">num_grid_points</span><span class="p">)</span> <span class="o">-</span> <span class="n">old_u_mean</span> <span class="o">+</span> <span class="n">new_u_mean</span>
+<a name="ln-464"></a>
+<a name="ln-465"></a><span class="c">! Add some noise into each wind element</span>
+<a name="ln-466"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-467"></a>   <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="n">x</span><span class="p">(</span><span class="n">wind_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-468"></a>                                        <span class="n">wind_random_amp</span> <span class="o">*</span> <span class="n">dt_seconds</span><span class="p">)</span>
+<a name="ln-469"></a><span class="n">enddo</span>
+<a name="ln-470"></a>
+<a name="ln-471"></a><span class="c">!----- End forced damped wind section</span>
+<a name="ln-472"></a>
+<a name="ln-473"></a>
+<a name="ln-474"></a><span class="c">!----- Time tendency with diurnal cycle for sources ---</span>
+<a name="ln-475"></a><span class="c">! Figure out what the time in the model is</span>
+<a name="ln-476"></a><span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="nb">time</span><span class="p">,</span> <span class="n">seconds</span><span class="p">,</span> <span class="n">days</span><span class="p">)</span>
+<a name="ln-477"></a><span class="n">t_phase</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0_r8</span> <span class="o">*</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">seconds</span> <span class="o">/</span> <span class="mi">8640</span><span class="mf">0.0_r8</span><span class="p">)</span> 
+<a name="ln-478"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-479"></a>   <span class="n">phase</span> <span class="o">=</span> <span class="n">t_phase</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="n">src_phase_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+<a name="ln-480"></a>   <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-481"></a>      <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="n">mean_src_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">source_diurnal_rel_amp</span> <span class="o">*</span> <span class="nb">cos</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span>
+<a name="ln-482"></a>      <span class="c">!!!+ x(mean_src_offset + i) * source_diurnal_rel_amp * cos(phase) * dt_seconds</span>
+<a name="ln-483"></a>   <span class="c">! Also add in some random walk</span>
+<a name="ln-484"></a>   <span class="n">random_src</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="mf">0.0_r8</span><span class="p">,</span> <span class="n">source_random_amp</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-485"></a>   <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">random_src</span> <span class="o">*</span> <span class="n">dt_seconds</span>
+<a name="ln-486"></a>   <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-487"></a>   <span class="c">! Finally, damp back towards the base value</span>
+<a name="ln-488"></a>   <span class="c">! Need an error handler call here</span>
+<a name="ln-489"></a>   <span class="k">if</span><span class="p">(</span><span class="n">source_damping_rate</span><span class="o">*</span><span class="n">dt_seconds</span> <span class="o">&gt;</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="k">stop</span>
+<a name="ln-490"></a><span class="k">   </span><span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="p">&amp;</span>
+<a name="ln-491"></a>      <span class="n">source_damping_rate</span><span class="o">*</span><span class="n">dt_seconds</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">source_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">(</span><span class="n">mean_src_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">))</span>
+<a name="ln-492"></a><span class="n">enddo</span>
+<a name="ln-493"></a>
+<a name="ln-494"></a><span class="c">!----- End sources time tendency -----</span>
+<a name="ln-495"></a>
+<a name="ln-496"></a><span class="c">! Time tendency for source model variables mean_source and source_phase_offset </span>
+<a name="ln-497"></a><span class="c">! is 0 for now. Might want to add in some process noise for filter advance.</span>
+<a name="ln-498"></a>
+<a name="ln-499"></a><span class="c">! Process noise test for source_phase_offset</span>
+<a name="ln-500"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_grid_points</span>
+<a name="ln-501"></a>   <span class="n">x</span><span class="p">(</span><span class="n">src_phase_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="n">x</span><span class="p">(</span><span class="n">src_phase_offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-502"></a>      <span class="n">source_phase_noise</span><span class="o">*</span><span class="n">dt_seconds</span><span class="p">)</span>
+<a name="ln-503"></a><span class="n">enddo</span>
+<a name="ln-504"></a>
+<a name="ln-505"></a><span class="k">call </span><span class="n">end_ensemble_manager</span><span class="p">(</span><span class="n">temp_handle</span><span class="p">)</span>
+<a name="ln-506"></a>
+<a name="ln-507"></a><span class="k">end subroutine </span><span class="n">adv_1step</span>
+<a name="ln-508"></a>
+<a name="ln-509"></a>
+<a name="ln-510"></a>
+<a name="ln-511"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-512"></a><span class="c">!&gt; Return the number of items in the state vector</span>
+<a name="ln-513"></a>
+<a name="ln-514"></a><span class="k">function </span><span class="n">get_model_size</span><span class="p">()</span>
+<a name="ln-515"></a>
+<a name="ln-516"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">get_model_size</span>
+<a name="ln-517"></a>
+<a name="ln-518"></a><span class="n">get_model_size</span> <span class="o">=</span> <span class="n">model_size</span>
+<a name="ln-519"></a>
+<a name="ln-520"></a><span class="k">end function </span><span class="n">get_model_size</span>
+<a name="ln-521"></a>
+<a name="ln-522"></a>
+<a name="ln-523"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-524"></a><span class="c">!&gt; this is a non-standard interface to model_interpolate.  it allows</span>
+<a name="ln-525"></a><span class="c">!&gt; an optional last argument, which if present should be a model state</span>
+<a name="ln-526"></a><span class="c">!&gt; and is used instead of the state handle.  this model_mod uses interpolate</span>
+<a name="ln-527"></a><span class="c">!&gt; during the adv_1step() when there&#39;s no state handle available; a naked</span>
+<a name="ln-528"></a><span class="c">!&gt; state is passed in to be advanced.    (having optional args is ok with</span>
+<a name="ln-529"></a><span class="c">!&gt; filter - it just never passes in that final arg.)</span>
+<a name="ln-530"></a><span class="c">!&gt;</span>
+<a name="ln-531"></a><span class="c">!&gt; Interpolates from ensemble of states to the location.</span>
+<a name="ln-532"></a><span class="c">!&gt; If x is present, Interpolates from state vector x to the location. </span>
+<a name="ln-533"></a><span class="c">!&gt; This code supports three obs types: concentration, source, and u</span>
+<a name="ln-534"></a>
+<a name="ln-535"></a><span class="k">subroutine </span><span class="n">model_interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">iqty</span><span class="p">,</span> <span class="n">expected_val</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<a name="ln-536"></a>
+<a name="ln-537"></a><span class="k">type</span><span class="p">(</span><span class="n">ensemble_type</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">state_handle</span>
+<a name="ln-538"></a><span class="kt">integer</span><span class="p">,</span>              <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ens_size</span>
+<a name="ln-539"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-540"></a><span class="kt">integer</span><span class="p">,</span>              <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">iqty</span>
+<a name="ln-541"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>             <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">expected_val</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-542"></a><span class="kt">integer</span><span class="p">,</span>              <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-543"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span>   <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span><span class="p">(:)</span>  <span class="c">! old format state vector, not distributed</span>
+<a name="ln-544"></a>
+<a name="ln-545"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lower_index</span><span class="p">,</span> <span class="n">upper_index</span>
+<a name="ln-546"></a>
+<a name="ln-547"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">offset</span>
+<a name="ln-548"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lctn</span><span class="p">,</span> <span class="n">lctnfrac</span>
+<a name="ln-549"></a>
+<a name="ln-550"></a><span class="c">! All forward operators supported</span>
+<a name="ln-551"></a><span class="n">istatus</span><span class="p">(:)</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-552"></a>
+<a name="ln-553"></a><span class="c">! Convert location to real</span>
+<a name="ln-554"></a><span class="n">lctn</span> <span class="o">=</span> <span class="n">get_location</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+<a name="ln-555"></a><span class="c">! Multiply by model size assuming domain is [0, 1] cyclic</span>
+<a name="ln-556"></a><span class="n">lctn</span> <span class="o">=</span> <span class="n">num_grid_points</span> <span class="o">*</span> <span class="n">lctn</span>
+<a name="ln-557"></a>
+<a name="ln-558"></a><span class="n">lower_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lctn</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-559"></a><span class="n">upper_index</span> <span class="o">=</span> <span class="n">lower_index</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-560"></a><span class="k">if</span><span class="p">(</span><span class="n">lower_index</span> <span class="o">&gt;</span> <span class="n">num_grid_points</span><span class="p">)</span> <span class="n">lower_index</span> <span class="o">=</span> <span class="n">lower_index</span> <span class="o">-</span> <span class="n">num_grid_points</span>
+<a name="ln-561"></a><span class="k">if</span><span class="p">(</span><span class="n">upper_index</span> <span class="o">&gt;</span> <span class="n">num_grid_points</span><span class="p">)</span> <span class="n">upper_index</span> <span class="o">=</span> <span class="n">upper_index</span> <span class="o">-</span> <span class="n">num_grid_points</span>
+<a name="ln-562"></a>
+<a name="ln-563"></a><span class="n">lctnfrac</span> <span class="o">=</span> <span class="n">lctn</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">lctn</span><span class="p">)</span>
+<a name="ln-564"></a>
+<a name="ln-565"></a><span class="c">! Now figure out which type</span>
+<a name="ln-566"></a><span class="k">if</span><span class="p">(</span><span class="n">iqty</span> <span class="o">==</span> <span class="n">QTY_TRACER_CONCENTRATION</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-567"></a><span class="k">   </span><span class="n">offset</span> <span class="o">=</span> <span class="n">conc_offset</span>
+<a name="ln-568"></a><span class="k">else if</span><span class="p">(</span><span class="n">iqty</span> <span class="o">==</span> <span class="n">QTY_TRACER_SOURCE</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-569"></a><span class="k">   </span><span class="n">offset</span> <span class="o">=</span> <span class="n">source_offset</span>
+<a name="ln-570"></a><span class="k">else if</span><span class="p">(</span><span class="n">iqty</span> <span class="o">==</span> <span class="n">QTY_VELOCITY</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-571"></a><span class="k">   </span><span class="n">offset</span> <span class="o">=</span> <span class="n">wind_offset</span>
+<a name="ln-572"></a><span class="k">else</span>
+<a name="ln-573"></a>   <span class="c">! technically this should just set istatus to a positive value and return</span>
+<a name="ln-574"></a>   <span class="c">! because it shouldn&#39;t be a fatal error to try to interpolate a quantity</span>
+<a name="ln-575"></a>   <span class="c">! that is not in the state vector. however for this model we only expect</span>
+<a name="ln-576"></a>   <span class="c">! to get observations of types in the state, so end the program if not.</span>
+<a name="ln-577"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;quantity &#39;</span><span class="p">,</span> <span class="n">iqty</span><span class="p">,</span> <span class="s1">&#39; (&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">get_name_for_quantity</span><span class="p">(</span><span class="n">iqty</span><span class="p">))</span><span class="o">//</span> <span class="p">&amp;</span>
+<a name="ln-578"></a>                     <span class="s1">&#39;) is not supported in model_interpolate&#39;</span>
+<a name="ln-579"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;model_interpolate&#39;</span><span class="p">,</span><span class="n">string1</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-580"></a><span class="n">endif</span>
+<a name="ln-581"></a>
+<a name="ln-582"></a><span class="c">! Add the offsets into the lower and upper indices</span>
+<a name="ln-583"></a><span class="n">lower_index</span> <span class="o">=</span> <span class="n">lower_index</span> <span class="o">+</span> <span class="n">offset</span>
+<a name="ln-584"></a><span class="n">upper_index</span> <span class="o">=</span> <span class="n">upper_index</span> <span class="o">+</span> <span class="n">offset</span>
+<a name="ln-585"></a>
+<a name="ln-586"></a><span class="c">! Do the interpolation and return.  first case is the normal RMA version</span>
+<a name="ln-587"></a><span class="c">! where expected_val is an ens_size array.  the second is a single state.</span>
+<a name="ln-588"></a><span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="nb">present</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-589"></a><span class="k">  </span><span class="n">expected_val</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">lctnfrac</span><span class="p">)</span> <span class="o">*</span>  <span class="n">get_state</span><span class="p">(</span><span class="n">lower_index</span><span class="p">,</span> <span class="n">state_handle</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-590"></a>                           <span class="n">lctnfrac</span>  <span class="o">*</span>  <span class="n">get_state</span><span class="p">(</span><span class="n">upper_index</span><span class="p">,</span> <span class="n">state_handle</span><span class="p">)</span>
+<a name="ln-591"></a><span class="k">else</span>
+<a name="ln-592"></a><span class="k">  </span><span class="n">expected_val</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">lctnfrac</span><span class="p">)</span> <span class="o">*</span>  <span class="n">x</span><span class="p">(</span><span class="n">lower_index</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-593"></a>                           <span class="n">lctnfrac</span>  <span class="o">*</span>  <span class="n">x</span><span class="p">(</span><span class="n">upper_index</span><span class="p">)</span>
+<a name="ln-594"></a><span class="n">endif</span>
+<a name="ln-595"></a>
+<a name="ln-596"></a><span class="k">end subroutine </span><span class="n">model_interpolate</span>
+<a name="ln-597"></a>
+<a name="ln-598"></a>
+<a name="ln-599"></a>
+<a name="ln-600"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-601"></a><span class="c">!&gt; the smallest time the model should be called to advance</span>
+<a name="ln-602"></a>
+<a name="ln-603"></a><span class="k">function </span><span class="n">shortest_time_between_assimilations</span><span class="p">()</span>
+<a name="ln-604"></a>
+<a name="ln-605"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">shortest_time_between_assimilations</span>
+<a name="ln-606"></a>
+<a name="ln-607"></a><span class="n">shortest_time_between_assimilations</span> <span class="o">=</span> <span class="n">time_step</span>
+<a name="ln-608"></a>
+<a name="ln-609"></a><span class="k">end function </span><span class="n">shortest_time_between_assimilations</span>
+<a name="ln-610"></a>
+<a name="ln-611"></a>
+<a name="ln-612"></a>
+<a name="ln-613"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-614"></a><span class="c">!&gt; Given an integer index into the state vector structure, returns the</span>
+<a name="ln-615"></a><span class="c">!&gt; associated location and optionally the state quantity.</span>
+<a name="ln-616"></a>
+<a name="ln-617"></a><span class="k">subroutine </span><span class="n">get_state_meta_data</span><span class="p">(</span><span class="n">index_in</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">var_qty</span><span class="p">)</span>
+<a name="ln-618"></a>
+<a name="ln-619"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">index_in</span>
+<a name="ln-620"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-621"></a><span class="kt">integer</span><span class="p">,</span>             <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">var_qty</span>
+<a name="ln-622"></a>
+<a name="ln-623"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">var_qty_index</span><span class="p">,</span> <span class="n">var_loc_index</span>
+<a name="ln-624"></a>
+<a name="ln-625"></a><span class="c">! Variable types</span>
+<a name="ln-626"></a><span class="n">var_qty_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_in</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_grid_points</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-627"></a><span class="n">var_loc_index</span> <span class="o">=</span> <span class="n">index_in</span> <span class="o">-</span> <span class="p">(</span><span class="n">var_qty_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">num_grid_points</span>
+<a name="ln-628"></a>
+<a name="ln-629"></a><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">var_qty</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-630"></a><span class="k">   if</span><span class="p">(</span><span class="n">var_qty_index</span> <span class="o">==</span> <span class="n">CONC</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-631"></a><span class="k">      </span><span class="n">var_qty</span> <span class="o">=</span> <span class="n">QTY_TRACER_CONCENTRATION</span>
+<a name="ln-632"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">var_qty_index</span> <span class="o">==</span> <span class="n">TSOURCE</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-633"></a><span class="k">      </span><span class="n">var_qty</span> <span class="o">=</span> <span class="n">QTY_TRACER_SOURCE</span>
+<a name="ln-634"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">var_qty_index</span> <span class="o">==</span> <span class="n">WIND</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-635"></a><span class="k">      </span><span class="n">var_qty</span> <span class="o">=</span> <span class="n">QTY_VELOCITY</span>
+<a name="ln-636"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">var_qty_index</span> <span class="o">==</span> <span class="n">MEAN_SRC</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-637"></a><span class="k">      </span><span class="n">var_qty</span> <span class="o">=</span> <span class="n">QTY_MEAN_SOURCE</span>
+<a name="ln-638"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">var_qty_index</span> <span class="o">==</span> <span class="n">SRC_PHASE</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-639"></a><span class="k">      </span><span class="n">var_qty</span> <span class="o">=</span> <span class="n">QTY_SOURCE_PHASE</span>
+<a name="ln-640"></a>   <span class="n">endif</span>
+<a name="ln-641"></a><span class="n">endif</span>
+<a name="ln-642"></a>
+<a name="ln-643"></a><span class="n">location</span> <span class="o">=</span> <span class="n">state_loc</span><span class="p">(</span><span class="n">var_loc_index</span><span class="p">)</span>
+<a name="ln-644"></a>
+<a name="ln-645"></a><span class="k">end subroutine </span><span class="n">get_state_meta_data</span>
+<a name="ln-646"></a>
+<a name="ln-647"></a>
+<a name="ln-648"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-649"></a><span class="c">! Writes the model-specific attributes to a netCDF file</span>
+<a name="ln-650"></a>
+<a name="ln-651"></a><span class="k">subroutine </span><span class="n">nc_write_model_atts</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">domain_id</span><span class="p">)</span>
+<a name="ln-652"></a>
+<a name="ln-653"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ncid</span>      <span class="c">! netCDF file identifier</span>
+<a name="ln-654"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">domain_id</span>
+<a name="ln-655"></a>
+<a name="ln-656"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">msize</span>
+<a name="ln-657"></a>
+<a name="ln-658"></a><span class="c">! other parts of the dart system will write the state into the file</span>
+<a name="ln-659"></a><span class="c">! so this routine just needs to write any model-specific</span>
+<a name="ln-660"></a><span class="c">! attributes it wants to record.</span>
+<a name="ln-661"></a>
+<a name="ln-662"></a><span class="n">msize</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_grid_points</span><span class="p">,</span> <span class="n">i4</span><span class="p">)</span>
+<a name="ln-663"></a>
+<a name="ln-664"></a><span class="c">! Write Global Attributes</span>
+<a name="ln-665"></a>
+<a name="ln-666"></a><span class="k">call </span><span class="n">nc_begin_define_mode</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-667"></a>
+<a name="ln-668"></a><span class="k">call </span><span class="n">nc_add_global_creation_time</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-669"></a>
+<a name="ln-670"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_source&quot;</span><span class="p">,</span> <span class="n">source</span> <span class="p">)</span>
+<a name="ln-671"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_revision&quot;</span><span class="p">,</span> <span class="n">revision</span> <span class="p">)</span>
+<a name="ln-672"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_revdate&quot;</span><span class="p">,</span> <span class="n">revdate</span> <span class="p">)</span>
+<a name="ln-673"></a>
+<a name="ln-674"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;simple_advection&quot;</span><span class="p">)</span>
+<a name="ln-675"></a>
+<a name="ln-676"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;mean_wind&quot;</span>              <span class="p">,</span> <span class="n">mean_wind</span> <span class="p">)</span>
+<a name="ln-677"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;wind_random_amp&quot;</span>        <span class="p">,</span> <span class="n">wind_random_amp</span> <span class="p">)</span>
+<a name="ln-678"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;wind_damping_rate&quot;</span>      <span class="p">,</span> <span class="n">wind_damping_rate</span> <span class="p">)</span>
+<a name="ln-679"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;destruction_rate&quot;</span>       <span class="p">,</span> <span class="n">destruction_rate</span> <span class="p">)</span>
+<a name="ln-680"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;source_random_amp_frac&quot;</span> <span class="p">,</span> <span class="n">source_random_amp_frac</span> <span class="p">)</span>
+<a name="ln-681"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;source_damping_rate&quot;</span>    <span class="p">,</span> <span class="n">source_damping_rate</span> <span class="p">)</span>
+<a name="ln-682"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;source_diurnal_rel_amp&quot;</span> <span class="p">,</span> <span class="n">source_diurnal_rel_amp</span> <span class="p">)</span>
+<a name="ln-683"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;source_phase_noise&quot;</span>     <span class="p">,</span> <span class="n">source_phase_noise</span> <span class="p">)</span>
+<a name="ln-684"></a>
+<a name="ln-685"></a><span class="k">call </span><span class="n">nc_write_location_atts</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">msize</span><span class="p">)</span>
+<a name="ln-686"></a><span class="k">call </span><span class="n">nc_end_define_mode</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-687"></a><span class="k">call </span><span class="n">nc_write_location</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">state_loc</span><span class="p">,</span> <span class="n">msize</span><span class="p">)</span>
+<a name="ln-688"></a>
+<a name="ln-689"></a><span class="k">call </span><span class="n">nc_synchronize_file</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-690"></a>
+<a name="ln-691"></a>
+<a name="ln-692"></a><span class="k">end subroutine </span><span class="n">nc_write_model_atts</span>
+<a name="ln-693"></a>
+<a name="ln-694"></a>
+<a name="ln-695"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-696"></a><span class="c">!&gt; Perturbs a model state for generating initial ensembles.</span>
+<a name="ln-697"></a><span class="c">!&gt; Returning interf_provided .true. means this code has </span>
+<a name="ln-698"></a><span class="c">!&gt; added uniform small independent perturbations to a</span>
+<a name="ln-699"></a><span class="c">!&gt; single ensemble member to generate the full ensemble.</span>
+<a name="ln-700"></a>
+<a name="ln-701"></a><span class="k">subroutine </span><span class="n">pert_model_copies</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">pert_amp</span><span class="p">,</span> <span class="n">interf_provided</span><span class="p">)</span>
+<a name="ln-702"></a>
+<a name="ln-703"></a><span class="k">type</span><span class="p">(</span><span class="n">ensemble_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">state_ens_handle</span>
+<a name="ln-704"></a><span class="kt">integer</span><span class="p">,</span>   <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ens_size</span>
+<a name="ln-705"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pert_amp</span>
+<a name="ln-706"></a><span class="kt">logical</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">interf_provided</span>
+<a name="ln-707"></a>
+<a name="ln-708"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span> <span class="n">num_my_grid_points</span><span class="p">,</span> <span class="n">my_qty</span>
+<a name="ln-709"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">my_grid_points</span><span class="p">(:)</span>
+<a name="ln-710"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">avg_wind</span><span class="p">,</span> <span class="n">localsum</span>
+<a name="ln-711"></a>
+<a name="ln-712"></a><span class="n">interf_provided</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-713"></a>
+<a name="ln-714"></a><span class="c">! if we are running with more than 1 task, then</span>
+<a name="ln-715"></a><span class="c">! we have all the ensemble members for a subset of</span>
+<a name="ln-716"></a><span class="c">! the model state.  which variables we have are determined</span>
+<a name="ln-717"></a><span class="c">! by looking at the global index number into the state vector.</span>
+<a name="ln-718"></a>
+<a name="ln-719"></a><span class="c">! how many grid points does my task have to work on?</span>
+<a name="ln-720"></a><span class="c">! and what are their indices into the full state vector?</span>
+<a name="ln-721"></a><span class="n">num_my_grid_points</span> <span class="o">=</span> <span class="n">get_my_num_vars</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">)</span>
+<a name="ln-722"></a><span class="k">allocate</span><span class="p">(</span><span class="n">my_grid_points</span><span class="p">(</span><span class="n">num_my_grid_points</span><span class="p">))</span>
+<a name="ln-723"></a><span class="k">call </span><span class="n">get_my_vars</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">,</span> <span class="n">my_grid_points</span><span class="p">)</span>
+<a name="ln-724"></a>
+<a name="ln-725"></a><span class="c">! we also want to compute the average wind field before we start.</span>
+<a name="ln-726"></a><span class="c">! find all the wind values on our task and then sum</span>
+<a name="ln-727"></a><span class="c">! them with wind values on other tasks.</span>
+<a name="ln-728"></a>
+<a name="ln-729"></a><span class="n">localsum</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-730"></a><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">num_my_grid_points</span>
+<a name="ln-731"></a>
+<a name="ln-732"></a>   <span class="c">! Variable quantities</span>
+<a name="ln-733"></a>   <span class="n">my_qty</span> <span class="o">=</span> <span class="p">(</span><span class="n">my_grid_points</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_grid_points</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-734"></a>
+<a name="ln-735"></a>   <span class="k">if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">WIND</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-736"></a><span class="k">      </span><span class="n">localsum</span> <span class="o">=</span> <span class="n">localsum</span> <span class="o">+</span> <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<a name="ln-737"></a>   <span class="n">endif</span>
+<a name="ln-738"></a><span class="n">enddo</span>
+<a name="ln-739"></a>
+<a name="ln-740"></a><span class="k">call </span><span class="n">sum_across_tasks</span><span class="p">(</span><span class="n">localsum</span><span class="p">,</span> <span class="n">avg_wind</span><span class="p">)</span>
+<a name="ln-741"></a><span class="n">avg_wind</span> <span class="o">=</span> <span class="n">avg_wind</span> <span class="o">/</span> <span class="n">num_grid_points</span>
+<a name="ln-742"></a>   
+<a name="ln-743"></a><span class="c">! and now we&#39;re ready to perturb the ensemble members</span>
+<a name="ln-744"></a><span class="c">! use the global index into the state vector to see what</span>
+<a name="ln-745"></a><span class="c">! quantities we have.</span>
+<a name="ln-746"></a><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">num_my_grid_points</span>
+<a name="ln-747"></a>
+<a name="ln-748"></a>   <span class="c">! Variable quantities</span>
+<a name="ln-749"></a>   <span class="n">my_qty</span> <span class="o">=</span> <span class="p">(</span><span class="n">my_grid_points</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_grid_points</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-750"></a>
+<a name="ln-751"></a>   <span class="k">if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">CONC</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-752"></a>      <span class="c">! Perturb the tracer concentration</span>
+<a name="ln-753"></a>      <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ens_size</span>
+<a name="ln-754"></a>         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-755"></a>                                         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-756"></a>                                         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+<a name="ln-757"></a>      <span class="n">enddo</span>
+<a name="ln-758"></a>      <span class="k">where</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-759"></a>            <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span> 
+<a name="ln-760"></a>   
+<a name="ln-761"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">TSOURCE</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-762"></a>      <span class="c">! Perturb the source</span>
+<a name="ln-763"></a>      <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ens_size</span>
+<a name="ln-764"></a>         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-765"></a>                                         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-766"></a>                                         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+<a name="ln-767"></a>      <span class="n">enddo</span>
+<a name="ln-768"></a>      <span class="k">where</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-769"></a>            <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span> 
+<a name="ln-770"></a>
+<a name="ln-771"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">WIND</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-772"></a>      <span class="c">! Perturb the u field using the average wind computed above</span>
+<a name="ln-773"></a>      <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ens_size</span>
+<a name="ln-774"></a>         <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_gaussian</span><span class="p">(</span><span class="n">random_seq</span><span class="p">,</span> <span class="mf">0.05_r8</span><span class="p">,</span> <span class="n">avg_wind</span><span class="p">)</span>
+<a name="ln-775"></a>      <span class="n">enddo</span>
+<a name="ln-776"></a>      <span class="k">where</span><span class="p">(</span><span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-777"></a>            <span class="n">state_ens_handle</span><span class="p">%</span><span class="n">copies</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_r8</span> 
+<a name="ln-778"></a>
+<a name="ln-779"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">MEAN_SRC</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-780"></a>      <span class="c">! NOT Perturbing the mean_source field. </span>
+<a name="ln-781"></a>      <span class="c">! comment in the following lines to perturb the source mean.</span>
+<a name="ln-782"></a>      <span class="c">! do j=1,ens_size</span>
+<a name="ln-783"></a>      <span class="c">!   state_ens_handle%copies(j, i) = random_gaussian(random_seq, &amp;</span>
+<a name="ln-784"></a>      <span class="c">!                                   state_ens_handle%copies(j, i), 0.2_r8)</span>
+<a name="ln-785"></a>      <span class="c">! enddo</span>
+<a name="ln-786"></a>
+<a name="ln-787"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">my_qty</span> <span class="o">==</span> <span class="n">SRC_PHASE</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-788"></a>
+<a name="ln-789"></a>      <span class="c">! NOT Perturbing the source_phase_offset field </span>
+<a name="ln-790"></a>      <span class="c">!  even if commented in, only perturb if the mean_source is non-zero</span>
+<a name="ln-791"></a>      <span class="c">! if (state_ens_handle%copies(j, i) /= 0.0_r8) then</span>
+<a name="ln-792"></a>      <span class="c">!    do j=1,ens_size</span>
+<a name="ln-793"></a>      <span class="c">!       state_ens_handle%copies(j, i) = random_gaussian(random_seq, &amp;</span>
+<a name="ln-794"></a>      <span class="c">!                                       state_ens_handle%copies(j, i), 0.4_r8)</span>
+<a name="ln-795"></a>      <span class="c">!    enddo</span>
+<a name="ln-796"></a>      <span class="c">! endif</span>
+<a name="ln-797"></a>
+<a name="ln-798"></a>   <span class="n">endif</span>
+<a name="ln-799"></a>
+<a name="ln-800"></a><span class="n">enddo</span> 
+<a name="ln-801"></a>
+<a name="ln-802"></a><span class="k">deallocate</span><span class="p">(</span><span class="n">my_grid_points</span><span class="p">)</span>
+<a name="ln-803"></a>
+<a name="ln-804"></a><span class="k">end subroutine </span><span class="n">pert_model_copies</span>
+<a name="ln-805"></a>
+<a name="ln-806"></a>
+<a name="ln-807"></a><span class="c">!===================================================================</span>
+<a name="ln-808"></a><span class="c">! End of model_mod</span>
+<a name="ln-809"></a><span class="c">!===================================================================</span>
+<a name="ln-810"></a><span class="k">end module </span><span class="n">model_mod</span>
+<a name="ln-811"></a>
+<a name="ln-812"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-813"></a><span class="c">! $URL$</span>
+<a name="ln-814"></a><span class="c">! $Id$</span>
+<a name="ln-815"></a><span class="c">! $Revision$</span>
+<a name="ln-816"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

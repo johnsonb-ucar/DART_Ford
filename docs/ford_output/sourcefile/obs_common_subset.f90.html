@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>obs_common_subset.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>obs_common_subset.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for source files.">572 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/obs_common_subset.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">obs_common_subset.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_common_subset.html">obs_common_subset</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/obs_common_subset.f90.html#src">obs_common_subset.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_common_subset.html">obs_common_subset</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/obs_common_subset.f90.html#src">obs_common_subset.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a>
+<a name="ln-8"></a><span class="c">!&gt;  This program takes as input one or more sets of N obs_seq filenames. </span>
+<a name="ln-9"></a><span class="c">!&gt;  N is usually 2, but can be any number of files to compare together.</span>
+<a name="ln-10"></a><span class="c">!&gt;  It opens the obs_seq files N at a time and does an obs-by-obs comparison.  </span>
+<a name="ln-11"></a><span class="c">!&gt;  It is intended to pull out a common subset of obs which were successfully</span>
+<a name="ln-12"></a><span class="c">!&gt;  assimilated in all experiments so the subsequent diagnostics can give</span>
+<a name="ln-13"></a><span class="c">!&gt;  an apples-to-apples comparison of the relative error or fit to obs</span>
+<a name="ln-14"></a><span class="c">!&gt;  between different experiments.</span>
+<a name="ln-15"></a><span class="c">!&gt; </span>
+<a name="ln-16"></a><span class="c">!&gt;  This tool does not search in the input obs_seq files to try to match obs</span>
+<a name="ln-17"></a><span class="c">!&gt;  in different orders or to skip over obs present in only one input file,</span>
+<a name="ln-18"></a><span class="c">!&gt;  so all experiments should be done with identical input obs_seq files.</span>
+<a name="ln-19"></a><span class="c">!&gt;  The obs to be assimilated or evaluated can be selected by namelist</span>
+<a name="ln-20"></a><span class="c">!&gt;  at run time if they are different, and different experiment settings</span>
+<a name="ln-21"></a><span class="c">!&gt;  can be selected by other namelist values.</span>
+<a name="ln-22"></a><span class="c">!&gt; </span>
+<a name="ln-23"></a><span class="c">!&gt;  If the next input obs don&#39;t match exactly (identical types, times, locations,</span>
+<a name="ln-24"></a><span class="c">!&gt;  and DART QC) they are discarded.  If they match, and if the DART QC indicates </span>
+<a name="ln-25"></a><span class="c">!&gt;  they have been successfully assimilated in all experiments, then each of the </span>
+<a name="ln-26"></a><span class="c">!&gt;  N input obs are copied through to the N output obs_seq files.  At the end of </span>
+<a name="ln-27"></a><span class="c">!&gt;  running this tool it creates sets of N output obs_seq files which contain a </span>
+<a name="ln-28"></a><span class="c">!&gt;  consistent set of assimilated obs across the set.</span>
+<a name="ln-29"></a><span class="c">!&gt; </span>
+<a name="ln-30"></a><span class="c">!&gt;  The outputs are suitable for input to the obs_diag or obs_seq_to_netcdf tools</span>
+<a name="ln-31"></a><span class="c">!&gt;  and there are matlab scripts for comparing the results of N experiments.</span>
+<a name="ln-32"></a><span class="c">!&gt;  Differences in the output diagnostics will now be because of the experiment </span>
+<a name="ln-33"></a><span class="c">!&gt;  differences, not differences in the number of obs assimilated.</span>
+<a name="ln-34"></a><span class="c">!&gt; </span>
+<a name="ln-35"></a><span class="c">!&gt;  Running this program creates sets of N new output files corresponding to each</span>
+<a name="ln-36"></a><span class="c">!&gt;  of N input files.  The output names are the input filenames with a suffix appended.  </span>
+<a name="ln-37"></a><span class="c">!&gt;  It can take a list of obs_seq files, either given directly in the namelist or</span>
+<a name="ln-38"></a><span class="c">!&gt;  a list of N filenames where each file contains one input filename per line.  </span>
+<a name="ln-39"></a><span class="c">!&gt;  If the lists contain more than 1 filename, this program will loop over each</span>
+<a name="ln-40"></a><span class="c">!&gt;  set of filenames in the lists until the end of the file.If more than N files</span>
+<a name="ln-41"></a><span class="c">!&gt; </span>
+<a name="ln-42"></a><span class="c">!&gt;  There is an option to allow observations which have been either successfully </span>
+<a name="ln-43"></a><span class="c">!&gt;  assimilated or evaluated to match each other.  The default requires them to</span>
+<a name="ln-44"></a><span class="c">!&gt;  have been treated identically in all experiments.</span>
+<a name="ln-45"></a>
+<a name="ln-46"></a><span class="k">program </span><span class="n">obs_common_subset</span>
+<a name="ln-47"></a>
+<a name="ln-48"></a><span class="k">use        </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">metadatalength</span>
+<a name="ln-49"></a><span class="k">use    </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">register_module</span><span class="p">,</span> <span class="n">initialize_utilities</span><span class="p">,</span>            <span class="p">&amp;</span>
+<a name="ln-50"></a>                             <span class="n">find_namelist_in_file</span><span class="p">,</span> <span class="n">check_namelist_read</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-51"></a>                             <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="n">nmlfileunit</span><span class="p">,</span>         <span class="p">&amp;</span>
+<a name="ln-52"></a>                             <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span><span class="p">,</span> <span class="n">get_next_filename</span><span class="p">,</span>      <span class="p">&amp;</span>
+<a name="ln-53"></a>                             <span class="n">finalize_utilities</span><span class="p">,</span> <span class="n">logfileunit</span>
+<a name="ln-54"></a><span class="k">use     </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span><span class="p">,</span> <span class="n">operator</span><span class="p">(</span><span class="o">/=</span><span class="p">)</span>
+<a name="ln-55"></a><span class="k">use      </span><span class="n">obs_def_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_def_type</span><span class="p">,</span> <span class="n">get_obs_def_time</span><span class="p">,</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-56"></a>                             <span class="n">get_obs_def_location</span>
+<a name="ln-57"></a><span class="k">use     </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">max_defined_types_of_obs</span><span class="p">,</span> <span class="n">get_name_for_type_of_obs</span>
+<a name="ln-58"></a><span class="k">use </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">print_date</span><span class="p">,</span> <span class="n">print_time</span><span class="p">,</span> <span class="n">set_time</span><span class="p">,</span>      <span class="p">&amp;</span>
+<a name="ln-59"></a>                             <span class="n">set_calendar_type</span><span class="p">,</span> <span class="n">get_calendar_type</span><span class="p">,</span>             <span class="p">&amp;</span>
+<a name="ln-60"></a>                             <span class="n">operator</span><span class="p">(</span><span class="o">/=</span><span class="p">),</span> <span class="n">operator</span><span class="p">(</span><span class="o">&gt;</span><span class="p">),</span> <span class="n">NO_CALENDAR</span>
+<a name="ln-61"></a><span class="k">use </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">write_obs_seq</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-62"></a>                             <span class="n">init_obs</span><span class="p">,</span> <span class="n">assignment</span><span class="p">(</span><span class="o">=</span><span class="p">),</span> <span class="n">get_obs_def</span><span class="p">,</span> <span class="n">get_obs_key</span><span class="p">,&amp;</span>
+<a name="ln-63"></a>                             <span class="n">init_obs_sequence</span><span class="p">,</span> <span class="n">static_init_obs_sequence</span><span class="p">,</span>      <span class="p">&amp;</span>
+<a name="ln-64"></a>                             <span class="n">read_obs_seq_header</span><span class="p">,</span> <span class="n">read_obs_seq</span><span class="p">,</span> <span class="n">get_num_obs</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-65"></a>                             <span class="n">get_first_obs</span><span class="p">,</span> <span class="n">get_next_obs</span><span class="p">,</span> <span class="n">get_num_key_range</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-66"></a>                             <span class="n">insert_obs_in_seq</span><span class="p">,</span> <span class="n">get_num_copies</span><span class="p">,</span> <span class="n">get_num_qc</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-67"></a>                             <span class="n">get_copy_meta_data</span><span class="p">,</span> <span class="n">get_qc_meta_data</span><span class="p">,</span> <span class="n">get_qc</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-68"></a>                             <span class="n">set_copy_meta_data</span><span class="p">,</span> <span class="n">set_qc_meta_data</span><span class="p">,</span>             <span class="p">&amp;</span>
+<a name="ln-69"></a>                             <span class="n">destroy_obs</span><span class="p">,</span> <span class="n">destroy_obs_sequence</span>
+<a name="ln-70"></a>
+<a name="ln-71"></a><span class="k">implicit none</span>
+<a name="ln-72"></a>
+<a name="ln-73"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-74"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-75"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-76"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-77"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-78"></a>
+<a name="ln-79"></a><span class="c">! max_num_input_files : maximum total number of input sequence files to be processed.</span>
+<a name="ln-80"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span>   <span class="kd">::</span> <span class="n">max_num_input_files</span> <span class="o">=</span> <span class="mi">5000</span>
+<a name="ln-81"></a>
+<a name="ln-82"></a><span class="c">! max number of files to compare against each other.  if you need to compare </span>
+<a name="ln-83"></a><span class="c">! more than 50 files together, let us know what you are doing because i&#39;d be </span>
+<a name="ln-84"></a><span class="c">! very interested to hear.  but you can make the maxcomp larger in that case.</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span>      <span class="kd">::</span> <span class="n">maxcomp</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c">! max number of files compared at once</span>
+<a name="ln-87"></a>
+<a name="ln-88"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-89"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq_out</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-90"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">),</span> <span class="n">next_obs_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-91"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs_out</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">),</span> <span class="n">prev_obs_out</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-92"></a><span class="kt">logical</span>                 <span class="kd">::</span> <span class="n">is_this_last</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-93"></a><span class="kt">logical</span>                 <span class="kd">::</span> <span class="n">wanted</span>
+<a name="ln-94"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-95"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">size_seq_out</span><span class="p">,</span> <span class="n">num_inserted</span><span class="p">,</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">nextfile</span>
+<a name="ln-96"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">max_num_obs</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">),</span> <span class="n">file_id</span><span class="p">,</span> <span class="n">atonce</span><span class="p">,</span> <span class="n">nsets</span>
+<a name="ln-97"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">num_rejected_badqc</span><span class="p">,</span> <span class="n">num_rejected_diffqc</span><span class="p">,</span> <span class="n">num_rejected_other</span>
+<a name="ln-98"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">num_mismatch_loc</span><span class="p">,</span> <span class="n">num_mismatch_time</span><span class="p">,</span> <span class="n">num_mismatch_type</span>
+<a name="ln-99"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">129</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">read_format</span>
+<a name="ln-100"></a><span class="kt">logical</span>                 <span class="kd">::</span> <span class="n">pre_I_format</span><span class="p">,</span> <span class="n">cal</span>
+<a name="ln-101"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">msgstring1</span><span class="p">,</span> <span class="n">msgstring2</span><span class="p">,</span> <span class="n">msgstring3</span>
+<a name="ln-102"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">filename_in</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>
+<a name="ln-103"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">384</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">filename_out</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>     <span class="c">! filename_in + . + suffix</span>
+<a name="ln-104"></a>
+<a name="ln-105"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">metadatalength</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">dart_qc_meta_data</span> <span class="o">=</span> <span class="s1">&#39;DART quality control&#39;</span>
+<a name="ln-106"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">metadatalength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">meta_data</span>
+<a name="ln-107"></a>
+<a name="ln-108"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">qc_index</span>
+<a name="ln-109"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">num_input_sets</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-110"></a>
+<a name="ln-111"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">temp_filelist</span><span class="p">(</span><span class="n">max_num_input_files</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-112"></a>
+<a name="ln-113"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-114"></a><span class="c">! Namelist input with default values</span>
+<a name="ln-115"></a>
+<a name="ln-116"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename_seq</span><span class="p">(</span><span class="n">max_num_input_files</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-117"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename_seq_list</span><span class="p">(</span><span class="n">maxcomp</span><span class="p">)</span>  <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-118"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">filename_out_suffix</span> <span class="o">=</span> <span class="s1">&#39;.common&#39;</span>
+<a name="ln-119"></a>
+<a name="ln-120"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_to_compare_at_once</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-121"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">print_only</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-122"></a>
+<a name="ln-123"></a><span class="c">! not expected to be changed often, but its here if needed.</span>
+<a name="ln-124"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">print_every</span> <span class="o">=</span> <span class="mi">10000</span>
+<a name="ln-125"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">dart_qc_threshold</span> <span class="o">=</span> <span class="mi">3</span>     <span class="c">! ok if DART QC &lt;= this</span>
+<a name="ln-126"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">eval_and_assim_can_match</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> 
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="kd">::</span> <span class="n">calendar</span> <span class="o">=</span> <span class="s1">&#39;Gregorian&#39;</span>
+<a name="ln-129"></a>
+<a name="ln-130"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">obs_common_subset_nml</span><span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-131"></a>         <span class="n">num_to_compare_at_once</span><span class="p">,</span>          <span class="p">&amp;</span>
+<a name="ln-132"></a>         <span class="n">filename_seq</span><span class="p">,</span> <span class="n">filename_seq_list</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-133"></a>         <span class="n">filename_out_suffix</span><span class="p">,</span> <span class="n">print_only</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-134"></a>         <span class="n">print_every</span><span class="p">,</span> <span class="n">dart_qc_threshold</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-135"></a>         <span class="n">calendar</span><span class="p">,</span> <span class="n">eval_and_assim_can_match</span>
+<a name="ln-136"></a>
+<a name="ln-137"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-138"></a><span class="c">! Start of the program:</span>
+<a name="ln-139"></a><span class="c">!</span>
+<a name="ln-140"></a><span class="c">! Process each N input observation sequence file in turn,</span>
+<a name="ln-141"></a><span class="c">! selecting observations to insert into the output sequence files.</span>
+<a name="ln-142"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-143"></a>
+<a name="ln-144"></a><span class="k">call </span><span class="n">setup</span><span class="p">()</span>
+<a name="ln-145"></a>
+<a name="ln-146"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-147"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;obs_common_subset_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-148"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">obs_common_subset_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-149"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;obs_common_subset_nml&quot;</span><span class="p">)</span>
+<a name="ln-150"></a>
+<a name="ln-151"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-152"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">obs_common_subset_nml</span><span class="p">)</span>
+<a name="ln-153"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">obs_common_subset_nml</span><span class="p">)</span>
+<a name="ln-154"></a>
+<a name="ln-155"></a><span class="c">! the logic here is slightly different than the obs_sequence_tool.</span>
+<a name="ln-156"></a><span class="c">! the user gives us a list of obs_seq files; either in the namelist</span>
+<a name="ln-157"></a><span class="c">! or as the name of a file which contains the list, one per line.</span>
+<a name="ln-158"></a><span class="c">! the files are compared N at a time, until the list is exhausted.</span>
+<a name="ln-159"></a><span class="c">! as in the other tools, it is an error to specify both an explicit</span>
+<a name="ln-160"></a><span class="c">! list and the name of file for input.</span>
+<a name="ln-161"></a>
+<a name="ln-162"></a><span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A,I3,A)&#39;</span><span class="p">)</span> <span class="s2">&quot;Asking to compare &quot;</span><span class="p">,</span> <span class="n">num_to_compare_at_once</span><span class="p">,</span> <span class="s2">&quot; obs_seq files at a time&quot;</span>
+<a name="ln-163"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s2">&quot;obs_common_subset&quot;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-164"></a>
+<a name="ln-165"></a><span class="k">if</span> <span class="p">((</span><span class="n">num_to_compare_at_once</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">(</span><span class="n">num_to_compare_at_once</span> <span class="o">&gt;</span> <span class="n">maxcomp</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-166"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s2">&quot;num_to_compare_at_once must be &gt;= 2 and &lt;= &quot;</span><span class="p">,</span> <span class="n">maxcomp</span>
+<a name="ln-167"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s2">&quot;obs_common_subset&quot;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-168"></a><span class="n">endif</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a><span class="c">! if there is only a single file from each experiment to compare, the order</span>
+<a name="ln-171"></a><span class="c">! doesn&#39;t matter.  if each experiment has a list of input obs_seq.final files from</span>
+<a name="ln-172"></a><span class="c">! a multi-step assimilation, list all the files from experiment 1 in list-file 1,</span>
+<a name="ln-173"></a><span class="c">! all files from experiment 2 in list-file 2, etc.</span>
+<a name="ln-174"></a><span class="k">call </span><span class="n">handle_filenames</span><span class="p">(</span><span class="n">num_to_compare_at_once</span><span class="p">,</span> <span class="n">maxcomp</span><span class="p">,</span> <span class="n">filename_seq</span><span class="p">,</span> <span class="n">filename_seq_list</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-175"></a>                      <span class="n">num_input_sets</span><span class="p">)</span>
+<a name="ln-176"></a>
+<a name="ln-177"></a><span class="k">if</span> <span class="p">(</span><span class="n">num_input_sets</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-178"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A,I3,A)&#39;</span><span class="p">)</span> <span class="s2">&quot;Will loop &quot;</span><span class="p">,</span> <span class="n">num_input_sets</span><span class="p">,</span> <span class="s2">&quot; times to process the entire input filelist&quot;</span>
+<a name="ln-179"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s2">&quot;obs_common_subset&quot;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-180"></a><span class="n">endif</span>
+<a name="ln-181"></a>
+<a name="ln-182"></a><span class="c">! because i am a lazy typist</span>
+<a name="ln-183"></a><span class="n">atonce</span> <span class="o">=</span> <span class="n">num_to_compare_at_once</span>
+<a name="ln-184"></a><span class="n">nsets</span> <span class="o">=</span> <span class="n">num_input_sets</span>
+<a name="ln-185"></a>
+<a name="ln-186"></a><span class="c">! the default is a gregorian calendar.  if you are using a different type</span>
+<a name="ln-187"></a><span class="c">! set it in the namelist.  this only controls how it prints out the first</span>
+<a name="ln-188"></a><span class="c">! and last timestamps in the obs_seq files.</span>
+<a name="ln-189"></a><span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">calendar</span><span class="p">)</span>
+<a name="ln-190"></a>
+<a name="ln-191"></a><span class="c">! set a logial to see if we have a calendar or not</span>
+<a name="ln-192"></a><span class="n">cal</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_calendar_type</span><span class="p">()</span> <span class="o">/=</span> <span class="n">NO_CALENDAR</span><span class="p">)</span>
+<a name="ln-193"></a>
+<a name="ln-194"></a><span class="c">! end of namelist processing and setup</span>
+<a name="ln-195"></a>
+<a name="ln-196"></a>
+<a name="ln-197"></a><span class="c">! process the files in sets, making sure the metadata matches. keep matching</span>
+<a name="ln-198"></a><span class="c">! obs which share the same QC values, as long as the QCs are &lt;= threshold.</span>
+<a name="ln-199"></a><span class="c">! since this tool has very little utility without the DART QC values, fail</span>
+<a name="ln-200"></a><span class="c">! if they aren&#39;t present.</span>
+<a name="ln-201"></a>
+<a name="ln-202"></a><span class="c">! count of input sets was set in the handle_filenames() routine above.</span>
+<a name="ln-203"></a><span class="n">nextfile</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-204"></a><span class="n">NUMSETS</span><span class="p">:</span> <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsets</span>
+<a name="ln-205"></a>
+<a name="ln-206"></a>   <span class="c">! if num_to_compare_at_once = 3 and num_input_sets = 100, then this</span>
+<a name="ln-207"></a>   <span class="c">! assumes the input file list is organized in this order:</span>
+<a name="ln-208"></a>   <span class="c">!       a1,b1,c1, a2,b2,c2, ..., a100,b100,c100</span>
+<a name="ln-209"></a>   <span class="c">! where a, b, c are the 3 separate experiments to compare, </span>
+<a name="ln-210"></a>   <span class="c">! and 1, 2, ... 100 are the obs_seq.final output files from 100 steps </span>
+<a name="ln-211"></a>   <span class="c">! of a multi-step assimilation.  handle_filenames() arranges this</span>
+<a name="ln-212"></a>   <span class="c">! order if list files were used.</span>
+<a name="ln-213"></a>
+<a name="ln-214"></a>   <span class="c">! fill in the names of the current set of obs_seq files</span>
+<a name="ln-215"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-216"></a>      <span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">filename_seq</span><span class="p">(</span><span class="n">nextfile</span><span class="p">)</span>
+<a name="ln-217"></a>      <span class="n">nextfile</span> <span class="o">=</span> <span class="n">nextfile</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-218"></a>   <span class="n">enddo</span>
+<a name="ln-219"></a>
+<a name="ln-220"></a>   <span class="c">! now filename_in(:) has all the names for this set.  read the headers in.</span>
+<a name="ln-221"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-222"></a>  
+<a name="ln-223"></a>      <span class="k">call </span><span class="n">read_obs_seq_header</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-224"></a>         <span class="n">size_seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">max_num_obs</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">file_id</span><span class="p">,</span> <span class="n">read_format</span><span class="p">,</span> <span class="n">pre_I_format</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-225"></a>         <span class="n">close_the_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.)</span>
+<a name="ln-226"></a>
+<a name="ln-227"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">size_seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-228"></a><span class="k">         write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;This tool cannot process empty obs_seq files&#39;</span>
+<a name="ln-229"></a>         <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;No obs found in input sequence file &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-230"></a>         <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-231"></a>            <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-232"></a>      <span class="n">endif</span>
+<a name="ln-233"></a>
+<a name="ln-234"></a>   <span class="n">enddo</span>
+<a name="ln-235"></a>
+<a name="ln-236"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-237"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">size_seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/=</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-238"></a><span class="k">         write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Input obs_seq files cannot have different observation counts&#39;</span>
+<a name="ln-239"></a>         <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Counts for file 1 and file &#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span><span class="s1">&#39; are &#39;</span><span class="p">,</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-240"></a>                             <span class="s1">&#39; obs and &#39;</span><span class="p">,</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39; obs&#39;</span>
+<a name="ln-241"></a>         <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-242"></a>            <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-243"></a>      <span class="n">endif</span>
+<a name="ln-244"></a>   <span class="n">enddo</span>
+<a name="ln-245"></a>
+<a name="ln-246"></a>   <span class="k">write</span><span class="p">(</span>     <span class="o">*</span><span class="p">,</span>      <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Starting to process input sequence files: &#39;</span>
+<a name="ln-247"></a>   <span class="k">write</span><span class="p">(</span><span class="n">logfileunit</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Starting to process input sequence files: &#39;</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-250"></a>      <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="o">*</span><span class="p">)</span>  <span class="nb">trim</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-251"></a>      <span class="k">write</span><span class="p">(</span><span class="n">logfileunit</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>  <span class="nb">trim</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-252"></a>
+<a name="ln-253"></a>      <span class="k">call </span><span class="n">read_obs_seq</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-254"></a>   <span class="n">enddo</span>
+<a name="ln-255"></a>
+<a name="ln-256"></a>   <span class="c">! make sure the files have compatible metadata.  this errors out here if not.</span>
+<a name="ln-257"></a>   <span class="k">call </span><span class="n">compare_metadata</span><span class="p">(</span><span class="n">atonce</span><span class="p">,</span> <span class="n">seq_in</span><span class="p">,</span> <span class="n">filename_in</span><span class="p">)</span>
+<a name="ln-258"></a>
+<a name="ln-259"></a>   <span class="c">! sanity check - ensure the linked list times are in increasing time order</span>
+<a name="ln-260"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-261"></a>      <span class="k">call </span><span class="n">validate_obs_seq_time</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-262"></a>   <span class="n">enddo</span>
+<a name="ln-263"></a>
+<a name="ln-264"></a>   <span class="c">! the output can have no more than the number of input obs, and we already</span>
+<a name="ln-265"></a>   <span class="c">! tested that all sequences have the same obs count.</span>
+<a name="ln-266"></a>   <span class="n">size_seq_out</span> <span class="o">=</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-267"></a>
+<a name="ln-268"></a>   <span class="c">! find which DART QC copy has the DART quality control.  this version of</span>
+<a name="ln-269"></a>   <span class="c">! the tool fails if one is not found.  there seems very little utility in</span>
+<a name="ln-270"></a>   <span class="c">! this tool if it tries to process files without a DART QC.</span>
+<a name="ln-271"></a>   <span class="n">qc_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-272"></a>   <span class="n">QCLOOP</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-273"></a>      <span class="k">if</span><span class="p">(</span><span class="nb">index</span><span class="p">(</span><span class="n">get_qc_meta_data</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">i</span><span class="p">),</span> <span class="n">dart_qc_meta_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-274"></a><span class="k">         </span><span class="n">qc_index</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-275"></a>         <span class="k">exit </span><span class="n">QCLOOP</span>
+<a name="ln-276"></a>      <span class="n">endif</span>
+<a name="ln-277"></a>   <span class="n">enddo</span> <span class="n">QCLOOP</span>
+<a name="ln-278"></a>
+<a name="ln-279"></a>   <span class="c">! if we do decide there is utility in running these on files without a</span>
+<a name="ln-280"></a>   <span class="c">! DART QC, remove this error exit here.   nsc 24 oct 2013</span>
+<a name="ln-281"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">qc_index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-282"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span>  <span class="s1">&#39;DART QC was not found in the input obs_seq files.&#39;</span>
+<a name="ln-283"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;This tool only works on output files from an assimilation.&#39;</span>
+<a name="ln-284"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-285"></a>            <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-286"></a>   <span class="n">endif</span>
+<a name="ln-287"></a>
+<a name="ln-288"></a>
+<a name="ln-289"></a>   <span class="c">! blank line, start of actually creating output file</span>
+<a name="ln-290"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a name="ln-291"></a>
+<a name="ln-292"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-293"></a>      <span class="c">! Initialize individual observation variables</span>
+<a name="ln-294"></a>      <span class="k">call </span><span class="n">init_obs</span><span class="p">(</span>      <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-295"></a>      <span class="k">call </span><span class="n">init_obs</span><span class="p">(</span> <span class="n">next_obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-296"></a>      <span class="k">call </span><span class="n">init_obs</span><span class="p">(</span>     <span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-297"></a>      <span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">prev_obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-298"></a>
+<a name="ln-299"></a>      <span class="c">! create the output sequences</span>
+<a name="ln-300"></a>      <span class="k">call </span><span class="n">init_obs_sequence</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">size_seq_out</span><span class="p">)</span>
+<a name="ln-301"></a>
+<a name="ln-302"></a>      <span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_copies_in</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-303"></a>         <span class="n">meta_data</span> <span class="o">=</span> <span class="n">get_copy_meta_data</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">k</span><span class="p">)</span>
+<a name="ln-304"></a>         <span class="k">call </span><span class="n">set_copy_meta_data</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">k</span><span class="p">,</span> <span class="n">meta_data</span><span class="p">)</span>
+<a name="ln-305"></a>      <span class="n">enddo</span>
+<a name="ln-306"></a>      <span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_qc_in</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-307"></a>         <span class="n">meta_data</span> <span class="o">=</span> <span class="n">get_qc_meta_data</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">k</span><span class="p">)</span>
+<a name="ln-308"></a>         <span class="k">call </span><span class="n">set_qc_meta_data</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">k</span><span class="p">,</span> <span class="n">meta_data</span><span class="p">)</span>
+<a name="ln-309"></a>      <span class="n">enddo</span>
+<a name="ln-310"></a>
+<a name="ln-311"></a>   <span class="n">enddo</span>
+<a name="ln-312"></a>
+<a name="ln-313"></a>   <span class="c">! Start to insert obs from sequence_in into sequence_out</span>
+<a name="ln-314"></a>   <span class="c">! NOTE: insert_obs_in_seq CHANGES the obs passed in.</span>
+<a name="ln-315"></a>   <span class="c">!       Must pass a copy of incoming obs to insert_obs_in_seq.</span>
+<a name="ln-316"></a>
+<a name="ln-317"></a>   <span class="n">num_inserted</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-318"></a>   <span class="n">num_rejected_badqc</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-319"></a>   <span class="n">num_rejected_diffqc</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-320"></a>   <span class="n">num_rejected_other</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-321"></a>   <span class="n">num_mismatch_time</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-322"></a>   <span class="n">num_mismatch_type</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-323"></a>   <span class="n">num_mismatch_loc</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-324"></a>
+<a name="ln-325"></a>   <span class="c">! get the first obs from each file.  since we have already checked</span>
+<a name="ln-326"></a>   <span class="c">! for empty sequence files, this is not expected to fail at this point.</span>
+<a name="ln-327"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-328"></a>      <span class="k">if</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">get_first_obs</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span> <span class="k">then</span>
+<a name="ln-329"></a><span class="k">         write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span><span class="s1">&#39;no first observation in &#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-330"></a>         <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">,</span><span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-331"></a>      <span class="n">endif</span>
+<a name="ln-332"></a>      <span class="n">is_this_last</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-333"></a>      <span class="n">next_obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-334"></a>   <span class="n">enddo</span>
+<a name="ln-335"></a>
+<a name="ln-336"></a>
+<a name="ln-337"></a>   <span class="c">! since we&#39;ve checked to be sure that all the input obs_seq files have</span>
+<a name="ln-338"></a>   <span class="c">! the same obs counts, i can test the result from the first seq only.</span>
+<a name="ln-339"></a>   <span class="n">ObsLoop</span> <span class="p">:</span> <span class="k">do while</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_this_last</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<a name="ln-340"></a>
+<a name="ln-341"></a>      <span class="c">! move the next obs into position to be worked on</span>
+<a name="ln-342"></a>      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-343"></a>         <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">next_obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-344"></a>      <span class="n">enddo</span>
+<a name="ln-345"></a>
+<a name="ln-346"></a>      <span class="c">! see if we want to keep it or not</span>
+<a name="ln-347"></a>      <span class="n">wanted</span> <span class="o">=</span> <span class="n">all_good</span><span class="p">(</span><span class="n">obs_in</span><span class="p">,</span> <span class="n">atonce</span><span class="p">,</span> <span class="n">qc_index</span><span class="p">,</span> <span class="n">dart_qc_threshold</span><span class="p">)</span>
+<a name="ln-348"></a>
+<a name="ln-349"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">wanted</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-350"></a><span class="k">         do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-351"></a>            <span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-352"></a>         <span class="n">enddo</span>
+<a name="ln-353"></a>
+<a name="ln-354"></a>         <span class="c">! Since the stride through the observation sequence file is always</span>
+<a name="ln-355"></a>         <span class="c">! guaranteed to be in temporally-ascending order, we can use the</span>
+<a name="ln-356"></a>         <span class="c">! &#39;previous&#39; observation as the starting point to search for the</span>
+<a name="ln-357"></a>         <span class="c">! correct insertion point.  This speeds up the insert code a lot.</span>
+<a name="ln-358"></a>
+<a name="ln-359"></a>         <span class="k">if</span> <span class="p">(</span><span class="n">num_inserted</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-360"></a><span class="k">            do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-361"></a>               <span class="k">call </span><span class="n">insert_obs_in_seq</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-362"></a>            <span class="n">enddo</span>
+<a name="ln-363"></a>         <span class="k">else</span>
+<a name="ln-364"></a><span class="k">            do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-365"></a>               <span class="k">call </span><span class="n">insert_obs_in_seq</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">prev_obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-366"></a>            <span class="n">enddo</span>
+<a name="ln-367"></a>         <span class="n">endif</span>
+<a name="ln-368"></a>
+<a name="ln-369"></a>         <span class="c">! update position in seq for next insert</span>
+<a name="ln-370"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-371"></a>            <span class="n">prev_obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-372"></a>         <span class="n">enddo</span>
+<a name="ln-373"></a>
+<a name="ln-374"></a>         <span class="n">num_inserted</span> <span class="o">=</span> <span class="n">num_inserted</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-375"></a>
+<a name="ln-376"></a>         <span class="k">if</span> <span class="p">(</span><span class="n">print_every</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-377"></a><span class="k">            if</span> <span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">num_inserted</span><span class="p">,</span><span class="n">print_every</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-378"></a><span class="k">               print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;inserted obs number &#39;</span><span class="p">,</span><span class="n">num_inserted</span><span class="p">,</span><span class="s1">&#39; of &#39;</span><span class="p">,</span><span class="n">size_seq_out</span>
+<a name="ln-379"></a>            <span class="n">endif</span>
+<a name="ln-380"></a>         <span class="n">endif</span>
+<a name="ln-381"></a>
+<a name="ln-382"></a>      <span class="n">endif</span>
+<a name="ln-383"></a>
+<a name="ln-384"></a>      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-385"></a>         <span class="k">call </span><span class="n">get_next_obs</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">next_obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">is_this_last</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-386"></a>      <span class="n">enddo</span>
+<a name="ln-387"></a>
+<a name="ln-388"></a>   <span class="n">enddo</span> <span class="n">ObsLoop</span>
+<a name="ln-389"></a>
+<a name="ln-390"></a>
+<a name="ln-391"></a>   <span class="c">! finished creating output sequences.  print info and write out files</span>
+<a name="ln-392"></a>
+<a name="ln-393"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Number of obs in each output seq file :&#39;</span><span class="p">,</span> <span class="n">get_num_key_range</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-394"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-395"></a>
+<a name="ln-396"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-397"></a>      <span class="n">filename_out</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename_out_suffix</span><span class="p">)</span>
+<a name="ln-398"></a>      <span class="k">call </span><span class="n">print_obs_seq</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">filename_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-399"></a>   <span class="n">enddo</span>
+<a name="ln-400"></a>
+<a name="ln-401"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">print_only</span><span class="p">)</span>  <span class="k">then</span>
+<a name="ln-402"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Output sequence files not created; print_only in namelist is .true.&#39;</span>
+<a name="ln-403"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-404"></a>   <span class="k">else</span>
+<a name="ln-405"></a>
+<a name="ln-406"></a><span class="k">      print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;---------  Obs seq file set  #  :         &#39;</span><span class="p">,</span> <span class="n">j</span>
+<a name="ln-407"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Number of obs in each input     :         &#39;</span><span class="p">,</span> <span class="n">size_seq_in</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-408"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Number of obs rejected diff qc  :         &#39;</span><span class="p">,</span> <span class="n">num_rejected_diffqc</span>
+<a name="ln-409"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Number of obs rejected bad qc   :         &#39;</span><span class="p">,</span> <span class="n">num_rejected_badqc</span>
+<a name="ln-410"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Number of obs rejected other    :         &#39;</span><span class="p">,</span> <span class="n">num_rejected_other</span>
+<a name="ln-411"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">num_rejected_other</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-412"></a><span class="k">      print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39; Number of mismatches in time   :         &#39;</span><span class="p">,</span> <span class="n">num_mismatch_time</span>
+<a name="ln-413"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39; Number of mismatches in type   :         &#39;</span><span class="p">,</span> <span class="n">num_mismatch_type</span>
+<a name="ln-414"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39; Number of mismatches in loc    :         &#39;</span><span class="p">,</span> <span class="n">num_mismatch_loc</span>
+<a name="ln-415"></a>      <span class="n">endif</span>
+<a name="ln-416"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;Number of obs copied to output  :         &#39;</span><span class="p">,</span> <span class="n">num_inserted</span>
+<a name="ln-417"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;---------------------------------------------------------&#39;</span>
+<a name="ln-418"></a>
+<a name="ln-419"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Starting to write output sequence files&#39;</span>
+<a name="ln-420"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-421"></a>
+<a name="ln-422"></a>      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-423"></a>         <span class="k">call </span><span class="n">write_obs_seq</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">filename_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-424"></a>      <span class="n">enddo</span>
+<a name="ln-425"></a>   <span class="n">endif</span>
+<a name="ln-426"></a>
+<a name="ln-427"></a>   <span class="c">! clean up - prev_obs_out is a copy of obs_out, so don&#39;t call destroy on it</span>
+<a name="ln-428"></a>   <span class="c">! because it&#39;s already been deleted.</span>
+<a name="ln-429"></a>
+<a name="ln-430"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">atonce</span>
+<a name="ln-431"></a>      <span class="k">call </span><span class="n">destroy_obs_sequence</span><span class="p">(</span><span class="n">seq_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-432"></a>      <span class="k">call </span><span class="n">destroy_obs_sequence</span><span class="p">(</span><span class="n">seq_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-433"></a>      <span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-434"></a>      <span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">obs_out</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-435"></a>      <span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">next_obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-436"></a>   <span class="n">enddo</span>
+<a name="ln-437"></a>
+<a name="ln-438"></a><span class="n">enddo</span> <span class="n">NUMSETS</span>
+<a name="ln-439"></a>
+<a name="ln-440"></a><span class="k">call </span><span class="n">shutdown</span><span class="p">()</span>
+<a name="ln-441"></a>
+<a name="ln-442"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-443"></a><span class="c">! end of main program.</span>
+<a name="ln-444"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-445"></a>
+<a name="ln-446"></a>
+<a name="ln-447"></a><span class="k">contains</span>
+<a name="ln-448"></a>
+<a name="ln-449"></a>
+<a name="ln-450"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-451"></a>
+<a name="ln-452"></a><span class="k">subroutine </span><span class="n">setup</span><span class="p">()</span>
+<a name="ln-453"></a>
+<a name="ln-454"></a><span class="c">! Initialize modules used that require it</span>
+<a name="ln-455"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">(</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">)</span>
+<a name="ln-456"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-457"></a><span class="k">call </span><span class="n">static_init_obs_sequence</span><span class="p">()</span>
+<a name="ln-458"></a>
+<a name="ln-459"></a><span class="k">end subroutine </span><span class="n">setup</span>
+<a name="ln-460"></a>
+<a name="ln-461"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-462"></a>
+<a name="ln-463"></a><span class="k">subroutine </span><span class="n">shutdown</span><span class="p">()</span>
+<a name="ln-464"></a>
+<a name="ln-465"></a><span class="k">call </span><span class="n">finalize_utilities</span><span class="p">(</span><span class="s1">&#39;obs_common_subset&#39;</span><span class="p">)</span>
+<a name="ln-466"></a>
+<a name="ln-467"></a><span class="k">end subroutine </span><span class="n">shutdown</span>
+<a name="ln-468"></a>
+<a name="ln-469"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-470"></a>
+<a name="ln-471"></a><span class="k">subroutine </span><span class="n">handle_filenames</span><span class="p">(</span><span class="n">setsize</span><span class="p">,</span> <span class="n">maxsets</span><span class="p">,</span> <span class="n">filename_seq</span><span class="p">,</span> <span class="n">filename_seq_list</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-472"></a>                            <span class="n">num_input_sets</span><span class="p">)</span>
+<a name="ln-473"></a>
+<a name="ln-474"></a><span class="c">! sort out the input lists, set the length as a return in num_input_sets,</span>
+<a name="ln-475"></a><span class="c">! fill in filename_seq if list was given, and make sure what&#39;s specified is consistent.</span>
+<a name="ln-476"></a>
+<a name="ln-477"></a><span class="kt">integer</span><span class="p">,</span>            <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">setsize</span>
+<a name="ln-478"></a><span class="kt">integer</span><span class="p">,</span>            <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">maxsets</span>
+<a name="ln-479"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>   <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename_seq</span><span class="p">(:)</span>
+<a name="ln-480"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>   <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">filename_seq_list</span><span class="p">(:)</span>
+<a name="ln-481"></a><span class="kt">integer</span><span class="p">,</span>            <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">num_input_sets</span>
+<a name="ln-482"></a>
+<a name="ln-483"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">indx</span><span class="p">,</span> <span class="n">num_input_files</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ifiles</span><span class="p">,</span> <span class="n">fcount</span><span class="p">,</span> <span class="n">this_set_filecount</span>
+<a name="ln-484"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">files_per_set</span><span class="p">,</span> <span class="n">nlists</span><span class="p">,</span> <span class="n">iset</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span>
+<a name="ln-485"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">from_file</span>
+<a name="ln-486"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nname</span>
+<a name="ln-487"></a>
+<a name="ln-488"></a><span class="c">! if the user specifies neither filename_seq nor filename_seq_list, error</span>
+<a name="ln-489"></a><span class="c">! if the user specifies both, error.</span>
+<a name="ln-490"></a><span class="c">! if list length isn&#39;t a whole multiple of num_to_compare_at_once, error.</span>
+<a name="ln-491"></a><span class="c">! if user gives a filelist name, make sure the length is not more than </span>
+<a name="ln-492"></a><span class="c">! maxfiles and read it into the explicit list and continue.</span>
+<a name="ln-493"></a><span class="c">! set num_input_sets to the count of sets in the list</span>
+<a name="ln-494"></a>
+<a name="ln-495"></a><span class="k">if</span> <span class="p">(</span><span class="n">filename_seq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">filename_seq_list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-496"></a><span class="k">   </span><span class="n">msgstring2</span><span class="o">=</span><span class="s1">&#39;One of filename_seq or filename_seq_list must be specified in namelist&#39;</span>
+<a name="ln-497"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span>            <span class="p">&amp;</span>
+<a name="ln-498"></a>                      <span class="s1">&#39;no filenames specified as input&#39;</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-499"></a>                      <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-500"></a><span class="n">endif</span>
+<a name="ln-501"></a>
+<a name="ln-502"></a><span class="c">! make sure the namelist specifies one or the other but not both</span>
+<a name="ln-503"></a><span class="k">if</span> <span class="p">(</span><span class="n">filename_seq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">filename_seq_list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-504"></a><span class="k">   call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-505"></a>       <span class="s1">&#39;cannot specify both filename_seq and filename_seq_list in namelist&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-506"></a>       <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-507"></a><span class="n">endif</span>
+<a name="ln-508"></a>
+<a name="ln-509"></a><span class="c">! count of all filenames, either explicitly in the namelist</span>
+<a name="ln-510"></a><span class="c">! or specified by a list of files which contain lists of names.</span>
+<a name="ln-511"></a><span class="n">num_input_files</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-512"></a><span class="n">nlists</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-513"></a>
+<a name="ln-514"></a><span class="k">if</span> <span class="p">(</span><span class="n">filename_seq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-515"></a>
+<a name="ln-516"></a>   <span class="c">! if the files are given in the namelist, just need to make sure</span>
+<a name="ln-517"></a>   <span class="c">! there are at least N given (where N == num_to_compare_at_once).</span>
+<a name="ln-518"></a>
+<a name="ln-519"></a>   <span class="n">nname</span> <span class="o">=</span> <span class="s1">&#39;filename_seq&#39;</span>
+<a name="ln-520"></a>   <span class="n">from_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-521"></a>
+<a name="ln-522"></a>   <span class="n">FILELOOP</span><span class="p">:</span> <span class="k">do </span><span class="n">indx</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_num_input_files</span>
+<a name="ln-523"></a>      <span class="c">! an empty name ends the list</span>
+<a name="ln-524"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">filename_seq</span><span class="p">(</span><span class="n">indx</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-525"></a><span class="k">         if</span> <span class="p">(</span><span class="n">indx</span> <span class="o">&lt;</span> <span class="n">num_to_compare_at_once</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-526"></a><span class="k">            write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A,I5,A)&#39;</span><span class="p">)</span> <span class="nb">trim</span><span class="p">(</span><span class="n">nname</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; must contain at least &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-527"></a>                <span class="n">num_to_compare_at_once</span><span class="p">,</span> <span class="s1">&#39; obs_seq filenames&#39;</span>
+<a name="ln-528"></a>            <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-529"></a>                <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-530"></a>         <span class="n">endif</span>
+<a name="ln-531"></a>         <span class="n">num_input_files</span> <span class="o">=</span> <span class="n">indx</span> <span class="o">-</span> <span class="mi">1</span> 
+<a name="ln-532"></a>         <span class="k">exit </span><span class="n">FILELOOP</span>
+<a name="ln-533"></a>      <span class="n">endif</span>
+<a name="ln-534"></a>   <span class="n">enddo</span> <span class="n">FILELOOP</span>
+<a name="ln-535"></a>
+<a name="ln-536"></a>   <span class="c">! make sure the list is an even multiple of setsize</span>
+<a name="ln-537"></a>   <span class="k">if</span> <span class="p">(</span><span class="nb">modulo</span><span class="p">(</span><span class="n">num_input_files</span><span class="p">,</span> <span class="n">setsize</span><span class="p">)</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-538"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;number of input files must be an even multiple of &#39;</span><span class="p">,</span> <span class="n">setsize</span>
+<a name="ln-539"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;found &#39;</span><span class="p">,</span> <span class="n">num_input_files</span><span class="p">,</span> <span class="s1">&#39; input files&#39;</span>
+<a name="ln-540"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-541"></a>                         <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-542"></a>   <span class="n">endif</span>
+<a name="ln-543"></a>
+<a name="ln-544"></a>   <span class="n">num_input_sets</span> <span class="o">=</span> <span class="n">num_input_files</span> <span class="o">/</span> <span class="n">setsize</span>
+<a name="ln-545"></a><span class="k">else</span>
+<a name="ln-546"></a>
+<a name="ln-547"></a>   <span class="c">! if they have specified a file which contains a list, read it into</span>
+<a name="ln-548"></a>   <span class="c">! a temp array, set the counts, and do some initial error checks.</span>
+<a name="ln-549"></a>
+<a name="ln-550"></a>   <span class="n">nname</span> <span class="o">=</span> <span class="s1">&#39;filename_seq_list&#39;</span>
+<a name="ln-551"></a>   <span class="n">from_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-552"></a>
+<a name="ln-553"></a>   <span class="c">! this is the total running count of files across all lists</span>
+<a name="ln-554"></a>   <span class="n">fcount</span> <span class="o">=</span> <span class="mi">1</span>   
+<a name="ln-555"></a>
+<a name="ln-556"></a>   <span class="n">EXPLOOP</span><span class="p">:</span> <span class="k">do </span><span class="n">iset</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">maxsets</span>
+<a name="ln-557"></a>      
+<a name="ln-558"></a>      <span class="c">! an empty name ends the list of lists</span>
+<a name="ln-559"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">filename_seq_list</span><span class="p">(</span><span class="n">iset</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-560"></a><span class="k">         </span><span class="n">num_input_files</span> <span class="o">=</span> <span class="n">fcount</span> <span class="o">-</span> <span class="mi">1</span> 
+<a name="ln-561"></a>         <span class="n">nlists</span> <span class="o">=</span> <span class="n">iset</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-562"></a>         <span class="k">if</span> <span class="p">(</span><span class="n">nlists</span> <span class="o">/=</span> <span class="n">setsize</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-563"></a><span class="k">            write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;number of input file lists in &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">nname</span><span class="p">)</span><span class="o">//</span> <span class="p">&amp;</span>
+<a name="ln-564"></a>                                     <span class="s1">&#39;&quot; must equal &quot;num_to_compare_at_once&quot;&#39;</span>
+<a name="ln-565"></a>            <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span> <span class="s1">&#39;(2(A,I5))&#39;</span><span class="p">)</span> <span class="nb">trim</span><span class="p">(</span><span class="n">nname</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; has &#39;</span><span class="p">,</span> <span class="n">nlists</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-566"></a>                  <span class="s1">&#39; items while num_to_compare_at_once is &#39;</span><span class="p">,</span> <span class="n">setsize</span>
+<a name="ln-567"></a>         
+<a name="ln-568"></a>            <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-569"></a>                               <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-570"></a>         <span class="n">endif</span>
+<a name="ln-571"></a>         <span class="k">exit </span><span class="n">EXPLOOP</span>
+<a name="ln-572"></a>      <span class="n">endif</span>
+<a name="ln-573"></a>   
+<a name="ln-574"></a>      <span class="n">LISTLOOP</span><span class="p">:</span> <span class="k">do </span><span class="n">ifiles</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_num_input_files</span>
+<a name="ln-575"></a>         <span class="k">if</span> <span class="p">(</span><span class="n">fcount</span> <span class="o">&gt;=</span> <span class="n">max_num_input_files</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-576"></a><span class="k">            write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>  <span class="s1">&#39;cannot specify more than &#39;</span><span class="p">,</span><span class="n">max_num_input_files</span><span class="p">,</span><span class="s1">&#39; total files&#39;</span>
+<a name="ln-577"></a>            <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;for more, change &quot;max_num_input_files&quot; in the source and recompile&#39;</span>
+<a name="ln-578"></a>            <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-579"></a>                               <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-580"></a>         <span class="n">endif</span>
+<a name="ln-581"></a>
+<a name="ln-582"></a>         <span class="n">temp_filelist</span><span class="p">(</span><span class="n">fcount</span><span class="p">)</span> <span class="o">=</span> <span class="n">get_next_filename</span><span class="p">(</span><span class="n">filename_seq_list</span><span class="p">(</span><span class="n">iset</span><span class="p">),</span> <span class="n">ifiles</span><span class="p">)</span>
+<a name="ln-583"></a>     
+<a name="ln-584"></a>         <span class="c">! an empty name ends the list</span>
+<a name="ln-585"></a>         <span class="k">if</span> <span class="p">(</span><span class="n">temp_filelist</span><span class="p">(</span><span class="n">fcount</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-586"></a><span class="k">            if</span> <span class="p">(</span><span class="n">ifiles</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-587"></a><span class="k">               call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-588"></a>                   <span class="nb">trim</span><span class="p">(</span><span class="n">filename_seq_list</span><span class="p">(</span><span class="n">iset</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39; contains no input obs_seq filenames&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-589"></a>                   <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-590"></a>            <span class="n">endif</span>
+<a name="ln-591"></a>            <span class="n">this_set_filecount</span> <span class="o">=</span> <span class="n">ifiles</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-592"></a>            <span class="k">exit </span><span class="n">LISTLOOP</span>
+<a name="ln-593"></a>         <span class="n">endif</span>
+<a name="ln-594"></a>         <span class="n">fcount</span> <span class="o">=</span> <span class="n">fcount</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-595"></a>      <span class="n">enddo</span> <span class="n">LISTLOOP</span>
+<a name="ln-596"></a>
+<a name="ln-597"></a>      <span class="c">! make sure each file in the list contains the same number</span>
+<a name="ln-598"></a>      <span class="c">! of filenames to be compared.  set the target the first time</span>
+<a name="ln-599"></a>      <span class="c">! through and then compare subsequent counts to be sure they match.</span>
+<a name="ln-600"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">iset</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-601"></a><span class="k">         </span><span class="n">files_per_set</span> <span class="o">=</span> <span class="n">this_set_filecount</span>
+<a name="ln-602"></a>      <span class="k">else</span>
+<a name="ln-603"></a><span class="k">         if</span> <span class="p">(</span><span class="n">files_per_set</span> <span class="o">/=</span> <span class="n">this_set_filecount</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-604"></a><span class="k">            write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename_seq_list</span><span class="p">(</span><span class="n">iset</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39; does not contain &#39;</span> <span class="o">//</span> <span class="p">&amp;</span>
+<a name="ln-605"></a>               <span class="s1">&#39;the same number of obs_seq filenames as previous lists&#39;</span>
+<a name="ln-606"></a>            <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span> <span class="s1">&#39;(3(A,I5),A)&#39;</span><span class="p">)</span> <span class="s1">&#39;list 1 contains &#39;</span><span class="p">,</span> <span class="n">files_per_set</span><span class="p">,</span> <span class="s1">&#39; filenames while list &#39;</span><span class="p">,</span> <span class="n">iset</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-607"></a>               <span class="s1">&#39; contains &#39;</span><span class="p">,</span> <span class="n">this_set_filecount</span><span class="p">,</span> <span class="s1">&#39; filenames&#39;</span>
+<a name="ln-608"></a>            <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-609"></a>               <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-610"></a>         <span class="n">endif</span>
+<a name="ln-611"></a>      <span class="n">endif</span>
+<a name="ln-612"></a>   
+<a name="ln-613"></a>   <span class="n">enddo</span> <span class="n">EXPLOOP</span>
+<a name="ln-614"></a>   
+<a name="ln-615"></a>   <span class="n">num_input_sets</span> <span class="o">=</span> <span class="n">files_per_set</span>
+<a name="ln-616"></a><span class="n">endif</span>
+<a name="ln-617"></a>
+<a name="ln-618"></a><span class="k">if</span> <span class="p">(</span><span class="n">num_input_files</span> <span class="o">&gt;=</span> <span class="n">max_num_input_files</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-619"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>  <span class="s1">&#39;cannot specify more than &#39;</span><span class="p">,</span><span class="n">max_num_input_files</span><span class="p">,</span><span class="s1">&#39; files&#39;</span>
+<a name="ln-620"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;for more, change &quot;max_num_input_files&quot; in the source and recompile&#39;</span>
+<a name="ln-621"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;handle_filenames&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-622"></a>                      <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-623"></a><span class="n">endif</span>
+<a name="ln-624"></a>
+<a name="ln-625"></a><span class="k">if</span> <span class="p">(</span><span class="n">from_file</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-626"></a>   <span class="c">! now that we know we have the right number of filenames, copy them</span>
+<a name="ln-627"></a>   <span class="c">! from the temp list into filename_seq in the right order for processing:  </span>
+<a name="ln-628"></a>   <span class="c">! first all file 1s from each experiment, then file 2s, etc.</span>
+<a name="ln-629"></a>   <span class="c">! the temp list is all files from exp1, all files from exp2, etc</span>
+<a name="ln-630"></a>   <span class="n">dst</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-631"></a>   <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_input_sets</span>
+<a name="ln-632"></a>      <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">setsize</span>
+<a name="ln-633"></a>         <span class="n">src</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">num_input_sets</span> <span class="o">+</span> <span class="n">i</span>
+<a name="ln-634"></a>         <span class="n">dst</span> <span class="o">=</span> <span class="n">dst</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-635"></a>         <span class="n">filename_seq</span><span class="p">(</span><span class="n">dst</span><span class="p">)</span> <span class="o">=</span> <span class="n">temp_filelist</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<a name="ln-636"></a>      <span class="n">enddo</span>
+<a name="ln-637"></a>   <span class="n">enddo</span>
+<a name="ln-638"></a><span class="n">endif</span>
+<a name="ln-639"></a>
+<a name="ln-640"></a><span class="k">end subroutine </span><span class="n">handle_filenames</span>
+<a name="ln-641"></a>
+<a name="ln-642"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-643"></a>
+<a name="ln-644"></a><span class="k">subroutine </span><span class="n">compare_metadata</span><span class="p">(</span><span class="nb">count</span><span class="p">,</span> <span class="n">seq</span><span class="p">,</span> <span class="n">fnames</span><span class="p">)</span>
+<a name="ln-645"></a>
+<a name="ln-646"></a><span class="c">! This subroutine compares the metadata for &#39;count&#39; different observation</span>
+<a name="ln-647"></a><span class="c">! sequences and terminates the program if they are not conformable.</span>
+<a name="ln-648"></a><span class="c">! In order to be processed all observation sequences must have the same</span>
+<a name="ln-649"></a><span class="c">! number of qc values, the same number of copies, and the same metadata names.</span>
+<a name="ln-650"></a>
+<a name="ln-651"></a><span class="kt">integer</span><span class="p">,</span>                 <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="nb">count</span>
+<a name="ln-652"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq</span><span class="p">(:)</span>
+<a name="ln-653"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fnames</span><span class="p">(:)</span>
+<a name="ln-654"></a>
+<a name="ln-655"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_copies1</span><span class="p">,</span> <span class="n">num_copiesN</span><span class="p">,</span> <span class="n">num_qc1</span><span class="p">,</span> <span class="n">num_qcN</span>
+<a name="ln-656"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
+<a name="ln-657"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">metadatalength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">str1</span><span class="p">,</span> <span class="n">strN</span>
+<a name="ln-658"></a>
+<a name="ln-659"></a><span class="n">num_copies1</span> <span class="o">=</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-660"></a><span class="n">num_qc1</span> <span class="o">=</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-661"></a>
+<a name="ln-662"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">count</span>
+<a name="ln-663"></a><span class="nb">   </span><span class="n">num_copiesN</span> <span class="o">=</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-664"></a>   <span class="n">num_qcN</span> <span class="o">=</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-665"></a>
+<a name="ln-666"></a>   <span class="c">! get this ready in case we have to use it in some later error string.</span>
+<a name="ln-667"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring3</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;Sequence files &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">fnames</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39; and &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">fnames</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span> <span class="p">&amp;</span>
+<a name="ln-668"></a>                      <span class="s1">&#39; are not compatible&#39;</span>
+<a name="ln-669"></a>
+<a name="ln-670"></a>   <span class="c">! compare the counts first - compare all against sequence 1 because they</span>
+<a name="ln-671"></a>   <span class="c">! all have to be identical to succeed.</span>
+<a name="ln-672"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">num_copies1</span> <span class="o">/=</span> <span class="n">num_copiesN</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-673"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;Different numbers of data copies found: &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-674"></a>                         <span class="n">num_copies1</span><span class="p">,</span> <span class="s1">&#39; vs &#39;</span><span class="p">,</span> <span class="n">num_copiesN</span>
+<a name="ln-675"></a>      <span class="n">num_copies1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-676"></a>   <span class="n">endif</span>
+<a name="ln-677"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">num_qc1</span> <span class="o">/=</span> <span class="n">num_qcN</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-678"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;Different different numbers of QCs found: &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-679"></a>                         <span class="n">num_qc1</span><span class="p">,</span> <span class="s1">&#39; vs &#39;</span><span class="p">,</span> <span class="n">num_qcN</span>
+<a name="ln-680"></a>      <span class="n">num_qc1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-681"></a>   <span class="n">endif</span>
+<a name="ln-682"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">num_copies1</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">num_qc1</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-683"></a><span class="k">      call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_metadata&#39;</span><span class="p">,</span> <span class="n">msgstring3</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-684"></a>                                 <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-685"></a>   <span class="n">endif</span>
+<a name="ln-686"></a>
+<a name="ln-687"></a>   <span class="c">! make sure the metadata matches exactly for both the copies and qcs</span>
+<a name="ln-688"></a>   <span class="c">! in all files.</span>
+<a name="ln-689"></a>   <span class="n">CopyMetaData</span> <span class="p">:</span> <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_copies1</span>
+<a name="ln-690"></a>      <span class="n">str1</span> <span class="o">=</span> <span class="n">get_copy_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-691"></a>      <span class="n">strN</span> <span class="o">=</span> <span class="n">get_copy_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-692"></a>
+<a name="ln-693"></a>      <span class="c">! if they match, continue.</span>
+<a name="ln-694"></a>      <span class="c">! if they don&#39;t match, it&#39;s a fatal error.</span>
+<a name="ln-695"></a>      <span class="k">if</span><span class="p">(</span> <span class="n">str1</span> <span class="o">/=</span> <span class="n">strN</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-696"></a><span class="k">         write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;copy metadata value mismatch. &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+<a name="ln-697"></a>         <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;copy metadata value mismatch. &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">strN</span><span class="p">)</span>
+<a name="ln-698"></a>         <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_metadata&#39;</span><span class="p">,</span> <span class="n">msgstring3</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-699"></a>                    <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-700"></a>      <span class="n">endif</span>
+<a name="ln-701"></a>
+<a name="ln-702"></a>   <span class="n">enddo</span> <span class="n">CopyMetaData</span>
+<a name="ln-703"></a>
+<a name="ln-704"></a>   <span class="n">QCMetaData</span> <span class="p">:</span> <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_qc1</span>
+<a name="ln-705"></a>      <span class="n">str1</span> <span class="o">=</span> <span class="n">get_qc_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-706"></a>      <span class="n">strN</span> <span class="o">=</span> <span class="n">get_qc_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-707"></a>
+<a name="ln-708"></a>      <span class="c">! if they match, continue.</span>
+<a name="ln-709"></a>      <span class="c">! if they don&#39;t match, it&#39;s a fatal error.</span>
+<a name="ln-710"></a>      <span class="k">if</span><span class="p">(</span> <span class="n">str1</span> <span class="o">/=</span> <span class="n">strN</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-711"></a><span class="k">         write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;qc metadata value mismatch.  &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+<a name="ln-712"></a>         <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;qc metadata value mismatch.  &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">strN</span><span class="p">)</span>
+<a name="ln-713"></a>         <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_metadata&#39;</span><span class="p">,</span> <span class="n">msgstring3</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-714"></a>                    <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">msgstring2</span><span class="p">)</span>
+<a name="ln-715"></a>      <span class="n">endif</span>
+<a name="ln-716"></a>
+<a name="ln-717"></a>   <span class="n">enddo</span> <span class="n">QCMetaData</span>
+<a name="ln-718"></a>
+<a name="ln-719"></a><span class="n">enddo</span>
+<a name="ln-720"></a>
+<a name="ln-721"></a><span class="k">end subroutine </span><span class="n">compare_metadata</span>
+<a name="ln-722"></a>
+<a name="ln-723"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-724"></a>
+<a name="ln-725"></a><span class="k">subroutine </span><span class="n">print_obs_seq</span><span class="p">(</span><span class="n">seq_in</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<a name="ln-726"></a>
+<a name="ln-727"></a><span class="c">! you can get more info by running the obs_diag program, but this</span>
+<a name="ln-728"></a><span class="c">! prints out a quick table of obs types and counts, overall start and</span>
+<a name="ln-729"></a><span class="c">! stop times, and metadata strings and counts.</span>
+<a name="ln-730"></a>
+<a name="ln-731"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq_in</span>
+<a name="ln-732"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename</span>
+<a name="ln-733"></a>
+<a name="ln-734"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span><span class="p">,</span> <span class="n">next_obs</span>
+<a name="ln-735"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">this_obs_def</span>
+<a name="ln-736"></a><span class="kt">logical</span>                 <span class="kd">::</span> <span class="n">is_there_one</span><span class="p">,</span> <span class="n">is_this_last</span>
+<a name="ln-737"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">size_seq_in</span>
+<a name="ln-738"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">i</span>
+<a name="ln-739"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">this_obs_kind</span>
+<a name="ln-740"></a><span class="c">! max_defined_types_of_obs is a public from obs_kind_mod.f90 and really is</span>
+<a name="ln-741"></a><span class="c">! counting the max number of types, not kinds</span>
+<a name="ln-742"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">type_count</span><span class="p">(</span><span class="n">max_defined_types_of_obs</span><span class="p">),</span> <span class="n">identity_count</span>
+<a name="ln-743"></a>
+<a name="ln-744"></a>
+<a name="ln-745"></a><span class="c">! Initialize input obs_types</span>
+<a name="ln-746"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_defined_types_of_obs</span>
+<a name="ln-747"></a>   <span class="n">type_count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-748"></a><span class="n">enddo</span>
+<a name="ln-749"></a><span class="n">identity_count</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-750"></a>
+<a name="ln-751"></a><span class="c">! make sure there are obs left to process before going on.</span>
+<a name="ln-752"></a><span class="c">! num_obs should be ok since we just constructed this seq so it should</span>
+<a name="ln-753"></a><span class="c">! have no unlinked obs.  if it might for some reason, use this instead:</span>
+<a name="ln-754"></a><span class="c">! size_seq_in = get_num_key_range(seq_in)     !current size of seq_in</span>
+<a name="ln-755"></a>
+<a name="ln-756"></a><span class="n">size_seq_in</span> <span class="o">=</span> <span class="n">get_num_obs</span><span class="p">(</span><span class="n">seq_in</span><span class="p">)</span>
+<a name="ln-757"></a><span class="k">if</span> <span class="p">(</span><span class="n">size_seq_in</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-758"></a><span class="k">   </span><span class="n">msgstring</span> <span class="o">=</span> <span class="s1">&#39;Obs_seq file &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; is empty.&#39;</span>
+<a name="ln-759"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;print_obs_seq&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-760"></a>   <span class="k">return</span>
+<a name="ln-761"></a><span class="n">endif</span>
+<a name="ln-762"></a>
+<a name="ln-763"></a><span class="c">! Initialize individual observation variables</span>
+<a name="ln-764"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span>     <span class="n">obs</span><span class="p">,</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq_in</span><span class="p">),</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq_in</span><span class="p">))</span>
+<a name="ln-765"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">next_obs</span><span class="p">,</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq_in</span><span class="p">),</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq_in</span><span class="p">))</span>
+<a name="ln-766"></a>
+<a name="ln-767"></a><span class="c">! blank line</span>
+<a name="ln-768"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a name="ln-769"></a>
+<a name="ln-770"></a><span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Processing sequence file &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-771"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-772"></a>
+<a name="ln-773"></a><span class="c">!  for an obs_seq final file which has lots of ensemble members this</span>
+<a name="ln-774"></a><span class="c">!  is really long and obscures useful data.  disable it for now.</span>
+<a name="ln-775"></a><span class="c">!  at some point we could make a verbose option which could re-enable it.</span>
+<a name="ln-776"></a><span class="k">if</span> <span class="p">(.</span><span class="n">false</span><span class="p">.)</span> <span class="k">call </span><span class="n">print_metadata</span><span class="p">(</span><span class="n">seq_in</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<a name="ln-777"></a>
+<a name="ln-778"></a>
+<a name="ln-779"></a><span class="c">! Start to process obs from seq_in</span>
+<a name="ln-780"></a>
+<a name="ln-781"></a><span class="n">is_there_one</span> <span class="o">=</span> <span class="n">get_first_obs</span><span class="p">(</span><span class="n">seq_in</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-782"></a>
+<a name="ln-783"></a><span class="k">if</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_there_one</span> <span class="p">)</span>  <span class="k">then</span>
+<a name="ln-784"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;no first observation in &#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-785"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;print_obs_seq&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-786"></a><span class="n">endif</span>
+<a name="ln-787"></a>
+<a name="ln-788"></a><span class="c">! process it here</span>
+<a name="ln-789"></a><span class="n">is_this_last</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-790"></a>
+<a name="ln-791"></a><span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">this_obs_def</span><span class="p">)</span>
+<a name="ln-792"></a><span class="k">call </span><span class="n">print_time</span><span class="p">(</span><span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">),</span> <span class="s1">&#39; First timestamp: &#39;</span><span class="p">)</span>
+<a name="ln-793"></a><span class="c">! does not work with NO_CALENDAR</span>
+<a name="ln-794"></a><span class="k">if</span> <span class="p">(</span><span class="n">cal</span><span class="p">)</span> <span class="k">call </span><span class="n">print_date</span><span class="p">(</span><span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">),</span> <span class="s1">&#39;   calendar Date: &#39;</span><span class="p">)</span>
+<a name="ln-795"></a>
+<a name="ln-796"></a><span class="n">ObsLoop</span> <span class="p">:</span> <span class="k">do while</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_this_last</span><span class="p">)</span>
+<a name="ln-797"></a>
+<a name="ln-798"></a>   <span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">this_obs_def</span><span class="p">)</span>
+<a name="ln-799"></a>   <span class="n">this_obs_kind</span> <span class="o">=</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">)</span>
+<a name="ln-800"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">this_obs_kind</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-801"></a><span class="k">      </span><span class="n">identity_count</span> <span class="o">=</span> <span class="n">identity_count</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-802"></a>   <span class="k">else</span>
+<a name="ln-803"></a><span class="k">      </span><span class="n">type_count</span><span class="p">(</span><span class="n">this_obs_kind</span><span class="p">)</span> <span class="o">=</span> <span class="n">type_count</span><span class="p">(</span><span class="n">this_obs_kind</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-804"></a>   <span class="n">endif</span>
+<a name="ln-805"></a>
+<a name="ln-806"></a>   <span class="k">call </span><span class="n">get_next_obs</span><span class="p">(</span><span class="n">seq_in</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">next_obs</span><span class="p">,</span> <span class="n">is_this_last</span><span class="p">)</span>
+<a name="ln-807"></a>   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_this_last</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-808"></a><span class="k">      </span><span class="n">obs</span> <span class="o">=</span> <span class="n">next_obs</span>
+<a name="ln-809"></a>   <span class="k">else</span>
+<a name="ln-810"></a><span class="k">      call </span><span class="n">print_time</span><span class="p">(</span><span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">),</span> <span class="s1">&#39;  Last timestamp: &#39;</span><span class="p">)</span>
+<a name="ln-811"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">cal</span><span class="p">)</span> <span class="k">call </span><span class="n">print_date</span><span class="p">(</span><span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">),</span> <span class="s1">&#39;   calendar Date: &#39;</span><span class="p">)</span>
+<a name="ln-812"></a>   <span class="n">endif</span>
+<a name="ln-813"></a>
+<a name="ln-814"></a><span class="n">enddo</span> <span class="n">ObsLoop</span>
+<a name="ln-815"></a>
+<a name="ln-816"></a>
+<a name="ln-817"></a><span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Number of obs processed  :          &#39;</span><span class="p">,</span> <span class="n">size_seq_in</span>
+<a name="ln-818"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-819"></a><span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;---------------------------------------------------------&#39;</span>
+<a name="ln-820"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-821"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_defined_types_of_obs</span>
+<a name="ln-822"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">type_count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-823"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(a32,i8,a)&#39;</span><span class="p">)</span> <span class="nb">trim</span><span class="p">(</span><span class="n">get_name_for_type_of_obs</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span> <span class="p">&amp;</span>
+<a name="ln-824"></a>                                     <span class="n">type_count</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39; obs&#39;</span>
+<a name="ln-825"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-826"></a>   <span class="n">endif</span>
+<a name="ln-827"></a><span class="n">enddo</span>
+<a name="ln-828"></a><span class="k">if</span> <span class="p">(</span><span class="n">identity_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-829"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(a32,i8,a)&#39;</span><span class="p">)</span> <span class="s1">&#39;Identity observations&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-830"></a>                                  <span class="n">identity_count</span><span class="p">,</span> <span class="s1">&#39; obs&#39;</span>
+<a name="ln-831"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-832"></a><span class="n">endif</span>
+<a name="ln-833"></a>
+<a name="ln-834"></a><span class="c">! another blank line</span>
+<a name="ln-835"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a name="ln-836"></a>
+<a name="ln-837"></a><span class="c">! Time to clean up</span>
+<a name="ln-838"></a>
+<a name="ln-839"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span>     <span class="n">obs</span><span class="p">)</span>
+<a name="ln-840"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">next_obs</span><span class="p">)</span>
+<a name="ln-841"></a>
+<a name="ln-842"></a><span class="k">end subroutine </span><span class="n">print_obs_seq</span>
+<a name="ln-843"></a>
+<a name="ln-844"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-845"></a>
+<a name="ln-846"></a><span class="k">subroutine </span><span class="n">validate_obs_seq_time</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<a name="ln-847"></a>
+<a name="ln-848"></a><span class="c">! this eventually belongs in the obs_seq_mod code, but for now</span>
+<a name="ln-849"></a><span class="c">! try it out here.  we just fixed a hole in the interactive create</span>
+<a name="ln-850"></a><span class="c">! routine which would silently let you create out-of-time-order</span>
+<a name="ln-851"></a><span class="c">! linked lists, which gave no errors but didn&#39;t assimilate the</span>
+<a name="ln-852"></a><span class="c">! right obs at the right time when running filter.   this runs</span>
+<a name="ln-853"></a><span class="c">! through the times in the entire sequence, ensuring they are</span>
+<a name="ln-854"></a><span class="c">! monotonically increasing in time.  this should help catch any</span>
+<a name="ln-855"></a><span class="c">! bad files which were created with older versions of code.</span>
+<a name="ln-856"></a>
+<a name="ln-857"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq</span>
+<a name="ln-858"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename</span>
+<a name="ln-859"></a>
+<a name="ln-860"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span><span class="p">,</span> <span class="n">next_obs</span>
+<a name="ln-861"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">this_obs_def</span>
+<a name="ln-862"></a><span class="kt">logical</span>                 <span class="kd">::</span> <span class="n">is_there_one</span><span class="p">,</span> <span class="n">is_this_last</span>
+<a name="ln-863"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">size_seq</span><span class="p">,</span> <span class="n">obs_count</span>
+<a name="ln-864"></a><span class="kt">integer</span>                 <span class="kd">::</span> <span class="n">key</span>
+<a name="ln-865"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">last_time</span><span class="p">,</span> <span class="n">this_time</span>
+<a name="ln-866"></a>
+<a name="ln-867"></a>
+<a name="ln-868"></a><span class="c">! make sure there are obs left to process before going on.</span>
+<a name="ln-869"></a><span class="n">size_seq</span> <span class="o">=</span> <span class="n">get_num_obs</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-870"></a><span class="k">if</span> <span class="p">(</span><span class="n">size_seq</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-871"></a><span class="k">   </span><span class="n">msgstring</span> <span class="o">=</span> <span class="s1">&#39;Obs_seq file &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; is empty.&#39;</span>
+<a name="ln-872"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span><span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-873"></a>   <span class="k">return</span>
+<a name="ln-874"></a><span class="n">endif</span>
+<a name="ln-875"></a>
+<a name="ln-876"></a><span class="c">! Initialize individual observation variables</span>
+<a name="ln-877"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span>     <span class="n">obs</span><span class="p">,</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq</span><span class="p">))</span>
+<a name="ln-878"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">next_obs</span><span class="p">,</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">seq</span><span class="p">))</span>
+<a name="ln-879"></a>
+<a name="ln-880"></a><span class="n">obs_count</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-881"></a>
+<a name="ln-882"></a>
+<a name="ln-883"></a><span class="c">! Start to process obs from seq</span>
+<a name="ln-884"></a>
+<a name="ln-885"></a><span class="n">is_there_one</span> <span class="o">=</span> <span class="n">get_first_obs</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-886"></a>
+<a name="ln-887"></a><span class="c">! we already tested for 0 obs above, so there should be a first obs here.</span>
+<a name="ln-888"></a><span class="k">if</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_there_one</span> <span class="p">)</span>  <span class="k">then</span>
+<a name="ln-889"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;no first obs in sequence &#39;</span> <span class="o">//</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-890"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-891"></a>                      <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-892"></a>   <span class="k">return</span>
+<a name="ln-893"></a><span class="n">endif</span>
+<a name="ln-894"></a>
+<a name="ln-895"></a><span class="n">is_this_last</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-896"></a><span class="n">last_time</span> <span class="o">=</span> <span class="n">set_time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-897"></a><span class="n">ObsLoop</span> <span class="p">:</span> <span class="k">do while</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_this_last</span><span class="p">)</span>
+<a name="ln-898"></a>
+<a name="ln-899"></a>   <span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">this_obs_def</span><span class="p">)</span>
+<a name="ln-900"></a>   <span class="n">this_time</span> <span class="o">=</span> <span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">this_obs_def</span><span class="p">)</span>
+<a name="ln-901"></a>
+<a name="ln-902"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">last_time</span> <span class="o">&gt;</span> <span class="n">this_time</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-903"></a>      <span class="c">! bad time order of observations in linked list</span>
+<a name="ln-904"></a>      <span class="k">call </span><span class="n">print_time</span><span class="p">(</span><span class="n">last_time</span><span class="p">,</span> <span class="s1">&#39; previous timestamp: &#39;</span><span class="p">)</span>
+<a name="ln-905"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">cal</span><span class="p">)</span> <span class="k">call </span><span class="n">print_date</span><span class="p">(</span><span class="n">last_time</span><span class="p">,</span> <span class="s1">&#39;      calendar date: &#39;</span><span class="p">)</span>
+<a name="ln-906"></a>      <span class="k">call </span><span class="n">print_time</span><span class="p">(</span><span class="n">this_time</span><span class="p">,</span> <span class="s1">&#39;     next timestamp: &#39;</span><span class="p">)</span>
+<a name="ln-907"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">cal</span><span class="p">)</span> <span class="k">call </span><span class="n">print_date</span><span class="p">(</span><span class="n">this_time</span><span class="p">,</span> <span class="s1">&#39;      calendar date: &#39;</span><span class="p">)</span>
+<a name="ln-908"></a>
+<a name="ln-909"></a>      <span class="n">key</span> <span class="o">=</span> <span class="n">get_obs_key</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>
+<a name="ln-910"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;obs number &#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; has earlier time than previous obs&#39;</span>
+<a name="ln-911"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;observations must be in increasing time order, file &#39;</span> <span class="o">//</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-912"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span> <span class="n">msgstring2</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-913"></a>                         <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-914"></a>                         <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-915"></a>   <span class="n">endif</span>
+<a name="ln-916"></a>
+<a name="ln-917"></a>   <span class="n">last_time</span> <span class="o">=</span> <span class="n">this_time</span>
+<a name="ln-918"></a>   <span class="n">obs_count</span> <span class="o">=</span> <span class="n">obs_count</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-919"></a>
+<a name="ln-920"></a>   <span class="k">call </span><span class="n">get_next_obs</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">next_obs</span><span class="p">,</span> <span class="n">is_this_last</span><span class="p">)</span>
+<a name="ln-921"></a>   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">is_this_last</span><span class="p">)</span> <span class="n">obs</span> <span class="o">=</span> <span class="n">next_obs</span>
+<a name="ln-922"></a>
+<a name="ln-923"></a><span class="n">enddo</span> <span class="n">ObsLoop</span>
+<a name="ln-924"></a>
+<a name="ln-925"></a><span class="c">! clean up</span>
+<a name="ln-926"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span>     <span class="n">obs</span><span class="p">)</span>
+<a name="ln-927"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">next_obs</span><span class="p">)</span>
+<a name="ln-928"></a>
+<a name="ln-929"></a><span class="c">! technically not a time validation, but easy to check.  obs_count should never</span>
+<a name="ln-930"></a><span class="c">! be larger than size_seq - that&#39;s a fatal error.  obs_count &lt; size_seq would</span>
+<a name="ln-931"></a><span class="c">! suggest there are obs in the file that aren&#39;t part of the linked list.</span>
+<a name="ln-932"></a><span class="c">! this does not necessarily indicate a fatal error but it&#39;s not a common</span>
+<a name="ln-933"></a><span class="c">! situation and might indicate someone should check on the file.</span>
+<a name="ln-934"></a><span class="k">if</span> <span class="p">(</span><span class="n">obs_count</span> <span class="o">/=</span> <span class="n">size_seq</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-935"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;input sequence &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-936"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-937"></a>
+<a name="ln-938"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;total obs in file: &#39;</span><span class="p">,</span> <span class="n">size_seq</span><span class="p">,</span> <span class="s1">&#39;  obs in linked list: &#39;</span><span class="p">,</span> <span class="n">obs_count</span>
+<a name="ln-939"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">obs_count</span> <span class="o">&gt;</span> <span class="n">size_seq</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-940"></a>      <span class="c">! this is a fatal error</span>
+<a name="ln-941"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;linked list obs_count &gt; total size_seq, should not happen&#39;</span>
+<a name="ln-942"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-943"></a>                         <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-944"></a>                         <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-945"></a>   <span class="k">else</span>
+<a name="ln-946"></a>      <span class="c">! just warning msg</span>
+<a name="ln-947"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;only observations in linked list will be processed&#39;</span>
+<a name="ln-948"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;validate_obs_seq_time&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-949"></a>                         <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">msgstring1</span><span class="p">)</span>
+<a name="ln-950"></a>   <span class="n">endif</span>
+<a name="ln-951"></a><span class="n">endif</span>
+<a name="ln-952"></a>
+<a name="ln-953"></a><span class="k">end subroutine </span><span class="n">validate_obs_seq_time</span>
+<a name="ln-954"></a>
+<a name="ln-955"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-956"></a>
+<a name="ln-957"></a><span class="k">subroutine </span><span class="n">print_metadata</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+<a name="ln-958"></a>
+<a name="ln-959"></a><span class="c">! print out the metadata strings, trimmed</span>
+<a name="ln-960"></a>
+<a name="ln-961"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq</span>
+<a name="ln-962"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>        <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fname</span>
+<a name="ln-963"></a>
+<a name="ln-964"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_copies</span> <span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">i</span>
+<a name="ln-965"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">metadatalength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">str</span>
+<a name="ln-966"></a>
+<a name="ln-967"></a><span class="n">num_copies</span> <span class="o">=</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-968"></a><span class="n">num_qc</span>     <span class="o">=</span> <span class="n">get_num_qc</span><span class="p">(</span>    <span class="n">seq</span><span class="p">)</span>
+<a name="ln-969"></a>
+<a name="ln-970"></a><span class="k">if</span> <span class="p">(</span> <span class="n">num_copies</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">num_qc</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-971"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39; illegal copy or obs count in file &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<a name="ln-972"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;print_metadata&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-973"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-974"></a><span class="n">endif</span>
+<a name="ln-975"></a>
+<a name="ln-976"></a><span class="n">MetaDataLoop</span> <span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_copies</span>
+<a name="ln-977"></a>   <span class="n">str</span> <span class="o">=</span> <span class="n">get_copy_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-978"></a>
+<a name="ln-979"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;Data Metadata: &#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<a name="ln-980"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-981"></a>
+<a name="ln-982"></a><span class="n">enddo</span> <span class="n">MetaDataLoop</span>
+<a name="ln-983"></a>
+<a name="ln-984"></a><span class="n">QCMetaData</span> <span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_qc</span>
+<a name="ln-985"></a>   <span class="n">str</span> <span class="o">=</span> <span class="n">get_qc_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-986"></a>
+<a name="ln-987"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;  QC Metadata: &#39;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<a name="ln-988"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-989"></a>
+<a name="ln-990"></a><span class="n">enddo</span> <span class="n">QCMetaData</span>
+<a name="ln-991"></a>
+<a name="ln-992"></a><span class="k">end subroutine </span><span class="n">print_metadata</span>
+<a name="ln-993"></a>
+<a name="ln-994"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-995"></a>
+<a name="ln-996"></a><span class="k">function </span><span class="n">all_good</span><span class="p">(</span><span class="n">obs_in</span><span class="p">,</span> <span class="nb">count</span><span class="p">,</span> <span class="n">indx</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+<a name="ln-997"></a>
+<a name="ln-998"></a><span class="c">! compare location, time, type, QC, plus make sure QC &lt;= threshold</span>
+<a name="ln-999"></a>
+<a name="ln-1000"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">),</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_in</span><span class="p">(:)</span>
+<a name="ln-1001"></a><span class="kt">integer</span><span class="p">,</span>                  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="nb">count</span><span class="p">,</span> <span class="n">indx</span><span class="p">,</span> <span class="n">threshold</span>
+<a name="ln-1002"></a><span class="kt">logical</span>                              <span class="kd">::</span> <span class="n">all_good</span>
+<a name="ln-1003"></a>
+<a name="ln-1004"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">test1_obs_def</span><span class="p">,</span>  <span class="n">testN_obs_def</span>
+<a name="ln-1005"></a><span class="kt">integer</span>             <span class="kd">::</span> <span class="n">test1_obs_type</span><span class="p">,</span> <span class="n">testN_obs_type</span>
+<a name="ln-1006"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">test1_obs_time</span><span class="p">,</span> <span class="n">testN_obs_time</span>
+<a name="ln-1007"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">test1_obs_loc</span><span class="p">,</span>  <span class="n">testN_obs_loc</span>
+<a name="ln-1008"></a><span class="kt">integer</span>             <span class="kd">::</span> <span class="n">test1_qc</span><span class="p">,</span>       <span class="n">testN_qc</span>
+<a name="ln-1009"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">temp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-1010"></a><span class="kt">integer</span>             <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">key</span>
+<a name="ln-1011"></a>
+<a name="ln-1012"></a><span class="c">! assume failure so we can return as soon as we know they don&#39;t match.</span>
+<a name="ln-1013"></a><span class="n">all_good</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-1014"></a>
+<a name="ln-1015"></a><span class="c">! get the info we need from sequence 1</span>
+<a name="ln-1016"></a><span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">test1_obs_def</span><span class="p">)</span>
+<a name="ln-1017"></a><span class="n">test1_obs_loc</span>  <span class="o">=</span> <span class="n">get_obs_def_location</span><span class="p">(</span><span class="n">test1_obs_def</span><span class="p">)</span>
+<a name="ln-1018"></a><span class="n">test1_obs_time</span> <span class="o">=</span> <span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">test1_obs_def</span><span class="p">)</span>
+<a name="ln-1019"></a><span class="n">test1_obs_type</span> <span class="o">=</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">(</span><span class="n">test1_obs_def</span><span class="p">)</span>
+<a name="ln-1020"></a><span class="k">call </span><span class="n">get_qc</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">temp</span><span class="p">,</span> <span class="n">indx</span><span class="p">)</span>
+<a name="ln-1021"></a><span class="n">test1_qc</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">temp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-1022"></a>
+<a name="ln-1023"></a>
+<a name="ln-1024"></a><span class="c">! compare the sets against the entries in sequence 1</span>
+<a name="ln-1025"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">count</span>
+<a name="ln-1026"></a><span class="nb">   </span><span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">testN_obs_def</span><span class="p">)</span>
+<a name="ln-1027"></a>   <span class="n">testN_obs_loc</span>  <span class="o">=</span> <span class="n">get_obs_def_location</span><span class="p">(</span><span class="n">testN_obs_def</span><span class="p">)</span>
+<a name="ln-1028"></a>   <span class="n">testN_obs_time</span> <span class="o">=</span> <span class="n">get_obs_def_time</span><span class="p">(</span><span class="n">testN_obs_def</span><span class="p">)</span>
+<a name="ln-1029"></a>   <span class="n">testN_obs_type</span> <span class="o">=</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">(</span><span class="n">testN_obs_def</span><span class="p">)</span>
+<a name="ln-1030"></a>   <span class="k">call </span><span class="n">get_qc</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">temp</span><span class="p">,</span> <span class="n">indx</span><span class="p">)</span>
+<a name="ln-1031"></a>   <span class="n">testN_qc</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">temp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-1032"></a>
+<a name="ln-1033"></a>   <span class="c">! we expect the types, locations, and times to match.  test them</span>
+<a name="ln-1034"></a>   <span class="c">! first so we can report those errors if they don&#39;t, since that is</span>
+<a name="ln-1035"></a>   <span class="c">! not expected.</span>
+<a name="ln-1036"></a>
+<a name="ln-1037"></a>   <span class="k">if</span> <span class="p">((</span><span class="n">test1_obs_type</span> <span class="o">/=</span> <span class="n">testN_obs_type</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span>  <span class="p">&amp;</span>
+<a name="ln-1038"></a>       <span class="p">(</span><span class="n">test1_obs_time</span> <span class="o">/=</span> <span class="n">testN_obs_time</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-1039"></a>       <span class="p">(</span><span class="n">test1_obs_loc</span>  <span class="o">/=</span> <span class="n">testN_obs_loc</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-1040"></a> 
+<a name="ln-1041"></a>      <span class="c">! count of rejected obs.</span>
+<a name="ln-1042"></a>      <span class="n">num_rejected_other</span> <span class="o">=</span> <span class="n">num_rejected_other</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1043"></a>
+<a name="ln-1044"></a>      <span class="n">key</span> <span class="o">=</span> <span class="n">get_obs_key</span><span class="p">(</span><span class="n">obs_in</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-1045"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;obs number &#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; does not match one or more of type/time/location&#39;</span>
+<a name="ln-1046"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-1047"></a>
+<a name="ln-1048"></a>      <span class="c">! more than one reason can be true for a single rejected ob</span>
+<a name="ln-1049"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">test1_obs_type</span> <span class="o">/=</span> <span class="n">testN_obs_type</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-1050"></a>         <span class="n">num_mismatch_type</span> <span class="o">=</span> <span class="n">num_mismatch_type</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1051"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">test1_obs_time</span> <span class="o">/=</span> <span class="n">testN_obs_time</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-1052"></a>         <span class="n">num_mismatch_time</span> <span class="o">=</span> <span class="n">num_mismatch_time</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1053"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">test1_obs_loc</span>  <span class="o">/=</span> <span class="n">testN_obs_loc</span> <span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-1054"></a>         <span class="n">num_mismatch_loc</span>  <span class="o">=</span> <span class="n">num_mismatch_loc</span>  <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1055"></a>
+<a name="ln-1056"></a>      <span class="k">return</span>
+<a name="ln-1057"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-1058"></a>   
+<a name="ln-1059"></a>   <span class="c">! check first to see if either of the DART QCs indicate</span>
+<a name="ln-1060"></a>   <span class="c">! that this obs was rejected for some reason.  this code</span>
+<a name="ln-1061"></a>   <span class="c">! is testing the first QC multiple times if N &gt; 2 but</span>
+<a name="ln-1062"></a>   <span class="c">! it makes the logic simpler so just repeat the test.</span>
+<a name="ln-1063"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">test1_qc</span> <span class="o">&gt;</span> <span class="n">threshold</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">testN_qc</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-1064"></a><span class="k">      </span><span class="n">num_rejected_badqc</span> <span class="o">=</span> <span class="n">num_rejected_badqc</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1065"></a>      <span class="k">return</span>
+<a name="ln-1066"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-1067"></a>
+<a name="ln-1068"></a>   <span class="c">! this is the test we expect to be the reason most obs fail:</span>
+<a name="ln-1069"></a>   <span class="c">! if they&#39;ve been assimilated in one experiment but not another.</span>
+<a name="ln-1070"></a>   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">match_qc</span><span class="p">(</span><span class="n">test1_qc</span><span class="p">,</span> <span class="n">testN_qc</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-1071"></a><span class="k">      </span><span class="n">num_rejected_diffqc</span> <span class="o">=</span> <span class="n">num_rejected_diffqc</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1072"></a>      <span class="k">return</span>
+<a name="ln-1073"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-1074"></a>
+<a name="ln-1075"></a><span class="n">enddo</span>
+<a name="ln-1076"></a>
+<a name="ln-1077"></a><span class="c">! all match - good return.</span>
+<a name="ln-1078"></a><span class="n">all_good</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-1079"></a>
+<a name="ln-1080"></a><span class="k">end function </span><span class="n">all_good</span>
+<a name="ln-1081"></a>
+<a name="ln-1082"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-1083"></a>
+<a name="ln-1084"></a><span class="k">function </span><span class="n">match_qc</span><span class="p">(</span><span class="n">qc1</span><span class="p">,</span> <span class="n">qc2</span><span class="p">)</span>
+<a name="ln-1085"></a>
+<a name="ln-1086"></a><span class="c">! normal behavior is to return true if the values are equal,</span>
+<a name="ln-1087"></a><span class="c">! and false if not.  but if the &quot;it&#39;s ok for evaluated and</span>
+<a name="ln-1088"></a><span class="c">! assimilated obs to match&quot;, then allow DART QC value 0 to </span>
+<a name="ln-1089"></a><span class="c">! match 1, and 2 to match 3, but no other combinations are valid.</span>
+<a name="ln-1090"></a>
+<a name="ln-1091"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">qc1</span>
+<a name="ln-1092"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">qc2</span>
+<a name="ln-1093"></a><span class="kt">logical</span>             <span class="kd">::</span> <span class="n">match_qc</span>
+<a name="ln-1094"></a>
+<a name="ln-1095"></a><span class="c">! if the combination of values is ok, return early</span>
+<a name="ln-1096"></a><span class="n">match_qc</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-1097"></a>
+<a name="ln-1098"></a><span class="k">if</span> <span class="p">(</span><span class="n">qc1</span> <span class="o">==</span> <span class="n">qc2</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-1099"></a>
+<a name="ln-1100"></a><span class="k">if</span> <span class="p">(</span><span class="n">eval_and_assim_can_match</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-1101"></a><span class="k">   if</span> <span class="p">(</span><span class="n">qc1</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-1102"></a><span class="k">   if</span> <span class="p">(</span><span class="n">qc1</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-1103"></a>
+<a name="ln-1104"></a><span class="k">   if</span> <span class="p">(</span><span class="n">qc1</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-1105"></a><span class="k">   if</span> <span class="p">(</span><span class="n">qc1</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-1106"></a><span class="n">endif</span>
+<a name="ln-1107"></a>
+<a name="ln-1108"></a><span class="c">! not one of the allowed matches.  these qcs really</span>
+<a name="ln-1109"></a><span class="c">! are not compatible and the match failed.</span>
+<a name="ln-1110"></a>
+<a name="ln-1111"></a><span class="n">match_qc</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-1112"></a>
+<a name="ln-1113"></a><span class="k">end function </span><span class="n">match_qc</span>
+<a name="ln-1114"></a>
+<a name="ln-1115"></a>
+<a name="ln-1116"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-1117"></a><span class="k">end program </span><span class="n">obs_common_subset</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

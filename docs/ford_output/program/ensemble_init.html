@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ensemble_init &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>ensemble_init
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.8% of total for programs.">342 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/ensemble_init.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/ensemble_init.f90.html'>ensemble_init.f90</a></li>
+    
+  
+     <li class="active">ensemble_init</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-source%7E51">source</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-revision%7E51">revision</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-revdate%7E51">revdate</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-max_state_variables%7E4">max_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_state_table_columns%7E4">num_state_table_columns</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_bounds_table_columns%7E4">num_bounds_table_columns</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-output_state_vector">output_state_vector</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-default_state_variables">default_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_state_variables">wrf_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_state_bounds">wrf_state_bounds</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_moist_vars">num_moist_vars</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_domains">num_domains</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-calendar_type%7E2">calendar_type</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-assimilation_period_seconds">assimilation_period_seconds</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-surf_obs%7E2">surf_obs</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-soil_data%7E2">soil_data</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-h_diab%7E2">h_diab</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-sfc_elev_max_diff">sfc_elev_max_diff</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-adv_mod_command">adv_mod_command</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-center_search_half_length">center_search_half_length</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-circulation_pres_level">circulation_pres_level</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-circulation_radius">circulation_radius</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-center_spline_grid_scale">center_spline_grid_scale</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-vert_localization_coord">vert_localization_coord</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-allow_obs_below_vol">allow_obs_below_vol</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-polar%7E5">polar</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-periodic_x%7E4">periodic_x</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-periodic_y%7E4">periodic_y</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-scm%7E4">scm</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-iunit%7E29">iunit</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-io%7E14">io</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-var_id%7E28">var_id</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-itime%7E10">itime</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf%7E4">wrf</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_mean">wrf_mean</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_tmp">wrf_tmp</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy">wrf_bdy</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy_mean">wrf_bdy_mean</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy_tmp">wrf_bdy_tmp</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-scale%7E3">scale</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-imem%7E2">imem</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-idom">idom</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-debug%7E20">debug</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-ne">Ne</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-i%7E69">i</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-id%7E24">id</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-dart_time%7E16">dart_time</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-year%7E28">year</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-month%7E31">month</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-day%7E39">day</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-hour%7E20">hour</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-minute%7E17">minute</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-second%7E19">second</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-timestring%7E4">timestring</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-check">check</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-wrf_add">wrf_add</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-wrfbdy_add">wrfbdy_add</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/wrf_data_module.html'>wrf_data_module</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-source%7E51">source</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-revision%7E51">revision</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-revdate%7E51">revdate</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-max_state_variables%7E4">max_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_state_table_columns%7E4">num_state_table_columns</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_bounds_table_columns%7E4">num_bounds_table_columns</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-output_state_vector">output_state_vector</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-default_state_variables">default_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_state_variables">wrf_state_variables</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_state_bounds">wrf_state_bounds</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_moist_vars">num_moist_vars</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-num_domains">num_domains</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-calendar_type%7E2">calendar_type</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-assimilation_period_seconds">assimilation_period_seconds</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-surf_obs%7E2">surf_obs</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-soil_data%7E2">soil_data</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-h_diab%7E2">h_diab</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-sfc_elev_max_diff">sfc_elev_max_diff</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-adv_mod_command">adv_mod_command</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-center_search_half_length">center_search_half_length</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-circulation_pres_level">circulation_pres_level</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-circulation_radius">circulation_radius</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-center_spline_grid_scale">center_spline_grid_scale</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-vert_localization_coord">vert_localization_coord</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-allow_obs_below_vol">allow_obs_below_vol</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-polar%7E5">polar</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-periodic_x%7E4">periodic_x</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-periodic_y%7E4">periodic_y</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-scm%7E4">scm</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-iunit%7E29">iunit</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-io%7E14">io</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-var_id%7E28">var_id</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-itime%7E10">itime</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf%7E4">wrf</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_mean">wrf_mean</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_tmp">wrf_tmp</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy">wrf_bdy</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy_mean">wrf_bdy_mean</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-wrf_bdy_tmp">wrf_bdy_tmp</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-scale%7E3">scale</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-imem%7E2">imem</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-idom">idom</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-debug%7E20">debug</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-ne">Ne</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-i%7E69">i</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-id%7E24">id</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-dart_time%7E16">dart_time</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-year%7E28">year</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-month%7E31">month</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-day%7E39">day</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-hour%7E20">hour</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-minute%7E17">minute</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-second%7E19">second</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#variable-timestring%7E4">timestring</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-check">check</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-wrf_add">wrf_add</a>
+      
+      <a class="list-group-item" href="../program/ensemble_init.html#proc-wrfbdy_add">wrfbdy_add</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E51"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E51"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E51"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_state_variables%7E4"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_state_variables</strong></td><td> =</td><td>100</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_state_table_columns%7E4"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_state_table_columns</strong></td><td> =</td><td>5</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_bounds_table_columns%7E4"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_bounds_table_columns</strong></td><td> =</td><td>4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-output_state_vector"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>output_state_vector</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-default_state_variables"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>default_state_variables</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_state_variables"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_state_variables</strong>(num_state_table_columns,max_state_variables)</td><td> =</td><td>'NULL'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_state_bounds"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_state_bounds</strong>(num_bounds_table_columns,max_state_variables)</td><td> =</td><td>'NULL'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_moist_vars"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_moist_vars</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_domains"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_domains</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-calendar_type%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>calendar_type</strong></td><td> =</td><td>GREGORIAN</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-assimilation_period_seconds"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>assimilation_period_seconds</strong></td><td> =</td><td>21600</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-surf_obs%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>surf_obs</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-soil_data%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>soil_data</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h_diab%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>h_diab</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sfc_elev_max_diff"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sfc_elev_max_diff</strong></td><td> =</td><td>-1.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-adv_mod_command"></span>character(len=72)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>adv_mod_command</strong></td><td> =</td><td>'./wrf.exe'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-center_search_half_length"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>center_search_half_length</strong></td><td> =</td><td>500000.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-circulation_pres_level"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>circulation_pres_level</strong></td><td> =</td><td>80000.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-circulation_radius"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>circulation_radius</strong></td><td> =</td><td>108000.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-center_spline_grid_scale"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>center_spline_grid_scale</strong></td><td> =</td><td>10</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vert_localization_coord"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>vert_localization_coord</strong></td><td> =</td><td>VERTISHEIGHT</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-allow_obs_below_vol"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>allow_obs_below_vol</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-polar%7E5"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>polar</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-periodic_x%7E4"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>periodic_x</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-periodic_y%7E4"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>periodic_y</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-scm%7E4"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>scm</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E29"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_id%7E28"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>var_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itime%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>itime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf%7E4"></span>type(<a href='../type/wrf_data.html'>wrf_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_mean"></span>type(<a href='../type/wrf_data.html'>wrf_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_tmp"></span>type(<a href='../type/wrf_data.html'>wrf_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_tmp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_bdy"></span>type(<a href='../type/wrf_bdy_data.html'>wrf_bdy_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_bdy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_bdy_mean"></span>type(<a href='../type/wrf_bdy_data.html'>wrf_bdy_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_bdy_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_bdy_tmp"></span>type(<a href='../type/wrf_bdy_data.html'>wrf_bdy_data</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_bdy_tmp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-scale%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>scale</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imem%7E2"></span>character(len=6)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>imem</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-idom"></span>character(len=1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>idom</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E20"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ne"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Ne</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E69"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-id%7E24"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_time%7E16"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_time</strong>(2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-year%7E28"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>year</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-month%7E31"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>month</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-day%7E39"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>day</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hour%7E20"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>hour</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-minute%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>minute</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-second%7E19"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>second</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-timestring%7E4"></span>character(len=19)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>timestring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-check"></span><h3>
+subroutine <a href='../proc/check.html'>check</a>(istatus)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>istatus</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-wrf_add"></span><h3>
+subroutine <a href='../proc/wrf_add.html'>wrf_add</a>(wrf_a, a, wrf_b, b)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/wrf_data.html'>wrf_data</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/wrf_data.html'>wrf_data</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_b</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>b</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-wrfbdy_add"></span><h3>
+subroutine <a href='../proc/wrfbdy_add.html'>wrfbdy_add</a>(wrfbdy_a, a, wrfbdy_b, b)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/wrf_bdy_data.html'>wrf_bdy_data</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>wrfbdy_a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/wrf_bdy_data.html'>wrf_bdy_data</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>wrfbdy_b</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>b</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

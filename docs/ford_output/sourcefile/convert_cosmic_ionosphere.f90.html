@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_cosmic_ionosphere.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_cosmic_ionosphere.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.2% of total for source files.">388 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_cosmic_ionosphere.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">convert_cosmic_ionosphere.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_cosmic_ionosphere.html">convert_cosmic_ionosphere</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_cosmic_ionosphere.f90.html#src">convert_cosmic_ionosphere.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_cosmic_ionosphere.html">convert_cosmic_ionosphere</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_cosmic_ionosphere.f90.html#src">convert_cosmic_ionosphere.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! DART $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="c">!&gt; An observation sequence converter for ionosphere profiles </span>
+<a name="ln-8"></a><span class="c">!&gt; from the CDAAC web site http://cosmic-io.cosmic.ucar.edu/cdaac</span>
+<a name="ln-9"></a><span class="c">!&gt; The usual mission is &#39;cosmic2013&#39;, the file type is &#39;ionPrf&#39;.</span>
+<a name="ln-10"></a><span class="c">!&gt;</span>
+<a name="ln-11"></a><span class="c">!&gt; The strategy here is to read the raw vertical locations and interpolate</span>
+<a name="ln-12"></a><span class="c">!&gt; to a fixed set of vertical locations. If there are any &#39;bad&#39; observations</span>
+<a name="ln-13"></a><span class="c">!&gt; below the lowest desired level - they are ignored. If there are any &#39;bad&#39;</span>
+<a name="ln-14"></a><span class="c">!&gt; observations ABOVE the lowest desired level - the entire profile is IGNORED.</span>
+<a name="ln-15"></a><span class="c">!&gt;</span>
+<a name="ln-16"></a><span class="c">!&gt; modified from GPS atmospheric radio/occultation version</span>
+<a name="ln-17"></a><span class="c">!&gt; which was created June 2008 by Ryan Torn, NCAR/MMM</span>
+<a name="ln-18"></a><span class="c">!&gt; nsc 11 mar 2016  </span>
+<a name="ln-19"></a><span class="c">!&gt;</span>
+<a name="ln-20"></a><span class="c">!&gt; Incorporated multiple methods for setting the observation error variance</span>
+<a name="ln-21"></a><span class="c">!&gt;   Feb. 2010  I-TE LEE, NCAR/HAO &amp; NCU</span>
+<a name="ln-22"></a><span class="c">!&gt;             Modify to read the ionPrf data file of COSMIC</span>
+<a name="ln-23"></a><span class="c">!&gt;             and write the data to the DART format.  </span>
+<a name="ln-24"></a><span class="c">!&gt;   Oct. 2010  I-TE LEE, NCAR/HAO &amp; NCU</span>
+<a name="ln-25"></a><span class="c">!&gt;             Remove the code for lower atmospheric observations</span>
+<a name="ln-26"></a><span class="c">!&gt;   Dec. 2010  I-TE LEE, NCAR/HAO &amp; NCU</span>
+<a name="ln-27"></a><span class="c">!&gt;             Add new error valur for log scale testing</span>
+<a name="ln-28"></a><span class="c">!&gt;   Jan. 2011  I-TE LEE, NCAR/HAO &amp; NCU</span>
+<a name="ln-29"></a><span class="c">!&gt;             Modify for real GOX observations</span>
+<a name="ln-30"></a><span class="c">!&gt;   Jan. 2011  I-TE LEE, NACR/HAO &amp; NCU</span>
+<a name="ln-31"></a><span class="c">!&gt;             Add subroutine to calculate the observation variance </span>
+<a name="ln-32"></a><span class="c">!&gt; the ancestor of this routine modified the observation time with the desired</span>
+<a name="ln-33"></a><span class="c">!&gt; analysis time - this is not done - windowing is done in a post-processing step.</span>
+<a name="ln-34"></a><span class="c">!&gt;</span>
+<a name="ln-35"></a><span class="c">!&gt; The normal usage pattern is to create a list of input files for all satellite</span>
+<a name="ln-36"></a><span class="c">!&gt; pairs for a given day and create a SINGLE observation sequence file. That file</span>
+<a name="ln-37"></a><span class="c">!&gt; can then be post-processed any way you like - but it is a lot more manageable</span>
+<a name="ln-38"></a><span class="c">!&gt; than reprocessing a thousand (literally) netCDF files.</span>
+<a name="ln-39"></a>
+<a name="ln-40"></a><span class="k">program </span><span class="n">convert_cosmic_ionosphere</span>
+<a name="ln-41"></a>
+<a name="ln-42"></a><span class="k">use          </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">MISSING_R8</span>
+<a name="ln-43"></a><span class="k">use   </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_calendar_type</span><span class="p">,</span> <span class="n">GREGORIAN</span><span class="p">,</span> <span class="n">set_time</span><span class="p">,&amp;</span>
+<a name="ln-44"></a>                               <span class="n">increment_time</span><span class="p">,</span> <span class="n">get_time</span><span class="p">,</span> <span class="n">set_date</span><span class="p">,</span> <span class="n">operator</span><span class="p">(</span><span class="o">-</span><span class="p">),</span>  <span class="p">&amp;</span>
+<a name="ln-45"></a>                               <span class="n">print_date</span>
+<a name="ln-46"></a><span class="k">use      </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">initialize_utilities</span><span class="p">,</span> <span class="n">find_namelist_in_file</span><span class="p">,</span>      <span class="p">&amp;</span>
+<a name="ln-47"></a>                               <span class="n">check_namelist_read</span><span class="p">,</span> <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">do_nml_file</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-48"></a>                               <span class="n">get_next_filename</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-49"></a>                               <span class="n">find_textfile_dims</span><span class="p">,</span> <span class="n">do_nml_term</span><span class="p">,</span>                  <span class="p">&amp;</span>
+<a name="ln-50"></a>                               <span class="n">to_upper</span><span class="p">,</span> <span class="n">open_file</span><span class="p">,</span> <span class="n">finalize_utilities</span>
+<a name="ln-51"></a><span class="k">use       </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">VERTISHEIGHT</span><span class="p">,</span> <span class="n">set_location</span>
+<a name="ln-52"></a><span class="k">use   </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">read_obs_seq</span><span class="p">,</span>        <span class="p">&amp;</span>
+<a name="ln-53"></a>                               <span class="n">static_init_obs_sequence</span><span class="p">,</span> <span class="n">init_obs</span><span class="p">,</span> <span class="n">destroy_obs</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-54"></a>                               <span class="n">write_obs_seq</span><span class="p">,</span> <span class="n">init_obs_sequence</span><span class="p">,</span> <span class="n">get_num_obs</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-55"></a>                               <span class="n">insert_obs_in_seq</span><span class="p">,</span> <span class="n">destroy_obs_sequence</span><span class="p">,</span>          <span class="p">&amp;</span>
+<a name="ln-56"></a>                               <span class="n">set_copy_meta_data</span><span class="p">,</span> <span class="n">set_qc_meta_data</span><span class="p">,</span> <span class="n">set_qc</span><span class="p">,</span>     <span class="p">&amp;</span> 
+<a name="ln-57"></a>                               <span class="n">set_obs_values</span><span class="p">,</span> <span class="n">set_obs_def</span><span class="p">,</span> <span class="n">insert_obs_in_seq</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-58"></a>                               <span class="n">get_num_copies</span><span class="p">,</span> <span class="n">get_num_qc</span>
+<a name="ln-59"></a><span class="k">use        </span><span class="n">obs_def_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_def_type</span><span class="p">,</span> <span class="n">set_obs_def_time</span><span class="p">,</span> <span class="n">set_obs_def_type_of_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-60"></a>                               <span class="n">set_obs_def_error_variance</span><span class="p">,</span> <span class="n">set_obs_def_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-61"></a>                               <span class="n">set_obs_def_key</span>
+<a name="ln-62"></a><span class="k">use  </span><span class="n">obs_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">add_obs_to_seq</span>
+<a name="ln-63"></a><span class="k">use       </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">COSMIC_ELECTRON_DENSITY</span>
+<a name="ln-64"></a>
+<a name="ln-65"></a><span class="k">use </span><span class="n">netcdf_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">nc_check</span><span class="p">,</span> <span class="n">nc_get_variable</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="k">use </span><span class="n">netcdf</span>
+<a name="ln-68"></a>
+<a name="ln-69"></a><span class="k">implicit none</span>
+<a name="ln-70"></a>
+<a name="ln-71"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-72"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-73"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-74"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-75"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-76"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">routine</span>  <span class="o">=</span> <span class="s1">&#39;convert_cosmic_ionosphere&#39;</span>
+<a name="ln-77"></a>
+<a name="ln-78"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">METHOD_CONSTANT</span>      <span class="o">=</span> <span class="mi">1</span>   <span class="c">!! = &#39;constant&#39;</span>
+<a name="ln-79"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">METHOD_SCALED</span>        <span class="o">=</span> <span class="mi">2</span>   <span class="c">!! = &#39;scaled&#39;</span>
+<a name="ln-80"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">METHOD_LOOKUP</span>        <span class="o">=</span> <span class="mi">3</span>   <span class="c">!! = &#39;lookup&#39;</span>
+<a name="ln-81"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">METHOD_SCALED_LOOKUP</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c">!! = &#39;scaled_lookup&#39;</span>
+<a name="ln-82"></a><span class="kt">integer</span>            <span class="kd">::</span> <span class="n">method</span>
+<a name="ln-83"></a>
+<a name="ln-84"></a><span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span>
+<a name="ln-85"></a><span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">next_infile</span>
+<a name="ln-86"></a>
+<a name="ln-87"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">nlevels</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">nfiles</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-88"></a>           <span class="n">iyear</span><span class="p">,</span> <span class="n">imonth</span><span class="p">,</span> <span class="n">iday</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="n">isec</span><span class="p">,</span> <span class="n">zloc</span><span class="p">,</span> <span class="n">obs_num</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-89"></a>           <span class="n">io</span><span class="p">,</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">filenum</span><span class="p">,</span> <span class="n">dummy</span><span class="p">,</span> <span class="n">numrejected</span>
+<a name="ln-90"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">file_exist</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">,</span> <span class="n">from_list</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-91"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">hght_miss</span><span class="p">,</span> <span class="n">elecd_miss</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span>   <span class="p">&amp;</span> 
+<a name="ln-92"></a>            <span class="n">qc</span><span class="p">,</span> <span class="n">lato</span><span class="p">,</span> <span class="n">lono</span><span class="p">,</span> <span class="n">hghto</span><span class="p">,</span> <span class="n">wght</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-93"></a>            <span class="n">obsval</span><span class="p">,</span> <span class="n">obs_val</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">qc_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-94"></a>
+<a name="ln-95"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">lat</span><span class="p">(:),</span> <span class="n">lon</span><span class="p">(:),</span> <span class="n">hght</span><span class="p">(:),</span> <span class="n">elecd</span><span class="p">(:)</span>
+<a name="ln-96"></a>
+<a name="ln-97"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">obs_def</span>
+<a name="ln-98"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_seq</span>
+<a name="ln-99"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span><span class="p">,</span> <span class="n">prev_obs</span>
+<a name="ln-100"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_time</span>
+<a name="ln-101"></a>
+<a name="ln-102"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_copies</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">! number of copies in sequence</span>
+<a name="ln-103"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_qc</span>     <span class="o">=</span> <span class="mi">1</span>  <span class="c">! number of QC entries</span>
+<a name="ln-104"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">existing_num_copies</span>  <span class="c">! number of copies in existing sequence</span>
+<a name="ln-105"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">existing_num_qc</span>      <span class="c">! number of QC entries in existing sequence</span>
+<a name="ln-106"></a>
+<a name="ln-107"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">hght_units</span>  <span class="c">! should be long enough</span>
+<a name="ln-108"></a>
+<a name="ln-109"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-110"></a><span class="c">!  Declare namelist parameters</span>
+<a name="ln-111"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-112"></a>
+<a name="ln-113"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NMAXLEVELS</span> <span class="o">=</span> <span class="mi">200</span>   <span class="c">!  max number of desired observation levels</span>
+<a name="ln-114"></a>
+<a name="ln-115"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">input_file</span>               <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-116"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">input_file_list</span>          <span class="o">=</span> <span class="s1">&#39;input_file_list.txt&#39;</span>
+<a name="ln-117"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">output_file</span>              <span class="o">=</span> <span class="s1">&#39;obs_seq.out&#39;</span>
+<a name="ln-118"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">observation_error_file</span>   <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+<a name="ln-119"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">observation_error_method</span> <span class="o">=</span> <span class="s1">&#39;scaled_lookup&#39;</span>
+<a name="ln-120"></a><span class="kt">logical</span>            <span class="kd">::</span> <span class="n">locations_only</span>           <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-121"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_error_factor</span>       <span class="o">=</span>  <span class="mf">1.0_r8</span>
+<a name="ln-122"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_levels</span><span class="p">(</span><span class="n">NMAXLEVELS</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0_r8</span>   <span class="c">! in kilometers</span>
+<a name="ln-123"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">verbose</span>                <span class="o">=</span> <span class="mi">0</span>   <span class="c">! higher is more output</span>
+<a name="ln-124"></a>
+<a name="ln-125"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">convert_cosmic_ionosphere_nml</span><span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-126"></a>             <span class="n">input_file</span><span class="p">,</span>                 <span class="p">&amp;</span>
+<a name="ln-127"></a>             <span class="n">input_file_list</span><span class="p">,</span>            <span class="p">&amp;</span>
+<a name="ln-128"></a>             <span class="n">output_file</span><span class="p">,</span>                <span class="p">&amp;</span>
+<a name="ln-129"></a>             <span class="n">observation_error_file</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-130"></a>             <span class="n">observation_error_method</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-131"></a>             <span class="n">obs_error_factor</span><span class="p">,</span>           <span class="p">&amp;</span>
+<a name="ln-132"></a>             <span class="n">locations_only</span><span class="p">,</span>             <span class="p">&amp;</span>
+<a name="ln-133"></a>             <span class="n">obs_levels</span><span class="p">,</span>                 <span class="p">&amp;</span>
+<a name="ln-134"></a>             <span class="n">verbose</span>
+<a name="ln-135"></a>
+<a name="ln-136"></a><span class="c">! initialize some values</span>
+<a name="ln-137"></a><span class="n">obs_num</span>   <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-138"></a><span class="n">qc</span>        <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-139"></a><span class="n">first_obs</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-140"></a><span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">GREGORIAN</span><span class="p">)</span>
+<a name="ln-141"></a>
+<a name="ln-142"></a><span class="c">!  read the necessary parameters from input.nml</span>
+<a name="ln-143"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">()</span>
+<a name="ln-144"></a>
+<a name="ln-145"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;convert_cosmic_ionosphere_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-146"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">convert_cosmic_ionosphere_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-147"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;convert_cosmic_ionosphere_nml&quot;</span><span class="p">)</span>
+<a name="ln-148"></a>
+<a name="ln-149"></a><span class="c">! Record the namelist values used for the run </span>
+<a name="ln-150"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">convert_cosmic_ionosphere_nml</span><span class="p">)</span>
+<a name="ln-151"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">convert_cosmic_ionosphere_nml</span><span class="p">)</span>
+<a name="ln-152"></a>
+<a name="ln-153"></a><span class="c">! This is basically the OSSE case - we only want locations</span>
+<a name="ln-154"></a><span class="k">if</span> <span class="p">(</span><span class="n">locations_only</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-155"></a><span class="k">   </span><span class="n">num_copies</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-156"></a>   <span class="n">num_qc</span>     <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-157"></a><span class="n">endif</span>
+<a name="ln-158"></a>
+<a name="ln-159"></a><span class="c">! it is faster to simply check an integer rather than a character string</span>
+<a name="ln-160"></a><span class="c">! each observation will need to check the method</span>
+<a name="ln-161"></a><span class="n">method</span> <span class="o">=</span> <span class="n">check_error_method</span><span class="p">()</span>
+<a name="ln-162"></a>
+<a name="ln-163"></a><span class="c">! if more than MAXLEVELS levels are specified in the namelist,</span>
+<a name="ln-164"></a><span class="c">! a namelist read error is generated.</span>
+<a name="ln-165"></a><span class="n">nlevels</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-166"></a><span class="n">LEVELLOOP</span><span class="p">:</span> <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">NMAXLEVELS</span>
+<a name="ln-167"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">obs_levels</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.0_r8</span> <span class="p">)</span>  <span class="k">exit </span><span class="n">LEVELLOOP</span>
+<a name="ln-168"></a>  <span class="n">nlevels</span> <span class="o">=</span> <span class="n">k</span>
+<a name="ln-169"></a><span class="n">enddo</span> <span class="n">LEVELLOOP</span>
+<a name="ln-170"></a><span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nlevels</span>
+<a name="ln-171"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">obs_levels</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">obs_levels</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-172"></a><span class="k">    call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="s1">&#39;Observation levels must increase&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-173"></a>                       <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-174"></a>  <span class="n">endif</span>
+<a name="ln-175"></a><span class="n">enddo</span>
+<a name="ln-176"></a>
+<a name="ln-177"></a><span class="c">! cannot have both a single filename and a list;</span>
+<a name="ln-178"></a><span class="k">if</span> <span class="p">(</span><span class="n">input_file</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">input_file_list</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-179"></a><span class="k">  call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-180"></a>                     <span class="s1">&#39;One of input_file or input_file_list must be NULL&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-181"></a>                     <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-182"></a><span class="n">endif</span>
+<a name="ln-183"></a><span class="k">if</span> <span class="p">(</span><span class="n">input_file_list</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="n">from_list</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-184"></a>
+<a name="ln-185"></a><span class="c">! need to know a reasonable max number of obs that could be added here.</span>
+<a name="ln-186"></a><span class="k">if</span> <span class="p">(</span><span class="n">from_list</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-187"></a><span class="k">   call </span><span class="n">find_textfile_dims</span><span class="p">(</span><span class="n">input_file_list</span><span class="p">,</span> <span class="n">nfiles</span><span class="p">,</span> <span class="n">dummy</span><span class="p">)</span>
+<a name="ln-188"></a>   <span class="n">num_new_obs</span> <span class="o">=</span> <span class="n">nlevels</span> <span class="o">*</span> <span class="n">nfiles</span>
+<a name="ln-189"></a><span class="k">else</span>
+<a name="ln-190"></a><span class="k">   </span><span class="n">num_new_obs</span> <span class="o">=</span> <span class="n">nlevels</span>
+<a name="ln-191"></a><span class="n">endif</span>
+<a name="ln-192"></a>
+<a name="ln-193"></a><span class="c">! either read existing obs_seq or create a new one</span>
+<a name="ln-194"></a><span class="k">call </span><span class="n">static_init_obs_sequence</span><span class="p">()</span>
+<a name="ln-195"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span>      <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-196"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">prev_obs</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-197"></a>
+<a name="ln-198"></a><span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="n">output_file</span><span class="p">,</span> <span class="n">exist</span><span class="o">=</span><span class="n">file_exist</span><span class="p">)</span>
+<a name="ln-199"></a><span class="k">if</span> <span class="p">(</span> <span class="n">file_exist</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-200"></a>
+<a name="ln-201"></a><span class="k">   write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;found existing obs_seq file, appending to &quot;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+<a name="ln-202"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;adding up to a maximum of &quot;</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="s2">&quot; new observations&quot;</span>
+<a name="ln-203"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">string1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-204"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">string2</span><span class="p">)</span>
+<a name="ln-205"></a>   <span class="k">call </span><span class="n">read_obs_seq</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-206"></a>
+<a name="ln-207"></a>   <span class="c">! check to see if existing file is compatible with locations_only setting</span>
+<a name="ln-208"></a>   <span class="n">existing_num_copies</span> <span class="o">=</span> <span class="n">get_num_copies</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-209"></a>   <span class="n">existing_num_qc</span>     <span class="o">=</span> <span class="n">get_num_qc</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">existing_num_copies</span> <span class="o">/=</span> <span class="n">num_copies</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span>  <span class="n">existing_num_qc</span> <span class="o">/=</span> <span class="n">num_qc</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-212"></a><span class="k">      write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;incompatible existing observation sequence file&#39;</span>
+<a name="ln-213"></a>      <span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span><span class="s1">&#39;(A,i4,A,i4)&#39;</span><span class="p">)</span><span class="s1">&#39;expected &#39;</span><span class="p">,</span><span class="n">num_copies</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-214"></a>                           <span class="s1">&#39; obs copies got &#39;</span><span class="p">,</span><span class="n">existing_num_copies</span>
+<a name="ln-215"></a>      <span class="k">write</span><span class="p">(</span><span class="n">string3</span><span class="p">,</span><span class="s1">&#39;(A,i4,A,i4)&#39;</span><span class="p">)</span><span class="s1">&#39;expected &#39;</span><span class="p">,</span><span class="n">num_qc</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-216"></a>                           <span class="s1">&#39; QC  copies got &#39;</span><span class="p">,</span><span class="n">existing_num_qc</span>
+<a name="ln-217"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">string1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-218"></a>                  <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">string2</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">string3</span><span class="p">)</span>
+<a name="ln-219"></a>   <span class="n">endif</span>
+<a name="ln-220"></a>
+<a name="ln-221"></a><span class="k">else</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="k">   write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;no existing obs_seq file, creating &quot;</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+<a name="ln-224"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;with up to a maximum of &quot;</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="s2">&quot; observations&quot;</span>
+<a name="ln-225"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">string1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-226"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">string2</span><span class="p">)</span>
+<a name="ln-227"></a>
+<a name="ln-228"></a>   <span class="k">call </span><span class="n">init_obs_sequence</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">)</span>
+<a name="ln-229"></a>   <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">locations_only</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-230"></a><span class="k">      call </span><span class="n">set_copy_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;observation&#39;</span><span class="p">)</span>
+<a name="ln-231"></a>      <span class="k">call </span><span class="n">set_qc_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;COSMIC QC&#39;</span><span class="p">)</span>
+<a name="ln-232"></a>   <span class="n">endif</span>
+<a name="ln-233"></a>
+<a name="ln-234"></a><span class="n">endif</span>
+<a name="ln-235"></a>
+<a name="ln-236"></a><span class="c">! main loop that does either a single file or a list of files.</span>
+<a name="ln-237"></a><span class="c">! the data is currently distributed as a single profile per file</span>
+<a name="ln-238"></a><span class="c">! with hundreds (even thousands) of profiles per day.</span>
+<a name="ln-239"></a>
+<a name="ln-240"></a><span class="n">filenum</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-241"></a><span class="n">numrejected</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-242"></a>
+<a name="ln-243"></a><span class="n">fileloop</span><span class="p">:</span> <span class="k">do</span>      <span class="c">! until out of files</span>
+<a name="ln-244"></a>
+<a name="ln-245"></a>   <span class="c">! get the single name, or the next name from a list</span>
+<a name="ln-246"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">from_list</span><span class="p">)</span> <span class="k">then </span>
+<a name="ln-247"></a><span class="k">      </span><span class="n">next_infile</span> <span class="o">=</span> <span class="n">get_next_filename</span><span class="p">(</span><span class="n">input_file_list</span><span class="p">,</span> <span class="n">filenum</span><span class="p">)</span>
+<a name="ln-248"></a>   <span class="k">else</span>
+<a name="ln-249"></a><span class="k">      </span><span class="n">next_infile</span> <span class="o">=</span> <span class="n">input_file</span>
+<a name="ln-250"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">filenum</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">next_infile</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-251"></a>   <span class="n">endif</span>
+<a name="ln-252"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">next_infile</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">exit </span><span class="n">fileloop</span>
+<a name="ln-253"></a>
+<a name="ln-254"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39; &#39;</span>  <span class="c">! improves readability </span>
+<a name="ln-255"></a>  
+<a name="ln-256"></a>   <span class="c">!  open the next occultation profile</span>
+<a name="ln-257"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_open</span><span class="p">(</span><span class="n">next_infile</span><span class="p">,</span> <span class="n">nf90_nowrite</span><span class="p">,</span> <span class="n">ncid</span><span class="p">),</span> <span class="s1">&#39;open &#39;</span><span class="p">,</span><span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-258"></a>
+<a name="ln-259"></a>   <span class="c">! process the profile</span>
+<a name="ln-260"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">,</span>  <span class="n">iyear</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;get_att year&#39;</span><span class="p">,</span>   <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-261"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="n">imonth</span><span class="p">),</span><span class="s1">&#39;get_att month&#39;</span><span class="p">,</span>  <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-262"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;day&#39;</span><span class="p">,</span>   <span class="n">iday</span><span class="p">)</span>  <span class="p">,</span><span class="s1">&#39;get_att day&#39;</span><span class="p">,</span>    <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-263"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;hour&#39;</span><span class="p">,</span>  <span class="n">ihour</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;get_att hour&#39;</span><span class="p">,</span>   <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-264"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;minute&#39;</span><span class="p">,</span><span class="n">imin</span><span class="p">)</span>  <span class="p">,</span><span class="s1">&#39;get_att minute&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-265"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">nf90_global</span><span class="p">,</span><span class="s1">&#39;second&#39;</span><span class="p">,</span><span class="n">isec</span><span class="p">)</span>  <span class="p">,</span><span class="s1">&#39;get_att second&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-266"></a>   
+<a name="ln-267"></a>   <span class="n">time_obs</span> <span class="o">=</span> <span class="n">set_date</span><span class="p">(</span><span class="n">iyear</span><span class="p">,</span> <span class="n">imonth</span><span class="p">,</span> <span class="n">iday</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="n">isec</span><span class="p">)</span>
+<a name="ln-268"></a>   <span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="n">time_obs</span><span class="p">,</span>  <span class="n">osec</span><span class="p">,</span> <span class="n">oday</span><span class="p">)</span>
+<a name="ln-269"></a>   
+<a name="ln-270"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;MSL_alt&quot;</span><span class="p">,</span> <span class="n">varid</span><span class="p">),</span>        <span class="s1">&#39;inq dimid MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-271"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">nobs</span><span class="p">),</span> <span class="s1">&#39;inq dim   MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-272"></a>   
+<a name="ln-273"></a>   <span class="k">allocate</span><span class="p">(</span>  <span class="n">lat</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-274"></a>   <span class="k">allocate</span><span class="p">(</span>  <span class="n">lon</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-275"></a>   <span class="k">allocate</span><span class="p">(</span> <span class="n">hght</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-276"></a>   <span class="k">allocate</span><span class="p">(</span><span class="n">elecd</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-277"></a>   
+<a name="ln-278"></a>   <span class="c">! read the latitude array</span>
+<a name="ln-279"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;GEO_lat&quot;</span><span class="p">,</span> <span class="n">varid</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;inq varid GEO_lat&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-280"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>         <span class="p">,</span><span class="s1">&#39;get var   GEO_lat&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-281"></a>   
+<a name="ln-282"></a>   <span class="c">! read the latitude array</span>
+<a name="ln-283"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;GEO_lon&quot;</span><span class="p">,</span> <span class="n">varid</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;inq varid GEO_lon&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-284"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>         <span class="p">,</span><span class="s1">&#39;get var   GEO_lon&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-285"></a>   
+<a name="ln-286"></a>   <span class="c">! read the altitude array  - could check that units are &#39;km&#39;</span>
+<a name="ln-287"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;MSL_alt&quot;</span><span class="p">,</span> <span class="n">varid</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;inq varid MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-288"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">hght</span><span class="p">)</span>        <span class="p">,</span><span class="s1">&#39;get_var   MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-289"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="s1">&#39;_FillValue&#39;</span><span class="p">,</span> <span class="n">hght_miss</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;get_att _FillValue MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-290"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="s1">&#39;units&#39;</span><span class="p">,</span> <span class="n">hght_units</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;get_att units MSL_alt&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-291"></a>   
+<a name="ln-292"></a>   <span class="c">! read the electron density</span>
+<a name="ln-293"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;ELEC_dens&quot;</span><span class="p">,</span> <span class="n">varid</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;inq varid ELEC_dens&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-294"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">elecd</span><span class="p">)</span>         <span class="p">,</span><span class="s1">&#39;get var   ELEC_dens&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-295"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_get_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="s1">&#39;_FillValue&#39;</span><span class="p">,</span> <span class="n">elecd_miss</span><span class="p">)</span> <span class="p">,</span><span class="s1">&#39;get_att _FillValue ELEC_dens&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-296"></a>   
+<a name="ln-297"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span> <span class="n">nf90_close</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;close file&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-298"></a>
+<a name="ln-299"></a>   <span class="c">! may want to figure out where the problem observations come from</span>
+<a name="ln-300"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-301"></a><span class="k">      call </span><span class="n">summarize</span><span class="p">(</span> <span class="n">hght</span><span class="p">,</span> <span class="s1">&#39;MSL_alt&#39;</span><span class="p">,</span>   <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-302"></a>      <span class="k">call </span><span class="n">summarize</span><span class="p">(</span><span class="n">elecd</span><span class="p">,</span> <span class="s1">&#39;ELEC_dens&#39;</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span>
+<a name="ln-303"></a>   <span class="n">endif</span>
+<a name="ln-304"></a>
+<a name="ln-305"></a>   <span class="c">! There are several ways that bad values are present.</span>
+<a name="ln-306"></a>   <span class="c">! If the electron density is flagged bad, </span>
+<a name="ln-307"></a>   <span class="c">! then interp_height_wght() will fail and we can cycle.</span>
+<a name="ln-308"></a>
+<a name="ln-309"></a>   <span class="k">where</span> <span class="p">(</span>  <span class="n">hght</span> <span class="o">==</span>  <span class="n">hght_miss</span>   <span class="p">)</span> <span class="n">elecd</span> <span class="o">=</span> <span class="n">MISSING_R8</span>
+<a name="ln-310"></a>   <span class="k">where</span> <span class="p">(</span> <span class="n">elecd</span> <span class="o">==</span> <span class="n">elecd_miss</span>   <span class="p">)</span> <span class="n">elecd</span> <span class="o">=</span> <span class="n">MISSING_R8</span>
+<a name="ln-311"></a>   <span class="k">where</span> <span class="p">(</span> <span class="n">elecd</span> <span class="o">&lt;</span>  <span class="mf">0.0_r8</span>       <span class="p">)</span> <span class="n">elecd</span> <span class="o">=</span> <span class="n">MISSING_R8</span>
+<a name="ln-312"></a>   <span class="k">where</span> <span class="p">(</span> <span class="n">elecd</span> <span class="o">&gt;</span>  <span class="mi">100000</span><span class="mf">0.0_r8</span> <span class="p">)</span> <span class="n">elecd</span> <span class="o">=</span> <span class="n">MISSING_R8</span>
+<a name="ln-313"></a>
+<a name="ln-314"></a>   <span class="c">! only need the densities above the minimum desired level</span>
+<a name="ln-315"></a>   <span class="c">! discard entire profile if there are negative densities above lowest level</span>
+<a name="ln-316"></a>    
+<a name="ln-317"></a>   <span class="k">if</span> <span class="p">(</span> <span class="n">bad_profile_check</span><span class="p">(</span><span class="n">obs_levels</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">hght</span><span class="p">,</span> <span class="n">elecd</span><span class="p">,</span> <span class="n">next_infile</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-318"></a><span class="k">      deallocate</span><span class="p">(</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">hght</span><span class="p">,</span> <span class="n">elecd</span> <span class="p">)</span>
+<a name="ln-319"></a>      <span class="n">filenum</span>     <span class="o">=</span> <span class="n">filenum</span>     <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-320"></a>      <span class="n">numrejected</span> <span class="o">=</span> <span class="n">numrejected</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-321"></a>      <span class="k">cycle </span><span class="n">fileloop</span>
+<a name="ln-322"></a>   <span class="n">endif</span>
+<a name="ln-323"></a>   
+<a name="ln-324"></a>   <span class="n">LEVELS</span><span class="p">:</span> <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nlevels</span>
+<a name="ln-325"></a>   
+<a name="ln-326"></a>     <span class="k">call </span><span class="n">interp_height_wght</span><span class="p">(</span><span class="n">hght</span><span class="p">,</span> <span class="n">obs_levels</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">zloc</span><span class="p">,</span> <span class="n">wght</span><span class="p">)</span>
+<a name="ln-327"></a>
+<a name="ln-328"></a>     <span class="k">if</span> <span class="p">(</span> <span class="n">zloc</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="k">cycle </span><span class="n">LEVELS</span>
+<a name="ln-329"></a>   
+<a name="ln-330"></a>     <span class="c">! lon(zloc) and lon(zloc+1) range from -180 to +180</span>
+<a name="ln-331"></a>     <span class="c">! call a subroutine to handle the wrap point, and convert to [0,360].</span>
+<a name="ln-332"></a>     <span class="n">lono</span>   <span class="o">=</span> <span class="n">compute_lon_wrap</span><span class="p">(</span><span class="n">lon</span><span class="p">(</span><span class="n">zloc</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">zloc</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">wght</span><span class="p">)</span>
+<a name="ln-333"></a>     <span class="n">lato</span>   <span class="o">=</span> <span class="n">wght</span> <span class="o">*</span>   <span class="n">lat</span><span class="p">(</span><span class="n">zloc</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">wght</span><span class="p">)</span> <span class="o">*</span>   <span class="n">lat</span><span class="p">(</span><span class="n">zloc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-334"></a>     <span class="n">hghto</span>  <span class="o">=</span> <span class="n">wght</span> <span class="o">*</span>  <span class="n">hght</span><span class="p">(</span><span class="n">zloc</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">wght</span><span class="p">)</span> <span class="o">*</span>  <span class="n">hght</span><span class="p">(</span><span class="n">zloc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-335"></a>     <span class="n">obsval</span> <span class="o">=</span> <span class="n">wght</span> <span class="o">*</span> <span class="n">elecd</span><span class="p">(</span><span class="n">zloc</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">wght</span><span class="p">)</span> <span class="o">*</span> <span class="n">elecd</span><span class="p">(</span><span class="n">zloc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-336"></a> 
+<a name="ln-337"></a>     <span class="c">! if you need a different observation error variance, modify it by extending</span>
+<a name="ln-338"></a>     <span class="c">! the electron_density_error() function. Please do not just hardcode something here.</span>
+<a name="ln-339"></a>     <span class="n">oerr</span>  <span class="o">=</span> <span class="n">electron_density_error</span><span class="p">(</span><span class="n">lono</span><span class="p">,</span> <span class="n">lato</span><span class="p">,</span> <span class="n">hghto</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-340"></a>                                     <span class="n">obs_error_factor</span><span class="p">,</span> <span class="n">obsval</span><span class="p">)</span>
+<a name="ln-341"></a>   
+<a name="ln-342"></a>     <span class="k">call </span><span class="n">set_obs_def_location</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span><span class="n">set_location</span><span class="p">(</span><span class="n">lono</span><span class="p">,</span><span class="n">lato</span><span class="p">,</span><span class="n">hghto</span><span class="o">*</span><span class="mi">100</span><span class="mf">0.0_r8</span><span class="p">,</span><span class="n">VERTISHEIGHT</span><span class="p">))</span>
+<a name="ln-343"></a>     <span class="k">call </span><span class="n">set_obs_def_type_of_obs</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">COSMIC_ELECTRON_DENSITY</span><span class="p">)</span>
+<a name="ln-344"></a>     <span class="k">call </span><span class="n">set_obs_def_time</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">set_time</span><span class="p">(</span><span class="n">osec</span><span class="p">,</span> <span class="n">oday</span><span class="p">))</span>
+<a name="ln-345"></a>     <span class="k">call </span><span class="n">set_obs_def_error_variance</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">oerr</span> <span class="o">*</span> <span class="n">oerr</span><span class="p">)</span>
+<a name="ln-346"></a>     <span class="k">call </span><span class="n">set_obs_def_key</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">obs_num</span><span class="p">)</span>
+<a name="ln-347"></a>     <span class="k">call </span><span class="n">set_obs_def</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">obs_def</span><span class="p">)</span>
+<a name="ln-348"></a>  
+<a name="ln-349"></a>     <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">locations_only</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-350"></a><span class="k">        </span><span class="n">obs_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">obsval</span>
+<a name="ln-351"></a>        <span class="n">qc_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="o">=</span> <span class="n">qc</span>
+<a name="ln-352"></a>        <span class="k">call </span><span class="n">set_obs_values</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">obs_val</span><span class="p">)</span>
+<a name="ln-353"></a>        <span class="k">call </span><span class="n">set_qc</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">qc_val</span><span class="p">)</span>
+<a name="ln-354"></a>     <span class="n">endif</span>
+<a name="ln-355"></a>
+<a name="ln-356"></a>     <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-357"></a>
+<a name="ln-358"></a>     <span class="n">obs_num</span> <span class="o">=</span> <span class="n">obs_num</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-359"></a>
+<a name="ln-360"></a>   <span class="n">enddo</span> <span class="n">LEVELS</span>
+<a name="ln-361"></a>
+<a name="ln-362"></a>  <span class="c">! clean up and loop if there is another input file</span>
+<a name="ln-363"></a>  <span class="k">deallocate</span><span class="p">(</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">hght</span><span class="p">,</span> <span class="n">elecd</span><span class="p">)</span>
+<a name="ln-364"></a>
+<a name="ln-365"></a>  <span class="n">filenum</span> <span class="o">=</span> <span class="n">filenum</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-366"></a>
+<a name="ln-367"></a><span class="n">enddo</span> <span class="n">fileloop</span>
+<a name="ln-368"></a>
+<a name="ln-369"></a><span class="c">! done with main loop.  if we added any new obs to the sequence, write it out.</span>
+<a name="ln-370"></a><span class="k">if</span> <span class="p">(</span><span class="n">obs_num</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">call </span><span class="n">write_obs_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+<a name="ln-371"></a>
+<a name="ln-372"></a><span class="c">! cleanup memory</span>
+<a name="ln-373"></a><span class="k">call </span><span class="n">destroy_obs_sequence</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-374"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>   <span class="c">! do not destroy prev_obs, which is same as obs</span>
+<a name="ln-375"></a>
+<a name="ln-376"></a><span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;processed &#39;</span><span class="p">,</span> <span class="n">filenum</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39; total profiles&#39;</span>
+<a name="ln-377"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">string1</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-378"></a>
+<a name="ln-379"></a><span class="k">if</span> <span class="p">(</span><span class="n">numrejected</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-380"></a><span class="k">   write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">numrejected</span><span class="p">,</span> <span class="s1">&#39; profiles rejected for bad incoming data.&#39;</span>
+<a name="ln-381"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">string1</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-382"></a><span class="n">endif</span>
+<a name="ln-383"></a>
+<a name="ln-384"></a><span class="k">call </span><span class="n">finalize_utilities</span><span class="p">()</span>
+<a name="ln-385"></a>
+<a name="ln-386"></a><span class="c">! END OF MAIN ROUTINE</span>
+<a name="ln-387"></a>
+<a name="ln-388"></a><span class="k">contains</span>
+<a name="ln-389"></a>
+<a name="ln-390"></a><span class="c">! local subroutines/functions follow</span>
+<a name="ln-391"></a>
+<a name="ln-392"></a>
+<a name="ln-393"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-394"></a><span class="c">!&gt; finds the vertical levels closest to the desired height level and</span>
+<a name="ln-395"></a><span class="c">!&gt; the weights to perform vertical interpolation.</span>
+<a name="ln-396"></a><span class="c">!&gt;</span>
+<a name="ln-397"></a><span class="c">!&gt; created June 2008, Ryan Torn NCAR/MMM</span>
+<a name="ln-398"></a><span class="c">!&gt; modified August 2017, Tim Hoar NCAR - changed the order of the</span>
+<a name="ln-399"></a><span class="c">!&gt; argument declarations so compilers can exploit knowing the array lengths</span>
+<a name="ln-400"></a>
+<a name="ln-401"></a><span class="k">subroutine </span><span class="n">interp_height_wght</span><span class="p">(</span><span class="n">hght</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">iz</span><span class="p">,</span> <span class="n">zgrid</span><span class="p">,</span> <span class="n">wght</span><span class="p">)</span>
+<a name="ln-402"></a>
+<a name="ln-403"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">iz</span>       <span class="c">!! number of vertical levels</span>
+<a name="ln-404"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">hght</span><span class="p">(</span><span class="n">iz</span><span class="p">)</span> <span class="c">!! height levels in column</span>
+<a name="ln-405"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">level</span>    <span class="c">!! height level to interpolate to</span>
+<a name="ln-406"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">zgrid</span>    <span class="c">!! index of lowest level for interpolation</span>
+<a name="ln-407"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">wght</span>     <span class="c">!! weight to give to the lower level in interpolation</span>
+<a name="ln-408"></a>
+<a name="ln-409"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">k</span><span class="p">,</span> <span class="n">klev</span><span class="p">,</span> <span class="n">kbot</span><span class="p">,</span> <span class="n">ktop</span><span class="p">,</span> <span class="n">kinc</span><span class="p">,</span> <span class="n">kleva</span>
+<a name="ln-410"></a>
+<a name="ln-411"></a><span class="k">if</span> <span class="p">(</span> <span class="n">hght</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">hght</span><span class="p">(</span><span class="n">iz</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-412"></a><span class="k">  </span><span class="n">kbot</span> <span class="o">=</span> <span class="n">iz</span>  <span class="p">;</span>   <span class="n">ktop</span> <span class="o">=</span> <span class="mi">1</span>   <span class="p">;</span>  <span class="n">kinc</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>   <span class="p">;</span>  <span class="n">kleva</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-413"></a><span class="k">else</span>
+<a name="ln-414"></a><span class="k">  </span><span class="n">kbot</span> <span class="o">=</span> <span class="mi">1</span>   <span class="p">;</span>   <span class="n">ktop</span> <span class="o">=</span> <span class="n">iz</span>  <span class="p">;</span>  <span class="n">kinc</span> <span class="o">=</span> <span class="mi">1</span>    <span class="p">;</span>  <span class="n">kleva</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-415"></a><span class="n">endif</span>
+<a name="ln-416"></a>
+<a name="ln-417"></a><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">hght</span><span class="p">(</span><span class="n">kbot</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">level</span><span class="p">)</span> <span class="p">.</span><span class="nb">AND</span><span class="p">.</span> <span class="p">(</span><span class="n">hght</span><span class="p">(</span><span class="n">ktop</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">level</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-418"></a>
+<a name="ln-419"></a><span class="k">  do </span><span class="n">k</span> <span class="o">=</span> <span class="n">kbot</span><span class="p">,</span> <span class="n">ktop</span><span class="p">,</span> <span class="n">kinc</span>  <span class="c">!  search for appropriate level</span>
+<a name="ln-420"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">hght</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">level</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-421"></a><span class="k">      </span><span class="n">klev</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="n">kleva</span>
+<a name="ln-422"></a>      <span class="k">exit</span>
+<a name="ln-423"></a><span class="k">    </span><span class="n">endif</span>
+<a name="ln-424"></a>  <span class="n">enddo</span>
+<a name="ln-425"></a>
+<a name="ln-426"></a>  <span class="c">! compute the weights</span>
+<a name="ln-427"></a>  <span class="n">zgrid</span> <span class="o">=</span> <span class="n">klev</span>
+<a name="ln-428"></a>  <span class="n">wght</span>  <span class="o">=</span> <span class="p">(</span><span class="n">level</span><span class="o">-</span><span class="n">hght</span><span class="p">(</span><span class="n">klev</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">hght</span><span class="p">(</span><span class="n">klev</span><span class="p">)</span> <span class="o">-</span> <span class="n">hght</span><span class="p">(</span><span class="n">klev</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-429"></a>
+<a name="ln-430"></a><span class="k">else</span>
+<a name="ln-431"></a>
+<a name="ln-432"></a><span class="k">  </span><span class="n">zgrid</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-433"></a>  <span class="n">wght</span>  <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-434"></a>
+<a name="ln-435"></a><span class="n">endif</span>
+<a name="ln-436"></a>
+<a name="ln-437"></a><span class="k">end subroutine </span><span class="n">interp_height_wght</span>
+<a name="ln-438"></a>
+<a name="ln-439"></a>
+<a name="ln-440"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-441"></a><span class="c">!&gt; interpolate between 2 longitude values taking into account wrapping at -180 degrees</span>
+<a name="ln-442"></a><span class="c">!&gt; returns interpolated longitude between 0 and 360 degrees.</span>
+<a name="ln-443"></a>
+<a name="ln-444"></a><span class="k">function </span><span class="n">compute_lon_wrap</span><span class="p">(</span><span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+<a name="ln-445"></a>
+<a name="ln-446"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lon1</span>   <span class="c">!! longitude in degrees between -180 and +180</span>
+<a name="ln-447"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lon2</span>   <span class="c">!! longitude in degrees between -180 and +180</span>
+<a name="ln-448"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">weight</span> <span class="c">!! interpolation weight between lon1 and lon2 (0 to 1)</span>
+<a name="ln-449"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">compute_lon_wrap</span>
+<a name="ln-450"></a>
+<a name="ln-451"></a><span class="c">! if the longitudes are the same sign (both negative or both positive)</span>
+<a name="ln-452"></a><span class="c">! then do the interpolation with the original values.  if the signs</span>
+<a name="ln-453"></a><span class="c">! are different then we need to decide if they are crossing 0 (where we</span>
+<a name="ln-454"></a><span class="c">! still use the original values) or if they are crossing the -180/180 line</span>
+<a name="ln-455"></a><span class="c">! and we have to wrap the negative value.</span>
+<a name="ln-456"></a><span class="c">!</span>
+<a name="ln-457"></a><span class="c">! to decide between the 0 and 180 cases, take the positive value and subtract </span>
+<a name="ln-458"></a><span class="c">! the negative value (which adds it on) and see if the sum is &gt; 180.  if not, </span>
+<a name="ln-459"></a><span class="c">! we&#39;re at the 0 crossing and we do nothing.  if yes, then we add 360 to the </span>
+<a name="ln-460"></a><span class="c">! negative value and interpolate between two positive values.   in either case</span>
+<a name="ln-461"></a><span class="c">! once we have the result, if it&#39;s &lt; 0 add 360 so the longitude returned is</span>
+<a name="ln-462"></a><span class="c">! between 0 and 360 in longitude.</span>
+<a name="ln-463"></a><span class="c">!</span>
+<a name="ln-464"></a><span class="c">! this does not try to do anything special if the profile is tracking directly</span>
+<a name="ln-465"></a><span class="c">! over one of the poles.  this is because at the exact poles all longitudes are</span>
+<a name="ln-466"></a><span class="c">! identical, so being off in the longitude in any direction won&#39;t be a large</span>
+<a name="ln-467"></a><span class="c">! difference in real distance.</span>
+<a name="ln-468"></a><span class="c">!</span>
+<a name="ln-469"></a><span class="c">! created nancy collins NCAR/IMAGe</span>
+<a name="ln-470"></a>
+<a name="ln-471"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lon1a</span><span class="p">,</span> <span class="n">lon2a</span><span class="p">,</span> <span class="n">lono</span>
+<a name="ln-472"></a>
+<a name="ln-473"></a><span class="c">! r/w temporaries in case we have to change the value.  </span>
+<a name="ln-474"></a><span class="n">lon1a</span> <span class="o">=</span> <span class="n">lon1</span>
+<a name="ln-475"></a><span class="n">lon2a</span> <span class="o">=</span> <span class="n">lon2</span>
+<a name="ln-476"></a>
+<a name="ln-477"></a><span class="c">! if different signs and crossing the -180/180 boundary, </span>
+<a name="ln-478"></a><span class="c">! add 360 to the negative value.</span>
+<a name="ln-479"></a><span class="k">if</span> <span class="p">(</span><span class="n">lon1</span> <span class="o">&lt;=</span> <span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">lon2</span> <span class="o">&gt;=</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-480"></a><span class="k">   if</span> <span class="p">(</span><span class="n">lon2</span> <span class="o">-</span> <span class="n">lon1</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="n">lon1a</span> <span class="o">=</span> <span class="n">lon1a</span> <span class="o">+</span> <span class="mi">36</span><span class="mf">0.0_r8</span>
+<a name="ln-481"></a><span class="k">else if</span> <span class="p">(</span><span class="n">lon1</span> <span class="o">&gt;=</span> <span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">lon2</span> <span class="o">&lt;=</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-482"></a><span class="k">   if</span> <span class="p">(</span><span class="n">lon1</span> <span class="o">-</span> <span class="n">lon2</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="n">lon2a</span> <span class="o">=</span> <span class="n">lon2a</span> <span class="o">+</span> <span class="mi">36</span><span class="mf">0.0_r8</span>
+<a name="ln-483"></a><span class="n">endif</span>
+<a name="ln-484"></a>
+<a name="ln-485"></a><span class="c">! linear interpolation, and make return value between 0 and 360.</span>
+<a name="ln-486"></a><span class="n">lono</span>  <span class="o">=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">lon1a</span>  <span class="o">+</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">weight</span><span class="p">)</span> <span class="o">*</span> <span class="n">lon2a</span>
+<a name="ln-487"></a><span class="k">if</span> <span class="p">(</span><span class="n">lono</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="n">lono</span> <span class="o">=</span> <span class="n">lono</span> <span class="o">+</span> <span class="mi">36</span><span class="mf">0.0_r8</span>
+<a name="ln-488"></a>
+<a name="ln-489"></a><span class="n">compute_lon_wrap</span> <span class="o">=</span> <span class="n">lono</span>
+<a name="ln-490"></a>
+<a name="ln-491"></a><span class="k">end function </span><span class="n">compute_lon_wrap</span>
+<a name="ln-492"></a>
+<a name="ln-493"></a>
+<a name="ln-494"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-495"></a><span class="c">!&gt; computes the observation error given a variety of algorithms</span>
+<a name="ln-496"></a><span class="c">!&gt;</span>
+<a name="ln-497"></a><span class="c">!&gt; METHOD_CONSTANT          percent = factor</span>
+<a name="ln-498"></a><span class="c">!&gt; METHOD_SCALED            percent = factor * obsval</span>
+<a name="ln-499"></a><span class="c">!&gt; METHOD_LOOKUP            percent = f(solar local time, magnetic equator latitude ...)</span>
+<a name="ln-500"></a><span class="c">!&gt; METHOD_SCALED_LOOKUP     percent = factor * f(solar local time, ...) * obsval</span>
+<a name="ln-501"></a>
+<a name="ln-502"></a><span class="k">function </span><span class="n">electron_density_error</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">hght</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">obsval</span><span class="p">)</span>
+<a name="ln-503"></a>
+<a name="ln-504"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">lon</span>     <span class="c">!! input real value geometric height [km]</span>
+<a name="ln-505"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">lat</span>     <span class="c">!! latitude in degrees</span>
+<a name="ln-506"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">hght</span>    <span class="c">!! height of observation</span>
+<a name="ln-507"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ihour</span>   <span class="c">!! hour of day ... UTC</span>
+<a name="ln-508"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">imin</span>    <span class="c">!! minute of day ... UTC</span>
+<a name="ln-509"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">method</span>  <span class="c">!! integer describing algorithm</span>
+<a name="ln-510"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">factor</span>  <span class="c">!! multiplier to scale all the errors up or down for testing</span>
+<a name="ln-511"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">obsval</span>  <span class="c">!! observation value</span>
+<a name="ln-512"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">electron_density_error</span> <span class="c">!! output electron density error variance</span>
+<a name="ln-513"></a>
+<a name="ln-514"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">percent</span>
+<a name="ln-515"></a>
+<a name="ln-516"></a><span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="n">METHOD_CONSTANT</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-517"></a><span class="k">   </span><span class="n">electron_density_error</span> <span class="o">=</span> <span class="n">factor</span>
+<a name="ln-518"></a>   <span class="k">return</span>
+<a name="ln-519"></a><span class="n">endif</span>
+<a name="ln-520"></a>
+<a name="ln-521"></a><span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="n">METHOD_SCALED</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-522"></a><span class="k">   </span><span class="n">electron_density_error</span> <span class="o">=</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">obsval</span>
+<a name="ln-523"></a>   <span class="k">return</span>
+<a name="ln-524"></a><span class="n">endif</span>
+<a name="ln-525"></a>
+<a name="ln-526"></a><span class="c">! The lookup table is read once in ionprf_obserr_percent().</span>
+<a name="ln-527"></a><span class="n">percent</span> <span class="o">=</span> <span class="n">ionprf_obserr_percent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">hght</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">)</span>
+<a name="ln-528"></a>
+<a name="ln-529"></a><span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="n">METHOD_LOOKUP</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-530"></a><span class="k">   </span><span class="n">electron_density_error</span> <span class="o">=</span> <span class="n">percent</span>
+<a name="ln-531"></a>   <span class="k">return</span>
+<a name="ln-532"></a><span class="n">endif</span>
+<a name="ln-533"></a>
+<a name="ln-534"></a><span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="n">METHOD_SCALED_LOOKUP</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-535"></a><span class="k">   </span><span class="n">electron_density_error</span> <span class="o">=</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">percent</span> <span class="o">*</span> <span class="n">obsval</span>
+<a name="ln-536"></a>   <span class="k">return</span>
+<a name="ln-537"></a><span class="n">endif</span>
+<a name="ln-538"></a>
+<a name="ln-539"></a><span class="k">end function </span><span class="n">electron_density_error</span>
+<a name="ln-540"></a>
+<a name="ln-541"></a>
+<a name="ln-542"></a>
+<a name="ln-543"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-544"></a><span class="c">!&gt; The lookup table is specified by &#39;observation_error_file&#39;</span>
+<a name="ln-545"></a><span class="c">!&gt; computes the observation error percentage for an electron density observation.</span>
+<a name="ln-546"></a><span class="c">!&gt; These numbers are taken from a Liu&#39;s and Yue&#39;s paper.</span>
+<a name="ln-547"></a><span class="c">!&gt;</span>
+<a name="ln-548"></a><span class="c">!&gt;    created by I-TE LEE NCAR/HAO &amp; NCU, 01/26/2010</span>
+<a name="ln-549"></a>
+<a name="ln-550"></a><span class="k">function </span><span class="n">ionprf_obserr_percent</span><span class="p">(</span><span class="n">lone</span><span class="p">,</span> <span class="n">late</span><span class="p">,</span> <span class="n">hghte</span><span class="p">,</span> <span class="n">houre</span><span class="p">,</span> <span class="n">mine</span><span class="p">)</span>
+<a name="ln-551"></a>
+<a name="ln-552"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span>  <span class="n">lone</span>  <span class="c">!! longitude of electron density observation</span>
+<a name="ln-553"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span>  <span class="n">late</span>  <span class="c">!! latitude of electron density observation</span>
+<a name="ln-554"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">hghte</span>  <span class="c">!! height of electron density observation (in km)</span>
+<a name="ln-555"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">houre</span>  <span class="c">!! UTC hour of day</span>
+<a name="ln-556"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span>  <span class="n">mine</span>  <span class="c">!! UTC minute of hour</span>
+<a name="ln-557"></a>
+<a name="ln-558"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">routine</span> <span class="o">=</span> <span class="s1">&#39;ionprf_obserr_percent&#39;</span>
+<a name="ln-559"></a>
+<a name="ln-560"></a><span class="c">!add F3/C ionprf observation error /add by ITL 2011.01.31</span>
+<a name="ln-561"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NUMZ</span>   <span class="o">=</span> <span class="mi">15</span>
+<a name="ln-562"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NUMLAT</span> <span class="o">=</span> <span class="mi">37</span>
+<a name="ln-563"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NUMTIME</span> <span class="o">=</span> <span class="mi">25</span>
+<a name="ln-564"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">save</span> <span class="kd">::</span> <span class="n">percent</span><span class="p">(</span><span class="n">NUMZ</span><span class="p">,</span><span class="n">NUMLAT</span><span class="p">,</span><span class="n">NUMTIME</span><span class="p">)</span>
+<a name="ln-565"></a><span class="kt">logical</span><span class="p">,</span>  <span class="k">save</span> <span class="kd">::</span> <span class="n">read_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-566"></a>
+<a name="ln-567"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mag_eq</span><span class="p">(</span><span class="mi">73</span><span class="p">),</span> <span class="n">slt</span><span class="p">,</span> <span class="n">ionprf_obserr_percent</span><span class="p">,</span> <span class="n">mq</span><span class="p">,</span> <span class="n">nlat</span>
+<a name="ln-568"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">err_top1</span><span class="p">,</span> <span class="n">err_bottom1</span><span class="p">,</span> <span class="n">err_obs1</span><span class="p">,</span> <span class="n">err_top2</span><span class="p">,</span> <span class="n">err_bottom2</span><span class="p">,</span> <span class="n">err_obs2</span><span class="p">,</span> <span class="n">err_obs</span>
+<a name="ln-569"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">altc</span><span class="p">,</span> <span class="n">latc</span><span class="p">,</span> <span class="n">ltc</span><span class="p">,</span> <span class="n">lonc</span>
+<a name="ln-570"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">ios</span><span class="p">,</span> <span class="n">ncid</span>
+<a name="ln-571"></a>
+<a name="ln-572"></a><span class="c">!Calculate the magnetic equator latitude (refer to IGRF output in 2008)</span>
+<a name="ln-573"></a><span class="k">data </span><span class="n">mag_eq</span><span class="o">/</span> <span class="mi">1</span><span class="mf">1.37_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">1.24_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">1.06_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">0.83_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">0.50_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">0.03_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-574"></a>              <span class="mf">9.43_r8</span><span class="p">,</span>  <span class="mf">8.75_r8</span><span class="p">,</span>  <span class="mf">8.11_r8</span><span class="p">,</span>  <span class="mf">7.61_r8</span><span class="p">,</span>  <span class="mf">7.32_r8</span><span class="p">,</span>  <span class="mf">7.22_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-575"></a>              <span class="mf">7.27_r8</span><span class="p">,</span>  <span class="mf">7.42_r8</span><span class="p">,</span>  <span class="mf">7.61_r8</span><span class="p">,</span>  <span class="mf">7.82_r8</span><span class="p">,</span>  <span class="mf">8.01_r8</span><span class="p">,</span>  <span class="mf">8.16_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-576"></a>              <span class="mf">8.23_r8</span><span class="p">,</span>  <span class="mf">8.21_r8</span><span class="p">,</span>  <span class="mf">8.08_r8</span><span class="p">,</span>  <span class="mf">7.89_r8</span><span class="p">,</span>  <span class="mf">7.75_r8</span><span class="p">,</span>  <span class="mf">7.64_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-577"></a>              <span class="mf">7.64_r8</span><span class="p">,</span>  <span class="mf">7.72_r8</span><span class="p">,</span>  <span class="mf">7.81_r8</span><span class="p">,</span>  <span class="mf">7.85_r8</span><span class="p">,</span>  <span class="mf">7.77_r8</span><span class="p">,</span>  <span class="mf">7.55_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-578"></a>              <span class="mf">7.18_r8</span><span class="p">,</span>  <span class="mf">6.64_r8</span><span class="p">,</span>  <span class="mf">5.93_r8</span><span class="p">,</span>  <span class="mf">5.07_r8</span><span class="p">,</span>  <span class="mf">4.12_r8</span><span class="p">,</span>  <span class="mf">3.16_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-579"></a>              <span class="mf">2.26_r8</span><span class="p">,</span>  <span class="mf">1.47_r8</span><span class="p">,</span>  <span class="mf">0.80_r8</span><span class="p">,</span>  <span class="mf">0.23_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.28_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.78_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-580"></a>             <span class="o">-</span><span class="mf">1.30_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.86_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.46_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.08_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.69_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.31_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-581"></a>             <span class="o">-</span><span class="mf">4.97_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.71_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.56_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.52_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">8.58_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.69_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-582"></a>             <span class="o">-</span><span class="mi">1</span><span class="mf">0.78_r8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="mf">1.71_r8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="mf">2.34_r8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="mf">2.46_r8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="mf">1.90_r8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="mf">0.61_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-583"></a>             <span class="o">-</span><span class="mf">8.63_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.08_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.17_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.14_r8</span><span class="p">,</span>  <span class="mf">2.73_r8</span><span class="p">,</span>  <span class="mf">5.23_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-584"></a>              <span class="mf">7.28_r8</span><span class="p">,</span>  <span class="mf">8.85_r8</span><span class="p">,</span>  <span class="mf">9.98_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">0.75_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">1.20_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">1.38_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-585"></a>             <span class="mi">1</span><span class="mf">1.38_r8</span><span class="o">/</span>
+<a name="ln-586"></a>
+<a name="ln-587"></a><span class="c">! read the lookup table once.</span>
+<a name="ln-588"></a><span class="c">! BTW: if the variable is the wrong shape, nc_get_variable() fails</span>
+<a name="ln-589"></a><span class="c">! with no information about the expected vs actual shape</span>
+<a name="ln-590"></a>
+<a name="ln-591"></a><span class="k">if</span> <span class="p">(</span><span class="n">read_file</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-592"></a><span class="k">   </span><span class="n">ios</span> <span class="o">=</span> <span class="n">nf90_open</span><span class="p">(</span><span class="n">observation_error_file</span><span class="p">,</span> <span class="n">NF90_NOWRITE</span><span class="p">,</span> <span class="n">ncid</span><span class="p">)</span>
+<a name="ln-593"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ios</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="s1">&#39;opening file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">observation_error_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+<a name="ln-594"></a>   <span class="k">call </span><span class="n">nc_get_variable</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;percent&#39;</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">routine</span><span class="p">,</span> <span class="n">observation_error_file</span><span class="p">)</span>
+<a name="ln-595"></a>   <span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">nf90_close</span><span class="p">(</span><span class="n">ncid</span><span class="p">),</span> <span class="n">routine</span><span class="p">,</span> <span class="n">observation_error_file</span><span class="p">)</span>
+<a name="ln-596"></a>
+<a name="ln-597"></a>   <span class="n">read_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-598"></a><span class="n">endif</span>
+<a name="ln-599"></a>
+<a name="ln-600"></a><span class="c">!Convert longitude to solar local time (simple method: longitude difference)</span>
+<a name="ln-601"></a><span class="n">slt</span> <span class="o">=</span> <span class="nb">INT</span><span class="p">(</span><span class="nb">NINT</span><span class="p">(</span> <span class="p">(</span><span class="n">lone</span><span class="o">/</span><span class="mi">15</span> <span class="o">+</span> <span class="n">houre</span> <span class="o">+</span> <span class="n">mine</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span> <span class="o">*</span><span class="mi">10</span><span class="p">))</span>
+<a name="ln-602"></a><span class="k">if</span>    <span class="p">(</span> <span class="n">slt</span> <span class="o">&gt;</span> <span class="mi">240</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-603"></a><span class="k">    </span><span class="n">slt</span> <span class="o">=</span> <span class="n">slt</span> <span class="o">-</span> <span class="mi">240</span>
+<a name="ln-604"></a><span class="n">elseif</span><span class="p">(</span> <span class="n">slt</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-605"></a><span class="k">    </span><span class="n">slt</span> <span class="o">=</span> <span class="n">slt</span> <span class="o">+</span> <span class="mi">240</span>
+<a name="ln-606"></a><span class="n">endif</span>
+<a name="ln-607"></a>
+<a name="ln-608"></a><span class="n">lonc</span> <span class="o">=</span> <span class="nb">INT</span><span class="p">(</span><span class="n">lone</span><span class="o">/</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-609"></a><span class="n">mq</span>   <span class="o">=</span> <span class="n">mag_eq</span><span class="p">(</span><span class="n">lonc</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">mag_eq</span><span class="p">(</span><span class="n">lonc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">mag_eq</span><span class="p">(</span><span class="n">lonc</span><span class="p">))</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="n">lone</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">lonc</span><span class="p">)</span>
+<a name="ln-610"></a><span class="n">nlat</span> <span class="o">=</span> <span class="n">late</span><span class="o">-</span><span class="n">mq</span>
+<a name="ln-611"></a>
+<a name="ln-612"></a><span class="k">if</span><span class="p">(</span><span class="n">nlat</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-613"></a><span class="k">    </span><span class="n">nlat</span> <span class="o">=</span> <span class="mi">90</span>
+<a name="ln-614"></a><span class="n">elseif</span><span class="p">(</span><span class="n">nlat</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-615"></a><span class="k">    </span><span class="n">nlat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">90</span>
+<a name="ln-616"></a><span class="n">endif</span>
+<a name="ln-617"></a>
+<a name="ln-618"></a><span class="c">!Linear interpolation the error percentage</span>
+<a name="ln-619"></a><span class="n">latc</span> <span class="o">=</span> <span class="nb">INT</span><span class="p">((</span><span class="n">nlat</span><span class="o">+</span><span class="mi">90</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-620"></a><span class="n">altc</span> <span class="o">=</span> <span class="nb">INT</span><span class="p">((</span><span class="n">hghte</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">50</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>   <span class="c">! table is (100 + i*50)  in km-space</span>
+<a name="ln-621"></a> <span class="n">ltc</span> <span class="o">=</span> <span class="nb">INT</span><span class="p">(</span><span class="nb">NINT</span><span class="p">(</span><span class="n">slt</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-622"></a>
+<a name="ln-623"></a><span class="k">if</span> <span class="p">(</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-624"></a>   <span class="c">! TJH for debug purposes only</span>
+<a name="ln-625"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;hghte  is &#39;</span><span class="p">,</span><span class="n">hghte</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span>   <span class="s1">&#39;nlat is &#39;</span><span class="p">,</span><span class="n">nlat</span><span class="p">,</span>  <span class="s1">&#39;;&#39;</span><span class="p">,</span>   <span class="s1">&#39;slt is &#39;</span><span class="p">,</span><span class="n">slt</span><span class="p">,</span>  <span class="s1">&#39;;&#39;</span>
+<a name="ln-626"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;altc   is &#39;</span><span class="p">,</span><span class="n">altc</span><span class="p">,</span>  <span class="s1">&#39;;&#39;</span><span class="p">,</span>   <span class="s1">&#39;latc is &#39;</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span>  <span class="s1">&#39;;&#39;</span><span class="p">,</span>   <span class="s1">&#39;ltc is &#39;</span><span class="p">,</span><span class="n">ltc</span><span class="p">,</span>  <span class="s1">&#39;;&#39;</span>
+<a name="ln-627"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;altc+1 is &#39;</span><span class="p">,</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;latc+1 is &#39;</span><span class="p">,</span><span class="n">latc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;ltc+1 is &#39;</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;;&#39;</span>
+<a name="ln-628"></a><span class="n">endif</span>
+<a name="ln-629"></a>
+<a name="ln-630"></a><span class="c">! err_top    = percent(altc+1,latc,ltc)+(percent(altc+1,latc+1,ltc)-percent(altc,latc,ltc))/5*(nlat+95-latc*5)</span>
+<a name="ln-631"></a><span class="c">! err_bottom = percent(altc,latc,ltc)+(percent(altc,latc+1,ltc)-percent(altc+1,latc,ltc))/5*(nlat+95-latc*5)</span>
+<a name="ln-632"></a><span class="c">! err_obs    = err_bottom+ (err_top-err_bottom)/50*(hghte-50-altc*50)</span>
+<a name="ln-633"></a>
+<a name="ln-634"></a><span class="c">!!3-Dimensional Linear interpolation of the observation error percentage</span>
+<a name="ln-635"></a><span class="n">err_top1</span>    <span class="o">=</span> <span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">ltc</span><span class="p">)</span><span class="o">-</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="p">))</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">nlat</span><span class="o">+</span><span class="mi">95</span><span class="o">-</span><span class="n">latc</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<a name="ln-636"></a><span class="n">err_bottom1</span> <span class="o">=</span> <span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">ltc</span><span class="p">)</span><span class="o">-</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="p">))</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">nlat</span><span class="o">+</span><span class="mi">95</span><span class="o">-</span><span class="n">latc</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<a name="ln-637"></a><span class="n">err_obs1</span>    <span class="o">=</span> <span class="n">err_bottom1</span> <span class="o">+</span> <span class="p">(</span><span class="n">err_top1</span><span class="o">-</span><span class="n">err_bottom1</span><span class="p">)</span><span class="o">/</span><span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">hghte</span><span class="o">-</span><span class="mi">50</span><span class="o">-</span><span class="n">altc</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<a name="ln-638"></a>
+<a name="ln-639"></a><span class="n">err_top2</span>    <span class="o">=</span> <span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">nlat</span><span class="o">+</span><span class="mi">95</span><span class="o">-</span><span class="n">latc</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<a name="ln-640"></a><span class="n">err_bottom2</span> <span class="o">=</span> <span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="p">,</span><span class="n">latc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">percent</span><span class="p">(</span><span class="n">altc</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">latc</span><span class="p">,</span><span class="n">ltc</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">nlat</span><span class="o">+</span><span class="mi">95</span><span class="o">-</span><span class="n">latc</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<a name="ln-641"></a><span class="n">err_obs2</span>    <span class="o">=</span> <span class="n">err_bottom2</span> <span class="o">+</span> <span class="p">(</span><span class="n">err_top2</span><span class="o">-</span><span class="n">err_bottom2</span><span class="p">)</span><span class="o">/</span><span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">hghte</span><span class="o">-</span><span class="mi">50</span><span class="o">-</span><span class="n">altc</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<a name="ln-642"></a>
+<a name="ln-643"></a><span class="n">err_obs</span>     <span class="o">=</span> <span class="mi">1</span><span class="mf">0.0_r8</span> <span class="o">+</span> <span class="n">err_obs1</span> <span class="o">+</span> <span class="p">(</span><span class="n">err_obs2</span><span class="o">-</span><span class="n">err_obs1</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="n">slt</span><span class="o">+</span><span class="mi">10</span><span class="o">-</span><span class="n">ltc</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+<a name="ln-644"></a>
+<a name="ln-645"></a><span class="n">ionprf_obserr_percent</span> <span class="o">=</span> <span class="n">err_obs</span>
+<a name="ln-646"></a>
+<a name="ln-647"></a><span class="k">end function </span><span class="n">ionprf_obserr_percent</span>
+<a name="ln-648"></a>
+<a name="ln-649"></a>
+<a name="ln-650"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-651"></a><span class="c">!&gt; ensures that the observation error method is supported</span>
+<a name="ln-652"></a><span class="c">!&gt; observation_error_method   is a namelist item specifying the method</span>
+<a name="ln-653"></a><span class="c">!&gt;</span>
+<a name="ln-654"></a><span class="c">!&gt; METHOD_CONSTANT          = 1 = &#39;constant&#39;</span>
+<a name="ln-655"></a><span class="c">!&gt; METHOD_SCALED            = 2 = &#39;scaled&#39;</span>
+<a name="ln-656"></a><span class="c">!&gt; METHOD_LOOKUP            = 3 = &#39;lookup&#39;</span>
+<a name="ln-657"></a><span class="c">!&gt; METHOD_SCALED_LOOKUP     = 4 = &#39;scaled_lookup&#39;</span>
+<a name="ln-658"></a>
+<a name="ln-659"></a><span class="kt">integer </span><span class="k">function </span><span class="n">check_error_method</span><span class="p">()</span>
+<a name="ln-660"></a>
+<a name="ln-661"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mystring</span>
+<a name="ln-662"></a>
+<a name="ln-663"></a><span class="n">mystring</span> <span class="o">=</span> <span class="n">observation_error_method</span>
+<a name="ln-664"></a><span class="k">call </span><span class="n">to_upper</span><span class="p">(</span><span class="n">mystring</span><span class="p">)</span>
+<a name="ln-665"></a>
+<a name="ln-666"></a><span class="k">select case</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">mystring</span><span class="p">))</span>
+<a name="ln-667"></a>   <span class="k">case</span> <span class="p">(</span><span class="s1">&#39;CONSTANT&#39;</span><span class="p">)</span>
+<a name="ln-668"></a>      <span class="n">check_error_method</span> <span class="o">=</span> <span class="n">METHOD_CONSTANT</span>
+<a name="ln-669"></a>   <span class="k">case</span> <span class="p">(</span><span class="s1">&#39;SCALED&#39;</span><span class="p">)</span>
+<a name="ln-670"></a>      <span class="n">check_error_method</span> <span class="o">=</span> <span class="n">METHOD_SCALED</span>
+<a name="ln-671"></a>   <span class="k">case</span> <span class="p">(</span><span class="s1">&#39;LOOKUP&#39;</span><span class="p">)</span>
+<a name="ln-672"></a>      <span class="n">check_error_method</span> <span class="o">=</span> <span class="n">METHOD_LOOKUP</span>
+<a name="ln-673"></a>   <span class="k">case</span> <span class="p">(</span><span class="s1">&#39;SCALED_LOOKUP&#39;</span><span class="p">)</span>
+<a name="ln-674"></a>      <span class="n">check_error_method</span> <span class="o">=</span> <span class="n">METHOD_SCALED_LOOKUP</span>
+<a name="ln-675"></a>   <span class="k">case </span><span class="n">default</span>
+<a name="ln-676"></a>      <span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;unknown method &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">observation_error_method</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span> 
+<a name="ln-677"></a>      <span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;valid values are &quot;constant&quot;, &quot;scaled&quot;, &quot;lookup&quot;, &amp;</span>
+<a name="ln-678"></a><span class="s1">                          &amp; or &quot;scaled_lookup&quot;&#39;</span>
+<a name="ln-679"></a>      <span class="k">write</span><span class="p">(</span><span class="n">string3</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;this is specified by &quot;observation_error_method&quot;&#39;</span>
+<a name="ln-680"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;check_error_method&#39;</span><span class="p">,</span><span class="n">string1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-681"></a>                 <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">string2</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">string3</span><span class="p">)</span>
+<a name="ln-682"></a><span class="k">end select</span>
+<a name="ln-683"></a>
+<a name="ln-684"></a><span class="k">end function </span><span class="n">check_error_method</span>
+<a name="ln-685"></a>
+<a name="ln-686"></a>
+<a name="ln-687"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-688"></a><span class="c">!&gt; If there are negative values above the lowest desired level - the profile</span>
+<a name="ln-689"></a><span class="c">!&gt; is discarded.</span>
+<a name="ln-690"></a>
+<a name="ln-691"></a><span class="k">function </span><span class="n">bad_profile_check</span><span class="p">(</span><span class="n">lowest_height</span><span class="p">,</span> <span class="n">profile_heights</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
+<a name="ln-692"></a>
+<a name="ln-693"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lowest_height</span>
+<a name="ln-694"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">profile_heights</span><span class="p">(:)</span>
+<a name="ln-695"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">density</span><span class="p">(:)</span>
+<a name="ln-696"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename</span>
+<a name="ln-697"></a><span class="kt">logical</span>              <span class="kd">::</span> <span class="n">bad_profile_check</span>
+<a name="ln-698"></a>
+<a name="ln-699"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">lowest_index</span>
+<a name="ln-700"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">weight</span> <span class="c">! do not need value for this application</span>
+<a name="ln-701"></a>
+<a name="ln-702"></a><span class="n">bad_profile_check</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="c">! assume profile is good until proven otherwise</span>
+<a name="ln-703"></a>
+<a name="ln-704"></a><span class="c">! Need to find the index of the lowest layer </span>
+<a name="ln-705"></a>
+<a name="ln-706"></a><span class="n">nobs</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">profile_heights</span><span class="p">)</span>
+<a name="ln-707"></a><span class="k">call </span><span class="n">interp_height_wght</span><span class="p">(</span><span class="n">profile_heights</span><span class="p">,</span> <span class="n">lowest_height</span><span class="p">,</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">lowest_index</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+<a name="ln-708"></a>
+<a name="ln-709"></a><span class="k">if</span> <span class="p">(</span><span class="n">lowest_index</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">lowest_index</span> <span class="o">==</span> <span class="n">nobs</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-710"></a><span class="k">   write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;unable to determine an observation below &#39;</span><span class="p">,</span><span class="n">lowest_height</span>
+<a name="ln-711"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;&quot;interp_height_wght&quot; returned &#39;</span><span class="p">,</span><span class="n">lowest_index</span>
+<a name="ln-712"></a>   <span class="k">write</span><span class="p">(</span><span class="n">string3</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;expected something between 1 and &#39;</span><span class="p">,</span><span class="n">nobs</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-713"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span><span class="s1">&#39;bad_profile_check&#39;</span><span class="p">,</span><span class="n">string1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-714"></a>             <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">string2</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">string3</span><span class="p">)</span>
+<a name="ln-715"></a><span class="n">endif</span>
+<a name="ln-716"></a>
+<a name="ln-717"></a><span class="k">if</span> <span class="p">(</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-718"></a><span class="k">   write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;lowest height &#39;</span><span class="p">,</span><span class="n">lowest_height</span>
+<a name="ln-719"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;profile    is &#39;</span><span class="p">,</span><span class="n">profile_heights</span><span class="p">(</span><span class="n">lowest_index</span>  <span class="p">),</span> <span class="n">density</span><span class="p">(</span><span class="n">lowest_index</span>  <span class="p">)</span>
+<a name="ln-720"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;profile+1  is &#39;</span><span class="p">,</span><span class="n">profile_heights</span><span class="p">(</span><span class="n">lowest_index</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">density</span><span class="p">(</span><span class="n">lowest_index</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-721"></a><span class="n">endif</span>
+<a name="ln-722"></a>
+<a name="ln-723"></a><span class="c">! If there are any negative electron densities above this layer it is a bad profile</span>
+<a name="ln-724"></a>
+<a name="ln-725"></a><span class="k">if</span> <span class="p">(</span> <span class="nb">any</span><span class="p">(</span><span class="n">density</span><span class="p">(</span><span class="n">lowest_index</span><span class="p">:</span><span class="n">nobs</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-726"></a><span class="k">   </span><span class="n">bad_profile_check</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-727"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-728"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;bad_profile_check&#39;</span><span class="p">,</span> <span class="s1">&#39;rejecting &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+<a name="ln-729"></a><span class="n">endif</span>
+<a name="ln-730"></a>
+<a name="ln-731"></a><span class="k">end function </span><span class="n">bad_profile_check</span>
+<a name="ln-732"></a>
+<a name="ln-733"></a>
+<a name="ln-734"></a>
+<a name="ln-735"></a><span class="k">subroutine </span><span class="n">summarize</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="n">varname</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-736"></a>
+<a name="ln-737"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">var</span><span class="p">(:)</span>
+<a name="ln-738"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">varname</span>
+<a name="ln-739"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">filename</span>
+<a name="ln-740"></a>
+<a name="ln-741"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ilast</span><span class="p">,</span> <span class="n">ilength</span>
+<a name="ln-742"></a>
+<a name="ln-743"></a><span class="c">! search for last &#39;/&#39; and trim filename</span>
+<a name="ln-744"></a><span class="n">ilength</span> <span class="o">=</span> <span class="nb">len_trim</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="ln-745"></a><span class="n">ilast</span>   <span class="o">=</span> <span class="nb">index</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">back</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-746"></a>
+<a name="ln-747"></a><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="n">filename</span><span class="p">(</span><span class="n">ilast</span><span class="p">:</span><span class="n">ilength</span><span class="p">),</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">varname</span><span class="p">),</span><span class="s1">&#39; range is &#39;</span><span class="p">,</span><span class="nb">minval</span><span class="p">(</span><span class="n">var</span><span class="p">),</span><span class="nb">maxval</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<a name="ln-748"></a>
+<a name="ln-749"></a><span class="k">end subroutine </span><span class="n">summarize</span>
+<a name="ln-750"></a>
+<a name="ln-751"></a>
+<a name="ln-752"></a><span class="k">end program</span>
+<a name="ln-753"></a>
+<a name="ln-754"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-755"></a><span class="c">! $URL$</span>
+<a name="ln-756"></a><span class="c">! $Id$</span>
+<a name="ln-757"></a><span class="c">! $Revision$</span>
+<a name="ln-758"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

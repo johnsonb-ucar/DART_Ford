@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>pert_sounding &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>pert_sounding
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for programs.">163 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/pert_sounding.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/pert_sounding.f90.html'>pert_sounding.f90</a></li>
+    
+  
+     <li class="active">pert_sounding</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-z1d">z1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-sfc1d">sfc1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-p1d">p1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-nz%7E27">nz</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-pert_kind">pert_kind</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-n_modes">n_modes</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-k_modes">k_modes</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-nens%7E2">nens</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-npertvar">npertvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-pertvar">pertvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-magvar">magvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-dummy">dummy</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-std_bot">std_bot</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-std_top">std_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-hgt_mid">hgt_mid</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-hgt_top">hgt_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-lvl_mid">lvl_mid</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-lvl_top">lvl_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-i%7E65">i</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ivar%7E11">ivar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-curvar">curvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ipert%7E3">ipert</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-iens">iens</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ik">ik</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-sndgvar">sndgvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-this_pertvar">this_pertvar</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/pert_sounding_mod.html'>pert_sounding_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-z1d">z1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-sfc1d">sfc1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-p1d">p1d</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-nz%7E27">nz</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-pert_kind">pert_kind</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-n_modes">n_modes</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-k_modes">k_modes</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-nens%7E2">nens</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-npertvar">npertvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-pertvar">pertvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-magvar">magvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-dummy">dummy</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-std_bot">std_bot</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-std_top">std_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-hgt_mid">hgt_mid</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-hgt_top">hgt_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-lvl_mid">lvl_mid</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-lvl_top">lvl_top</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-i%7E65">i</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ivar%7E11">ivar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-curvar">curvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ipert%7E3">ipert</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-iens">iens</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-ik">ik</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-sndgvar">sndgvar</a>
+      
+      <a class="list-group-item" href="../program/pert_sounding.html#variable-this_pertvar">this_pertvar</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-z1d"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>z1d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sfc1d"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>sfc1d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-p1d"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>p1d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nz%7E27"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pert_kind"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pert_kind</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_modes"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n_modes</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k_modes"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>k_modes</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nens%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nens</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-npertvar"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>npertvar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pertvar"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>pertvar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-magvar"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>magvar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy"></span>character(len=10)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-std_bot"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>std_bot</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-std_top"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>std_top</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hgt_mid"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>hgt_mid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hgt_top"></span>real,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>hgt_top</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lvl_mid"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>lvl_mid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lvl_top"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>lvl_top</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E65"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ivar%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ivar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-curvar"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>curvar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ipert%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ipert</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iens"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iens</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ik"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ik</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sndgvar"></span>character(len=3)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sndgvar</strong>(5)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-this_pertvar"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>this_pertvar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

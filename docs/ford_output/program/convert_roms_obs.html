@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_roms_obs &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_roms_obs
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.9% of total for programs.">383 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_roms_obs.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/convert_roms_obs.f90.html'>convert_roms_obs.f90</a></li>
+    
+  
+     <li class="active">convert_roms_obs</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-source%7E156">source</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-revision%7E156">revision</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-revdate%7E156">revdate</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-max_ens">MAX_ENS</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_copies%7E40">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_qc%7E35">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-iunit%7E112">iunit</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-io%7E86">io</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-darttype">darttype</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_input_files%7E12">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-rc%7E13">rc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ncid%7E144">ncid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-nobs%7E6">nobs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-n%7E28">n</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-i%7E126">i</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oday%7E14">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-osec%7E14">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-nobs2">nobs2</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-file_exist%7E14">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-first_obs%7E17">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string1%7E24">string1</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string2%7E18">string2</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string3%7E13">string3</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-max_types">MAX_TYPES</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_strings">roms_prov_strings</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_integers">roms_prov_integers</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-dart_type_integers">dart_type_integers</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_count">roms_prov_count</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs_def%7E54">obs_def</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-lat%7E95">lat</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-lon%7E97">lon</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-depth%7E9">depth</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ovar">ovar</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oval%7E2">oval</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-raw_qc">raw_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-combined_qc">combined_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-temp_fo">temp_fo</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-forw_ops">forw_ops</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oprov">oprov</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-missing">missing</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-xgrid">Xgrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ygrid">Ygrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-zgrid">Zgrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-my_rand">my_rand</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-otim">otim</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs_seq%7E19">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs%7E72">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-prev_obs%7E23">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-time_obs%7E14">time_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-prev_time%7E20">prev_time</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ens_size%7E121">ens_size</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_mod_obs_files">roms_mod_obs_files</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_mod_obs_filelist">roms_mod_obs_filelist</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-dart_output_obs_file">dart_output_obs_file</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-append_to_existing">append_to_existing</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-use_precomputed_values">use_precomputed_values</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-locations_in_ijk">locations_in_IJK</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-add_random_noise">add_random_noise</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-pert_amplitude">pert_amplitude</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-verbose%7E26">verbose</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-type_translations">type_translations</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-convert_ijk_to_latlondepth">convert_ijk_to_latlondepth</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-match_roms_flag">match_roms_flag</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-convert_romstype_to_darttype">convert_romstype_to_darttype</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_provenance_maps">get_provenance_maps</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_flag_value">get_flag_value</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_flag_name">get_flag_name</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_translation_table">get_translation_table</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/sort_mod.html'>sort_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+    <li><a href='../module/random_seq_mod.html'>random_seq_mod</a></li>
+    
+    <li><a href='../module/model_mod.html'>model_mod</a></li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>program that converts ROMS observations PLUS FORWARD OPERATOR VALUES
+ (estimated values computed during the ROMS run).  this program
+ needs to read 1 obs input file to get the original obs value, time,
+ location, error, etc; plus N (ensemble size) ROMS "mod" files to
+ extract the forward operators.  possibly also a third type of file
+ to get the grid information - we are currently hoping that we can
+ get lat/lon/depth directly from the ROMS input obs file, but if not
+ we have to add more code. the input obs files currently has X,Y,Z
+ values relative to the ROMS grid - we'd have to open a grid file and
+ compute the lat/lon values from that.</p>
+<p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>FIXME -
+ we could get the ens size from the number of input files
+ but we can also ask users to tell us how many should be there
+ so we can error out if the counts don't match.
+@todo FIXME -
+ TJH: I vote to remove the roms_obs_files() mechanism since roms_mod_obs_filelist
+ is so much more flexible. The roms_obs_files variable just mucks up the 
+ namelist print and log files.
+@todo FIXME -
+ TJH: The type_translations table is currently implemented as an explicit
+ set of type translations ... it <em>could</em> be made to exist as a superset with
+ multiple ROMS variants that relate to the same DART TYPE. hernan and tim
+ prefer the superset, Chris and Nancy prefer the subset ... Andy?
+@todo FIXME -
+ TJH: could remove the locations_in_IJK variable by simply checking 
+ if the obs_lon,obs_lat variables exist. 
+ If they do exist, use them; if not - try the IJK method.</p></div>
+<p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>FIXME make sure the missing values in the depth arrays are handled</p></div>
+<p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>FIXME ... depth may be MISSING_R8 ... in that the parent variable
+ "obs_depth" has a 'missing_value' attribute</p></div>
+<p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>... write out a summary of how many observations were successfully converted.</p></div>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-source%7E156">source</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-revision%7E156">revision</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-revdate%7E156">revdate</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-max_ens">MAX_ENS</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_copies%7E40">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_qc%7E35">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-iunit%7E112">iunit</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-io%7E86">io</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-darttype">darttype</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-num_input_files%7E12">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-rc%7E13">rc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ncid%7E144">ncid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-nobs%7E6">nobs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-n%7E28">n</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-i%7E126">i</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oday%7E14">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-osec%7E14">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-nobs2">nobs2</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-file_exist%7E14">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-first_obs%7E17">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string1%7E24">string1</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string2%7E18">string2</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-string3%7E13">string3</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-max_types">MAX_TYPES</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_strings">roms_prov_strings</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_integers">roms_prov_integers</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-dart_type_integers">dart_type_integers</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_prov_count">roms_prov_count</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs_def%7E54">obs_def</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-lat%7E95">lat</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-lon%7E97">lon</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-depth%7E9">depth</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ovar">ovar</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oval%7E2">oval</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-raw_qc">raw_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-combined_qc">combined_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-temp_fo">temp_fo</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-forw_ops">forw_ops</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-oprov">oprov</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-missing">missing</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-xgrid">Xgrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ygrid">Ygrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-zgrid">Zgrid</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-my_rand">my_rand</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-otim">otim</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs_seq%7E19">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-obs%7E72">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-prev_obs%7E23">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-time_obs%7E14">time_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-prev_time%7E20">prev_time</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-ens_size%7E121">ens_size</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_mod_obs_files">roms_mod_obs_files</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-roms_mod_obs_filelist">roms_mod_obs_filelist</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-dart_output_obs_file">dart_output_obs_file</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-append_to_existing">append_to_existing</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-use_precomputed_values">use_precomputed_values</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-locations_in_ijk">locations_in_IJK</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-add_random_noise">add_random_noise</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-pert_amplitude">pert_amplitude</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-verbose%7E26">verbose</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#variable-type_translations">type_translations</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-convert_ijk_to_latlondepth">convert_ijk_to_latlondepth</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-match_roms_flag">match_roms_flag</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-convert_romstype_to_darttype">convert_romstype_to_darttype</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_provenance_maps">get_provenance_maps</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_flag_value">get_flag_value</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_flag_name">get_flag_name</a>
+      
+      <a class="list-group-item" href="../program/convert_roms_obs.html#proc-get_translation_table">get_translation_table</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E156"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E156"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E156"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_ens"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MAX_ENS</strong></td><td> =</td><td>100</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E40"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_copies</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E35"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_qc</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E112"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E86"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-darttype"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>darttype</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_input_files%7E12"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_input_files</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rc%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid%7E144"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nobs%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nobs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E28"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E126"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nobs2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nobs2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_exist%7E14"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_exist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E17"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E24"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string2%7E18"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string3%7E13"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_types"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MAX_TYPES</strong></td><td> =</td><td>100</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roms_prov_strings"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roms_prov_strings</strong>(MAX_TYPES)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roms_prov_integers"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roms_prov_integers</strong>(MAX_TYPES)</td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_type_integers"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_type_integers</strong>(MAX_TYPES)</td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roms_prov_count"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roms_prov_count</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_def%7E54"></span>type(<a href='../type/obs_def_type.html'>obs_def_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_def</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat%7E95"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lat</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon%7E97"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lon</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-depth%7E9"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>depth</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ovar"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>ovar</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oval%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>oval</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-raw_qc"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>raw_qc</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-combined_qc"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>combined_qc</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-temp_fo"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>temp_fo</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forw_ops"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>forw_ops</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oprov"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>oprov</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-missing"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>missing</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xgrid"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>Xgrid</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ygrid"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>Ygrid</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zgrid"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>Zgrid</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-my_rand"></span>type(<a href='../type/random_seq_type.html'>random_seq_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>my_rand</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-otim"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>otim</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E19"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E72"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E23"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_obs%7E14"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E20"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_size%7E121"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ens_size</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roms_mod_obs_files"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roms_mod_obs_files</strong>(MAX_ENS)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roms_mod_obs_filelist"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roms_mod_obs_filelist</strong></td><td> =</td><td>'filelist.txt'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_output_obs_file"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_output_obs_file</strong></td><td> =</td><td>'obs_seq.out'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-append_to_existing"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>append_to_existing</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-use_precomputed_values"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>use_precomputed_values</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-locations_in_ijk"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>locations_in_IJK</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-add_random_noise"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>add_random_noise</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pert_amplitude"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pert_amplitude</strong></td><td> =</td><td>0.01</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verbose%7E26"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verbose</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-type_translations"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>type_translations</strong>(2,MAX_TYPES)</td><td> =</td><td>'NULL'</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-convert_ijk_to_latlondepth"></span><h3>
+function <a href='../proc/convert_ijk_to_latlondepth.html'>convert_ijk_to_latlondepth</a>(r_iloc, r_jloc, r_kloc, dart_type, lon, lat, depth)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>ISTATUS : 0 - all went well
+ ISTATUS : 3 - vertical index is a missing_value
+ all other error codes inherited from model_mod:get_location_from_ijk()</p><a href="../proc/convert_ijk_to_latlondepth.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r_iloc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r_jloc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r_kloc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dart_type</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lon</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lat</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>depth</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-match_roms_flag"></span><h3>
+function <a href='../proc/match_roms_flag.html'>match_roms_flag</a>(str_to_match)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str_to_match</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-convert_romstype_to_darttype"></span><h3>
+subroutine <a href='../proc/convert_romstype_to_darttype.html'>convert_romstype_to_darttype</a>(roms_prov, dart_type)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>roms observation types are in the 'obs_provenance' integer array
+ and the table of contents in the global attribute 'obs_provenance'
+ (formatted as a single string with embedded newlines)</p><a href="../proc/convert_romstype_to_darttype.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>roms_prov</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dart_type</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_provenance_maps"></span><h3>
+subroutine <a href='../proc/get_provenance_maps.html'>get_provenance_maps</a>(ncid, flag_count, flag_names, flag_vals)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>the global attribute 'obs_provenance' relates the integer codes with
+ the character strings that humans prefer.
+ The character string MUST IDENTICALLY match the 
+ input.nml:&amp;convert_roms_obs_nml:type_translations that relate those
+ character strings to DART observation TYPES. </p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flag_count</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flag_names</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flag_vals</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_flag_value"></span><h3>
+subroutine <a href='../proc/get_flag_value.html'>get_flag_value</a>(mystring, ivalue)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Given a string of the form</p><a href="../proc/get_flag_value.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mystring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ivalue</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_flag_name"></span><h3>
+subroutine <a href='../proc/get_flag_name.html'>get_flag_name</a>(mystring, myflag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Given a string of the form
+  6: ARGO floats temperature from Met Office 
+ the flag name is everything beyond the colon </p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mystring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>myflag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_translation_table"></span><h3>
+subroutine <a href='../proc/get_translation_table.html'>get_translation_table</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>user gives us a translation table from the namelist
+ each pair of strings should be:
+    a roms string that matches the flags in the netcdf file
+    a dart type string like "ARGO_TEMPERATURE"</p><a href="../proc/get_translation_table.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_diff &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>test_diff
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for programs.">42 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/test_diff.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/test_diff.f90.html'>test_diff.f90</a></li>
+    
+  
+     <li class="active">test_diff</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-source%7E136">source</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-revision%7E136">revision</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-revdate%7E136">revdate</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-n%7E22">n</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-i%7E112">i</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-iunit%7E93">iunit</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-io%7E68">io</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r%7E20">r</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r1%7E3">r1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r2%7E2">r2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-dist2">dist2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-mean_dist2">mean_dist2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformati">wformatI</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformat1">wformat1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformat2">wformat2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-mean%7E7">mean</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-sd1">sd1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-sd2">sd2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-predicted">predicted</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-iseed">iseed</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/random_seq_mod.html'>random_seq_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-source%7E136">source</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-revision%7E136">revision</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-revdate%7E136">revdate</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-n%7E22">n</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-i%7E112">i</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-iunit%7E93">iunit</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-io%7E68">io</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r%7E20">r</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r1%7E3">r1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-r2%7E2">r2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-dist2">dist2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-mean_dist2">mean_dist2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformati">wformatI</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformat1">wformat1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-wformat2">wformat2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-mean%7E7">mean</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-sd1">sd1</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-sd2">sd2</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-predicted">predicted</a>
+      
+      <a class="list-group-item" href="../program/test_diff.html#variable-iseed">iseed</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E136"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E136"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E136"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E22"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>n</strong></td><td> =</td><td>1000000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E112"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E93"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E68"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r%7E20"></span>type(<a href='../type/random_seq_type.html'>random_seq_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r1%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>r1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r2%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>r2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dist2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dist2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mean_dist2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mean_dist2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wformati"></span>character(len=16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wformatI</strong></td><td> =</td><td>'(A,I8)'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wformat1"></span>character(len=16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wformat1</strong></td><td> =</td><td>'(A,1(F25.16))'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wformat2"></span>character(len=16)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wformat2</strong></td><td> =</td><td>'(A,2(F25.16))'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mean%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mean</strong></td><td> =</td><td>0.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sd1"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sd1</strong></td><td> =</td><td>1.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sd2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sd2</strong></td><td> =</td><td>2.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-predicted"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>predicted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iseed"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iseed</strong></td><td> =</td><td>123</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>COSMOS_development &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>COSMOS_development
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.8% of total for programs.">322 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/COSMOS_development.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/cosmos_development.f90.html'>COSMOS_development.f90</a></li>
+    
+  
+     <li class="active">COSMOS_development</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-source%7E158">source</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-revision%7E158">revision</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-revdate%7E158">revdate</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-site_metadata_file%7E4">site_metadata_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-text_input_file%7E4">text_input_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs_out_file%7E4">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-sitename%7E6">sitename</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-year%7E36">year</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-maxgoodqc%7E2">maxgoodqc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-verbose%7E28">verbose</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-input_line%7E4">input_line</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string1%7E26">string1</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string2%7E20">string2</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string3%7E15">string3</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-iline%7E2">iline</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-first_obs%7E19">first_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-oday%7E16">oday</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-osec%7E16">osec</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-rcio%7E4">rcio</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-iunit%7E114">iunit</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-num_copies%7E42">num_copies</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-num_qc%7E37">num_qc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-max_obs%7E9">max_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-oerr%7E19">oerr</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-qc%7E31">qc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs_seq%7E21">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs%7E74">obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-prev_obs%7E25">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-prev_time%7E22">prev_time</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-cosmos%7E2">cosmos</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-cosmos_metadata%7E2">cosmos_metadata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-nsites%7E2">nSites</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-siteindx%7E2">siteIndx</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obsindx%7E4">obsindx</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-bd%7E6">bd</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-lattwat%7E6">lattwat</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-n%7E6">N</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-alpha%7E13">alpha</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l1%7E6">L1</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l2%7E6">L2</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l3%7E6">L3</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l4%7E6">L4</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#type-cosmosdata%7E2">cosmosdata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#type-site_metadata%7E2">site_metadata</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-read_cosmos_metadata%7E2">read_cosmos_metadata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-find_site_index%7E2">find_site_index</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-create_3d_obs%7E3">create_3d_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-decode_header%7E2">decode_header</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-stringparse%7E2">stringparse</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-fill_site%7E2">fill_site</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-get_var%7E2">get_var</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+    <li><a href='../module/obs_def_cosmos_mod.html'>obs_def_COSMOS_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li>typesizes</li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-source%7E158">source</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-revision%7E158">revision</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-revdate%7E158">revdate</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-site_metadata_file%7E4">site_metadata_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-text_input_file%7E4">text_input_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs_out_file%7E4">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-sitename%7E6">sitename</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-year%7E36">year</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-maxgoodqc%7E2">maxgoodqc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-verbose%7E28">verbose</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-input_line%7E4">input_line</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string1%7E26">string1</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string2%7E20">string2</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-string3%7E15">string3</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-iline%7E2">iline</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-first_obs%7E19">first_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-oday%7E16">oday</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-osec%7E16">osec</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-rcio%7E4">rcio</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-iunit%7E114">iunit</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-num_copies%7E42">num_copies</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-num_qc%7E37">num_qc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-max_obs%7E9">max_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-oerr%7E19">oerr</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-qc%7E31">qc</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs_seq%7E21">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obs%7E74">obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-prev_obs%7E25">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-prev_time%7E22">prev_time</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-cosmos%7E2">cosmos</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-cosmos_metadata%7E2">cosmos_metadata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-nsites%7E2">nSites</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-siteindx%7E2">siteIndx</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-obsindx%7E4">obsindx</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-bd%7E6">bd</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-lattwat%7E6">lattwat</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-n%7E6">N</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-alpha%7E13">alpha</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l1%7E6">L1</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l2%7E6">L2</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l3%7E6">L3</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#variable-l4%7E6">L4</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#type-cosmosdata%7E2">cosmosdata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#type-site_metadata%7E2">site_metadata</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-read_cosmos_metadata%7E2">read_cosmos_metadata</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-find_site_index%7E2">find_site_index</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-create_3d_obs%7E3">create_3d_obs</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-decode_header%7E2">decode_header</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-stringparse%7E2">stringparse</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-fill_site%7E2">fill_site</a>
+      
+      <a class="list-group-item" href="../program/cosmos_development.html#proc-get_var%7E2">get_var</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E158"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E158"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E158"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-site_metadata_file%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>site_metadata_file</strong></td><td> =</td><td>'COSMIC_parlist.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-text_input_file%7E4"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>text_input_file</strong></td><td> =</td><td>'textdata.input'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_out_file%7E4"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_out_file</strong></td><td> =</td><td>'obs_seq.out'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sitename%7E6"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sitename</strong></td><td> =</td><td>'missing'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-year%7E36"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>year</strong></td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxgoodqc%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>maxgoodqc</strong></td><td> =</td><td>3.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verbose%7E28"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verbose</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_line%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_line</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E26"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string2%7E20"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string3%7E15"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iline%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iline</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E19"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E16"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E16"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rcio%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rcio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E114"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E42"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E37"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_obs%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oerr%7E19"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E31"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E21"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E74"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E25"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E22"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cosmos%7E2"></span>type(<a href='../type/cosmosdata%7E2.html'>cosmosdata</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cosmos</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cosmos_metadata%7E2"></span>type(<a href='../type/site_metadata%7E2.html'>site_metadata</a>),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>cosmos_metadata</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsites%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nSites</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-siteindx%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>siteIndx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsindx%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsindx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bd%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lattwat%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lattwat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>N</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alpha%7E13"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>alpha</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l1%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>L1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l2%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>L2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l3%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>L3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l4%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>L4</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <section>
+   <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-cosmosdata%7E2"></span><h3>type :: <a href='../type/cosmosdata%7E2.html'>cosmosdata</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_obs%7E2"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>time_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-monthstring"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>monthstring</strong></td><td> =</td><td>'month'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-daystring"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>daystring</strong></td><td> =</td><td>'day'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hourstring"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>hourstring</strong></td><td> =</td><td>'hour'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-doystring"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>doystring</strong></td><td> =</td><td>'doy'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronstring%7E2"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronstring</strong></td><td> =</td><td>'neutron_fluxAVE'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronstdstring%7E2"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronstdstring</strong></td><td> =</td><td>'neutron_fluxSTD'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronqcstring"></span>character(len=20),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronQCstring</strong></td><td> =</td><td>'neutron_fluxQC'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-monthindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>monthindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dayindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dayindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hourindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>hourindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-doyindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>doyindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronindex%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronstdindex%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronstdindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronqcindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronQCindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-month%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>month</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-day%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>day</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hour%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>hour</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-doy"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>doy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutron%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutron</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronstd%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronstd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-neutronqc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>neutronQC</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-site_metadata%7E2"></span><h3>type :: <a href='../type/site_metadata%7E2.html'>site_metadata</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sitename%7E2"></span>character(len=metadatalength),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sitename</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-location%7E5"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>location</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-latitude%7E5"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>latitude</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-longitude%7E5"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>longitude</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-elevation%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>elevation</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bd%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lattwat%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lattwat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>N</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alpha%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>alpha</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l1%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>L1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l2%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>L2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l3%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>L3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l4%7E2"></span>real(kind=r8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>L4</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+    </section>
+   <br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-read_cosmos_metadata%7E2"></span><h3>
+function <a href='../proc/read_cosmos_metadata%7E2.html'>read_cosmos_metadata</a>(site_metadata_file)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>site_metadata_file</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-find_site_index%7E2"></span><h3>
+function <a href='../proc/find_site_index%7E2.html'>find_site_index</a>(sitename)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sitename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-create_3d_obs%7E3"></span><h3>
+subroutine <a href='../proc/create_3d_obs%7E3.html'>create_3d_obs</a>(lat, lon, vval, vkind, obsv, okind, oerr, day, sec, qc, key, obs)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lat</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lon</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vval</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vkind</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsv</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>okind</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>oerr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>day</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sec</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>key</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_type.html'>obs_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-decode_header%7E2"></span><h3>
+subroutine <a href='../proc/decode_header%7E2.html'>decode_header</a>(iunit)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-stringparse%7E2"></span><h3>
+subroutine <a href='../proc/stringparse%7E2.html'>stringparse</a>(str1, linenum)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>str1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>linenum</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-fill_site%7E2"></span><h3>
+subroutine <a href='../proc/fill_site%7E2.html'>fill_site</a>(ncid, siteindx)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>siteindx</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_var%7E2"></span><h3>
+subroutine <a href='../proc/get_var%7E2.html'>get_var</a>(ncid, siteindx, varname, slot)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>siteindx</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>slot</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

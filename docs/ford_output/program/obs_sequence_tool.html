@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>obs_sequence_tool &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>obs_sequence_tool
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.0% of total for programs.">843 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/obs_sequence_tool.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/obs_sequence_tool.f90.html'>obs_sequence_tool.f90</a></li>
+    
+  
+     <li class="active">obs_sequence_tool</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-source%7E109">source</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-revision%7E109">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-revdate%7E109">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-seq_in%7E24">seq_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-seq_out%7E6">seq_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_in%7E9">obs_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-next_obs_in%7E7">next_obs_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_out%7E6">obs_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-prev_obs_out%7E6">prev_obs_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-is_there_one%7E5">is_there_one</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-is_this_last%7E12">is_this_last</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-size_seq_in%7E9">size_seq_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_copies_in%7E9">num_copies_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_qc_in%7E9">num_qc_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-size_seq_out%7E6">size_seq_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_copies_out%7E2">num_copies_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_qc_out%7E2">num_qc_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_inserted%7E6">num_inserted</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-iunit%7E73">iunit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-io%7E52">io</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-i%7E92">i</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-j%7E73">j</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-total_num_inserted%7E2">total_num_inserted</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_num_obs%7E14">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-file_id%7E12">file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-remaining_obs_count%7E2">remaining_obs_count</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_seq%7E2">first_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-read_format%7E11">read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-meta_data%7E9">meta_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-pre_i_format%7E15">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-all_gone%7E7">all_gone</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-trim_first%7E2">trim_first</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-trim_last%7E2">trim_last</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring1%7E10">msgstring1</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring2%7E11">msgstring2</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring3%7E5">msgstring3</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-print_every%7E9">print_every</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_qc_listlen">copy_qc_listlen</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_num_input_files%7E2">max_num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_obs_input_types%7E9">max_obs_input_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-process_file%7E2">process_file</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_obs_type">restrict_by_obs_type</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_location">restrict_by_location</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_qc">restrict_by_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_copy">restrict_by_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_obs_input_types%7E2">num_obs_input_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_loc%7E2">min_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_loc%7E2">max_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-editing_obs">editing_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_copy_metadata">matching_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_qc_metadata">matching_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_time">first_obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_time">last_obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_copy_limit">matching_copy_limit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_qc_limit">matching_qc_limit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_index_len">copy_index_len</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-qc_index_len">qc_index_len</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_input_files%7E7">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_seq%7E4">filename_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_seq_list%7E4">filename_seq_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_out%7E7">filename_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_days%7E2">first_obs_days</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_seconds%7E2">first_obs_seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_days%7E2">last_obs_days</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_seconds%7E2">last_obs_seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_types%7E2">obs_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-keep_types">keep_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_box">min_box</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_box">max_box</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_lat">min_lat</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_lat">max_lat</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_lon">min_lon</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_lon">max_lon</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_copy">min_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_copy">max_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_type">copy_type</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_metadata%7E2">copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_metadata">new_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_copy_metadata">edit_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_copies%7E2">edit_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_index%7E2">new_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_data%7E2">new_copy_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-synonymous_copy_list">synonymous_copy_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_qc">min_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_qc">max_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-qc_metadata">qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_metadata">new_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_qc_metadata">edit_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_qcs%7E2">edit_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_index%7E2">new_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_data%7E2">new_qc_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-synonymous_qc_list">synonymous_qc_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-print_only%7E6">print_only</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-gregorian_cal">gregorian_cal</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_gps_height">min_gps_height</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-write_external_fos">write_external_FOs</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-obs_seq_modules_used%7E2">obs_seq_modules_used</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-compare_metadata%7E2">compare_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-trim_seq">trim_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-print_obs_seq%7E8">print_obs_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-validate_obs_seq_time%7E10">validate_obs_seq_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-print_metadata%7E10">print_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-set_new_data">set_new_data</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>Change observation sequence files by adding or removing observations
+ based on type, location, values, time.  Long list of options based on 
+ namelist settings.  See the html documention for extensive examples.</p>
+<p>FIXME: VERTISUNDEF, but not all loc mods have it
+ FIXME: VERTISUNDEF, but not all loc mods have it</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-source%7E109">source</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-revision%7E109">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-revdate%7E109">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-seq_in%7E24">seq_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-seq_out%7E6">seq_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_in%7E9">obs_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-next_obs_in%7E7">next_obs_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_out%7E6">obs_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-prev_obs_out%7E6">prev_obs_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-is_there_one%7E5">is_there_one</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-is_this_last%7E12">is_this_last</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-size_seq_in%7E9">size_seq_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_copies_in%7E9">num_copies_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_qc_in%7E9">num_qc_in</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-size_seq_out%7E6">size_seq_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_copies_out%7E2">num_copies_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_qc_out%7E2">num_qc_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_inserted%7E6">num_inserted</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-iunit%7E73">iunit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-io%7E52">io</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-i%7E92">i</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-j%7E73">j</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-total_num_inserted%7E2">total_num_inserted</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_num_obs%7E14">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-file_id%7E12">file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-remaining_obs_count%7E2">remaining_obs_count</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_seq%7E2">first_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-read_format%7E11">read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-meta_data%7E9">meta_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-pre_i_format%7E15">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-all_gone%7E7">all_gone</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-trim_first%7E2">trim_first</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-trim_last%7E2">trim_last</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring1%7E10">msgstring1</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring2%7E11">msgstring2</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-msgstring3%7E5">msgstring3</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-print_every%7E9">print_every</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_qc_listlen">copy_qc_listlen</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_num_input_files%7E2">max_num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_obs_input_types%7E9">max_obs_input_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-process_file%7E2">process_file</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_obs_type">restrict_by_obs_type</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_location">restrict_by_location</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_qc">restrict_by_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-restrict_by_copy">restrict_by_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_obs_input_types%7E2">num_obs_input_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_loc%7E2">min_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_loc%7E2">max_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-editing_obs">editing_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_copy_metadata">matching_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_qc_metadata">matching_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_time">first_obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_time">last_obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_copy_limit">matching_copy_limit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-matching_qc_limit">matching_qc_limit</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_index_len">copy_index_len</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-qc_index_len">qc_index_len</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-num_input_files%7E7">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_seq%7E4">filename_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_seq_list%7E4">filename_seq_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-filename_out%7E7">filename_out</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_days%7E2">first_obs_days</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-first_obs_seconds%7E2">first_obs_seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_days%7E2">last_obs_days</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-last_obs_seconds%7E2">last_obs_seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-obs_types%7E2">obs_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-keep_types">keep_types</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_box">min_box</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_box">max_box</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_lat">min_lat</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_lat">max_lat</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_lon">min_lon</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_lon">max_lon</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_copy">min_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_copy">max_copy</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_type">copy_type</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-copy_metadata%7E2">copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_metadata">new_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_copy_metadata">edit_copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_copies%7E2">edit_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_index%7E2">new_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_copy_data%7E2">new_copy_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-synonymous_copy_list">synonymous_copy_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_qc">min_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-max_qc">max_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-qc_metadata">qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_metadata">new_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_qc_metadata">edit_qc_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-edit_qcs%7E2">edit_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_index%7E2">new_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-new_qc_data%7E2">new_qc_data</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-synonymous_qc_list">synonymous_qc_list</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-print_only%7E6">print_only</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-gregorian_cal">gregorian_cal</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-min_gps_height">min_gps_height</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#variable-write_external_fos">write_external_FOs</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-obs_seq_modules_used%7E2">obs_seq_modules_used</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-compare_metadata%7E2">compare_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-trim_seq">trim_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-print_obs_seq%7E8">print_obs_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-validate_obs_seq_time%7E10">validate_obs_seq_time</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-print_metadata%7E10">print_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_sequence_tool.html#proc-set_new_data">set_new_data</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E109"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E109"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E109"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seq_in%7E24"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seq_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seq_out%7E6"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seq_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_in%7E9"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-next_obs_in%7E7"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>next_obs_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_out%7E6"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs_out%7E6"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-is_there_one%7E5"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>is_there_one</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-is_this_last%7E12"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>is_this_last</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-size_seq_in%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>size_seq_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies_in%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc_in%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-size_seq_out%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>size_seq_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies_out%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc_out%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_inserted%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_inserted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E73"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E52"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E92"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E73"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-total_num_inserted%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>total_num_inserted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_obs%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_id%7E12"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-remaining_obs_count%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>remaining_obs_count</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_seq%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-read_format%7E11"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>read_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-meta_data%7E9"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>meta_data</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pre_i_format%7E15"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pre_I_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-all_gone%7E7"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>all_gone</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trim_first%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>trim_first</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trim_last%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>trim_last</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring1%7E10"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring2%7E11"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring3%7E5"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-print_every%7E9"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>print_every</strong></td><td> =</td><td>20000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_qc_listlen"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>copy_qc_listlen</strong></td><td> =</td><td>256</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_input_files%7E2"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_num_input_files</strong></td><td> =</td><td>1000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_obs_input_types%7E9"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_obs_input_types</strong></td><td> =</td><td>500</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-process_file%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>process_file</strong>(max_num_input_files)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-restrict_by_obs_type"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>restrict_by_obs_type</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-restrict_by_location"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>restrict_by_location</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-restrict_by_qc"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>restrict_by_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-restrict_by_copy"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>restrict_by_copy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs_input_types%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs_input_types</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_loc%7E2"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_loc%7E2"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-editing_obs"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>editing_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-matching_copy_metadata"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>matching_copy_metadata</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-matching_qc_metadata"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>matching_qc_metadata</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs_time"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_obs_time"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>last_obs_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-matching_copy_limit"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>matching_copy_limit</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-matching_qc_limit"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>matching_qc_limit</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_index_len"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>copy_index_len</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_index_len"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc_index_len</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_input_files%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_input_files</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filename_seq%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>filename_seq</strong>(max_num_input_files)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filename_seq_list%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>filename_seq_list</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filename_out%7E7"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>filename_out</strong></td><td> =</td><td>'obs_seq.processed'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs_days%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs_days</strong></td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs_seconds%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs_seconds</strong></td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_obs_days%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>last_obs_days</strong></td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_obs_seconds%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>last_obs_seconds</strong></td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_types%7E2"></span>character(len=obstypelength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_types</strong>(max_obs_input_types)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-keep_types"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>keep_types</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_box"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_box</strong>(4)</td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_box"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_box</strong>(4)</td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_lat</strong></td><td> =</td><td>-90.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_lat</strong></td><td> =</td><td>90.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_lon</strong></td><td> =</td><td>0.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_lon</strong></td><td> =</td><td>360.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_copy"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_copy</strong></td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_copy"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_copy</strong></td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_type"></span>character(len=obstypelength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>copy_type</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_metadata%7E2"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>copy_metadata</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_copy_metadata"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_copy_metadata</strong>(copy_qc_listlen)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-edit_copy_metadata"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>edit_copy_metadata</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-edit_copies%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>edit_copies</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_copy_index%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_copy_index</strong>(copy_qc_listlen)</td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_copy_data%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_copy_data</strong>(copy_qc_listlen)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-synonymous_copy_list"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>synonymous_copy_list</strong>(copy_qc_listlen)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_qc"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_qc</strong></td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_qc"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_qc</strong></td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_metadata"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc_metadata</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_qc_metadata"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_qc_metadata</strong>(copy_qc_listlen)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-edit_qc_metadata"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>edit_qc_metadata</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-edit_qcs%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>edit_qcs</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_qc_index%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_qc_index</strong>(copy_qc_listlen)</td><td> =</td><td>-1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_qc_data%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>new_qc_data</strong>(copy_qc_listlen)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-synonymous_qc_list"></span>character(len=metadatalength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>synonymous_qc_list</strong>(copy_qc_listlen)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-print_only%7E6"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>print_only</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gregorian_cal"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gregorian_cal</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_gps_height"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>min_gps_height</strong></td><td> =</td><td>missing_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-write_external_fos"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>write_external_FOs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-obs_seq_modules_used%7E2"></span><h3>
+subroutine <a href='../proc/obs_seq_modules_used%7E2.html'>obs_seq_modules_used</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compare_metadata%7E2"></span><h3>
+subroutine <a href='../proc/compare_metadata%7E2.html'>compare_metadata</a>(seq1, seq2, fname1, fname2)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td></td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td></td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname2</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-trim_seq"></span><h3>
+subroutine <a href='../proc/trim_seq.html'>trim_seq</a>(seq, trim_first, first_time, trim_last, last_time, seqfilename, print_msg, remaining_obs_count)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>trim_first</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>first_time</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>trim_last</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>last_time</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seqfilename</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>print_msg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>remaining_obs_count</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-print_obs_seq%7E8"></span><h3>
+subroutine <a href='../proc/print_obs_seq%7E8.html'>print_obs_seq</a>(seq_in, filename)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq_in</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-validate_obs_seq_time%7E10"></span><h3>
+subroutine <a href='../proc/validate_obs_seq_time%7E10.html'>validate_obs_seq_time</a>(seq, filename)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-print_metadata%7E10"></span><h3>
+subroutine <a href='../proc/print_metadata%7E10.html'>print_metadata</a>(seq1, fname1)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td></td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname1</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-set_new_data"></span><h3>
+subroutine <a href='../proc/set_new_data.html'>set_new_data</a>(obs, edit_copies, new_copy_index, new_copy_data, edit_qcs, new_qc_index, new_qc_data)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_type.html'>obs_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>edit_copies</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>new_copy_index</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>new_copy_data</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>edit_qcs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>new_qc_index</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>new_qc_data</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

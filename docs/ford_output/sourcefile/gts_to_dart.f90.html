@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>gts_to_dart.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>gts_to_dart.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for source files.">174 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/gts_to_dart.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">gts_to_dart.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/gts_to_dart.html">gts_to_dart</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/gts_to_dart.f90.html#src">gts_to_dart.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/gts_to_dart.html">gts_to_dart</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/gts_to_dart.f90.html#src">gts_to_dart.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a> 
+<a name="ln-7"></a><span class="k">PROGRAM </span><span class="n">gts_to_dart</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a><span class="k">use         </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">missing_r8</span><span class="p">,</span> <span class="n">missing_data</span><span class="p">,</span> <span class="n">DEG2RAD</span><span class="p">,</span> <span class="n">earth_radius</span>
+<a name="ln-10"></a><span class="k">use     </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">open_file</span><span class="p">,</span> <span class="n">close_file</span><span class="p">,</span> <span class="n">initialize_utilities</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-11"></a>                              <span class="n">register_module</span><span class="p">,</span> <span class="n">logfileunit</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="n">finalize_utilities</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-12"></a>                              <span class="n">error_handler</span><span class="p">,</span> <span class="n">find_namelist_in_file</span><span class="p">,</span> <span class="n">check_namelist_read</span>
+<a name="ln-13"></a><span class="k">use  </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">init_obs_sequence</span><span class="p">,</span> <span class="n">insert_obs_in_seq</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-14"></a>                              <span class="n">set_copy_meta_data</span><span class="p">,</span> <span class="n">set_qc_meta_data</span><span class="p">,</span> <span class="n">write_obs_seq</span><span class="p">,</span> <span class="n">assignment</span><span class="p">(</span><span class="o">=</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-15"></a>                              <span class="n">init_obs</span><span class="p">,</span> <span class="n">static_init_obs_sequence</span><span class="p">,</span> <span class="n">set_obs_def</span><span class="p">,</span> <span class="n">set_obs_values</span><span class="p">,</span> <span class="n">set_qc</span>
+<a name="ln-16"></a><span class="k">use       </span><span class="n">obs_def_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">set_obs_def_location</span><span class="p">,</span> <span class="n">set_obs_def_error_variance</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-17"></a>                              <span class="n">set_obs_def_type_of_obs</span><span class="p">,</span> <span class="n">set_obs_def_time</span><span class="p">,</span> <span class="n">set_obs_def_key</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-18"></a>                              <span class="n">obs_def_type</span>
+<a name="ln-19"></a><span class="k">use      </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">SAT_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">SAT_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-20"></a>                              <span class="n">QKSWND_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">QKSWND_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-21"></a>                              <span class="n">RADIOSONDE_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">RADIOSONDE_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-22"></a>                              <span class="n">RADIOSONDE_TEMPERATURE</span><span class="p">,</span> <span class="n">RADIOSONDE_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-23"></a>                              <span class="n">RADIOSONDE_DEWPOINT</span><span class="p">,</span> <span class="n">METAR_DEWPOINT_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-24"></a>                              <span class="n">METAR_U_10_METER_WIND</span><span class="p">,</span> <span class="n">METAR_V_10_METER_WIND</span><span class="p">,</span> <span class="n">METAR_TEMPERATURE_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-25"></a>                              <span class="n">METAR_SPECIFIC_HUMIDITY_2_METER</span><span class="p">,</span> <span class="n">METAR_SURFACE_PRESSURE</span><span class="p">,</span> <span class="n">METAR_POT_TEMP_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-26"></a>                              <span class="n">BUOY_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">BUOY_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">BUOY_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-27"></a>                              <span class="n">BUOY_TEMPERATURE</span><span class="p">,</span> <span class="n">BUOY_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-28"></a>                              <span class="n">SHIP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">SHIP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">SHIP_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-29"></a>                              <span class="n">SHIP_TEMPERATURE</span><span class="p">,</span> <span class="n">SHIP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-30"></a>                              <span class="n">SYNOP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">SYNOP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">SYNOP_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-31"></a>                              <span class="n">SYNOP_TEMPERATURE</span><span class="p">,</span> <span class="n">SYNOP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-32"></a>                              <span class="n">METAR_U_10_METER_WIND</span><span class="p">,</span> <span class="n">METAR_V_10_METER_WIND</span><span class="p">,</span> <span class="n">METAR_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-33"></a>                              <span class="n">METAR_TEMPERATURE_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-34"></a>                              <span class="n">AIREP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">AIREP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">AIREP_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-35"></a>                              <span class="n">AIREP_TEMPERATURE</span><span class="p">,</span> <span class="n">AIREP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-36"></a>                              <span class="n">AMDAR_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">AMDAR_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">AMDAR_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-37"></a>                              <span class="n">AMDAR_TEMPERATURE</span><span class="p">,</span> <span class="n">AMDAR_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-38"></a>                              <span class="n">PILOT_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">PILOT_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">PILOT_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-39"></a>                              <span class="n">PILOT_TEMPERATURE</span><span class="p">,</span> <span class="n">PILOT_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-40"></a>                              <span class="n">PROFILER_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">PROFILER_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">PROFILER_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-41"></a>                              <span class="n">BOGUS_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">BOGUS_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">BOGUS_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-42"></a>                              <span class="n">BOGUS_TEMPERATURE</span><span class="p">,</span> <span class="n">BOGUS_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-43"></a>                              <span class="n">GPSRO_REFRACTIVITY</span>
+<a name="ln-44"></a><span class="k">use      </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span><span class="p">,</span> <span class="n">set_location</span><span class="p">,</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">VERTISHEIGHT</span>
+<a name="ln-45"></a><span class="k">use  </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_date</span><span class="p">,</span> <span class="n">set_calendar_type</span><span class="p">,</span> <span class="n">GREGORIAN</span>
+<a name="ln-46"></a>
+<a name="ln-47"></a><span class="k">use </span><span class="n">DA_Constants</span>
+<a name="ln-48"></a><span class="k">use </span><span class="n">DA_Define_Structures</span>
+<a name="ln-49"></a><span class="k">use </span><span class="n">module_obs</span>
+<a name="ln-50"></a>
+<a name="ln-51"></a><span class="k">use </span><span class="n">gts_dart_mod</span>
+<a name="ln-52"></a>
+<a name="ln-53"></a><span class="k">implicit none</span>
+<a name="ln-54"></a>
+<a name="ln-55"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-56"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-57"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-58"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-59"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-60"></a>
+<a name="ln-61"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq</span>
+<a name="ln-62"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span>
+<a name="ln-63"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">obs_def</span>
+<a name="ln-64"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-65"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="nb">time</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="kt">integer</span>           <span class="kd">::</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">iost</span><span class="p">,</span> <span class="n">io</span>
+<a name="ln-68"></a><span class="kt">integer</span>           <span class="kd">::</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span>
+<a name="ln-69"></a><span class="kt">integer</span>           <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">ii</span><span class="p">,</span> <span class="n">which_vert</span><span class="p">,</span> <span class="n">gpskey</span>
+<a name="ln-70"></a><span class="kt">integer</span>           <span class="kd">::</span> <span class="n">num_obs</span><span class="p">,</span> <span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">max_num_obs</span><span class="o">=</span><span class="mi">8000000</span>
+<a name="ln-71"></a>
+<a name="ln-72"></a><span class="c">!real(r8)          :: lat,lon,pressure, height</span>
+<a name="ln-73"></a><span class="c">!real(r8)          :: windspd, winddir, uu, vv, tk, td, rh, qv</span>
+<a name="ln-74"></a>
+<a name="ln-75"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dummy</span>
+<a name="ln-76"></a>
+<a name="ln-77"></a><span class="kt">logical</span>           <span class="kd">::</span> <span class="n">valid</span>
+<a name="ln-78"></a>
+<a name="ln-79"></a><span class="c">!-----------------------------------------------------------------------------</span>
+<a name="ln-80"></a><span class="c">! Namelist with default values</span>
+<a name="ln-81"></a><span class="c">!</span>
+<a name="ln-82"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span> <span class="o">=</span> <span class="mi">129</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gts_file</span>        <span class="o">=</span> <span class="s1">&#39;gts_obsout.dat&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-83"></a>                        <span class="n">obs_seq_out_file_name</span> <span class="o">=</span> <span class="s1">&#39;obs_seq.out&#39;</span>
+<a name="ln-84"></a><span class="kt">integer</span>              <span class="kd">::</span> <span class="n">calendar_type</span>         <span class="o">=</span> <span class="n">GREGORIAN</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="kt">integer</span>              <span class="kd">::</span> <span class="n">gts_qc_threshold</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>     
+<a name="ln-87"></a>                        <span class="c">! &lt; 0 : keep all obs (see qc_flag in da_control in WRFVAR)</span>
+<a name="ln-88"></a>                        <span class="c">! &gt; 0 : keep obs with 0 &lt;= qc_flag &lt;= gts_qc_threshold</span>
+<a name="ln-89"></a>
+<a name="ln-90"></a>
+<a name="ln-91"></a><span class="kt">logical</span>  <span class="kd">::</span>  <span class="n">Use_SynopObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-92"></a>             <span class="n">Use_ShipsObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-93"></a>             <span class="n">Use_MetarObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-94"></a>             <span class="n">Use_BuoysObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-95"></a>             <span class="n">Use_PilotObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-96"></a>             <span class="n">Use_SoundObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-97"></a>             <span class="n">Use_SatemObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-98"></a>             <span class="n">Use_SatobObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-99"></a>             <span class="n">Use_AirepObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-100"></a>             <span class="n">Use_AmdarObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-101"></a>             <span class="n">Use_GpspwObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-102"></a>             <span class="n">Use_SsmiRetrievalObs</span> <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-103"></a>             <span class="n">Use_SsmiTbObs</span>  <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-104"></a>             <span class="n">Use_Ssmt1Obs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-105"></a>             <span class="n">Use_Ssmt2Obs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-106"></a>             <span class="n">Use_ProflObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-107"></a>             <span class="n">Use_QscatObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-108"></a>             <span class="n">Use_BogusObs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.,</span> <span class="p">&amp;</span>
+<a name="ln-109"></a>             <span class="n">Use_gpsrefobs</span>   <span class="o">=</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.</span>
+<a name="ln-110"></a><span class="kt">logical</span>  <span class="kd">::</span>  <span class="n">dropsonde_only</span>  <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span>
+<a name="ln-111"></a>
+<a name="ln-112"></a><span class="kt">integer</span>  <span class="kd">::</span>  <span class="n">num_thin_satob</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">num_thin_qscat</span> <span class="o">=</span> <span class="mi">100</span>
+<a name="ln-113"></a>
+<a name="ln-114"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">gts_to_dart_nml</span><span class="o">/</span> <span class="n">gts_file</span><span class="p">,</span> <span class="n">obs_seq_out_file_name</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-115"></a>                           <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-116"></a>                           <span class="n">Use_SynopObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-117"></a>                           <span class="n">Use_ShipsObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-118"></a>                           <span class="n">Use_MetarObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-119"></a>                           <span class="n">Use_BuoysObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-120"></a>                           <span class="n">Use_PilotObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-121"></a>                           <span class="n">Use_SoundObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-122"></a>                           <span class="n">Use_SatemObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-123"></a>                           <span class="n">Use_SatobObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-124"></a>                           <span class="n">Use_AirepObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-125"></a>                           <span class="n">Use_AmdarObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-126"></a>                           <span class="n">Use_GpspwObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-127"></a>                           <span class="n">Use_SsmiRetrievalObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-128"></a>                           <span class="n">Use_SsmiTbObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-129"></a>                           <span class="n">Use_Ssmt1Obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-130"></a>                           <span class="n">Use_Ssmt2Obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-131"></a>                           <span class="n">Use_QscatObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-132"></a>                           <span class="n">Use_ProflObs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-133"></a>                           <span class="n">Use_gpsrefobs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-134"></a>                           <span class="n">Use_Bogusobs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-135"></a>                           <span class="n">dropsonde_only</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-136"></a>                           <span class="n">num_thin_satob</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-137"></a>                           <span class="n">num_thin_qscat</span> 
+<a name="ln-138"></a>
+<a name="ln-139"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-140"></a>
+<a name="ln-141"></a><span class="c">!print*,&#39;Input WRFVAR 2.1 GTS OBS filename: &#39;</span>
+<a name="ln-142"></a><span class="c">!read(*,&#39;(a)&#39;) gts_file</span>
+<a name="ln-143"></a><span class="c">!print*,&#39;Output DART OBS Sequence filename: &#39;</span>
+<a name="ln-144"></a><span class="c">!read(*,&#39;(a)&#39;) obs_seq_out_file_name</span>
+<a name="ln-145"></a>
+<a name="ln-146"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">(</span><span class="s1">&#39;gts_to_dart&#39;</span><span class="p">)</span>
+<a name="ln-147"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-148"></a>
+<a name="ln-149"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-150"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;gts_to_dart_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-151"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">gts_to_dart_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-152"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;gts_to_dart_nml&quot;</span><span class="p">)</span>
+<a name="ln-153"></a>
+<a name="ln-154"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-155"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;gts_to_dart&#39;</span><span class="p">,</span><span class="s1">&#39;gts_to_dart_nml values are&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a name="ln-156"></a><span class="k">write</span><span class="p">(</span><span class="n">logfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">gts_to_dart_nml</span><span class="p">)</span>
+<a name="ln-157"></a><span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">gts_to_dart_nml</span><span class="p">)</span>
+<a name="ln-158"></a>
+<a name="ln-159"></a><span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">calendar_type</span><span class="p">)</span>
+<a name="ln-160"></a>
+<a name="ln-161"></a><span class="c">!-----------------------------------------------------------------------------!</span>
+<a name="ln-162"></a><span class="c">! Read 3D-VAR GTS observation file</span>
+<a name="ln-163"></a><span class="c">! at the end, &#39;ob&#39; contains all observations</span>
+<a name="ln-164"></a><span class="c">!-----------------------------------------------------------------------------!</span>
+<a name="ln-165"></a><span class="c">!iunit = open_file(gts_file, action = &#39;read&#39;)</span>
+<a name="ln-166"></a><span class="n">iunit</span> <span class="o">=</span> <span class="mi">99</span>
+<a name="ln-167"></a><span class="k">open</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="k">file</span><span class="o">=</span><span class="n">gts_file</span><span class="p">)</span>
+<a name="ln-168"></a>
+<a name="ln-169"></a><span class="n">max_sound_input</span> <span class="o">=</span> <span class="n">max_sound</span>
+<a name="ln-170"></a><span class="n">max_synop_input</span> <span class="o">=</span> <span class="n">max_synop</span>
+<a name="ln-171"></a><span class="n">max_satob_input</span> <span class="o">=</span> <span class="n">max_satob</span>
+<a name="ln-172"></a><span class="n">max_airep_input</span> <span class="o">=</span> <span class="n">max_airep</span>
+<a name="ln-173"></a><span class="n">max_satem_input</span> <span class="o">=</span> <span class="n">max_satem</span>
+<a name="ln-174"></a><span class="n">max_pilot_input</span> <span class="o">=</span> <span class="n">max_pilot</span>
+<a name="ln-175"></a><span class="n">max_amdar_input</span> <span class="o">=</span> <span class="n">max_amdar</span>
+<a name="ln-176"></a><span class="n">max_metar_input</span> <span class="o">=</span> <span class="n">max_metar</span>
+<a name="ln-177"></a><span class="n">max_gpspw_input</span> <span class="o">=</span> <span class="n">max_gpspw</span>
+<a name="ln-178"></a><span class="n">max_ships_input</span> <span class="o">=</span> <span class="n">max_ships</span>
+<a name="ln-179"></a><span class="n">max_ssmt1_input</span> <span class="o">=</span> <span class="n">max_ssmt1</span>
+<a name="ln-180"></a><span class="n">max_ssmt2_input</span> <span class="o">=</span> <span class="n">max_ssmt2</span>
+<a name="ln-181"></a><span class="n">max_ssmi_input</span>  <span class="o">=</span> <span class="n">max_ssmi</span>
+<a name="ln-182"></a><span class="n">max_tovs_input</span>  <span class="o">=</span> <span class="n">max_tovs</span>
+<a name="ln-183"></a><span class="n">max_qscat_input</span> <span class="o">=</span> <span class="n">max_qscat</span>
+<a name="ln-184"></a><span class="n">max_profl_input</span> <span class="o">=</span> <span class="n">max_profl</span>
+<a name="ln-185"></a><span class="n">max_buoys_input</span> <span class="o">=</span> <span class="n">max_buoys</span>
+<a name="ln-186"></a><span class="n">max_bogus_input</span> <span class="o">=</span> <span class="n">max_bogus</span>
+<a name="ln-187"></a><span class="n">max_gpsref_input</span> <span class="o">=</span> <span class="n">max_gpsref</span>
+<a name="ln-188"></a>
+<a name="ln-189"></a><span class="k">CALL </span><span class="n">DA_Setup_Obs_Structures</span>
+<a name="ln-190"></a>
+<a name="ln-191"></a><span class="c">!-----------------------------------------------------------------------------!</span>
+<a name="ln-192"></a><span class="c">! Create DART obs sequence file</span>
+<a name="ln-193"></a><span class="c">!-----------------------------------------------------------------------------!</span>
+<a name="ln-194"></a>
+<a name="ln-195"></a><span class="c">! Initialize the counters:</span>
+<a name="ln-196"></a>
+<a name="ln-197"></a><span class="n">num_obs</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-198"></a><span class="n">num_obs_last</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-199"></a>
+<a name="ln-200"></a><span class="k">call </span><span class="n">static_init_obs_sequence</span><span class="p">()</span>
+<a name="ln-201"></a>
+<a name="ln-202"></a><span class="n">num_copies</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-203"></a><span class="n">num_qc</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-204"></a>
+<a name="ln-205"></a><span class="c">! Initialize an obs_sequence structure</span>
+<a name="ln-206"></a><span class="k">call </span><span class="n">init_obs_sequence</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">max_num_obs</span><span class="p">)</span>
+<a name="ln-207"></a>
+<a name="ln-208"></a><span class="k">call </span><span class="n">set_copy_meta_data</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;WRFVAR 2.1 GTS observations&#39;</span><span class="p">)</span>
+<a name="ln-209"></a><span class="k">call </span><span class="n">set_qc_meta_data</span><span class="p">(</span>  <span class="n">seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;WRFVAR OBSPROC Quality Control&#39;</span><span class="p">)</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-212"></a>
+<a name="ln-213"></a><span class="c">!  -----------------</span>
+<a name="ln-214"></a><span class="c">!  LOOP OVER RECORDS</span>
+<a name="ln-215"></a><span class="c">!  -----------------</span>
+<a name="ln-216"></a>
+<a name="ln-217"></a><span class="mi">101</span> <span class="k">format</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">3</span><span class="n">I8</span><span class="p">)</span>
+<a name="ln-218"></a>
+<a name="ln-219"></a><span class="c">!--- process sound  ---</span>
+<a name="ln-220"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_SoundObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-221"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_sound</span>
+<a name="ln-222"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">sound</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-223"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-224"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">RADIOSONDE_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-225"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">RADIOSONDE_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-226"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">RADIOSONDE_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-227"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">RADIOSONDE_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-228"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-229"></a>   <span class="n">enddo</span>
+<a name="ln-230"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed  OBS_TYPE    VAR#   DART#  Total_DART#&#39;</span>  
+<a name="ln-231"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed      TEMP&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_sound</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-232"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-233"></a><span class="n">endif</span>
+<a name="ln-234"></a>
+<a name="ln-235"></a><span class="c">!--- process profiler  ---</span>
+<a name="ln-236"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_ProflObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-237"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_profl</span>
+<a name="ln-238"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">profl</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-239"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-240"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">PROFILER_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-241"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">PROFILER_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-242"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-243"></a>   <span class="n">enddo</span>
+<a name="ln-244"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_profl, &#39; PROFI,  total obs # &#39;, num_obs</span>
+<a name="ln-245"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     PROFI&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_profl</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-246"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-247"></a><span class="n">endif</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a><span class="c">!---  process satob  ---</span>
+<a name="ln-250"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_SatobObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-251"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_satob</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num_thin_satob</span><span class="p">)</span>      <span class="c">! thinning: take one every num_thin_satob</span>
+<a name="ln-252"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">satob</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-253"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-254"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">SAT_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-255"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">SAT_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-256"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-257"></a>   <span class="n">enddo</span>
+<a name="ln-258"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_satob, &#39; SATOB,  total obs # &#39;, num_obs</span>
+<a name="ln-259"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     SATOB&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_satob</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-260"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-261"></a><span class="n">endif</span>
+<a name="ln-262"></a>
+<a name="ln-263"></a><span class="c">!--- process qscat ---</span>
+<a name="ln-264"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_QscatObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-265"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_qscat</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">num_thin_qscat</span><span class="p">)</span>      <span class="c">! thinning: take one every num_thin_qscat</span>
+<a name="ln-266"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">qscat</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-267"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-268"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">QKSWND_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-269"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">QKSWND_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-270"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-271"></a>   <span class="n">enddo</span>
+<a name="ln-272"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_qscat, &#39; QSCAT,  total obs # &#39;, num_obs</span>
+<a name="ln-273"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     QSCAT&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_qscat</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-274"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-275"></a><span class="n">endif</span>
+<a name="ln-276"></a>
+<a name="ln-277"></a><span class="c">!--- process synop ---</span>
+<a name="ln-278"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_SynopObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-279"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_synop</span>
+<a name="ln-280"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">synop</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-281"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-282"></a>                          <span class="n">pressure_type</span>    <span class="o">=</span> <span class="n">SYNOP_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-283"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">SYNOP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-284"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">SYNOP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-285"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">SYNOP_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-286"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">SYNOP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-287"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-288"></a>   <span class="n">enddo</span>
+<a name="ln-289"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_synop, &#39; SYNOP,  total obs # &#39;, num_obs</span>
+<a name="ln-290"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     SYNOP&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_synop</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-291"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-292"></a><span class="n">endif</span>
+<a name="ln-293"></a>
+<a name="ln-294"></a><span class="c">!--- process metar ---</span>
+<a name="ln-295"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_MetarObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-296"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_metar</span>
+<a name="ln-297"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">metar</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-298"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-299"></a>                          <span class="n">pressure_type</span>    <span class="o">=</span> <span class="n">METAR_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-300"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">METAR_U_10_METER_WIND</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-301"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">METAR_V_10_METER_WIND</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-302"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">METAR_TEMPERATURE_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-303"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">METAR_DEWPOINT_2_METER</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-304"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-305"></a>   <span class="n">enddo</span>
+<a name="ln-306"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_metar, &#39; METAR,  total obs # &#39;, num_obs</span>
+<a name="ln-307"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     METAR&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_metar</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-308"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-309"></a><span class="n">endif</span>
+<a name="ln-310"></a>
+<a name="ln-311"></a><span class="c">!--- process buoys ---</span>
+<a name="ln-312"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_BuoysObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-313"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_buoys</span>
+<a name="ln-314"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">buoys</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-315"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-316"></a>                          <span class="n">pressure_type</span>    <span class="o">=</span> <span class="n">BUOY_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-317"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">BUOY_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-318"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">BUOY_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-319"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">BUOY_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-320"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">BUOY_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-321"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-322"></a>   <span class="n">enddo</span>
+<a name="ln-323"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_buoys, &#39; BUOY ,  total obs # &#39;, num_obs</span>
+<a name="ln-324"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     BUOYS&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_buoys</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-325"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-326"></a><span class="n">endif</span>
+<a name="ln-327"></a>
+<a name="ln-328"></a><span class="c">!--- process ships ---</span>
+<a name="ln-329"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_ShipsObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-330"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_ships</span>
+<a name="ln-331"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">ships</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span> 
+<a name="ln-332"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-333"></a>                          <span class="n">pressure_type</span>    <span class="o">=</span> <span class="n">SHIP_SURFACE_PRESSURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-334"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">SHIP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-335"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">SHIP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-336"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">SHIP_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-337"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">SHIP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-338"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-339"></a>   <span class="n">enddo</span>
+<a name="ln-340"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_ships, &#39; SHIP ,  total obs # &#39;, num_obs</span>
+<a name="ln-341"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     SHIPS&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_ships</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-342"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-343"></a><span class="n">endif</span>
+<a name="ln-344"></a>
+<a name="ln-345"></a><span class="c">!--- process airep ---</span>
+<a name="ln-346"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_AirepObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-347"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_airep</span>
+<a name="ln-348"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">airep</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-349"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-350"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">AIREP_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-351"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">AIREP_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-352"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">AIREP_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-353"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">AIREP_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-354"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-355"></a>   <span class="n">enddo</span>
+<a name="ln-356"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_airep, &#39; AIREP,  total obs # &#39;, num_obs</span>
+<a name="ln-357"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     AIREP&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_airep</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-358"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-359"></a><span class="n">endif</span> 
+<a name="ln-360"></a>
+<a name="ln-361"></a><span class="c">!--- process amdar ---</span>
+<a name="ln-362"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_AmdarObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-363"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_amdar</span>
+<a name="ln-364"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">amdar</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-365"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-366"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">AMDAR_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>         
+<a name="ln-367"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">AMDAR_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-368"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">AMDAR_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-369"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">AMDAR_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-370"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-371"></a>   <span class="n">enddo</span>
+<a name="ln-372"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_amdar, &#39; AMDAR,  total obs # &#39;, num_obs</span>
+<a name="ln-373"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     AMDAR&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_amdar</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-374"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-375"></a><span class="n">endif</span>
+<a name="ln-376"></a>
+<a name="ln-377"></a><span class="c">!--- process pilot ---</span>
+<a name="ln-378"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_PilotObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-379"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_pilot</span>
+<a name="ln-380"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">pilot</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-381"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-382"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">PILOT_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-383"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">PILOT_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-384"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">PILOT_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-385"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">PILOT_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-386"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-387"></a>   <span class="n">enddo</span>                  
+<a name="ln-388"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_pilot, &#39; PILOT,  total obs # &#39;, num_obs</span>
+<a name="ln-389"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     PILOT&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_pilot</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-390"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-391"></a><span class="n">endif</span>
+<a name="ln-392"></a>
+<a name="ln-393"></a><span class="c">!--- process bogus ---</span>
+<a name="ln-394"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_BogusObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-395"></a><span class="k">   do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_bogus</span>
+<a name="ln-396"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">bogus</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>   
+<a name="ln-397"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-398"></a>                          <span class="n">u_wind_type</span>      <span class="o">=</span> <span class="n">BOGUS_U_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-399"></a>                          <span class="n">v_wind_type</span>      <span class="o">=</span> <span class="n">BOGUS_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-400"></a>                          <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">BOGUS_TEMPERATURE</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-401"></a>                          <span class="n">dew_point_type</span>   <span class="o">=</span> <span class="n">BOGUS_DEWPOINT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-402"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-403"></a>   <span class="n">enddo</span>
+<a name="ln-404"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_pilot, &#39; BOGUS,  total obs # &#39;, num_obs</span>
+<a name="ln-405"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed     BOGUS&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_bogus</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-406"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-407"></a><span class="n">endif</span>
+<a name="ln-408"></a>
+<a name="ln-409"></a><span class="c">!--- process gpsref ---</span>
+<a name="ln-410"></a><span class="k">if</span> <span class="p">(</span><span class="n">Use_gpsrefObs</span> <span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">.</span><span class="n">TRUE</span><span class="p">.)</span> <span class="k">then</span>
+<a name="ln-411"></a><span class="k">   </span><span class="n">gpskey</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-412"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_gpsref</span>
+<a name="ln-413"></a>      <span class="k">call </span><span class="n">insert_gts_obs</span><span class="p">(</span><span class="n">ob</span><span class="p">%</span><span class="n">gpsref</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-414"></a>                          <span class="n">qc_threshold</span> <span class="o">=</span> <span class="n">gts_qc_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-415"></a>                          <span class="n">gpsref_type</span> <span class="o">=</span> <span class="n">GPSRO_REFRACTIVITY</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-416"></a>                          <span class="n">gpsref_key</span> <span class="o">=</span> <span class="n">gpskey</span><span class="p">,</span> <span class="n">gpsref_form</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">isgps</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.,&amp;</span>
+<a name="ln-417"></a>                          <span class="n">which_vert</span><span class="o">=</span><span class="n">VERTISHEIGHT</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">=</span><span class="n">num_obs</span><span class="p">,</span> <span class="n">obs</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
+<a name="ln-418"></a>   <span class="n">enddo</span>
+<a name="ln-419"></a><span class="c">!  print*,&#39;Processed &#39;, ob%num_gpsref, &#39;GPSREF,  total obs # &#39;, num_obs</span>
+<a name="ln-420"></a>   <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;Processed    GPSREF&#39;</span><span class="p">,</span> <span class="n">ob</span><span class="p">%</span><span class="n">num_gpsref</span><span class="p">,</span> <span class="n">num_obs</span><span class="o">-</span><span class="n">num_obs_last</span><span class="p">,</span> <span class="n">num_obs</span>
+<a name="ln-421"></a>   <span class="n">num_obs_last</span> <span class="o">=</span> <span class="n">num_obs</span>
+<a name="ln-422"></a><span class="n">endif</span>
+<a name="ln-423"></a>
+<a name="ln-424"></a>
+<a name="ln-425"></a><span class="c">!!--- process satem  ---</span>
+<a name="ln-426"></a><span class="c">!if (Use_SatemObs .eqv. .TRUE.) then</span>
+<a name="ln-427"></a><span class="c">!!   do i = 1, ob%num_satem</span>
+<a name="ln-428"></a><span class="c">!      call insert_gts_obs(ob%satem(i), &amp;</span>
+<a name="ln-429"></a><span class="c">!                          qc_threshold = gts_qc_threshold, &amp;</span>
+<a name="ln-430"></a><span class="c">!                          thickness_type   = SATEM_THICKNESS, &amp;</span>
+<a name="ln-431"></a><span class="c">!                          which_vert=VERTISPRESSURE, num_obs=num_obs, obs=obs, seq=seq)</span>
+<a name="ln-432"></a><span class="c">!   enddo</span>
+<a name="ln-433"></a><span class="c">!   write(*,101) &#39;Processed  OBS_TYPE    VAR#   DART#  Total_DART#&#39;</span>
+<a name="ln-434"></a><span class="c">!   write(*,101) &#39;Processed      TEMP&#39;, ob%num_satem, num_obs-num_obs_last, num_obs</span>
+<a name="ln-435"></a><span class="c">!   num_obs_last = num_obs</span>
+<a name="ln-436"></a><span class="c">!endif</span>
+<a name="ln-437"></a>
+<a name="ln-438"></a>
+<a name="ln-439"></a><span class="k">call </span><span class="n">close_file</span><span class="p">(</span><span class="n">iunit</span><span class="p">)</span>
+<a name="ln-440"></a>
+<a name="ln-441"></a><span class="k">call </span><span class="n">write_obs_seq</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">obs_seq_out_file_name</span><span class="p">)</span>
+<a name="ln-442"></a>
+<a name="ln-443"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;gts_to_dart&#39;</span><span class="p">,</span> <span class="s1">&#39;FINISHED gts_to_dart.&#39;</span><span class="p">)</span>
+<a name="ln-444"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;gts_to_dart&#39;</span><span class="p">,</span> <span class="s1">&#39;Finished successfully.&#39;</span><span class="p">,&amp;</span>
+<a name="ln-445"></a>                   <span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-446"></a><span class="k">call </span><span class="n">finalize_utilities</span><span class="p">()</span>
+<a name="ln-447"></a>
+<a name="ln-448"></a> 
+<a name="ln-449"></a><span class="k">END PROGRAM </span><span class="n">gts_to_dart</span>
+<a name="ln-450"></a>
+<a name="ln-451"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-452"></a><span class="c">! $URL$</span>
+<a name="ln-453"></a><span class="c">! $Id$</span>
+<a name="ln-454"></a><span class="c">! $Revision$</span>
+<a name="ln-455"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>pert_wrf_bc &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>pert_wrf_bc
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.8% of total for programs.">361 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/pert_wrf_bc.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/pert_wrf_bc.f90.html'>pert_wrf_bc.f90</a></li>
+    
+  
+     <li class="active">pert_wrf_bc</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-source%7E48">source</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-revision%7E48">revision</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-revdate%7E48">revdate</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_3d_variables">max_3d_variables</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_2d_variables">max_2d_variables</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_times%7E2">max_times</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_input_current_file">wrf_input_current_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_input_next_file">wrf_input_next_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_bdy_file">wrf_bdy_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-time_name%7E3">time_name</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var_name%7E9">var_name</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var3d">var3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var2d">var2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyname">bdyname</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tenname">tenname</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-udtime">udtime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdytime">bdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-thisbdytime">thisbdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nextbdytime">nextbdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nexttime">nexttime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msgstring">msgstring</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ids%7E4">ids</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ide%7E4">ide</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-jds%7E4">jds</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-jde%7E4">jde</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-kds%7E3">kds</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-kde%7E3">kde</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-num3d">num3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-num2d">num2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ndims%7E2">ndims</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nmoist">nmoist</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-i%7E66">i</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-j%7E56">j</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-k%7E9">k</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-l">l</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-m%7E4">m</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-n%7E16">n</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_bdy">ntimes_bdy</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_ud">ntimes_ud</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_next">ntimes_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-itime%7E8">itime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-dims">dims</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tend2d">tend2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-scnd2d">scnd2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-frst2d">frst2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tend3d">tend3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-scnd3d">scnd3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-frst3d">frst3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-full3d">full3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-full3d_next">full3d_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-u%7E9">u</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-v%7E7">v</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-w%7E3">w</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-u_next">u_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-v_next">v_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-w_next">w_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mu%7E4">mu</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mu_next">mu_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mub%7E7">mub</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfu%7E2">msfu</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfv%7E2">msfv</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfm%7E2">msfm</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-east_end">east_end</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-north_end">north_end</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-debug%7E18">debug</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyfrq_old">bdyfrq_old</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyfrq">bdyfrq</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-dtnext">dtnext</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/module_netcdf_interface.html'>module_netcdf_interface</a></li>
+    
+    <li><a href='../module/module_couple_uv.html'>module_couple_uv</a></li>
+    
+    <li><a href='../module/module_timediff.html'>module_timediff</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-source%7E48">source</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-revision%7E48">revision</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-revdate%7E48">revdate</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_3d_variables">max_3d_variables</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_2d_variables">max_2d_variables</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-max_times%7E2">max_times</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_input_current_file">wrf_input_current_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_input_next_file">wrf_input_next_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-wrf_bdy_file">wrf_bdy_file</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-time_name%7E3">time_name</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var_name%7E9">var_name</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var3d">var3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-var2d">var2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyname">bdyname</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tenname">tenname</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-udtime">udtime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdytime">bdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-thisbdytime">thisbdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nextbdytime">nextbdytime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nexttime">nexttime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msgstring">msgstring</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ids%7E4">ids</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ide%7E4">ide</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-jds%7E4">jds</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-jde%7E4">jde</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-kds%7E3">kds</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-kde%7E3">kde</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-num3d">num3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-num2d">num2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ndims%7E2">ndims</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-nmoist">nmoist</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-i%7E66">i</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-j%7E56">j</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-k%7E9">k</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-l">l</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-m%7E4">m</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-n%7E16">n</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_bdy">ntimes_bdy</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_ud">ntimes_ud</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-ntimes_next">ntimes_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-itime%7E8">itime</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-dims">dims</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tend2d">tend2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-scnd2d">scnd2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-frst2d">frst2d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-tend3d">tend3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-scnd3d">scnd3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-frst3d">frst3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-full3d">full3d</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-full3d_next">full3d_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-u%7E9">u</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-v%7E7">v</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-w%7E3">w</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-u_next">u_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-v_next">v_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-w_next">w_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mu%7E4">mu</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mu_next">mu_next</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-mub%7E7">mub</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfu%7E2">msfu</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfv%7E2">msfv</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-msfm%7E2">msfm</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-east_end">east_end</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-north_end">north_end</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-debug%7E18">debug</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyfrq_old">bdyfrq_old</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-bdyfrq">bdyfrq</a>
+      
+      <a class="list-group-item" href="../program/pert_wrf_bc.html#variable-dtnext">dtnext</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E48"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E48"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E48"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_3d_variables"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_3d_variables</strong></td><td> =</td><td>20</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_2d_variables"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_2d_variables</strong></td><td> =</td><td>20</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_times%7E2"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_times</strong></td><td> =</td><td>100</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_input_current_file"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_input_current_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_input_next_file"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_input_next_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_bdy_file"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_bdy_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_name%7E3"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time_name</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_name%7E9"></span>character(len=20)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>var_name</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var3d"></span>character(len=20)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>var3d</strong>(max_3d_variables)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var2d"></span>character(len=20)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>var2d</strong>(max_2d_variables)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdyname"></span>character(len=10),</td>
+  
+  
+  <td>dimension(4)</td><td>::</td>
+  <td><strong>bdyname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tenname"></span>character(len=10),</td>
+  
+  
+  <td>dimension(4)</td><td>::</td>
+  <td><strong>tenname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-udtime"></span>character(len=19),</td>
+  
+  
+  <td>dimension(max_times)</td><td>::</td>
+  <td><strong>udtime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdytime"></span>character(len=19),</td>
+  
+  
+  <td>dimension(max_times)</td><td>::</td>
+  <td><strong>bdytime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thisbdytime"></span>character(len=19),</td>
+  
+  
+  <td>dimension(max_times)</td><td>::</td>
+  <td><strong>thisbdytime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nextbdytime"></span>character(len=19),</td>
+  
+  
+  <td>dimension(max_times)</td><td>::</td>
+  <td><strong>nextbdytime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nexttime"></span>character(len=19),</td>
+  
+  
+  <td>dimension(max_times)</td><td>::</td>
+  <td><strong>nexttime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ids%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ids</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ide%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ide</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jds%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jds</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jde%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jde</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-kds%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>kds</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-kde%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>kde</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num3d"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num3d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num2d"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num2d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndims%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ndims</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nmoist"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nmoist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E66"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E56"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>k</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>l</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-m%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>m</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E16"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ntimes_bdy"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes_bdy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ntimes_ud"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes_ud</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ntimes_next"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itime%7E8"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>itime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dims"></span>integer,</td>
+  
+  
+  <td>dimension(4)</td><td>::</td>
+  <td><strong>dims</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tend2d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>tend2d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-scnd2d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>scnd2d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-frst2d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>frst2d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tend3d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>tend3d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-scnd3d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>scnd3d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-frst3d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>frst3d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-full3d"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>full3d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-full3d_next"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>full3d_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u%7E9"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>u</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v%7E7"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>v</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w%7E3"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>w</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_next"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>u_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v_next"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>v_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w_next"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,:,:)</td><td>::</td>
+  <td><strong>w_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mu%7E4"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>mu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mu_next"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>mu_next</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mub%7E7"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>mub</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msfu%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>msfu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msfv%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>msfv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msfm%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:,  :)</td><td>::</td>
+  <td><strong>msfm</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-east_end"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>east_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-north_end"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>north_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E18"></span>logical,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdyfrq_old"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bdyfrq_old</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdyfrq"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bdyfrq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dtnext"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dtnext</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

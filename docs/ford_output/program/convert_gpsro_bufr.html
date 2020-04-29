@@ -1,0 +1,3224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_gpsro_bufr &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_gpsro_bufr
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.1% of total for programs.">469 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_gpsro_bufr.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/convert_gpsro_bufr.f90.html'>convert_gpsro_bufr.f90</a></li>
+    
+  
+     <li class="active">convert_gpsro_bufr</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-source%7E149">source</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-revision%7E149">revision</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-revdate%7E149">revdate</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_copies%7E33">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_qc%7E28">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-msgstring%7E29">msgstring</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-next_infile%7E4">next_infile</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-subset">subset</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlevels%7E4">nlevels</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nfiles%7E11">nfiles</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_new_obs%7E3">num_new_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-oday%7E7">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-osec%7E7">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iyear%7E9">iyear</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-imonth%7E5">imonth</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iday%7E11">iday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ihour%7E5">ihour</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-imin%7E4">imin</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_count">obs_count</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gps_obs_num">gps_obs_num</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_num_byfile">obs_num_byfile</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-io%7E78">io</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iunit%7E105">iunit</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-filenum%7E4">filenum</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy%7E5">dummy</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-file_exist%7E9">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-first_obs%7E11">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-from_list%7E3">from_list</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-oerr%7E12">oerr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qc%7E24">qc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nx%7E34">nx</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ny%7E34">ny</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nz%7E28">nz</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rfict%7E4">rfict</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obsval%7E10">obsval</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_val%7E22">obs_val</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qc_val%7E3">qc_val</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_def%7E50">obs_def</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_seq%7E12">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs%7E65">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-prev_obs%7E16">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_time%7E18">obs_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-prev_time%7E13">prev_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-anal_time%7E3">anal_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-window_min">window_min</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-window_max">window_max</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gday%7E4">gday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gsec%7E4">gsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dsec">dsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bsec">bsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bday">bday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-esec">esec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-eday">eday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_excluded_bytime">num_excluded_bytime</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-existing_obs">existing_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-use_bending_angle">use_bending_angle</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_a">dummy_a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_b">dummy_b</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_c">dummy_c</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_d">dummy_d</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_tf">dummy_tf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_str">dummy_str</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-hdr1a">hdr1a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nemo">nemo</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-subsetb">subsetb</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-cflg">cflg</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obstype%7E5">obstype</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-crecord">crecord</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-unit_in">unit_in</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-unit_aux">unit_aux</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-n1ahdr">n1ahdr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-maxlevs">maxlevs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-maxinfo">maxinfo</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-mxib">mxib</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isats">isats</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ireadmg">ireadmg</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ireadsb">ireadsb</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_satid">num_satid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nk">nk</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-idate%7E2">idate</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iret">iret</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_message">num_message</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_subset">num_subset</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ikx">ikx</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlevs%7E7">nlevs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nreps_roseq1">nreps_ROSEQ1</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-i%7E124">i</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-k%7E21">k</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-m%7E7">m</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-said">said</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ptid">ptid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_gps">nprof_gps</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_bytime">nprof_bytime</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_bad">nprof_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_nosat">nprof_nosat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_cdaac_bad">nprof_cdaac_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_gras_bad">nprof_gras_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_levs_bad">nprof_levs_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ibit">ibit</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nib">nib</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nsatid">nsatid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlines%7E2">nlines</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-istat%7E7">istat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isatid">isatid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isub">isub</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iuse%7E2">iuse</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-pcc">pcc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-roc">roc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-impact">impact</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-geopot">geopot</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-height%7E4">height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rlat%7E4">rlat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rlon%7E4">rlon</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ref%7E2">ref</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-referr">referr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ref_pccf">ref_pccf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-freq_chk">freq_chk</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-freq%7E2">freq</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend">bend</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend_error">bend_error</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend_pccf">bend_pccf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-hdr">hdr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qfro">qfro</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nreps_this_roseq2">nreps_this_ROSEQ2</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-data1b">data1b</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-data2a">data2a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gps_satid">gps_satid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-max_num_obs%7E25">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-lone%7E2">lone</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-good%7E2">good</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_hbot">ray_hbot</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_htop">ray_htop</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_ds">ray_ds</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_window_hr%7E2">obs_window_hr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gsi_error_inv_factor">gsi_error_inv_factor</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-if_global">if_global</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_error_in_gsi">obs_error_in_gsi</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-convert_to_geopotential_height">convert_to_geopotential_height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-debug%7E38">debug</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_bufr_file">gpsro_bufr_file</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_bufr_filelist">gpsro_bufr_filelist</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_out_file">gpsro_out_file</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_aux_file">gpsro_aux_file</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-ref_obserr_kuo_percent">ref_obserr_kuo_percent</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-compute_geopotential_height">compute_geopotential_height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-gsi_refractivity_error">gsi_refractivity_error</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_def_gps_mod%7E2.html'>obs_def_gps_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-source%7E149">source</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-revision%7E149">revision</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-revdate%7E149">revdate</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_copies%7E33">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_qc%7E28">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-msgstring%7E29">msgstring</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-next_infile%7E4">next_infile</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-subset">subset</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlevels%7E4">nlevels</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nfiles%7E11">nfiles</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_new_obs%7E3">num_new_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-oday%7E7">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-osec%7E7">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iyear%7E9">iyear</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-imonth%7E5">imonth</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iday%7E11">iday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ihour%7E5">ihour</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-imin%7E4">imin</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_count">obs_count</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gps_obs_num">gps_obs_num</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_num_byfile">obs_num_byfile</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-io%7E78">io</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iunit%7E105">iunit</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-filenum%7E4">filenum</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy%7E5">dummy</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-file_exist%7E9">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-first_obs%7E11">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-from_list%7E3">from_list</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-oerr%7E12">oerr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qc%7E24">qc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nx%7E34">nx</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ny%7E34">ny</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nz%7E28">nz</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rfict%7E4">rfict</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obsval%7E10">obsval</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_val%7E22">obs_val</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qc_val%7E3">qc_val</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_def%7E50">obs_def</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_seq%7E12">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs%7E65">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-prev_obs%7E16">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_time%7E18">obs_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-prev_time%7E13">prev_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-anal_time%7E3">anal_time</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-window_min">window_min</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-window_max">window_max</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gday%7E4">gday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gsec%7E4">gsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dsec">dsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bsec">bsec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bday">bday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-esec">esec</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-eday">eday</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_excluded_bytime">num_excluded_bytime</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-existing_obs">existing_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-use_bending_angle">use_bending_angle</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_a">dummy_a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_b">dummy_b</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_c">dummy_c</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_d">dummy_d</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_tf">dummy_tf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-dummy_str">dummy_str</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-hdr1a">hdr1a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nemo">nemo</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-subsetb">subsetb</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-cflg">cflg</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obstype%7E5">obstype</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-crecord">crecord</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-unit_in">unit_in</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-unit_aux">unit_aux</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-n1ahdr">n1ahdr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-maxlevs">maxlevs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-maxinfo">maxinfo</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-mxib">mxib</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isats">isats</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ireadmg">ireadmg</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ireadsb">ireadsb</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_satid">num_satid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nk">nk</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-idate%7E2">idate</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iret">iret</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_message">num_message</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-num_subset">num_subset</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ikx">ikx</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlevs%7E7">nlevs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nreps_roseq1">nreps_ROSEQ1</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-i%7E124">i</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-k%7E21">k</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-m%7E7">m</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-said">said</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ptid">ptid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_gps">nprof_gps</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_bytime">nprof_bytime</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_bad">nprof_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_nosat">nprof_nosat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_cdaac_bad">nprof_cdaac_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_gras_bad">nprof_gras_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nprof_levs_bad">nprof_levs_bad</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ibit">ibit</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nib">nib</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nsatid">nsatid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nlines%7E2">nlines</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-istat%7E7">istat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isatid">isatid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-isub">isub</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-iuse%7E2">iuse</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-pcc">pcc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-roc">roc</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-impact">impact</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-geopot">geopot</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-height%7E4">height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rlat%7E4">rlat</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-rlon%7E4">rlon</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ref%7E2">ref</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-referr">referr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ref_pccf">ref_pccf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-freq_chk">freq_chk</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-freq%7E2">freq</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend">bend</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend_error">bend_error</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-bend_pccf">bend_pccf</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-hdr">hdr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-qfro">qfro</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-nreps_this_roseq2">nreps_this_ROSEQ2</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-data1b">data1b</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-data2a">data2a</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gps_satid">gps_satid</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-max_num_obs%7E25">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-lone%7E2">lone</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-good%7E2">good</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_hbot">ray_hbot</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_htop">ray_htop</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-ray_ds">ray_ds</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_window_hr%7E2">obs_window_hr</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gsi_error_inv_factor">gsi_error_inv_factor</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-if_global">if_global</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-obs_error_in_gsi">obs_error_in_gsi</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-convert_to_geopotential_height">convert_to_geopotential_height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-debug%7E38">debug</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_bufr_file">gpsro_bufr_file</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_bufr_filelist">gpsro_bufr_filelist</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_out_file">gpsro_out_file</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#variable-gpsro_aux_file">gpsro_aux_file</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-ref_obserr_kuo_percent">ref_obserr_kuo_percent</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-compute_geopotential_height">compute_geopotential_height</a>
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html#proc-gsi_refractivity_error">gsi_refractivity_error</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E149"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E149"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E149"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E33"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_copies</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E28"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_qc</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring%7E29"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-next_infile%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>next_infile</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-subset"></span>character(len=6)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>subset</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlevels%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nlevels</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfiles%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nfiles</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_new_obs%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_new_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iyear%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iyear</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imonth%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>imonth</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iday%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ihour%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ihour</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imin%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>imin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_count"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_count</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gps_obs_num"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gps_obs_num</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_num_byfile"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_num_byfile</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E78"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E105"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filenum%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>filenum</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_exist%7E9"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_exist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E11"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-from_list%7E3"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>from_list</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oerr%7E12"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E24"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nx%7E34"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ny%7E34"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ny</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nz%7E28"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rfict%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rfict</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsval%7E10"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsval</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_val%7E22"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_val</strong>(1)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_val%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc_val</strong>(1)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_def%7E50"></span>type(<a href='../type/obs_def_type.html'>obs_def_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_def</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E12"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E65"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E16"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_time%7E18"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E13"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-anal_time%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>anal_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-window_min"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>window_min</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-window_max"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>window_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gday%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gsec%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gsec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dsec"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dsec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bsec"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bsec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bday"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-esec"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>esec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-eday"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>eday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_excluded_bytime"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_excluded_bytime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-existing_obs"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>existing_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-use_bending_angle"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>use_bending_angle</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_a"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_a</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_b"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_b</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_c"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_d"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_tf"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_tf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_str"></span>character(len=32)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dummy_str</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hdr1a"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>hdr1a</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nemo"></span>character(len=10)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nemo</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-subsetb"></span>character(len=8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>subsetb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cflg"></span>character(len=1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cflg</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obstype%7E5"></span>character(len=7)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obstype</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-crecord"></span>character(len=120)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>crecord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-unit_in"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>unit_in</strong></td><td> =</td><td>91</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-unit_aux"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>unit_aux</strong></td><td> =</td><td>92</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1ahdr"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>n1ahdr</strong></td><td> =</td><td>10</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxlevs"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>maxlevs</strong></td><td> =</td><td>500</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxinfo"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>maxinfo</strong></td><td> =</td><td>16</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mxib"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>mxib</strong></td><td> =</td><td>31</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-isats"></span>integer,</td>
+  
+  
+  <td>dimension(50)</td><td>::</td>
+  <td><strong>isats</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ireadmg"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ireadmg</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ireadsb"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ireadsb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_satid"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_satid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nk"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nk</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-idate%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>idate</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iret"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iret</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_message"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_message</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_subset"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_subset</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ikx"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ikx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlevs%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nreps_roseq1"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nreps_ROSEQ1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E124"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k%7E21"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>k</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-m%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>m</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-said"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>said</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ptid"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ptid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_gps"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_gps</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_bytime"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_bytime</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_bad"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_bad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_nosat"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_nosat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_cdaac_bad"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_cdaac_bad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_gras_bad"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_gras_bad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprof_levs_bad"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nprof_levs_bad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ibit"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ibit</strong>(mxib)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nib"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nib</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsatid"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nsatid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlines%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nlines</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-istat%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>istat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-isatid"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>isatid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-isub"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>isub</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iuse%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iuse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pcc"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pcc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-roc"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>roc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-impact"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>impact</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-geopot"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>geopot</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-height%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>height</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rlat%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rlat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rlon%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rlon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ref</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-referr"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>referr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref_pccf"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ref_pccf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-freq_chk"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>freq_chk</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-freq%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>freq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bend"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bend</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bend_error"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bend_error</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bend_pccf"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bend_pccf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hdr"></span>real(kind=digits12),</td>
+  
+  
+  <td>dimension(n1ahdr)</td><td>::</td>
+  <td><strong>hdr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qfro"></span>real(kind=digits12),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>qfro</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nreps_this_roseq2"></span>real(kind=digits12),</td>
+  
+  
+  <td>dimension(maxlevs)</td><td>::</td>
+  <td><strong>nreps_this_ROSEQ2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data1b"></span>real(kind=digits12),</td>
+  
+  
+  <td>dimension(50,maxlevs)</td><td>::</td>
+  <td><strong>data1b</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data2a"></span>real(kind=digits12),</td>
+  
+  
+  <td>dimension(50,maxlevs)</td><td>::</td>
+  <td><strong>data2a</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gps_satid"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>gps_satid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_obs%7E25"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_num_obs</strong></td><td> =</td><td>200000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lone%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lone</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-good%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>good</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ray_hbot"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ray_hbot</strong></td><td> =</td><td>3000.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ray_htop"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ray_htop</strong></td><td> =</td><td>30000.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ray_ds"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ray_ds</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_window_hr%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_window_hr</strong></td><td> =</td><td>-1.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gsi_error_inv_factor"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gsi_error_inv_factor</strong></td><td> =</td><td>1.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-if_global"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>if_global</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_error_in_gsi"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_error_in_gsi</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-convert_to_geopotential_height"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>convert_to_geopotential_height</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E38"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gpsro_bufr_file"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gpsro_bufr_file</strong></td><td> =</td><td>'gdas.gpsro.bufr'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gpsro_bufr_filelist"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gpsro_bufr_filelist</strong></td><td> =</td><td>'list_gpsro_bufr'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gpsro_out_file"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gpsro_out_file</strong></td><td> =</td><td>'obs_seq.gpsro'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gpsro_aux_file"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>gpsro_aux_file</strong></td><td> =</td><td>'convinfo.txt'</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ref_obserr_kuo_percent"></span><h3>
+function <a href='../proc/ref_obserr_kuo_percent.html'>ref_obserr_kuo_percent</a>(hght)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>hght</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compute_geopotential_height"></span><h3>
+function <a href='../proc/compute_geopotential_height.html'>compute_geopotential_height</a>(H, lat)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>H</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lat</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gsi_refractivity_error"></span><h3>
+function <a href='../proc/gsi_refractivity_error.html'>gsi_refractivity_error</a>(H, lat, is_it_global, factor)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>H</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lat</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>is_it_global</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>factor</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

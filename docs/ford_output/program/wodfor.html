@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>wodFOR &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>wodFOR
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for programs.">163 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/wodFOR.f"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/wodfor.f.html'>wodFOR.f</a></li>
+    
+  
+     <li class="active">wodFOR</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-0">Common Blocks</a></h3></div>
+  <div id="common-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-thedata%7E3">thedata</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-flags%7E3">flags</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-oflags%7E2">oflags</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-significant%7E3">significant</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-precision%7E3">precision</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-totfigs%7E3">totfigs</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-second%7E3">second</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-parminfo%7E2">parminfo</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-biology%7E3">biology</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-taxon%7E3">taxon</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-cc%7E3">cc</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-chars%7E3">chars</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-filename%7E93">filename</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-isig%7E3">isig</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-iprec%7E3">iprec</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-ip2%7E5">ip2</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-ipi%7E3">ipi</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+
+    <hr>
+<div class="codehilite"><pre><span></span><span class="n">Missing</span> <span class="k">values</span> <span class="n">used</span> <span class="k">in</span> <span class="n">this</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">bmiss</span> <span class="o">=</span> <span class="o">-</span><span class="mi">999</span><span class="p">.</span><span class="mi">99</span>
+</pre></div>
+
+
+<hr>
+<p>Parameters (constants):</p>
+<div class="codehilite"><pre><span></span> <span class="n">maxlevel</span>  <span class="o">-</span> <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">depth</span> <span class="n">levels</span><span class="p">,</span> <span class="n">also</span> <span class="n">maximum</span>
+               <span class="nb">number</span> <span class="k">of</span> <span class="k">all</span> <span class="n">types</span> <span class="k">of</span> <span class="n">variables</span>
+ <span class="n">maxcalc</span>   <span class="o">-</span> <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">measured</span> <span class="k">and</span> <span class="n">calculated</span>
+               <span class="n">depth</span> <span class="n">dependent</span> <span class="n">variables</span>
+ <span class="n">kdim</span>      <span class="o">-</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">standard</span> <span class="n">depth</span> <span class="n">levels</span>
+ <span class="n">bmiss</span>     <span class="o">-</span> <span class="nb">binary</span> <span class="n">missing</span> <span class="n">value</span> <span class="n">marker</span>
+ <span class="n">maxtcode</span>  <span class="o">-</span> <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">different</span> <span class="n">taxa</span> <span class="k">variable</span> <span class="n">codes</span>
+ <span class="n">maxtax</span>    <span class="o">-</span> <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">taxa</span> <span class="k">sets</span>
+ <span class="n">maxpinf</span>   <span class="o">-</span> <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="k">distinct</span> <span class="n">measured</span> <span class="k">variable</span>
+             <span class="n">information</span> <span class="n">codes</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<p>Character Arrays:</p>
+<div class="codehilite"><pre><span></span> <span class="n">cc</span>        <span class="o">-</span> <span class="n">NODC</span> <span class="n">country</span> <span class="n">code</span>
+ <span class="n">chars</span>     <span class="o">-</span> <span class="n">WOD</span> <span class="nb">character</span> <span class="k">data</span><span class="p">:</span> <span class="mi">1</span><span class="p">.</span> <span class="n">originators</span> <span class="n">cruise</span> <span class="n">code</span><span class="p">,</span>
+                                 <span class="mi">2</span><span class="p">.</span> <span class="n">originators</span> <span class="n">station</span> <span class="n">code</span>
+ <span class="n">filename</span>  <span class="o">-</span> <span class="n">file</span> <span class="n">name</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="n">nf</span> <span class="k">is</span> <span class="n">the</span> <span class="k">input</span> <span class="n">file</span> <span class="n">indentification</span> <span class="nb">number</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="k">Get</span> <span class="k">user</span> <span class="k">input</span> <span class="n">file</span> <span class="n">name</span> <span class="k">from</span> <span class="n">which</span> <span class="n">casts</span> <span class="n">will</span> <span class="n">be</span>
+ <span class="n">taken</span><span class="p">.</span>  <span class="k">Open</span> <span class="n">this</span> <span class="n">file</span><span class="p">.</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<p>SUBROUTINE "WODread":  READS IN A SINGLE PROFILE FROM THE ASCII 
+                          FILE AND STORES THE DATA INTO ARRAYS</p>
+<hr>
+<p>Passed Variables:</p>
+<div class="codehilite"><pre><span></span> <span class="nv">nf</span>      <span class="o">-</span> <span class="nv">file</span> <span class="nv">identification</span> <span class="nv">number</span> <span class="k">for</span> <span class="nv">input</span> <span class="nv">file</span>
+ <span class="nv">jj</span>      <span class="o">-</span> <span class="nv">WOD</span> <span class="nv">cast</span> <span class="nv">number</span>
+ <span class="nv">cc</span>      <span class="o">-</span> <span class="nv">NODC</span> <span class="nv">country</span> <span class="nv">code</span>
+ <span class="nv">icruise</span> <span class="o">-</span> <span class="nv">NODC</span> <span class="nv">cruise</span> <span class="nv">number</span>
+ <span class="nv">iyear</span>   <span class="o">-</span> <span class="nv">year</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">month</span>   <span class="o">-</span> <span class="nv">month</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">iday</span>    <span class="o">-</span> <span class="nv">day</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">time</span>    <span class="o">-</span> <span class="nv">time</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">rlat</span>    <span class="o">-</span> <span class="nv">latitude</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">rlon</span>    <span class="o">-</span> <span class="nv">longitude</span> <span class="nv">of</span> <span class="nv">cast</span>
+ <span class="nv">levels</span>  <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">depth</span> <span class="nv">levels</span> <span class="nv">of</span> <span class="nv">data</span>
+ <span class="nv">istdlev</span> <span class="o">-</span> <span class="nv">observed</span> <span class="ss">(</span><span class="mi">0</span><span class="ss">)</span> <span class="nv">or</span> <span class="nv">standard</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">levels</span>
+ <span class="nv">nvar</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">variables</span> <span class="nv">recorded</span> <span class="nv">in</span> <span class="nv">cast</span>
+ <span class="nv">ip2</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">variable</span> <span class="nv">codes</span> <span class="nv">of</span> <span class="nv">variables</span> <span class="nv">in</span> <span class="nv">cast</span>
+ <span class="nv">nsecond</span> <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">variables</span>
+ <span class="nv">nbio</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">biological</span> <span class="nv">variables</span>
+ <span class="nv">isig</span><span class="ss">()</span>  <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">latitude</span>, <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="nv">longitude</span>
+            <span class="nv">and</span> <span class="ss">(</span><span class="mi">3</span><span class="ss">)</span> <span class="nv">time</span>
+ <span class="nv">iprec</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">latitude</span>, <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="nv">longitude</span>, <span class="ss">(</span><span class="mi">3</span><span class="ss">)</span> <span class="nv">time</span>
+ <span class="nv">bmiss</span>   <span class="o">-</span> <span class="nv">missing</span> <span class="nv">value</span> <span class="nv">marker</span>
+ <span class="nv">ieof</span>    <span class="o">-</span> <span class="nv">set</span> <span class="nv">to</span> <span class="nv">one</span> <span class="k">if</span> <span class="k">end</span> <span class="nv">of</span> <span class="nv">file</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">encountered</span>
+</pre></div>
+
+
+<p>Common/Shared Variables and Arrays (see COMMON area of program):</p>
+<div class="codehilite"><pre><span></span> <span class="nv">depth</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>   <span class="o">-</span> <span class="nv">depth</span> <span class="nv">in</span> <span class="nv">meters</span> <span class="ss">(</span><span class="nv">x</span> <span class="o">=</span> <span class="nv">depth</span> <span class="nv">level</span><span class="ss">)</span>
+ <span class="nv">temp</span><span class="ss">(</span><span class="nv">x</span>,<span class="nv">y</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">variable</span> <span class="nv">data</span> <span class="ss">(</span><span class="nv">x</span> <span class="o">=</span> <span class="nv">depth</span> <span class="nv">level</span>, <span class="nv">y</span> <span class="o">=</span> <span class="nv">variable</span> <span class="nv">ID</span> <span class="o">=</span> <span class="nv">ip2</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>
+            ... <span class="nv">see</span> <span class="nv">also</span> <span class="nv">nvar</span>, <span class="nv">ip2</span>, <span class="nv">istdlev</span>, <span class="nv">levels</span> <span class="nv">above</span> ...
+ <span class="nv">sechead</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">data</span> <span class="ss">(</span><span class="nv">i</span> <span class="o">=</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">ID</span> <span class="o">=</span> <span class="nv">isec</span><span class="ss">(</span><span class="nv">j</span><span class="ss">))</span>
+ <span class="nv">isec</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span>    <span class="o">-</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">ID</span> <span class="ss">(</span><span class="nv">j</span> <span class="o">=</span> #<span class="nv">sequence</span> <span class="ss">(</span><span class="mi">1</span><span class="nv">st</span>, <span class="mi">2</span><span class="nv">nd</span>, <span class="mi">3</span><span class="nv">rd</span><span class="ss">))</span>
+            ... <span class="nv">see</span> <span class="nv">also</span> <span class="nv">nsecond</span> <span class="nv">above</span> ...
+ <span class="nv">bio</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>     <span class="o">-</span> <span class="nv">biology</span> <span class="nv">header</span> <span class="nv">data</span> <span class="ss">(</span><span class="nv">i</span> <span class="o">=</span> <span class="nv">biol</span><span class="o">-</span><span class="nv">header</span> <span class="nv">ID</span> <span class="o">=</span> <span class="nv">ibio</span><span class="ss">(</span><span class="nv">j</span><span class="ss">))</span>
+ <span class="nv">ibio</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span>    <span class="o">-</span> <span class="nv">biology</span> <span class="nv">header</span> <span class="nv">ID</span> <span class="ss">(</span><span class="nv">j</span> <span class="o">=</span> #<span class="nv">sequence</span> <span class="ss">(</span><span class="mi">1</span><span class="nv">st</span>, <span class="mi">2</span><span class="nv">nd</span>, <span class="mi">3</span><span class="nv">rd</span><span class="ss">))</span>
+            ... <span class="nv">see</span> <span class="nv">also</span> <span class="nv">nbio</span> <span class="nv">above</span> ...
+ <span class="nv">nbothtot</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">taxa</span> <span class="nv">set</span> <span class="o">/</span> <span class="nv">biomass</span> <span class="nv">variables</span>
+ <span class="nv">vtax</span><span class="ss">(</span><span class="nv">i</span>,<span class="nv">j</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">taxonomic</span><span class="o">/</span><span class="nv">biomass</span> <span class="nv">array</span>, <span class="nv">where</span> <span class="nv">j</span> <span class="o">=</span> <span class="ss">(</span><span class="mi">1</span>..<span class="nv">nbothtot</span><span class="ss">)</span>
+               <span class="k">For</span> <span class="nv">each</span> <span class="nv">entry</span> <span class="ss">(</span><span class="nv">j</span><span class="o">=</span><span class="mi">1</span>..<span class="nv">nbothtot</span><span class="ss">)</span>, <span class="nv">there</span> <span class="nv">are</span> <span class="nv">vtax</span><span class="ss">(</span><span class="mi">0</span>,<span class="nv">j</span><span class="ss">)</span>
+               <span class="nv">sub</span><span class="o">-</span><span class="nv">entries</span>.  [<span class="nv">Note</span>:  <span class="nv">The</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">sub</span><span class="o">-</span><span class="nv">entries</span> <span class="nv">is</span> 
+               <span class="nv">variable</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">main</span> <span class="nv">entry</span>.]  <span class="nv">vtax</span> <span class="nv">also</span> <span class="nv">holds</span> <span class="nv">the</span>
+               <span class="nv">value</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">sub</span><span class="o">-</span><span class="nv">entries</span>.
+ <span class="nv">itaxnum</span><span class="ss">(</span><span class="nv">i</span>,<span class="nv">j</span><span class="ss">)</span><span class="o">-</span> <span class="nv">taxonomic</span> <span class="nv">code</span> <span class="nv">or</span> <span class="nv">sub</span><span class="o">-</span><span class="nv">code</span> 
+ <span class="nv">chars</span>       <span class="o">-</span> <span class="nv">WOD</span> <span class="nv">character</span> <span class="nv">data</span>: <span class="mi">1</span>. <span class="nv">originators</span> <span class="nv">cruise</span> <span class="nv">code</span>,
+                                   <span class="mi">2</span>. <span class="nv">originators</span> <span class="nv">station</span> <span class="nv">code</span>
+ <span class="nv">npi</span>        <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">PI</span> <span class="nv">codes</span>
+ <span class="nv">ipi</span>        <span class="o">-</span> <span class="nv">Primary</span> <span class="nv">Investigator</span> <span class="nv">information</span>
+              <span class="mi">1</span>. <span class="nv">primary</span> <span class="nv">investigator</span>
+              <span class="mi">2</span>. <span class="nv">variable</span> <span class="nv">investigated</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">STANDARD</span> <span class="nv">LEVELS</span> <span class="nv">OR</span> <span class="nv">OBSERVED</span> <span class="nv">LEVELS</span>
+ <span class="o">----------------------------------</span>
+
+ <span class="k">If</span> <span class="nv">this</span> <span class="nv">file</span> <span class="nv">is</span> <span class="nv">on</span> <span class="nv">standard</span> <span class="nv">levels</span> <span class="ss">(</span><span class="nv">istdlev</span><span class="o">=</span><span class="mi">1</span><span class="ss">)</span>, <span class="nv">program</span> <span class="nv">places</span> <span class="nv">the</span>
+ <span class="nv">standard</span> <span class="nv">depths</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">depth</span><span class="ss">()</span> <span class="nv">array</span> <span class="ss">(</span><span class="nv">otherwise</span>, <span class="nv">observed</span> <span class="nv">depth</span> <span class="nv">values</span> 
+ <span class="nv">were</span> <span class="nv">read</span> <span class="nv">in</span> <span class="nv">and</span> <span class="nv">stored</span> <span class="nv">above</span> <span class="nv">by</span> <span class="nv">subroutine</span> <span class="nv">WODreadxxxx</span><span class="c1">; where xxxx is</span>
+ <span class="mi">200</span><span class="nv">X</span> <span class="nv">or</span> <span class="mi">1998</span> <span class="nv">depending</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">data</span> <span class="nv">input</span> <span class="nv">format</span><span class="ss">)</span>.
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="k">WRITE</span> <span class="n">HEADER</span> <span class="n">INFORMATION</span> <span class="k">TO</span> <span class="n">THE</span> <span class="n">SCREEN</span>
+ <span class="c1">--------------------------------------</span>
+
+ <span class="n">cc</span>         <span class="o">-</span> <span class="n">country</span> <span class="n">code</span> <span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+ <span class="n">icruise</span>    <span class="o">-</span> <span class="n">WOD</span> <span class="n">cruise</span> <span class="n">identifier</span> <span class="p">(</span><span class="n">i8</span><span class="p">)</span>
+ <span class="n">rlat</span>       <span class="o">-</span> <span class="n">latitude</span> <span class="p">(</span><span class="n">f7</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span>
+ <span class="n">rlon</span>       <span class="o">-</span> <span class="n">longitude</span> <span class="p">(</span><span class="n">f8</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span>
+ <span class="n">iyear</span>      <span class="o">-</span> <span class="k">year</span> <span class="p">(</span><span class="n">i4</span><span class="p">)</span>
+ <span class="k">month</span>      <span class="o">-</span> <span class="k">month</span> <span class="p">(</span><span class="n">i2</span><span class="p">)</span>
+ <span class="n">iday</span>       <span class="o">-</span> <span class="k">day</span> <span class="p">(</span><span class="n">i2</span><span class="p">)</span>
+ <span class="n">time</span>       <span class="o">-</span> <span class="n">time</span> <span class="p">(</span><span class="n">GMT</span><span class="p">)</span> <span class="p">(</span><span class="n">f7</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span>
+ <span class="n">jj</span>         <span class="o">-</span> <span class="n">WOD</span> <span class="k">cast</span> <span class="n">identifier</span> <span class="p">(</span><span class="n">i8</span><span class="p">)</span>
+ <span class="n">levels</span>     <span class="o">-</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">depth</span> <span class="n">levels</span> <span class="n">measured</span> <span class="p">(</span><span class="n">i6</span><span class="p">)</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="k">WRITE</span> <span class="nb">CHARACTER</span> <span class="k">DATA</span> <span class="k">TO</span> <span class="n">THE</span> <span class="n">SCREEN</span>
+ <span class="c1">----------------------------------</span>
+
+ <span class="n">chars</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="o">-</span> <span class="n">Originators</span> <span class="n">cruise</span> <span class="n">identifier</span>
+ <span class="n">chars</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="o">-</span> <span class="n">Originators</span> <span class="n">station</span> <span class="n">identifier</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">PRIMARY</span> <span class="nv">INVESTIGATOR</span> <span class="nv">INFORMATION</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">----------------------------------------------------</span>
+
+ <span class="nv">npi</span> <span class="o">=</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">primary</span> <span class="nv">investigator</span> <span class="nv">entries</span>
+ <span class="nv">ipi</span><span class="ss">(</span><span class="mi">1</span>..<span class="nv">npi</span>,<span class="mi">1</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">PI</span> <span class="nv">code</span>
+ <span class="nv">ipi</span><span class="ss">(</span><span class="mi">1</span>..<span class="nv">npi</span>,<span class="mi">2</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">variable</span> <span class="k">for</span> <span class="nv">which</span> <span class="nv">PI</span> <span class="nv">was</span> <span class="nv">responsible</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">VARIABLE</span><span class="o">-</span><span class="nv">CODE</span> <span class="ss">(</span><span class="nv">column</span> <span class="nv">headings</span><span class="ss">)</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">----------------------------------------------------</span>
+
+ <span class="nv">nvar</span>          <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">variables</span> <span class="ss">(</span><span class="mi">1</span>...<span class="nv">nvar</span><span class="ss">)</span>
+ <span class="nv">ip2</span><span class="ss">(</span><span class="mi">1</span>..<span class="nv">nvar</span><span class="ss">)</span>  <span class="o">-</span> <span class="nv">variable</span> <span class="nv">code</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">variable</span> <span class="nv">present</span>
+
+ <span class="nv">Example</span>:  
+   <span class="k">For</span> <span class="nv">a</span> <span class="nv">cast</span> <span class="nv">with</span> <span class="nv">just</span> <span class="nv">Temperature</span>[<span class="mi">1</span>], <span class="nv">Oxygen</span>[<span class="mi">3</span>], <span class="nv">Pressure</span>[<span class="mi">25</span>]:
+
+   <span class="nv">The</span> <span class="nv">variable</span> <span class="nv">sequence</span> <span class="nv">is</span> <span class="nv">ip2</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span><span class="o">=</span><span class="nv">Temperature</span>, <span class="nv">ip2</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span><span class="o">=</span><span class="nv">Oxygen</span>, 
+      <span class="nv">ip2</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span><span class="o">=</span><span class="nv">Pressure</span>
+
+   <span class="nv">nvar</span> <span class="o">=</span> <span class="mi">3</span>
+
+   <span class="nv">ip2</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">1</span>, <span class="nv">ip2</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">3</span>, <span class="nv">ip3</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">25</span>
+
+
+ <span class="nv">Note</span>:  <span class="k">If</span> <span class="s2">&quot;</span><span class="s">nvar = 0</span><span class="s2">&quot;</span>, <span class="nv">biology</span> <span class="nv">only</span> <span class="nv">cast</span>.
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">DEPTH</span><span class="o">-</span><span class="nv">DEPENDENT</span> <span class="nv">VARIABLE</span> <span class="nv">DATA</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">--------------------------------------------------</span>
+
+ <span class="nv">Print</span> <span class="nv">depth</span> <span class="ss">(</span><span class="nv">depth</span><span class="ss">(</span><span class="nv">n</span><span class="ss">))</span>, <span class="nv">error</span> <span class="nv">flags</span> <span class="k">for</span> <span class="nv">depth</span> <span class="ss">(</span><span class="nv">iderror</span><span class="ss">(</span><span class="nv">n</span>,<span class="mi">0</span><span class="ss">))</span>,
+ <span class="nv">each</span> <span class="nv">variable</span> <span class="ss">(</span><span class="nv">temp</span><span class="ss">(</span><span class="nv">n</span>,<span class="mi">1</span>..<span class="nv">nvar</span><span class="ss">))</span>, <span class="nv">and</span> <span class="nv">error</span> <span class="nv">flags</span> <span class="k">for</span> <span class="nv">each</span>
+ <span class="nv">variables</span> <span class="ss">(</span><span class="nv">iderror</span><span class="ss">(</span><span class="nv">n</span>,<span class="mi">1</span>..<span class="nv">nvar</span><span class="ss">))</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="n">PRINT</span> <span class="n">ENTIRE</span><span class="o">-</span><span class="n">PROFILE</span> <span class="n">ERROR</span> <span class="n">FLAGS</span>
+ <span class="c1">------------------------------------</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">SECONDARY</span><span class="o">-</span><span class="nv">HEADER</span> <span class="nv">INFORMATION</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">---------------------------------------------</span>
+
+ <span class="nv">Print</span> <span class="nv">the</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">code</span> <span class="ss">(</span><span class="nv">isec</span><span class="ss">(</span><span class="mi">1</span>..<span class="nv">nsecond</span><span class="ss">))</span> <span class="nv">and</span> <span class="nv">the</span> <span class="nv">value</span>
+ <span class="k">for</span> <span class="nv">that</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="ss">(</span><span class="nv">sechead</span><span class="ss">(</span><span class="nv">isec</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)))</span>.
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span>  <span class="k">WRITE</span> <span class="k">VARIABLE</span> <span class="k">SPECIFIC</span> <span class="n">INFORMATION</span> <span class="k">TO</span> <span class="n">THE</span> <span class="n">SCREEN</span>
+  <span class="c1">-------------------------------------------------</span>
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">BIOLOGICAL</span> <span class="nv">HEADER</span> <span class="nv">INFORMATION</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">------------------------------------------</span>
+
+ <span class="nv">Print</span> <span class="nv">the</span> <span class="nv">biology</span> <span class="nv">header</span> <span class="nv">code</span> <span class="ss">(</span><span class="nv">ibio</span><span class="ss">(</span><span class="mi">1</span>..<span class="nv">nbio</span><span class="ss">))</span> <span class="nv">and</span> <span class="nv">the</span> <span class="nv">value</span>
+ <span class="k">for</span> <span class="nv">that</span> <span class="nv">biology</span> <span class="nv">header</span> <span class="ss">(</span><span class="nv">bio</span><span class="ss">(</span><span class="nv">ibio</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)))</span>.
+</pre></div>
+
+
+<hr>
+<hr>
+<div class="codehilite"><pre><span></span> <span class="nv">WRITE</span> <span class="nv">TAXA</span> <span class="nv">SET</span><span class="o">/</span><span class="nv">BIOMASS</span> <span class="nv">VARIABLE</span> <span class="nv">INFORMATION</span> <span class="nv">TO</span> <span class="nv">THE</span> <span class="nv">SCREEN</span>
+ <span class="o">----------------------------------------------------------</span>
+
+ <span class="k">For</span> <span class="nv">each</span> <span class="nv">set</span><span class="o">/</span><span class="nv">variable</span> <span class="ss">(</span><span class="mi">1</span>..<span class="nv">nbothtot</span><span class="ss">)</span>, <span class="nv">print</span> <span class="nv">the</span> <span class="nv">set</span><span class="o">/</span><span class="nv">variable</span> <span class="nv">code</span> 
+ <span class="ss">(</span><span class="nv">ivtax</span> <span class="o">=</span> <span class="nv">vtax</span><span class="ss">(</span><span class="mi">1</span>,<span class="nv">n</span><span class="ss">))</span> <span class="nv">and</span> <span class="nv">each</span> <span class="nv">member</span> <span class="nv">of</span> <span class="nv">that</span> <span class="nv">set</span> <span class="ss">(</span><span class="mi">1</span>..<span class="nv">vtax</span><span class="ss">(</span><span class="mi">0</span>,<span class="nv">n</span><span class="ss">))</span>, 
+ <span class="nv">where</span> <span class="nv">the</span> <span class="nv">sub</span><span class="o">-</span><span class="nv">code</span> <span class="nv">is</span> <span class="nv">itaxnum</span><span class="ss">(</span><span class="nv">n2</span>,<span class="nv">n</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">the</span> <span class="nv">sub</span><span class="o">-</span><span class="nv">value</span> <span class="nv">is</span> <span class="nv">vtax</span><span class="ss">(</span><span class="nv">n2</span>,<span class="nv">n</span><span class="ss">)</span>.
+</pre></div>
+
+
+<hr>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-1">Common Blocks</a></h3></div>
+  <div id="common-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-thedata%7E3">thedata</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-flags%7E3">flags</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-oflags%7E2">oflags</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-significant%7E3">significant</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-precision%7E3">precision</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-totfigs%7E3">totfigs</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-second%7E3">second</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-parminfo%7E2">parminfo</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-biology%7E3">biology</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#common-taxon%7E3">taxon</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-cc%7E3">cc</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-chars%7E3">chars</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-filename%7E93">filename</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-isig%7E3">isig</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-iprec%7E3">iprec</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-ip2%7E5">ip2</a>
+      
+      <a class="list-group-item" href="../program/wodfor.html#variable-ipi%7E3">ipi</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+     <section>
+       <h2>Common Blocks</h2>
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-thedata%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-thedata'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-thedata%7E2'>WODREAD1998</a> (subroutine)<br>">common /thedata/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-depth%7E8"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>depth</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-temp%7E12"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>temp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-flags%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-flags'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-flags%7E2'>WODREAD1998</a> (subroutine)<br>">common /flags/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ierror%7E8"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ierror</strong>(maxlevel)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iderror%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iderror</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-oflags%7E2"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-oflags'>WODREAD200X</a> (subroutine)<br>">common /oflags/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iorigflag%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iorigflag</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-significant%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-significant'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-significant%7E2'>WODREAD1998</a> (subroutine)<br>">common /significant/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msig%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msig</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-precision%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-precision'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-precision%7E2'>WODREAD1998</a> (subroutine)<br>">common /precision/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mprec%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mprec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-totfigs%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-totfigs'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-totfigs%7E2'>WODREAD1998</a> (subroutine)<br>">common /totfigs/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mtot%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mtot</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-second%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-second'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-second%7E2'>WODREAD1998</a> (subroutine)<br>">common /second/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jsig2%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jsig2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jprec2%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jprec2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jtot2%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jtot2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-isec%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>isec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sechead%7E4"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sechead</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-parminfo%7E2"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-parminfo'>WODREAD200X</a> (subroutine)<br>">common /parminfo/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jsigp%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jsigp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jprecp%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jprecp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jtotp%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jtotp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-parminf%7E3"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>parminf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-biology%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-biology'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-biology%7E2'>WODREAD1998</a> (subroutine)<br>">common /biology/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jsigb%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jsigb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jprecb%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jprecb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jtotb%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jtotb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ibio%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ibio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bio%7E4"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+       
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-taxon%7E3"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/wodread200x.html#common-taxon'>WODREAD200X</a> (subroutine)<br><a href='../proc/wodread1998.html#common-taxon%7E2'>WODREAD1998</a> (subroutine)<br>">common /taxon/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jsigtax%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jsigtax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jprectax%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jprectax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jtottax%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jtottax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itaxerr%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>itaxerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vtax%7E4"></span>real</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>vtax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itaxnum%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>itaxnum</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbothtot%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nbothtot</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itaxorigerr%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>itaxorigerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+       
+     </section>
+     <br>
+     <script>
+       $(function () {
+       $('[data-toggle="popover"]').popover()
+       })
+     </script>
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cc%7E3"></span>character(len=2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-chars%7E3"></span>character(len=15)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>chars</strong>(2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-filename%7E93"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td><td></td><td><hr>
+<p>Arrays:</p>
+<div class="codehilite"><pre><span></span> <span class="nv">isig</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">latitude</span>, <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="nv">longitude</span>
+              <span class="nv">and</span> <span class="ss">(</span><span class="mi">3</span><span class="ss">)</span> <span class="nv">time</span>
+ <span class="nv">iprec</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span> <span class="nv">latitude</span>, <span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="nv">longitude</span>, <span class="ss">(</span><span class="mi">3</span><span class="ss">)</span> <span class="nv">time</span>
+ <span class="nv">ip2</span><span class="ss">()</span>     <span class="o">-</span> <span class="nv">variable</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">variables</span> <span class="nv">in</span> <span class="nv">cast</span>
+ <span class="nv">ierror</span><span class="ss">()</span>  <span class="o">-</span> <span class="nv">whole</span> <span class="nv">profile</span> <span class="nv">error</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">variable</span>
+
+ <span class="nv">ipi</span><span class="ss">()</span>     <span class="o">-</span> <span class="nv">primary</span> <span class="nv">investigators</span> <span class="nv">information</span>
+               <span class="mi">1</span>. <span class="nv">primary</span> <span class="nv">investigators</span>
+               <span class="mi">2</span>. <span class="k">for</span> <span class="nv">which</span> <span class="nv">variable</span>
+
+ <span class="nv">jsig2</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">variable</span>
+ <span class="nv">jprec2</span><span class="ss">()</span>  <span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="nv">each</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">variable</span>
+ <span class="nv">sechead</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">variables</span>
+
+ <span class="nv">jsigb</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">biological</span> <span class="nv">variable</span>
+ <span class="nv">jprecb</span><span class="ss">()</span>  <span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="nv">each</span> <span class="nv">biological</span> <span class="nv">variable</span>
+ <span class="nv">bio</span><span class="ss">()</span>     <span class="o">-</span> <span class="nv">biological</span> <span class="nv">data</span>
+
+ <span class="nv">depth</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">depth</span> <span class="nv">of</span> <span class="nv">each</span> <span class="nv">measurement</span>
+
+ <span class="nv">jtot2</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">bytes</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">variable</span>
+ <span class="nv">jtotb</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">bytes</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">biological</span> <span class="nv">variable</span>
+
+ <span class="nv">msig</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">measured</span> <span class="nv">variable</span> <span class="nv">at</span>
+              <span class="nv">each</span> <span class="nv">level</span> <span class="nv">of</span> <span class="nv">measurement</span>
+ <span class="nv">mprec</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="nv">each</span> <span class="nv">measured</span> <span class="nv">variable</span> <span class="nv">at</span> <span class="nv">each</span>
+              <span class="nv">level</span> <span class="nv">of</span> <span class="nv">measurement</span>
+
+ <span class="nv">mtot</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">digits</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">measured</span> <span class="nv">variable</span> <span class="nv">at</span>
+              <span class="nv">each</span> <span class="nv">level</span> <span class="nv">of</span> <span class="nv">measurement</span>
+
+ <span class="nv">temp</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">variable</span> <span class="nv">data</span> <span class="nv">at</span> <span class="nv">each</span> <span class="nv">level</span>
+ <span class="nv">iderror</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">error</span> <span class="nv">flags</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">variable</span> <span class="nv">at</span> <span class="nv">each</span> <span class="nv">depth</span> <span class="nv">level</span>
+ <span class="nv">iorigflag</span><span class="ss">()</span><span class="o">-</span> <span class="nv">originators</span> <span class="nv">flags</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">variable</span> <span class="nv">and</span> <span class="nv">depth</span>
+
+ <span class="nv">isec</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">variable</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">secondary</span> <span class="nv">header</span> <span class="nv">data</span>
+ <span class="nv">ibio</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">variable</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">biological</span> <span class="nv">data</span>
+ <span class="nv">parminf</span><span class="ss">()</span>  <span class="o">-</span> <span class="nv">variable</span> <span class="nv">specific</span> <span class="nv">information</span>
+ <span class="nv">jprecp</span><span class="ss">()</span>   <span class="o">-</span> <span class="nv">precision</span> <span class="k">for</span> <span class="nv">variable</span> <span class="nv">specific</span> <span class="nv">information</span>
+ <span class="nv">jsigp</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="k">for</span> <span class="nv">variable</span> <span class="nv">specific</span>
+            <span class="nv">information</span>
+ <span class="nv">jtotp</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">digits</span> <span class="nv">in</span> <span class="k">for</span> <span class="nv">variable</span> <span class="nv">specific</span> <span class="nv">information</span>
+
+ <span class="nv">itaxnum</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">different</span> <span class="nv">taxonomic</span> <span class="nv">and</span> <span class="nv">biomass</span> <span class="nv">variable</span>
+              <span class="nv">codes</span> <span class="nv">found</span> <span class="nv">in</span> <span class="nv">data</span>
+ <span class="nv">vtax</span><span class="ss">()</span>    <span class="o">-</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">taxonomic</span> <span class="nv">variables</span> <span class="nv">and</span> <span class="nv">biomass</span> <span class="nv">variables</span>
+
+ <span class="nv">jsigtax</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">significant</span> <span class="nv">figures</span> <span class="nv">in</span> <span class="nv">taxon</span> <span class="nv">values</span> <span class="nv">and</span>
+              <span class="nv">biomass</span> <span class="nv">variables</span>
+ <span class="nv">jprectax</span><span class="ss">()</span><span class="o">-</span> <span class="nv">precision</span> <span class="nv">of</span> <span class="nv">taxon</span> <span class="nv">values</span> <span class="nv">and</span> <span class="nv">biomass</span> <span class="nv">variables</span>
+
+ <span class="nv">jtottax</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">bytes</span> <span class="nv">in</span> <span class="nv">taxon</span> <span class="nv">values</span> 
+ <span class="nv">itaxerr</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">error</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">taxon</span> <span class="nv">data</span>
+ <span class="nv">itaxorigerr</span><span class="ss">()</span> <span class="o">-</span> <span class="nv">originators</span> <span class="nv">error</span> <span class="nv">codes</span> <span class="k">for</span> <span class="nv">taxon</span> <span class="nv">data</span>
+
+ <span class="nv">nbothtot</span><span class="ss">()</span><span class="o">-</span> <span class="nv">total</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">taxa</span> <span class="nv">variables</span>
+ <span class="nv">stdz</span><span class="ss">(</span><span class="mi">40</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">standard</span> <span class="nv">depth</span> <span class="nv">levels</span>
+</pre></div>
+
+
+<hr></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-isig%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>isig</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iprec%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iprec</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ip2%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ip2</strong>(0:maxlevel)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ipi%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ipi</strong>(maxlevel,2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

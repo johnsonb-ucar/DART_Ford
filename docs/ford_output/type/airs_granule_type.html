@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>airs_granule_type &ndash; DART </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>airs_granule_type
+    <small>Derived Type</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="<p> 5.2% of total for derived types.</p>Including implementation: 66 statements,  5.2% of total for derived types.">66 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/airs_JPL_mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/airs_jpl_mod.f90.html'>airs_JPL_mod.f90</a></li>
+    
+     <li><a href='../module/airs_jpl_mod.html'>airs_JPL_mod</a></li>
+    
+  
+     <li class="active">airs_granule_type</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numlandsurface">NumLandSurface</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numoceansurface">NumOceanSurface</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_year">start_year</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_month">start_month</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_day">start_day</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_hour">start_hour</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_minute">start_minute</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_sec">start_sec</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-granule_number">granule_number</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-latitude">Latitude</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-longitude">Longitude</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-time">Time</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sat_lat">sat_lat</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sat_lon">sat_lon</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-satzen">satzen</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-satazi">satazi</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-solzen">solzen</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-solazi">solazi</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-glintlat">glintlat</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-glintlon">glintlon</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sun_glint_distance">sun_glint_distance</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-topog">topog</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-topog_err">topog_err</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-landfrac">landFrac</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-landfrac_err">landFrac_err</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pressstd">pressStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pressh2o">pressH2O</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-latairs">latAIRS</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-lonairs">lonAIRS</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_guess_psurf">Qual_Guess_PSurf</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-psurfstd">PSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-nsurfstd">nSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pbest">PBest</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pgood">PGood</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-nbeststd">nBestStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-ngoodstd">nGoodStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstd">TAirStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstderr">TAirStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstd_qc">TAirStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfair">TSurfAir</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfairerr">TSurfAirErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfair_qc">TSurfAir_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_surf">Qual_Surf</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfstd">TSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfstderr">TSurfStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_h2o">Qual_H2O</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstd">H2OMMRStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstderr">H2OMMRStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstd_qc">H2OMMRStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostd">totH2OStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostderr">totH2OStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostd_qc">totH2OStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numcloud">numCloud</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tcldtopstd">TCldTopStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tcldtopstderr">TCldTopStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pcldtopstd">PCldTopStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pcldtopstderr">PCldTopStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-cldfrcstd">CldFrcStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-cldfrcstderr">CldFrcStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-totcldh2ostd">totCldH2OStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-totcldh2ostderr">totCldH2OStdErr</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: airs_granule_type</h2>
+    
+    
+    
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numlandsurface">NumLandSurface</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numoceansurface">NumOceanSurface</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_year">start_year</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_month">start_month</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_day">start_day</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_hour">start_hour</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_minute">start_minute</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-start_sec">start_sec</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-granule_number">granule_number</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-latitude">Latitude</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-longitude">Longitude</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-time">Time</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sat_lat">sat_lat</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sat_lon">sat_lon</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-satzen">satzen</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-satazi">satazi</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-solzen">solzen</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-solazi">solazi</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-glintlat">glintlat</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-glintlon">glintlon</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-sun_glint_distance">sun_glint_distance</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-topog">topog</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-topog_err">topog_err</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-landfrac">landFrac</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-landfrac_err">landFrac_err</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pressstd">pressStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pressh2o">pressH2O</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-latairs">latAIRS</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-lonairs">lonAIRS</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_guess_psurf">Qual_Guess_PSurf</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-psurfstd">PSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-nsurfstd">nSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pbest">PBest</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pgood">PGood</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-nbeststd">nBestStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-ngoodstd">nGoodStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstd">TAirStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstderr">TAirStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tairstd_qc">TAirStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfair">TSurfAir</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfairerr">TSurfAirErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfair_qc">TSurfAir_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_surf">Qual_Surf</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfstd">TSurfStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tsurfstderr">TSurfStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-qual_h2o">Qual_H2O</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstd">H2OMMRStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstderr">H2OMMRStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-h2ommrstd_qc">H2OMMRStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostd">totH2OStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostderr">totH2OStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-toth2ostd_qc">totH2OStd_QC</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-numcloud">numCloud</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tcldtopstd">TCldTopStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-tcldtopstderr">TCldTopStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pcldtopstd">PCldTopStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-pcldtopstderr">PCldTopStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-cldfrcstd">CldFrcStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-cldfrcstderr">CldFrcStdErr</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-totcldh2ostd">totCldH2OStd</a>
+      
+      <a class="list-group-item" href="../type/airs_granule_type.html#variable-totcldh2ostderr">totCldH2OStdErr</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-numlandsurface"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumLandSurface</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-numoceansurface"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumOceanSurface</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_year"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_year</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_month"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_month</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_day"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_day</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_hour"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_hour</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_minute"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_minute</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-start_sec"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>start_sec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-granule_number"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>granule_number</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-latitude"></span>real(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Latitude</strong>(AIRS_RET_GEOXTRACK,AIRS_RET_GEOTRACK)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-longitude"></span>real(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Longitude</strong>(AIRS_RET_GEOXTRACK,AIRS_RET_GEOTRACK)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time"></span>real(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Time</strong>(AIRS_RET_GEOXTRACK,AIRS_RET_GEOTRACK)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sat_lat"></span>real(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sat_lat</strong>(45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sat_lon"></span>real(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sat_lon</strong>(45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-satzen"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>satzen</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-satazi"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>satazi</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-solzen"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>solzen</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-solazi"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>solazi</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-glintlat"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>glintlat</strong>(45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-glintlon"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>glintlon</strong>(45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sun_glint_distance"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sun_glint_distance</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-topog"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>topog</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-topog_err"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>topog_err</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-landfrac"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>landFrac</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-landfrac_err"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>landFrac_err</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pressstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pressStd</strong>(28)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pressh2o"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pressH2O</strong>(15)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-latairs"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>latAIRS</strong>(3,3,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lonairs"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lonAIRS</strong>(3,3,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qual_guess_psurf"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Qual_Guess_PSurf</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-psurfstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PSurfStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsurfstd"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nSurfStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pbest"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PBest</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pgood"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PGood</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbeststd"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nBestStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ngoodstd"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nGoodStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tairstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TAirStd</strong>(28,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tairstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TAirStdErr</strong>(28,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tairstd_qc"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TAirStd_QC</strong>(28,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsurfair"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TSurfAir</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsurfairerr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TSurfAirErr</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsurfair_qc"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TSurfAir_QC</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qual_surf"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Qual_Surf</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsurfstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TSurfStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsurfstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TSurfStdErr</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qual_h2o"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Qual_H2O</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h2ommrstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>H2OMMRStd</strong>(14,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h2ommrstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>H2OMMRStdErr</strong>(14,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h2ommrstd_qc"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>H2OMMRStd_QC</strong>(14,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-toth2ostd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>totH2OStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-toth2ostderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>totH2OStdErr</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-toth2ostd_qc"></span>integer(kind=2),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>totH2OStd_QC</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-numcloud"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>numCloud</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tcldtopstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TCldTopStd</strong>(2,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tcldtopstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TCldTopStdErr</strong>(2,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pcldtopstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PCldTopStd</strong>(2,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pcldtopstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PCldTopStdErr</strong>(2,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cldfrcstd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CldFrcStd</strong>(2,3,3,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cldfrcstderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CldFrcStdErr</strong>(2,3,3,30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-totcldh2ostd"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>totCldH2OStd</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-totcldh2ostderr"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>totCldH2OStdErr</strong>(30,45)</td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

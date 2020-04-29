@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>fft.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>fft.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for source files.">482 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/fft.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">fft.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../proc/fft.html">fft</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/fft.f90.html#src">fft.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../proc/fft.html">fft</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/fft.f90.html#src">fft.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! This code is not protected by the DART copyright agreement.</span>
+<a name="ln-2"></a><span class="c">! DART $Id$</span>
+<a name="ln-3"></a>
+<a name="ln-4"></a><span class="c">! ======================================================================</span>
+<a name="ln-5"></a><span class="c">! NIST Guide to Available Math Software.</span>
+<a name="ln-6"></a><span class="c">! Source for module FFT from package GO.</span>
+<a name="ln-7"></a><span class="c">! Retrieved from NETLIB on Wed Jul  5 11:50:07 1995.</span>
+<a name="ln-8"></a><span class="c">! ======================================================================</span>
+<a name="ln-9"></a>
+<a name="ln-10"></a>      <span class="k">subroutine </span><span class="n">fft</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">ntot</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">nspan</span><span class="p">,</span><span class="n">isn</span><span class="p">)</span>
+<a name="ln-11"></a>
+<a name="ln-12"></a><span class="c">!  multivariate complex fourier transform, computed in place</span>
+<a name="ln-13"></a><span class="c">!    using mixed-radix fast fourier transform algorithm.</span>
+<a name="ln-14"></a><span class="c">!  by r. c. singleton, stanford research institute, sept. 1968</span>
+<a name="ln-15"></a><span class="c">!  arrays a and b originally hold the real and imaginary</span>
+<a name="ln-16"></a><span class="c">!    components of the data, and return the real and</span>
+<a name="ln-17"></a><span class="c">!    imaginary components of the resulting fourier coefficients.</span>
+<a name="ln-18"></a><span class="c">!  multivariate data is indexed according to the fortran</span>
+<a name="ln-19"></a><span class="c">!    array element successor function, without limit</span>
+<a name="ln-20"></a><span class="c">!    on the number of implied multiple subscripts.</span>
+<a name="ln-21"></a><span class="c">!    the subroutine is called once for each variate.</span>
+<a name="ln-22"></a><span class="c">!    the calls for a multivariate transform may be in any order.</span>
+<a name="ln-23"></a><span class="c">!  ntot is the total number of complex data values.</span>
+<a name="ln-24"></a><span class="c">!  n is the dimension of the current variable.</span>
+<a name="ln-25"></a><span class="c">!  nspan/n is the spacing of consecutive data values</span>
+<a name="ln-26"></a><span class="c">!    while indexing the current variable.</span>
+<a name="ln-27"></a><span class="c">!  the sign of isn determines the sign of the complex</span>
+<a name="ln-28"></a><span class="c">!    exponential, and the magnitude of isn is normally one.</span>
+<a name="ln-29"></a><span class="c">!  a tri-variate transform with a(n1,n2,n3), b(n1,n2,n3)</span>
+<a name="ln-30"></a><span class="c">!    is computed by</span>
+<a name="ln-31"></a><span class="c">!      call fft(a,b,n1*n2*n3,n1,n1,1)</span>
+<a name="ln-32"></a><span class="c">!      call fft(a,b,n1*n2*n3,n2,n1*n2,1)</span>
+<a name="ln-33"></a><span class="c">!      call fft(a,b,n1*n2*n3,n3,n1*n2*n3,1)</span>
+<a name="ln-34"></a><span class="c">!  for a single-variate transform,</span>
+<a name="ln-35"></a><span class="c">!    ntot = n = nspan = (number of complex data values), e.g.</span>
+<a name="ln-36"></a><span class="c">!      call fft(a,b,n,n,n,1)</span>
+<a name="ln-37"></a><span class="c">!  the data can alternatively be stored in a single complex array c</span>
+<a name="ln-38"></a><span class="c">!    in standard fortran fashion, i.e. alternating real and imaginary</span>
+<a name="ln-39"></a><span class="c">!    parts. then with most fortran compilers, the complex array c can</span>
+<a name="ln-40"></a><span class="c">!    be equivalenced to a real array a, the magnitude of isn changed</span>
+<a name="ln-41"></a><span class="c">!    to two to give correct indexing increment, and a(1) and a(2) used</span>
+<a name="ln-42"></a><span class="c">!    to pass the initial addresses for the sequences of real and</span>
+<a name="ln-43"></a><span class="c">!    imaginary values, e.g.</span>
+<a name="ln-44"></a><span class="c">!       complex c(ntot)</span>
+<a name="ln-45"></a><span class="c">!       real    a(2*ntot)</span>
+<a name="ln-46"></a><span class="c">!       equivalence (c(1),a(1))</span>
+<a name="ln-47"></a><span class="c">!       call fft(a(1),a(2),ntot,n,nspan,2)</span>
+<a name="ln-48"></a><span class="c">!  arrays at(maxf), ck(maxf), bt(maxf), sk(maxf), and np(maxp)</span>
+<a name="ln-49"></a><span class="c">!    are used for temporary storage.  if the available storage</span>
+<a name="ln-50"></a><span class="c">!    is insufficient, the program is terminated by a stop.</span>
+<a name="ln-51"></a><span class="c">!    maxf must be .ge. the maximum prime factor of n.</span>
+<a name="ln-52"></a><span class="c">!    maxp must be .gt. the number of prime factors of n.</span>
+<a name="ln-53"></a><span class="c">!    in addition, if the square-free portion k of n has two or</span>
+<a name="ln-54"></a><span class="c">!    more prime factors, then maxp must be .ge. k-1.</span>
+<a name="ln-55"></a><span class="c">!      dimension a(1),b(1)</span>
+<a name="ln-56"></a>      <span class="k">dimension </span><span class="n">a</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="n">b</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a name="ln-57"></a><span class="c">!  array storage in nfac for a maximum of 15 prime factors of n.</span>
+<a name="ln-58"></a><span class="c">!  if n has more than one square-free factor, the product of the</span>
+<a name="ln-59"></a><span class="c">!    square-free factors must be .le. 210</span>
+<a name="ln-60"></a>      <span class="k">dimension </span><span class="n">nfac</span><span class="p">(</span><span class="mi">101</span><span class="p">),</span><span class="n">np</span><span class="p">(</span><span class="mi">209</span><span class="p">)</span>
+<a name="ln-61"></a><span class="c">!  array storage for maximum prime factor of 23</span>
+<a name="ln-62"></a>      <span class="k">dimension </span><span class="n">at</span><span class="p">(</span><span class="mi">53</span><span class="p">),</span><span class="n">ck</span><span class="p">(</span><span class="mi">53</span><span class="p">),</span><span class="n">bt</span><span class="p">(</span><span class="mi">53</span><span class="p">),</span><span class="n">sk</span><span class="p">(</span><span class="mi">53</span><span class="p">)</span>
+<a name="ln-63"></a>      <span class="k">equivalence</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ii</span><span class="p">)</span>
+<a name="ln-64"></a><span class="c">!  the following two constants should agree with the array dimensions.</span>
+<a name="ln-65"></a>      <span class="n">maxp</span><span class="o">=</span><span class="mi">209</span>
+<a name="ln-66"></a>      <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-67"></a><span class="k">      </span><span class="n">inc</span><span class="o">=</span><span class="n">isn</span>
+<a name="ln-68"></a>      <span class="n">c72</span><span class="o">=</span><span class="mf">0.30901699437494742</span>
+<a name="ln-69"></a>      <span class="n">s72</span><span class="o">=</span><span class="mf">0.95105651629515357</span>
+<a name="ln-70"></a>      <span class="n">s120</span><span class="o">=</span><span class="mf">0.86602540378443865</span>
+<a name="ln-71"></a>      <span class="n">rad</span><span class="o">=</span><span class="mf">6.2831853071796</span>
+<a name="ln-72"></a>      <span class="k">if</span><span class="p">(</span><span class="n">isn</span> <span class="p">.</span><span class="n">ge</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">10</span>
+<a name="ln-73"></a>      <span class="n">s72</span><span class="o">=-</span><span class="n">s72</span>
+<a name="ln-74"></a>      <span class="n">s120</span><span class="o">=-</span><span class="n">s120</span>
+<a name="ln-75"></a>      <span class="n">rad</span><span class="o">=-</span><span class="n">rad</span>
+<a name="ln-76"></a>      <span class="n">inc</span><span class="o">=-</span><span class="n">inc</span>
+<a name="ln-77"></a>   <span class="mi">10</span> <span class="n">nt</span><span class="o">=</span><span class="n">inc</span><span class="o">*</span><span class="n">ntot</span>
+<a name="ln-78"></a>      <span class="n">ks</span><span class="o">=</span><span class="n">inc</span><span class="o">*</span><span class="n">nspan</span>
+<a name="ln-79"></a>      <span class="n">kspan</span><span class="o">=</span><span class="n">ks</span>
+<a name="ln-80"></a>      <span class="n">nn</span><span class="o">=</span><span class="n">nt</span><span class="o">-</span><span class="n">inc</span>
+<a name="ln-81"></a>      <span class="n">jc</span><span class="o">=</span><span class="n">ks</span><span class="o">/</span><span class="n">n</span>
+<a name="ln-82"></a>      <span class="n">radf</span><span class="o">=</span><span class="n">rad</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">jc</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span>
+<a name="ln-83"></a>      <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-84"></a>      <span class="n">jf</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-85"></a><span class="c">!  determine the factors of n</span>
+<a name="ln-86"></a>      <span class="n">m</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-87"></a>      <span class="n">k</span><span class="o">=</span><span class="n">n</span>
+<a name="ln-88"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">20</span>
+<a name="ln-89"></a>   <span class="mi">15</span> <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-90"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">=</span><span class="mi">4</span>
+<a name="ln-91"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">/</span><span class="mi">16</span>
+<a name="ln-92"></a>   <span class="mi">20</span> <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span><span class="o">*</span><span class="mi">16</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">15</span>
+<a name="ln-93"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">3</span>
+<a name="ln-94"></a>      <span class="n">jj</span><span class="o">=</span><span class="mi">9</span>
+<a name="ln-95"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">30</span>
+<a name="ln-96"></a>   <span class="mi">25</span> <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-97"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">=</span><span class="n">j</span>
+<a name="ln-98"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">/</span><span class="n">jj</span>
+<a name="ln-99"></a>   <span class="mi">30</span> <span class="k">if</span><span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">jj</span><span class="p">)</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">25</span>
+<a name="ln-100"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span>
+<a name="ln-101"></a>      <span class="n">jj</span><span class="o">=</span><span class="n">j</span><span class="o">**</span><span class="mi">2</span>
+<a name="ln-102"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jj</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">30</span>
+<a name="ln-103"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="mi">4</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">40</span>
+<a name="ln-104"></a>      <span class="n">kt</span><span class="o">=</span><span class="n">m</span>
+<a name="ln-105"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">k</span>
+<a name="ln-106"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">1</span><span class="p">)</span> <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-107"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">80</span>
+<a name="ln-108"></a>   <span class="mi">40</span> <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">50</span>
+<a name="ln-109"></a>      <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-110"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">=</span><span class="mi">2</span>
+<a name="ln-111"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">/</span><span class="mi">4</span>
+<a name="ln-112"></a>   <span class="mi">50</span> <span class="n">kt</span><span class="o">=</span><span class="n">m</span>
+<a name="ln-113"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">2</span>
+<a name="ln-114"></a>   <span class="mi">60</span> <span class="k">if</span><span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">70</span>
+<a name="ln-115"></a>      <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-116"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">=</span><span class="n">j</span>
+<a name="ln-117"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">/</span><span class="n">j</span>
+<a name="ln-118"></a>   <span class="mi">70</span> <span class="n">j</span><span class="o">=</span><span class="p">((</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-119"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">60</span>
+<a name="ln-120"></a>   <span class="mi">80</span> <span class="k">if</span><span class="p">(</span><span class="n">kt</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">100</span>
+<a name="ln-121"></a>      <span class="n">j</span><span class="o">=</span><span class="n">kt</span>
+<a name="ln-122"></a>   <span class="mi">90</span> <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-123"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-124"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-125"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">90</span>
+<a name="ln-126"></a><span class="c">!  compute fourier transform</span>
+<a name="ln-127"></a>  <span class="mi">100</span> <span class="n">sd</span><span class="o">=</span><span class="n">radf</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">kspan</span><span class="p">)</span>
+<a name="ln-128"></a>      <span class="n">cd</span><span class="o">=</span><span class="mf">2.0</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<a name="ln-129"></a>      <span class="n">sd</span><span class="o">=</span><span class="nb">sin</span><span class="p">(</span><span class="n">sd</span><span class="o">+</span><span class="n">sd</span><span class="p">)</span>
+<a name="ln-130"></a>      <span class="n">kk</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-131"></a>      <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-132"></a>      <span class="k">if</span><span class="p">(</span><span class="n">nfac</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">400</span>
+<a name="ln-133"></a><span class="c">!  transform for factor of 2 (including rotation factor)</span>
+<a name="ln-134"></a>      <span class="n">kspan</span><span class="o">=</span><span class="n">kspan</span><span class="o">/</span><span class="mi">2</span>
+<a name="ln-135"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">kspan</span><span class="o">+</span><span class="mi">2</span>
+<a name="ln-136"></a>  <span class="mi">210</span> <span class="n">k2</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-137"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-138"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-139"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">ak</span>
+<a name="ln-140"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">bk</span>
+<a name="ln-141"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">ak</span>
+<a name="ln-142"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">bk</span>
+<a name="ln-143"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-144"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">210</span>
+<a name="ln-145"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nn</span>
+<a name="ln-146"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">jc</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">210</span>
+<a name="ln-147"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">800</span>
+<a name="ln-148"></a>  <span class="mi">220</span> <span class="n">c1</span><span class="o">=</span><span class="mf">1.0</span><span class="o">-</span><span class="n">cd</span>
+<a name="ln-149"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">sd</span>
+<a name="ln-150"></a>  <span class="mi">230</span> <span class="n">k2</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-151"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-152"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-153"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-154"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-155"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">ak</span><span class="o">-</span><span class="n">s1</span><span class="o">*</span><span class="n">bk</span>
+<a name="ln-156"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">s1</span><span class="o">*</span><span class="n">ak</span><span class="o">+</span><span class="n">c1</span><span class="o">*</span><span class="n">bk</span>
+<a name="ln-157"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-158"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">nt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">230</span>
+<a name="ln-159"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nt</span>
+<a name="ln-160"></a>      <span class="n">c1</span><span class="o">=-</span><span class="n">c1</span>
+<a name="ln-161"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k1</span><span class="o">-</span><span class="n">k2</span>
+<a name="ln-162"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">230</span>
+<a name="ln-163"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">c1</span><span class="o">-</span><span class="p">(</span><span class="n">cd</span><span class="o">*</span><span class="n">c1</span><span class="o">+</span><span class="n">sd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-164"></a>      <span class="n">s1</span><span class="o">=</span><span class="p">(</span><span class="n">sd</span><span class="o">*</span><span class="n">c1</span><span class="o">-</span><span class="n">cd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span><span class="o">+</span><span class="n">s1</span>
+<a name="ln-165"></a>      <span class="n">c1</span><span class="o">=</span><span class="mf">2.0</span><span class="o">-</span><span class="p">(</span><span class="n">ak</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-166"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-167"></a>      <span class="n">c1</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">ak</span>
+<a name="ln-168"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-169"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">230</span>
+<a name="ln-170"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">inc</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-171"></a>      <span class="n">kk</span><span class="o">=</span><span class="p">(</span><span class="n">k1</span><span class="o">-</span><span class="n">kspan</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-172"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">jc</span><span class="o">+</span><span class="n">jc</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">220</span>
+<a name="ln-173"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">100</span>
+<a name="ln-174"></a><span class="c">!  transform for factor of 3 (optional code)</span>
+<a name="ln-175"></a>  <span class="mi">320</span> <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-176"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-177"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-178"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-179"></a>      <span class="n">aj</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-180"></a>      <span class="n">bj</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-181"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-182"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-183"></a>      <span class="n">ak</span><span class="o">=-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">aj</span><span class="o">+</span><span class="n">ak</span>
+<a name="ln-184"></a>      <span class="n">bk</span><span class="o">=-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">bj</span><span class="o">+</span><span class="n">bk</span>
+<a name="ln-185"></a>      <span class="n">aj</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">))</span><span class="o">*</span><span class="n">s120</span>
+<a name="ln-186"></a>      <span class="n">bj</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">))</span><span class="o">*</span><span class="n">s120</span>
+<a name="ln-187"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">-</span><span class="n">bj</span>
+<a name="ln-188"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-189"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-190"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">-</span><span class="n">aj</span>
+<a name="ln-191"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-192"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">320</span>
+<a name="ln-193"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nn</span>
+<a name="ln-194"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">320</span>
+<a name="ln-195"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">700</span>
+<a name="ln-196"></a><span class="c">!  transform for factor of 4</span>
+<a name="ln-197"></a>  <span class="mi">400</span> <span class="k">if</span><span class="p">(</span><span class="n">nfac</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">4</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">600</span>
+<a name="ln-198"></a>      <span class="n">kspnn</span><span class="o">=</span><span class="n">kspan</span>
+<a name="ln-199"></a>      <span class="n">kspan</span><span class="o">=</span><span class="n">kspan</span><span class="o">/</span><span class="mi">4</span>
+<a name="ln-200"></a>  <span class="mi">410</span> <span class="n">c1</span><span class="o">=</span><span class="mf">1.0</span>
+<a name="ln-201"></a>      <span class="n">s1</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-202"></a>  <span class="mi">420</span> <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-203"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-204"></a>      <span class="n">k3</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-205"></a>      <span class="n">akp</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-206"></a>      <span class="n">akm</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-207"></a>      <span class="n">ajp</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-208"></a>      <span class="n">ajm</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-209"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">akp</span><span class="o">+</span><span class="n">ajp</span>
+<a name="ln-210"></a>      <span class="n">ajp</span><span class="o">=</span><span class="n">akp</span><span class="o">-</span><span class="n">ajp</span>
+<a name="ln-211"></a>      <span class="n">bkp</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-212"></a>      <span class="n">bkm</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-213"></a>      <span class="n">bjp</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-214"></a>      <span class="n">bjm</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-215"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">bkp</span><span class="o">+</span><span class="n">bjp</span>
+<a name="ln-216"></a>      <span class="n">bjp</span><span class="o">=</span><span class="n">bkp</span><span class="o">-</span><span class="n">bjp</span>
+<a name="ln-217"></a>      <span class="k">if</span><span class="p">(</span><span class="n">isn</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">450</span>
+<a name="ln-218"></a>      <span class="n">akp</span><span class="o">=</span><span class="n">akm</span><span class="o">-</span><span class="n">bjm</span>
+<a name="ln-219"></a>      <span class="n">akm</span><span class="o">=</span><span class="n">akm</span><span class="o">+</span><span class="n">bjm</span>
+<a name="ln-220"></a>      <span class="n">bkp</span><span class="o">=</span><span class="n">bkm</span><span class="o">+</span><span class="n">ajm</span>
+<a name="ln-221"></a>      <span class="n">bkm</span><span class="o">=</span><span class="n">bkm</span><span class="o">-</span><span class="n">ajm</span>
+<a name="ln-222"></a>      <span class="k">if</span><span class="p">(</span><span class="n">s1</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">460</span>
+<a name="ln-223"></a>  <span class="mi">430</span> <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">akp</span><span class="o">*</span><span class="n">c1</span><span class="o">-</span><span class="n">bkp</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-224"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">akp</span><span class="o">*</span><span class="n">s1</span><span class="o">+</span><span class="n">bkp</span><span class="o">*</span><span class="n">c1</span>
+<a name="ln-225"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ajp</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">bjp</span><span class="o">*</span><span class="n">s2</span>
+<a name="ln-226"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ajp</span><span class="o">*</span><span class="n">s2</span><span class="o">+</span><span class="n">bjp</span><span class="o">*</span><span class="n">c2</span>
+<a name="ln-227"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">akm</span><span class="o">*</span><span class="n">c3</span><span class="o">-</span><span class="n">bkm</span><span class="o">*</span><span class="n">s3</span>
+<a name="ln-228"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">akm</span><span class="o">*</span><span class="n">s3</span><span class="o">+</span><span class="n">bkm</span><span class="o">*</span><span class="n">c3</span>
+<a name="ln-229"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k3</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-230"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">420</span>
+<a name="ln-231"></a>  <span class="mi">440</span> <span class="n">c2</span><span class="o">=</span><span class="n">c1</span><span class="o">-</span><span class="p">(</span><span class="n">cd</span><span class="o">*</span><span class="n">c1</span><span class="o">+</span><span class="n">sd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-232"></a>      <span class="n">s1</span><span class="o">=</span><span class="p">(</span><span class="n">sd</span><span class="o">*</span><span class="n">c1</span><span class="o">-</span><span class="n">cd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span><span class="o">+</span><span class="n">s1</span>
+<a name="ln-233"></a>      <span class="n">c1</span><span class="o">=</span><span class="mf">2.0</span><span class="o">-</span><span class="p">(</span><span class="n">c2</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-234"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-235"></a>      <span class="n">c1</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">c2</span>
+<a name="ln-236"></a>      <span class="n">c2</span><span class="o">=</span><span class="n">c1</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span>
+<a name="ln-237"></a>      <span class="n">s2</span><span class="o">=</span><span class="mf">2.0</span><span class="o">*</span><span class="n">c1</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-238"></a>      <span class="n">c3</span><span class="o">=</span><span class="n">c2</span><span class="o">*</span><span class="n">c1</span><span class="o">-</span><span class="n">s2</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-239"></a>      <span class="n">s3</span><span class="o">=</span><span class="n">c2</span><span class="o">*</span><span class="n">s1</span><span class="o">+</span><span class="n">s2</span><span class="o">*</span><span class="n">c1</span>
+<a name="ln-240"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nt</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-241"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">420</span>
+<a name="ln-242"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">kspan</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-243"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">jc</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">410</span>
+<a name="ln-244"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kspan</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="n">jc</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">800</span>
+<a name="ln-245"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">100</span>
+<a name="ln-246"></a>  <span class="mi">450</span> <span class="n">akp</span><span class="o">=</span><span class="n">akm</span><span class="o">+</span><span class="n">bjm</span>
+<a name="ln-247"></a>      <span class="n">akm</span><span class="o">=</span><span class="n">akm</span><span class="o">-</span><span class="n">bjm</span>
+<a name="ln-248"></a>      <span class="n">bkp</span><span class="o">=</span><span class="n">bkm</span><span class="o">-</span><span class="n">ajm</span>
+<a name="ln-249"></a>      <span class="n">bkm</span><span class="o">=</span><span class="n">bkm</span><span class="o">+</span><span class="n">ajm</span>
+<a name="ln-250"></a>      <span class="k">if</span><span class="p">(</span><span class="n">s1</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">430</span>
+<a name="ln-251"></a>  <span class="mi">460</span> <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">akp</span>
+<a name="ln-252"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">bkp</span>
+<a name="ln-253"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ajp</span>
+<a name="ln-254"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bjp</span>
+<a name="ln-255"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">akm</span>
+<a name="ln-256"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">bkm</span>
+<a name="ln-257"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k3</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-258"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">420</span>
+<a name="ln-259"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">440</span>
+<a name="ln-260"></a><span class="c">!  transform for factor of 5 (optional code)</span>
+<a name="ln-261"></a>  <span class="mi">510</span> <span class="n">c2</span><span class="o">=</span><span class="n">c72</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">s72</span><span class="o">**</span><span class="mi">2</span>
+<a name="ln-262"></a>      <span class="n">s2</span><span class="o">=</span><span class="mf">2.0</span><span class="o">*</span><span class="n">c72</span><span class="o">*</span><span class="n">s72</span>
+<a name="ln-263"></a>  <span class="mi">520</span> <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-264"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-265"></a>      <span class="n">k3</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-266"></a>      <span class="n">k4</span><span class="o">=</span><span class="n">k3</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-267"></a>      <span class="n">akp</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span>
+<a name="ln-268"></a>      <span class="n">akm</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span>
+<a name="ln-269"></a>      <span class="n">bkp</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span>
+<a name="ln-270"></a>      <span class="n">bkm</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span>
+<a name="ln-271"></a>      <span class="n">ajp</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-272"></a>      <span class="n">ajm</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-273"></a>      <span class="n">bjp</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-274"></a>      <span class="n">bjm</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span>
+<a name="ln-275"></a>      <span class="n">aa</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-276"></a>      <span class="n">bb</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-277"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">aa</span><span class="o">+</span><span class="n">akp</span><span class="o">+</span><span class="n">ajp</span>
+<a name="ln-278"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">bb</span><span class="o">+</span><span class="n">bkp</span><span class="o">+</span><span class="n">bjp</span>
+<a name="ln-279"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">akp</span><span class="o">*</span><span class="n">c72</span><span class="o">+</span><span class="n">ajp</span><span class="o">*</span><span class="n">c2</span><span class="o">+</span><span class="n">aa</span>
+<a name="ln-280"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bkp</span><span class="o">*</span><span class="n">c72</span><span class="o">+</span><span class="n">bjp</span><span class="o">*</span><span class="n">c2</span><span class="o">+</span><span class="n">bb</span>
+<a name="ln-281"></a>      <span class="n">aj</span><span class="o">=</span><span class="n">akm</span><span class="o">*</span><span class="n">s72</span><span class="o">+</span><span class="n">ajm</span><span class="o">*</span><span class="n">s2</span>
+<a name="ln-282"></a>      <span class="n">bj</span><span class="o">=</span><span class="n">bkm</span><span class="o">*</span><span class="n">s72</span><span class="o">+</span><span class="n">bjm</span><span class="o">*</span><span class="n">s2</span>
+<a name="ln-283"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">-</span><span class="n">bj</span>
+<a name="ln-284"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-285"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-286"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k4</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">-</span><span class="n">aj</span>
+<a name="ln-287"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">akp</span><span class="o">*</span><span class="n">c2</span><span class="o">+</span><span class="n">ajp</span><span class="o">*</span><span class="n">c72</span><span class="o">+</span><span class="n">aa</span>
+<a name="ln-288"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bkp</span><span class="o">*</span><span class="n">c2</span><span class="o">+</span><span class="n">bjp</span><span class="o">*</span><span class="n">c72</span><span class="o">+</span><span class="n">bb</span>
+<a name="ln-289"></a>      <span class="n">aj</span><span class="o">=</span><span class="n">akm</span><span class="o">*</span><span class="n">s2</span><span class="o">-</span><span class="n">ajm</span><span class="o">*</span><span class="n">s72</span>
+<a name="ln-290"></a>      <span class="n">bj</span><span class="o">=</span><span class="n">bkm</span><span class="o">*</span><span class="n">s2</span><span class="o">-</span><span class="n">bjm</span><span class="o">*</span><span class="n">s72</span>
+<a name="ln-291"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">-</span><span class="n">bj</span>
+<a name="ln-292"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-293"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-294"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k3</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">-</span><span class="n">aj</span>
+<a name="ln-295"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k4</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-296"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">520</span>
+<a name="ln-297"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nn</span>
+<a name="ln-298"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">520</span>
+<a name="ln-299"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">700</span>
+<a name="ln-300"></a><span class="c">!  transform for odd factors</span>
+<a name="ln-301"></a>  <span class="mi">600</span> <span class="n">k</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-302"></a>      <span class="n">kspnn</span><span class="o">=</span><span class="n">kspan</span>
+<a name="ln-303"></a>      <span class="n">kspan</span><span class="o">=</span><span class="n">kspan</span><span class="o">/</span><span class="n">k</span>
+<a name="ln-304"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">3</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">320</span>
+<a name="ln-305"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">5</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">510</span>
+<a name="ln-306"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="n">jf</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">640</span>
+<a name="ln-307"></a>      <span class="n">jf</span><span class="o">=</span><span class="n">k</span>
+<a name="ln-308"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">rad</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-309"></a>      <span class="n">c1</span><span class="o">=</span><span class="nb">cos</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-310"></a>      <span class="n">s1</span><span class="o">=</span><span class="nb">sin</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-311"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jf</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">maxf</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">998</span>
+<a name="ln-312"></a>      <span class="n">ck</span><span class="p">(</span><span class="n">jf</span><span class="p">)</span><span class="o">=</span><span class="mf">1.0</span>
+<a name="ln-313"></a>      <span class="n">sk</span><span class="p">(</span><span class="n">jf</span><span class="p">)</span><span class="o">=</span><span class="mf">0.0</span>
+<a name="ln-314"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-315"></a>  <span class="mi">630</span> <span class="n">ck</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">ck</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">c1</span><span class="o">+</span><span class="n">sk</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-316"></a>      <span class="n">sk</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">ck</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">s1</span><span class="o">-</span><span class="n">sk</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">c1</span>
+<a name="ln-317"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-318"></a>      <span class="n">ck</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">=</span><span class="n">ck</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-319"></a>      <span class="n">sk</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">=-</span><span class="n">sk</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-320"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-321"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">630</span>
+<a name="ln-322"></a>  <span class="mi">640</span> <span class="n">k1</span><span class="o">=</span><span class="n">kk</span>
+<a name="ln-323"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspnn</span>
+<a name="ln-324"></a>      <span class="n">aa</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-325"></a>      <span class="n">bb</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-326"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">aa</span>
+<a name="ln-327"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bb</span>
+<a name="ln-328"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-329"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-330"></a>  <span class="mi">650</span> <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">kspan</span>
+<a name="ln-331"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-332"></a>      <span class="n">at</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-333"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">at</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">ak</span>
+<a name="ln-334"></a>      <span class="n">bt</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-335"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bt</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">bk</span>
+<a name="ln-336"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-337"></a>      <span class="n">at</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-338"></a>      <span class="n">bt</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-339"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-340"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k1</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">650</span>
+<a name="ln-341"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span>
+<a name="ln-342"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span>
+<a name="ln-343"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">kk</span>
+<a name="ln-344"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspnn</span>
+<a name="ln-345"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-346"></a>  <span class="mi">660</span> <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-347"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">kspan</span>
+<a name="ln-348"></a>      <span class="n">jj</span><span class="o">=</span><span class="n">j</span>
+<a name="ln-349"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">aa</span>
+<a name="ln-350"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bb</span>
+<a name="ln-351"></a>      <span class="n">aj</span><span class="o">=</span><span class="mf">0.0</span>
+<a name="ln-352"></a>      <span class="n">bj</span><span class="o">=</span><span class="mf">0.0</span>
+<a name="ln-353"></a>      <span class="n">k</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-354"></a>  <span class="mi">670</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-355"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">at</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">ck</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span><span class="o">+</span><span class="n">ak</span>
+<a name="ln-356"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">bt</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">ck</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span><span class="o">+</span><span class="n">bk</span>
+<a name="ln-357"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-358"></a>      <span class="n">aj</span><span class="o">=</span><span class="n">at</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">sk</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-359"></a>      <span class="n">bj</span><span class="o">=</span><span class="n">bt</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">sk</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-360"></a>      <span class="n">jj</span><span class="o">=</span><span class="n">jj</span><span class="o">+</span><span class="n">j</span>
+<a name="ln-361"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jj</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">jf</span><span class="p">)</span> <span class="n">jj</span><span class="o">=</span><span class="n">jj</span><span class="o">-</span><span class="n">jf</span>
+<a name="ln-362"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">jf</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">670</span>
+<a name="ln-363"></a>      <span class="n">k</span><span class="o">=</span><span class="n">jf</span><span class="o">-</span><span class="n">j</span>
+<a name="ln-364"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">-</span><span class="n">bj</span>
+<a name="ln-365"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">+</span><span class="n">aj</span>
+<a name="ln-366"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span><span class="o">+</span><span class="n">bj</span>
+<a name="ln-367"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span><span class="o">-</span><span class="n">aj</span>
+<a name="ln-368"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-369"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">660</span>
+<a name="ln-370"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspnn</span>
+<a name="ln-371"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">640</span>
+<a name="ln-372"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nn</span>
+<a name="ln-373"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">640</span>
+<a name="ln-374"></a><span class="c">!  multiply by rotation factor (except for factors of 2 and 4)</span>
+<a name="ln-375"></a>  <span class="mi">700</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="n">m</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">800</span>
+<a name="ln-376"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">jc</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-377"></a>  <span class="mi">710</span> <span class="n">c2</span><span class="o">=</span><span class="mf">1.0</span><span class="o">-</span><span class="n">cd</span>
+<a name="ln-378"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">sd</span>
+<a name="ln-379"></a>  <span class="mi">720</span> <span class="n">c1</span><span class="o">=</span><span class="n">c2</span>
+<a name="ln-380"></a>      <span class="n">s2</span><span class="o">=</span><span class="n">s1</span>
+<a name="ln-381"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-382"></a>  <span class="mi">730</span> <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-383"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">c2</span><span class="o">*</span><span class="n">ak</span><span class="o">-</span><span class="n">s2</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-384"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">s2</span><span class="o">*</span><span class="n">ak</span><span class="o">+</span><span class="n">c2</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-385"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspnn</span>
+<a name="ln-386"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">730</span>
+<a name="ln-387"></a>      <span class="n">ak</span><span class="o">=</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span>
+<a name="ln-388"></a>      <span class="n">s2</span><span class="o">=</span><span class="n">s1</span><span class="o">*</span><span class="n">c2</span><span class="o">+</span><span class="n">c1</span><span class="o">*</span><span class="n">s2</span>
+<a name="ln-389"></a>      <span class="n">c2</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">ak</span>
+<a name="ln-390"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nt</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-391"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspnn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">730</span>
+<a name="ln-392"></a>      <span class="n">c2</span><span class="o">=</span><span class="n">c1</span><span class="o">-</span><span class="p">(</span><span class="n">cd</span><span class="o">*</span><span class="n">c1</span><span class="o">+</span><span class="n">sd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-393"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">s1</span><span class="o">+</span><span class="p">(</span><span class="n">sd</span><span class="o">*</span><span class="n">c1</span><span class="o">-</span><span class="n">cd</span><span class="o">*</span><span class="n">s1</span><span class="p">)</span>
+<a name="ln-394"></a>      <span class="n">c1</span><span class="o">=</span><span class="mf">2.0</span><span class="o">-</span><span class="p">(</span><span class="n">c2</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">s1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-395"></a>      <span class="n">s1</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">s1</span>
+<a name="ln-396"></a>      <span class="n">c2</span><span class="o">=</span><span class="n">c1</span><span class="o">*</span><span class="n">c2</span>
+<a name="ln-397"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">kspnn</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-398"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">kspan</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">720</span>
+<a name="ln-399"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">kspan</span><span class="o">+</span><span class="n">jc</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-400"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">jc</span><span class="o">+</span><span class="n">jc</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">710</span>
+<a name="ln-401"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">100</span>
+<a name="ln-402"></a><span class="c">!  permute the results to normal order---done in two stages</span>
+<a name="ln-403"></a><span class="c">!  permutation for square factors of n</span>
+<a name="ln-404"></a>  <span class="mi">800</span> <span class="n">np</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">ks</span>
+<a name="ln-405"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kt</span> <span class="p">.</span><span class="n">eq</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">890</span>
+<a name="ln-406"></a>      <span class="n">k</span><span class="o">=</span><span class="n">kt</span><span class="o">+</span><span class="n">kt</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-407"></a>      <span class="k">if</span><span class="p">(</span><span class="n">m</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-408"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-409"></a>      <span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">jc</span>
+<a name="ln-410"></a>  <span class="mi">810</span> <span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">/</span><span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-411"></a>      <span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-412"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-413"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-414"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">810</span>
+<a name="ln-415"></a>      <span class="n">k3</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-416"></a>      <span class="n">kspan</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-417"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">jc</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-418"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kspan</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-419"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-420"></a>      <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">ntot</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">850</span>
+<a name="ln-421"></a><span class="c">!  permutation for single-variate transform (optional code)</span>
+<a name="ln-422"></a>  <span class="mi">820</span> <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-423"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-424"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span>
+<a name="ln-425"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-426"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-427"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span>
+<a name="ln-428"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-429"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kspan</span><span class="o">+</span><span class="n">k2</span>
+<a name="ln-430"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">820</span>
+<a name="ln-431"></a>  <span class="mi">830</span> <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-432"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-433"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">k2</span>
+<a name="ln-434"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">))</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">830</span>
+<a name="ln-435"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-436"></a>  <span class="mi">840</span> <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">820</span>
+<a name="ln-437"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-438"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kspan</span><span class="o">+</span><span class="n">k2</span>
+<a name="ln-439"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">840</span>
+<a name="ln-440"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">830</span>
+<a name="ln-441"></a>      <span class="n">jc</span><span class="o">=</span><span class="n">k3</span>
+<a name="ln-442"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">890</span>
+<a name="ln-443"></a><span class="c">!  permutation for multivariate transform</span>
+<a name="ln-444"></a>  <span class="mi">850</span> <span class="n">k</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-445"></a>  <span class="mi">860</span> <span class="n">ak</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-446"></a>      <span class="n">a</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-447"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">ak</span>
+<a name="ln-448"></a>      <span class="n">bk</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span>
+<a name="ln-449"></a>      <span class="n">b</span><span class="p">(</span><span class="n">kk</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-450"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">bk</span>
+<a name="ln-451"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-452"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">inc</span>
+<a name="ln-453"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">860</span>
+<a name="ln-454"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">ks</span><span class="o">-</span><span class="n">jc</span>
+<a name="ln-455"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="n">ks</span><span class="o">-</span><span class="n">jc</span>
+<a name="ln-456"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">nt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">850</span>
+<a name="ln-457"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">nt</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-458"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">-</span><span class="n">nt</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-459"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">850</span>
+<a name="ln-460"></a>  <span class="mi">870</span> <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-461"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-462"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">k2</span>
+<a name="ln-463"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">))</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">870</span>
+<a name="ln-464"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-465"></a>  <span class="mi">880</span> <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">850</span>
+<a name="ln-466"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">jc</span>
+<a name="ln-467"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kspan</span><span class="o">+</span><span class="n">k2</span>
+<a name="ln-468"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k2</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">880</span>
+<a name="ln-469"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="n">ks</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">870</span>
+<a name="ln-470"></a>      <span class="n">jc</span><span class="o">=</span><span class="n">k3</span>
+<a name="ln-471"></a>  <span class="mi">890</span> <span class="k">if</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">kt</span><span class="o">+</span><span class="mi">1</span> <span class="p">.</span><span class="n">ge</span><span class="p">.</span> <span class="n">m</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-472"></a><span class="k">      </span><span class="n">kspnn</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">kt</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-473"></a><span class="c">!  permutation for square-free factors of n</span>
+<a name="ln-474"></a>      <span class="n">j</span><span class="o">=</span><span class="n">m</span><span class="o">-</span><span class="n">kt</span>
+<a name="ln-475"></a>      <span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span>
+<a name="ln-476"></a>  <span class="mi">900</span> <span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">nfac</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-477"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-478"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">kt</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">900</span>
+<a name="ln-479"></a>      <span class="n">kt</span><span class="o">=</span><span class="n">kt</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-480"></a>      <span class="n">nn</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">kt</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-481"></a>      <span class="k">if</span><span class="p">(</span><span class="n">nn</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">maxp</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">998</span>
+<a name="ln-482"></a>      <span class="n">jj</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-483"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-484"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">906</span>
+<a name="ln-485"></a>  <span class="mi">902</span> <span class="n">jj</span><span class="o">=</span><span class="n">jj</span><span class="o">-</span><span class="n">k2</span>
+<a name="ln-486"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">kk</span>
+<a name="ln-487"></a>      <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-488"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-489"></a>  <span class="mi">904</span> <span class="n">jj</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">jj</span>
+<a name="ln-490"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jj</span> <span class="p">.</span><span class="n">ge</span><span class="p">.</span> <span class="n">k2</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">902</span>
+<a name="ln-491"></a>      <span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">jj</span>
+<a name="ln-492"></a>  <span class="mi">906</span> <span class="n">k2</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">kt</span><span class="p">)</span>
+<a name="ln-493"></a>      <span class="n">k</span><span class="o">=</span><span class="n">kt</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-494"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">nfac</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-495"></a>      <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-496"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">le</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">904</span>
+<a name="ln-497"></a><span class="c">!  determine the permutation cycles of length greater than 1</span>
+<a name="ln-498"></a>      <span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-499"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">914</span>
+<a name="ln-500"></a>  <span class="mi">910</span> <span class="n">k</span><span class="o">=</span><span class="n">kk</span>
+<a name="ln-501"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-502"></a>      <span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">=-</span><span class="n">kk</span>
+<a name="ln-503"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">j</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">910</span>
+<a name="ln-504"></a>      <span class="n">k3</span><span class="o">=</span><span class="n">kk</span>
+<a name="ln-505"></a>  <span class="mi">914</span> <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-506"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-507"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">914</span>
+<a name="ln-508"></a>      <span class="k">if</span><span class="p">(</span><span class="n">kk</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">j</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">910</span>
+<a name="ln-509"></a>      <span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=-</span><span class="n">j</span>
+<a name="ln-510"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">nn</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">914</span>
+<a name="ln-511"></a>      <span class="n">maxf</span><span class="o">=</span><span class="n">inc</span><span class="o">*</span><span class="n">maxf</span>
+<a name="ln-512"></a><span class="c">!  reorder a and b, following the permutation cycles</span>
+<a name="ln-513"></a>      <span class="n">go</span> <span class="n">to</span> <span class="mi">950</span>
+<a name="ln-514"></a>  <span class="mi">924</span> <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span>
+<a name="ln-515"></a>      <span class="k">if</span><span class="p">(</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="p">.</span><span class="n">lt</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">924</span>
+<a name="ln-516"></a>      <span class="n">jj</span><span class="o">=</span><span class="n">jc</span>
+<a name="ln-517"></a>  <span class="mi">926</span> <span class="n">kspan</span><span class="o">=</span><span class="n">jj</span>
+<a name="ln-518"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jj</span> <span class="p">.</span><span class="n">gt</span><span class="p">.</span> <span class="n">maxf</span><span class="p">)</span> <span class="n">kspan</span><span class="o">=</span><span class="n">maxf</span>
+<a name="ln-519"></a>      <span class="n">jj</span><span class="o">=</span><span class="n">jj</span><span class="o">-</span><span class="n">kspan</span>
+<a name="ln-520"></a>      <span class="n">k</span><span class="o">=</span><span class="n">np</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-521"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">jc</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="n">ii</span><span class="o">+</span><span class="n">jj</span>
+<a name="ln-522"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-523"></a>      <span class="n">k2</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-524"></a>  <span class="mi">928</span> <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-525"></a>      <span class="n">at</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span>
+<a name="ln-526"></a>      <span class="n">bt</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span>
+<a name="ln-527"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">-</span><span class="n">inc</span>
+<a name="ln-528"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k1</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">kk</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">928</span>
+<a name="ln-529"></a>  <span class="mi">932</span> <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-530"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k1</span><span class="o">-</span><span class="n">jc</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+<a name="ln-531"></a>      <span class="n">k</span><span class="o">=-</span><span class="n">np</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-532"></a>  <span class="mi">936</span> <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">a</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-533"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">b</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-534"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">-</span><span class="n">inc</span>
+<a name="ln-535"></a>      <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">-</span><span class="n">inc</span>
+<a name="ln-536"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k1</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">kk</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">936</span>
+<a name="ln-537"></a>      <span class="n">kk</span><span class="o">=</span><span class="n">k2</span>
+<a name="ln-538"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">j</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">932</span>
+<a name="ln-539"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">kk</span><span class="o">+</span><span class="n">kspan</span>
+<a name="ln-540"></a>      <span class="n">k2</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-541"></a>  <span class="mi">940</span> <span class="n">k2</span><span class="o">=</span><span class="n">k2</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-542"></a>      <span class="n">a</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">at</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-543"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span><span class="o">=</span><span class="n">bt</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a name="ln-544"></a>      <span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="o">-</span><span class="n">inc</span>
+<a name="ln-545"></a>      <span class="k">if</span><span class="p">(</span><span class="n">k1</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="n">kk</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">940</span>
+<a name="ln-546"></a>      <span class="k">if</span><span class="p">(</span><span class="n">jj</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">926</span>
+<a name="ln-547"></a>      <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="p">.</span><span class="n">ne</span><span class="p">.</span> <span class="mi">1</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">924</span>
+<a name="ln-548"></a>  <span class="mi">950</span> <span class="n">j</span><span class="o">=</span><span class="n">k3</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-549"></a>      <span class="n">nt</span><span class="o">=</span><span class="n">nt</span><span class="o">-</span><span class="n">kspnn</span>
+<a name="ln-550"></a>      <span class="n">ii</span><span class="o">=</span><span class="n">nt</span><span class="o">-</span><span class="n">inc</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-551"></a>      <span class="k">if</span><span class="p">(</span><span class="n">nt</span> <span class="p">.</span><span class="n">ge</span><span class="p">.</span> <span class="mi">0</span><span class="p">)</span> <span class="n">go</span> <span class="n">to</span> <span class="mi">924</span>
+<a name="ln-552"></a>      <span class="k">return</span>
+<a name="ln-553"></a><span class="c">! error finish, insufficient array storage</span>
+<a name="ln-554"></a>  <span class="mi">998</span> <span class="n">isn</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-555"></a>      <span class="k">print</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;array bounds exceeded within subroutine fft&#39;</span>
+<a name="ln-556"></a>
+<a name="ln-557"></a>      <span class="k">stop</span>
+<a name="ln-558"></a><span class="k">      end</span>
+<a name="ln-559"></a>
+<a name="ln-560"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-561"></a><span class="c">! $URL$</span>
+<a name="ln-562"></a><span class="c">! $Id$</span>
+<a name="ln-563"></a><span class="c">! $Revision$</span>
+<a name="ln-564"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_read_write_restarts &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>test_read_write_restarts
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for programs.">117 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/test_read_write_restarts.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/test_read_write_restarts.f90.html'>test_read_write_restarts.f90</a></li>
+    
+  
+     <li class="active">test_read_write_restarts</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-source%7E132">source</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-revision%7E132">revision</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-revdate%7E132">revdate</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_ens%7E5">num_ens</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_domains%7E6">num_domains</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-imem%7E7">imem</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-domid%7E2">domid</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_input_handle">file_input_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_output_handle">file_output_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_array_input%7E5">file_array_input</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_array_output%7E3">file_array_output</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-my_base%7E5">my_base</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-my_desc%7E5">my_desc</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-string1%7E20">string1</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-iunit%7E91">iunit</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-io%7E67">io</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-ens_handle%7E120">ens_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-time1%7E13">time1</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-single_file_in%7E2">single_file_in</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-read_time_from_file%7E7">read_time_from_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-model_size%7E25">model_size</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-ens_size%7E120">ens_size</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-nfields">nfields</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-max_state_variables%7E5">max_state_variables</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_state_table_columns%7E5">num_state_table_columns</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-variable_table">variable_table</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-state_kinds_list">state_kinds_list</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-model_variables">model_variables</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_name_index">VAR_NAME_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_qty_index">VAR_QTY_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_update_index">VAR_UPDATE_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-input_file%7E3">input_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-output_file%7E5">output_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-verbose%7E24">verbose</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-initialize_filenames%7E2">initialize_filenames</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-initialize_module%7E8">initialize_module</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-verify_state_variables%7E3">verify_state_variables</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/mpi_utilities_mod.html'>mpi_utilities_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/state_vector_io_mod.html'>state_vector_io_mod</a></li>
+    
+    <li><a href='../module/state_structure_mod.html'>state_structure_mod</a></li>
+    
+    <li><a href='../module/ensemble_manager_mod.html'>ensemble_manager_mod</a></li>
+    
+    <li><a href='../module/io_filenames_mod.html'>io_filenames_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/filter_mod.html'>filter_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-source%7E132">source</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-revision%7E132">revision</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-revdate%7E132">revdate</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_ens%7E5">num_ens</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_domains%7E6">num_domains</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-imem%7E7">imem</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-domid%7E2">domid</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_input_handle">file_input_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_output_handle">file_output_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_array_input%7E5">file_array_input</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-file_array_output%7E3">file_array_output</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-my_base%7E5">my_base</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-my_desc%7E5">my_desc</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-string1%7E20">string1</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-iunit%7E91">iunit</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-io%7E67">io</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-ens_handle%7E120">ens_handle</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-time1%7E13">time1</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-single_file_in%7E2">single_file_in</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-read_time_from_file%7E7">read_time_from_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-model_size%7E25">model_size</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-ens_size%7E120">ens_size</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-nfields">nfields</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-max_state_variables%7E5">max_state_variables</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-num_state_table_columns%7E5">num_state_table_columns</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-variable_table">variable_table</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-state_kinds_list">state_kinds_list</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-model_variables">model_variables</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_name_index">VAR_NAME_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_qty_index">VAR_QTY_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-var_update_index">VAR_UPDATE_INDEX</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-input_file%7E3">input_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-output_file%7E5">output_file</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#variable-verbose%7E24">verbose</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-initialize_filenames%7E2">initialize_filenames</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-initialize_module%7E8">initialize_module</a>
+      
+      <a class="list-group-item" href="../program/test_read_write_restarts.html#proc-verify_state_variables%7E3">verify_state_variables</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E132"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E132"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E132"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_ens%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_ens</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_domains%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_domains</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imem%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>imem</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-domid%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>domid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_input_handle"></span>type(<a href='../type/file_info_type.html'>file_info_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_input_handle</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_output_handle"></span>type(<a href='../type/file_info_type.html'>file_info_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_output_handle</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_array_input%7E5"></span>character(len=256),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>file_array_input</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_array_output%7E3"></span>character(len=256),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>file_array_output</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-my_base%7E5"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>my_base</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-my_desc%7E5"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>my_desc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E20"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E91"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E67"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_handle%7E120"></span>type(<a href='../type/ensemble_type.html'>ensemble_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ens_handle</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time1%7E13"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-single_file_in%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>single_file_in</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-read_time_from_file%7E7"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>read_time_from_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-model_size%7E25"></span>integer(kind=i8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>model_size</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_size%7E120"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ens_size</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfields"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nfields</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_state_variables%7E5"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_state_variables</strong></td><td> =</td><td>10</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_state_table_columns%7E5"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_state_table_columns</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-variable_table"></span>character(len=vtablenamelength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>variable_table</strong>(max_state_variables,num_state_table_columns)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-state_kinds_list"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>state_kinds_list</strong>(max_state_variables)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-model_variables"></span>character(len=vtablenamelength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>model_variables</strong>(max_state_variables*num_state_table_columns)</td><td> =</td><td>' '</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_name_index"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>VAR_NAME_INDEX</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_qty_index"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>VAR_QTY_INDEX</strong></td><td> =</td><td>2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_update_index"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>VAR_UPDATE_INDEX</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_file%7E3"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_file</strong>(1)</td><td> =</td><td>"cf_test.nc"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-output_file%7E5"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>output_file</strong>(1)</td><td> =</td><td>"cf_test_out.nc"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verbose%7E24"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verbose</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-initialize_filenames%7E2"></span><h3>
+function <a href='../proc/initialize_filenames%7E2.html'>initialize_filenames</a>(filename, IO_STRING) result(file_handle)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>IO_STRING</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(<a href='../type/file_info_type.html'>file_info_type</a>)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-initialize_module%7E8"></span><h3>
+subroutine <a href='../proc/initialize_module%7E8.html'>initialize_module</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-verify_state_variables%7E3"></span><h3>
+subroutine <a href='../proc/verify_state_variables%7E3.html'>verify_state_variables</a>(state_variables, ngood, table, kind_list)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Verify that the namelist was filled in correctly, and check
+ that there are valid entries for the dart_kind. 
+ Returns a table with columns:  </p><a href="../proc/verify_state_variables%7E3.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>state_variables</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ngood</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>table</strong>(:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kind_list</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

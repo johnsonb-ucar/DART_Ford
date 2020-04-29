@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_madis_satwnd &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_madis_satwnd
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for programs.">115 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_madis_satwnd.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/convert_madis_satwnd.f90.html'>convert_madis_satwnd.f90</a></li>
+    
+  
+     <li class="active">convert_madis_satwnd</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-satwnd_netcdf_file">satwnd_netcdf_file</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-satwnd_out_file">satwnd_out_file</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-exclude_special%7E2">exclude_special</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-use_input_qc%7E4">use_input_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-num_copies%7E68">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-num_qc%7E63">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-iruse%7E2">iruse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-visuse%7E2">visuse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wvuse%7E2">wvuse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-allbands">allbands</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-ncid%7E156">ncid</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-nobs%7E10">nobs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-n%7E35">n</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-i%7E138">i</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-oday%7E36">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-osec%7E36">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-nused%7E7">nused</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-file_exist%7E30">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-first_obs%7E43">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wdir_miss%7E4">wdir_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wspd_miss%7E4">wspd_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-band_miss">band_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-uwnd%7E12">uwnd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-vwnd%7E12">vwnd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-oerr%7E27">oerr</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc%7E52">qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-lat%7E116">lat</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-lon%7E118">lon</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-pres%7E72">pres</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-tobs%7E5">tobs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wdir%7E12">wdir</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wspd%7E9">wspd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-band%7E2">band</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-tused%7E4">tused</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc_wdir%7E4">qc_wdir</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc_wspd%7E4">qc_wspd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-used%7E4">used</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-sorted_used%7E4">sorted_used</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-obs_seq%7E43">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-obs%7E101">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-prev_obs%7E51">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-comp_day0%7E12">comp_day0</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-time_obs%7E34">time_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-prev_time%7E45">prev_time</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/meteor_mod.html'>meteor_mod</a></li>
+    
+    <li><a href='../module/obs_err_mod%7E2.html'>obs_err_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/sort_mod.html'>sort_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-satwnd_netcdf_file">satwnd_netcdf_file</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-satwnd_out_file">satwnd_out_file</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-exclude_special%7E2">exclude_special</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-use_input_qc%7E4">use_input_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-num_copies%7E68">num_copies</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-num_qc%7E63">num_qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-iruse%7E2">iruse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-visuse%7E2">visuse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wvuse%7E2">wvuse</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-allbands">allbands</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-ncid%7E156">ncid</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-nobs%7E10">nobs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-n%7E35">n</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-i%7E138">i</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-oday%7E36">oday</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-osec%7E36">osec</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-nused%7E7">nused</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-file_exist%7E30">file_exist</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-first_obs%7E43">first_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wdir_miss%7E4">wdir_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wspd_miss%7E4">wspd_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-band_miss">band_miss</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-uwnd%7E12">uwnd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-vwnd%7E12">vwnd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-oerr%7E27">oerr</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc%7E52">qc</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-lat%7E116">lat</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-lon%7E118">lon</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-pres%7E72">pres</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-tobs%7E5">tobs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wdir%7E12">wdir</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-wspd%7E9">wspd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-band%7E2">band</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-tused%7E4">tused</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc_wdir%7E4">qc_wdir</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-qc_wspd%7E4">qc_wspd</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-used%7E4">used</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-sorted_used%7E4">sorted_used</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-obs_seq%7E43">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-obs%7E101">obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-prev_obs%7E51">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-comp_day0%7E12">comp_day0</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-time_obs%7E34">time_obs</a>
+      
+      <a class="list-group-item" href="../program/convert_madis_satwnd.html#variable-prev_time%7E45">prev_time</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-satwnd_netcdf_file"></span>character(len=16),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>satwnd_netcdf_file</strong></td><td> =</td><td>'satwnd_input.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-satwnd_out_file"></span>character(len=129),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>satwnd_out_file</strong></td><td> =</td><td>'obs_seq.satwnd'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-exclude_special%7E2"></span>logical,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>exclude_special</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-use_input_qc%7E4"></span>logical,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>use_input_qc</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E68"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_copies</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E63"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>num_qc</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iruse%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iruse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-visuse%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>visuse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wvuse%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wvuse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-allbands"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>allbands</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid%7E156"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nobs%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nobs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E35"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E138"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E36"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E36"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nused%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nused</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_exist%7E30"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_exist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E43"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wdir_miss%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wdir_miss</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wspd_miss%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wspd_miss</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-band_miss"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>band_miss</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-uwnd%7E12"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>uwnd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vwnd%7E12"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>vwnd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oerr%7E27"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E52"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat%7E116"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lat</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon%7E118"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lon</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pres%7E72"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>pres</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tobs%7E5"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>tobs</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wdir%7E12"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>wdir</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wspd%7E9"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>wspd</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-band%7E2"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>band</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tused%7E4"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>tused</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_wdir%7E4"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qc_wdir</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_wspd%7E4"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qc_wspd</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-used%7E4"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>used</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sorted_used%7E4"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sorted_used</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E43"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E101"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E51"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp_day0%7E12"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp_day0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_obs%7E34"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E45"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

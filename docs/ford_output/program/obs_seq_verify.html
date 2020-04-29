@@ -1,0 +1,3210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>obs_seq_verify &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>obs_seq_verify
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.2% of total for programs.">928 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/obs_seq_verify.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/obs_seq_verify.f90.html'>obs_seq_verify.f90</a></li>
+    
+  
+     <li class="active">obs_seq_verify</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-source%7E90">source</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-revision%7E90">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-revdate%7E90">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-desiredstations">DesiredStations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-station">station</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-voxel">voxel</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncmeta">ncmeta</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ensemble_size">ensemble_size</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_voxels">num_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_stations">num_stations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_levels%7E5">num_levels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_verif_times">num_verif_times</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_forecasts">num_forecasts</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncopies">NCOPIES</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-copy_metadata">copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-seq%7E114">seq</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs1%7E4">obs1</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs2%7E3">obs2</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_def%7E40">obs_def</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_loc%7E22">obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-flavor%7E10">flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_copies%7E17">num_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_qc%7E14">num_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_obs%7E13">num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-max_num_obs%7E5">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_file_id%7E4">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obtype_integer">obtype_integer</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_copy_names">qc_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_values">qc_values</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_copy_names">obs_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-copy_values">copy_values</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_read_format%7E4">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-pre_i_format%7E6">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-last_ob_flag">last_ob_flag</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-max_num_input_files">MAX_NUM_INPUT_FILES</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_input_files%7E3">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_in_file_name">obs_seq_in_file_name</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_sequences">obs_sequences</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_sequence_list">obs_sequence_list</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-input_template">input_template</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-netcdf_out%7E2">netcdf_out</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-calendar%7E3">calendar</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obtype_string">obtype_string</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-print_every">print_every</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-verbose%7E14">verbose</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-debug%7E25">debug</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_index%7E2">qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-dart_qc_index%7E3">dart_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_copy_index">obs_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-voxel_id%7E3">voxel_id</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-fcst_lead_index">fcst_lead_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-analysisindex">AnalysisIndex</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-analysist">analysisT</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-module_obs_copy_names">module_obs_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-prior_copy_indices">prior_copy_indices</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-forecast_leads">forecast_leads</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mandatory_level">mandatory_level</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-verifytimes">VerifyTimes</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_error_variance">obs_error_variance</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ifile%7E44">ifile</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-iobs%7E2">iobs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ngood%7E4">ngood</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-i%7E82">i</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-io%7E38">io</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncunit">ncunit</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mystart">mystart</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mycount">mycount</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_time%7E9">obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncname">ncName</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string1%7E10">string1</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string2%7E8">string2</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string3%7E4">string3</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-half_meter">HALF_METER</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-onepa">OnePa</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-voxel_type">voxel_type</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-station_type">station_type</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-nc6dvar">nc6Dvar</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-fill_voxels">fill_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-relate_voxels_to_stations">relate_voxels_to_stations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-initnetcdf">InitNetCDF</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-writenetcdf">WriteNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-closenetcdf">CloseNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-destroy_voxels">destroy_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_ensemble_size">find_ensemble_size</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_analysis_time">find_analysis_time</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_our_copies">find_our_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-match_obs_to_voxel">match_obs_to_voxel</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-determine_hyperslab_indices">determine_hyperslab_indices</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/location_io_mod.html'>location_io_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li>typeSizes</li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>This program creates a netCDF file suitable for forecast evaluation.</p>
+<p>(analysisT, station, level, copy, ensemble, forecast_lead)
+      |         |       |      |      |         |
+      |         |       |      |      |         +- forecast length : 0,3,6,9,12,...
+      |         |       |      |      |
+      |         |       |      |      +----------- ensemble member index
+      |         |       |      |
+      |         |       |      +------------------ obs value, prior, obs_err
+      |         |       |
+      |         |       +------------------------- vertical level index
+      |         |
+      |         +--------------------------------- (horizontal) station index
+      |
+      +------------------------------------------- analysis time/date</p>
+<p>I think the logic of the program should be as follows:
+ 1) The list of 'stations' is read from a netCDF file -- the product of obs_seq_coverage.f90
+ 2) The set of forecast lead times must be determined. Having 8 might not be
+    specific enough ... we want 8 separated by 3 hours ... for example.
+ 3) A series of obs_seq.fcst files (each from one analysisT and containing multiple
+    forecast lead times) is read and stuffed into an appropriate structure.
+ 4) The structure is written into the netCDF file.
+ 5) On to the next obs_seq.fcst file ... (step 3)
+ 6) wrap up ...</p>
+<p>Soyoung's (original) wish list - which has been subsequently modified:
+ "Now I'm done running filter for 24-hr forecast with 3-hrly observations as an
+ evaluation mode only, and am ready to hand obs_seq.final over to you for the final
+ conversion process.</p>
+<p>Ideally, in obs_seq_fcst.nc (if I can name it on my own), I would like to have a
+ data structure of (copy, station, level, ensemble, date, time) for each variable
+ and each obs type, where copy is (observation value, prior observation value
+ corresponding to the observation, obs error standard deviation), date is the
+ number of cycle, and time is the number of forecast lead times.
+ So, the dimension "date" is 1 for my current single obs_seq.final, but reserved
+ for multiple initialization cases (i.e., multiple obs_seq.final files) with the
+ same length of forecast lead times. This dimension is the most critical one in the
+ statistical verification since this dimension number is the actual sample size to
+ tell if we have enough samples to make the verification result statistically
+ significant or not."</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-source%7E90">source</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-revision%7E90">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-revdate%7E90">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-desiredstations">DesiredStations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-station">station</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-voxel">voxel</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncmeta">ncmeta</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ensemble_size">ensemble_size</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_voxels">num_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_stations">num_stations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_levels%7E5">num_levels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_verif_times">num_verif_times</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_forecasts">num_forecasts</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncopies">NCOPIES</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-copy_metadata">copy_metadata</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-seq%7E114">seq</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs1%7E4">obs1</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs2%7E3">obs2</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_def%7E40">obs_def</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_loc%7E22">obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-flavor%7E10">flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_copies%7E17">num_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_qc%7E14">num_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_obs%7E13">num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-max_num_obs%7E5">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_file_id%7E4">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obtype_integer">obtype_integer</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_copy_names">qc_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_values">qc_values</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_copy_names">obs_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-copy_values">copy_values</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_read_format%7E4">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-pre_i_format%7E6">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-last_ob_flag">last_ob_flag</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-max_num_input_files">MAX_NUM_INPUT_FILES</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-num_input_files%7E3">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_seq_in_file_name">obs_seq_in_file_name</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_sequences">obs_sequences</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_sequence_list">obs_sequence_list</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-input_template">input_template</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-netcdf_out%7E2">netcdf_out</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-calendar%7E3">calendar</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obtype_string">obtype_string</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-print_every">print_every</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-verbose%7E14">verbose</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-debug%7E25">debug</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-qc_index%7E2">qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-dart_qc_index%7E3">dart_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_copy_index">obs_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-voxel_id%7E3">voxel_id</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-fcst_lead_index">fcst_lead_index</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-analysisindex">AnalysisIndex</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-analysist">analysisT</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-module_obs_copy_names">module_obs_copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-prior_copy_indices">prior_copy_indices</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-forecast_leads">forecast_leads</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mandatory_level">mandatory_level</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-verifytimes">VerifyTimes</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_error_variance">obs_error_variance</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ifile%7E44">ifile</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-iobs%7E2">iobs</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ngood%7E4">ngood</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-i%7E82">i</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-io%7E38">io</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncunit">ncunit</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mystart">mystart</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-mycount">mycount</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-obs_time%7E9">obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-ncname">ncName</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string1%7E10">string1</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string2%7E8">string2</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-string3%7E4">string3</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-half_meter">HALF_METER</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#variable-onepa">OnePa</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-voxel_type">voxel_type</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-station_type">station_type</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#type-nc6dvar">nc6Dvar</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-fill_voxels">fill_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-relate_voxels_to_stations">relate_voxels_to_stations</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-initnetcdf">InitNetCDF</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-writenetcdf">WriteNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-closenetcdf">CloseNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-destroy_voxels">destroy_voxels</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_ensemble_size">find_ensemble_size</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_analysis_time">find_analysis_time</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-find_our_copies">find_our_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-match_obs_to_voxel">match_obs_to_voxel</a>
+      
+      <a class="list-group-item" href="../program/obs_seq_verify.html#proc-determine_hyperslab_indices">determine_hyperslab_indices</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E90"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E90"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E90"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-desiredstations"></span>logical,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>DesiredStations</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-station"></span>type(<a href='../type/station_type.html'>station_type</a>),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>station</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-voxel"></span>type(<a href='../type/voxel_type.html'>voxel_type</a>),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>voxel</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncmeta"></span>type(<a href='../type/nc6dvar.html'>nc6Dvar</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncmeta</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ensemble_size"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ensemble_size</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_voxels"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_voxels</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_stations"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_stations</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_levels%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_levels</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_verif_times"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_verif_times</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_forecasts"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_forecasts</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncopies"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>NCOPIES</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_metadata"></span>character(len=metadatalength),</td>
+  
+  
+  <td>dimension(NCOPIES)</td><td>::</td>
+  <td><strong>copy_metadata</strong></td><td> =</td><td>(/'observation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'forecast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'observation error variance'/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seq%7E114"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs1%7E4"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs2%7E3"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_def%7E40"></span>type(<a href='../type/obs_def_type.html'>obs_def_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_def</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_loc%7E22"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flavor%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_obs%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_file_id%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_file_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obtype_integer"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obtype_integer</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_copy_names"></span>character(len=metadatalength),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>qc_copy_names</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_values"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>qc_values</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_copy_names"></span>character(len=metadatalength),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>obs_copy_names</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_values"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>copy_values</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_read_format%7E4"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_read_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pre_i_format%7E6"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pre_I_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_ob_flag"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>last_ob_flag</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_input_files"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MAX_NUM_INPUT_FILES</strong></td><td> =</td><td>500</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_input_files%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_input_files</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_in_file_name"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_in_file_name</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_sequences"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_sequences</strong>(MAX_NUM_INPUT_FILES)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_sequence_list"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_sequence_list</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_template"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_template</strong></td><td> =</td><td>'obsdef_mask.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-netcdf_out%7E2"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>netcdf_out</strong></td><td> =</td><td>'forecast.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-calendar%7E3"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>calendar</strong></td><td> =</td><td>'gregorian'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obtype_string"></span>character(len=obstypelength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obtype_string</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-print_every"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>print_every</strong></td><td> =</td><td>10000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verbose%7E14"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verbose</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E25"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_index%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_qc_index%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_qc_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_copy_index"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_copy_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-voxel_id%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>voxel_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fcst_lead_index"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>fcst_lead_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-analysisindex"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>AnalysisIndex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-analysist"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>analysisT</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-module_obs_copy_names"></span>character(len=metadatalength),</td>
+  
+  
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>module_obs_copy_names</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior_copy_indices"></span>integer,</td>
+  
+  
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>prior_copy_indices</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forecast_leads"></span>integer,</td>
+  
+  
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>forecast_leads</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mandatory_level"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>mandatory_level</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verifytimes"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>VerifyTimes</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_error_variance"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_error_variance</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ifile%7E44"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ifile</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iobs%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iobs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ngood%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ngood</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E82"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E38"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncunit"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mystart"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>mystart</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mycount"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>mycount</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_time%7E9"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncname"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncName</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E10"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string2%7E8"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string3%7E4"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-half_meter"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>HALF_METER</strong></td><td> =</td><td>180.0_r8/(40000.0_r8*1000.0_r8)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-onepa"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>OnePa</strong></td><td> =</td><td>1.0_r8</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <section>
+   <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-voxel_type"></span><h3>type :: <a href='../type/voxel_type.html'>voxel_type</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-good"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>good</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_type"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>obs_type</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_time"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>first_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_time"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>last_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-times"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  <td>public,</td>
+  <td>pointer</td><td>::</td>
+  <td><strong>times</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-location"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>location</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lonlatlev"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>LonLatLev</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-station_id"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>station_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-levelindex"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>levelindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-station_type"></span><h3>type :: <a href='../type/station_type.html'>station_type</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_type%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>obs_type</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-location%7E2"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>location</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-nc6dvar"></span><h3>type :: <a href='../type/nc6dvar.html'>nc6Dvar</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-analysisdimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AnalysisDimName</strong></td><td> =</td><td>'analysisT'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-analysisdimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AnalysisDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-analysisdimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AnalysisDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copydimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CopyDimName</strong></td><td> =</td><td>'copy'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copydimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CopyDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copydimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CopyDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stationsdimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>StationsDimName</strong></td><td> =</td><td>'station'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stationsdimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>StationsDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stationsdimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>StationsDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-levelsdimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LevelsDimName</strong></td><td> =</td><td>'level'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-levelsdimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LevelsDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-levelsdimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LevelsDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ensembledimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>EnsembleDimName</strong></td><td> =</td><td>'ensemble'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ensembledimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>EnsembleDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ensembledimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>EnsembleDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forecastdimname"></span>character(len=NF90_MAX_NAME),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ForecastDimName</strong></td><td> =</td><td>'forecast_lead'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forecastdimid"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ForecastDimID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forecastdimlen"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ForecastDimLen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+    </section>
+   <br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-fill_voxels"></span><h3>
+function <a href='../proc/fill_voxels.html'>fill_voxels</a>(filename) result(nvoxels)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-relate_voxels_to_stations"></span><h3>
+function <a href='../proc/relate_voxels_to_stations.html'>relate_voxels_to_stations</a>() result(nstations)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-initnetcdf"></span><h3>
+function <a href='../proc/initnetcdf.html'>InitNetCDF</a>(fname)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writenetcdf"></span><h3>
+subroutine <a href='../proc/writenetcdf.html'>WriteNetCDF</a>(ncid, fname, values, obs_index, prior_indices, ob_err, org_qc, dart_qc, ncstart, nccount)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>values</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obs_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>prior_indices</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ob_err</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>org_qc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dart_qc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>ncstart</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>nccount</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-closenetcdf"></span><h3>
+subroutine <a href='../proc/closenetcdf.html'>CloseNetCDF</a>(ncid, fname)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-destroy_voxels"></span><h3>
+subroutine <a href='../proc/destroy_voxels.html'>destroy_voxels</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-find_ensemble_size"></span><h3>
+subroutine <a href='../proc/find_ensemble_size.html'>find_ensemble_size</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-find_analysis_time"></span><h3>
+subroutine <a href='../proc/find_analysis_time.html'>find_analysis_time</a>(filename, ExpIndex, analysis_time)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ExpIndex</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>analysis_time</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-find_our_copies"></span><h3>
+subroutine <a href='../proc/find_our_copies.html'>find_our_copies</a>(myseq, obsindex, indices)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>myseq</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsindex</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>indices</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-match_obs_to_voxel"></span><h3>
+subroutine <a href='../proc/match_obs_to_voxel.html'>match_obs_to_voxel</a>(iobs, ob_type, ob_loc, ob_time, vid, forecast_lead_index)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iobs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ob_type</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ob_loc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ob_time</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>forecast_lead_index</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-determine_hyperslab_indices"></span><h3>
+subroutine <a href='../proc/determine_hyperslab_indices.html'>determine_hyperslab_indices</a>(analysisTindex, forecast_lead_index, vid, ncstart, nccount)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>analysisTindex</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>forecast_lead_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>ncstart</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>nccount</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

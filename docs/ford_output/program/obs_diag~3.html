@@ -1,0 +1,8617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>obs_diag &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>obs_diag
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 5.6% of total for programs.">2409 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/obs_diag.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/obs_diag.f90%7E3.html'>obs_diag.f90</a></li>
+    
+  
+     <li class="active">obs_diag</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-source%7E114">source</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-revision%7E114">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-revdate%7E114">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxlevels%7E2">MaxLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxregions%7E3">MaxRegions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxtrusted%7E3">MaxTrusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-stringlength%7E3">stringlength</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seq%7E120">seq</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-observation%7E8">observation</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-next_obs%7E7">next_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs1%7E7">obs1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsn%7E3">obsN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_def%7E45">obs_def</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_loc%7E25">obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_list%7E3">trusted_list</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_mean%7E4">prior_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_mean%7E7">posterior_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_spread%7E3">prior_spread</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_spread%7E3">posterior_spread</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_mean%7E3">pr_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_mean%7E3">po_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_sprd%7E3">pr_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_sprd%7E3">po_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs%7E2">U_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs_err_var%7E2">U_obs_err_var</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs_loc%7E2">U_obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_flavor%7E2">U_flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_type%7E2">U_type</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_pr_mean%7E2">U_pr_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_pr_sprd%7E2">U_pr_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_po_mean%7E2">U_po_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_po_sprd%7E2">U_po_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_qc%7E2">U_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_index%7E10">obs_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_mean_index%7E5">prior_mean_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_mean_index%7E5">posterior_mean_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_spread_index%7E5">prior_spread_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_spread_index%7E5">posterior_spread_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-flavor%7E13">flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-wflavor%7E2">wflavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_copies%7E22">num_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_qc%7E19">num_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs%7E17">num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_obs%7E17">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_seq_file_id%7E7">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs_types%7E3">num_obs_types</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ens_size%7E115">ens_size</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-rank_histogram_bin%7E3">rank_histogram_bin</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ran_seq%7E3">ran_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_error_variance%7E4">obs_error_variance</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_seq_read_format%7E7">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pre_i_format%7E18">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-key_bounds%7E10">key_bounds</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs%7E58">obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-keys%7E12">keys</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ens_copy_index%7E7">ens_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-out_of_range%7E5">out_of_range</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-keeper%7E4">keeper</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-has_posteriors">has_posteriors</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-org_qc_index%7E5">org_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-dart_qc_index%7E6">dart_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_value%7E4">qc_value</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_max_prior%7E3">QC_MAX_PRIOR</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_max_posterior%7E3">QC_MAX_POSTERIOR</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc%7E18">qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-copyvals%7E3">copyvals</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hist_qcs%7E3">hist_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_prior_qcs%7E3">trusted_prior_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_poste_qcs%7E3">trusted_poste_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-good_prior_qcs%7E3">good_prior_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-good_poste_qcs%7E3">good_poste_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-numqcvals%7E3">numqcvals</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_input_files%7E5">max_num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-rat_cri%7E2">rat_cri</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-input_qc_threshold%7E2">input_qc_threshold</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_sequence_name%7E4">obs_sequence_name</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_sequence_list%7E5">obs_sequence_list</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-first_bin_center%7E2">first_bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-last_bin_center%7E2">last_bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_separation%7E2">bin_separation</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_width%7E2">bin_width</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-time_to_skip%7E3">time_to_skip</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_bins%7E3">max_num_bins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-plevel%7E4">plevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hlevel%7E2">hlevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-mlevel">mlevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-plevel_edges">plevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hlevel_edges%7E2">hlevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-mlevel_edges">mlevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nregions%7E3">Nregions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-lonlim1%7E2">lonlim1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-lonlim2%7E2">lonlim2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-latlim1">latlim1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-latlim2">latlim2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-reg_names%7E3">reg_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-min_loc%7E3">min_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_loc%7E3">max_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_obs%7E3">trusted_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-print_mismatched_locs">print_mismatched_locs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-print_obs_locations">print_obs_locations</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-verbose%7E17">verbose</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-outliers_in_histogram%7E3">outliers_in_histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-create_rank_histogram%7E3">create_rank_histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-use_zero_error_obs%7E3">use_zero_error_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ncopies%7E3">Ncopies</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-copy_names%7E3">copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-poste%7E7">poste</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior%7E7">prior</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posteavg%7E2">posteAVG</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prioravg%7E2">priorAVG</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_center%7E3">bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_edges%7E3">bin_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-epoch_center%7E4">epoch_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-epoch_edges%7E4">epoch_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_used_in_epoch%7E3">obs_used_in_epoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nplevels">Nplevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nhlevels">Nhlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nmlevels">Nmlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iregion%7E12">iregion</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iepoch%7E8">iepoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ivar%7E14">ivar</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ifile%7E49">ifile</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs_in_epoch%7E3">num_obs_in_epoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslon%7E4">obslon</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslat%7E4">obslat</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslevel%7E3">obslevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsloc3%7E2">obsloc3</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsindex%7E4">obsindex</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-i%7E95">i</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iunit%7E78">iunit</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ierr%7E53">ierr</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-io%7E55">io</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ikind%7E3">ikind</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seconds%7E38">seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-days%7E33">days</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nepochs%7E3">Nepochs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_input_files%7E10">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_trusted%7E3">num_trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted%7E8">trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ivert">ivert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-level_index%7E4">level_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nlevels%7E2">Nlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ilev%7E3">ilev</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-which_vert%7E45">which_vert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-scale_factor%7E2">scale_factor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ob_defining_vert%7E2">ob_defining_vert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_type_strings%7E3">obs_type_strings</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxsigmabins%7E3">MaxSigmaBins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nsigma%7E3">nsigma</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nsigmaunit%7E3">nsigmaUnit</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-indx%7E10">indx</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_zscore%7E3">pr_zscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_zscore%7E3">po_zscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-zscoreu%7E2">zscoreU</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-timemin%7E3">TimeMin</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-timemax%7E3">TimeMax</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-beg_time%7E3">beg_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-end_time%7E3">end_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-binsep%7E2">binsep</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-binwidth%7E3">binwidth</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-halfbinwidth%7E3">halfbinwidth</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seqt1%7E3">seqT1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seqtn%7E3">seqTN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-allseqt1%7E2">AllseqT1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-allseqtn%7E2">AllseqTN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_time%7E13">obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-skip_time%7E3">skip_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string1%7E13">string1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string2%7E11">string2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string3%7E7">string3</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsname%7E6">obsname</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nidentity%7E3">Nidentity</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_ambiguous%7E2">num_ambiguous</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#type-tlrv_type%7E2">TLRV_type</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#type-lrv_type%7E2">LRV_type</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-grok_observation_names%7E2">grok_observation_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-no_time_intersection%7E3">No_Time_Intersection</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-getenssize%7E3">GetEnsSize</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-is_observation_trusted%7E3">is_observation_trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-parselevel">ParseLevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-innovzscore%7E3">InnovZscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rank_histogram%7E3">Rank_Histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-checkmate%7E2">CheckMate</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rlevels2edges">Rlevels2edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-redges2levels">Redges2levels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-find_my_level">find_my_level</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-findvertical">FindVertical</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rremoveduplicates">RRemoveDuplicates</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-iremoveduplicates">IRemoveDuplicates</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-namelist2times%7E2">Namelist2Times</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-definetimebins%7E2">DefineTimeBins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setheightlevels%7E2">setHeightLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setpressurelevels">setPressureLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setmodellevels">setModelLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-defineregions%7E2">DefineRegions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-counttrustedobstypes%7E2">CountTrustedObsTypes</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setscalefactors%7E2">SetScaleFactors</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-initializeallvariables">InitializeALLVariables</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-allocateonetlrvvariable">AllocateOneTLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-resetonetlrvvariable">ResetOneTLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-allocateonelrvvariable">AllocateOneLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-resetonelrvvariable">ResetOneLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-getfirstlastobs%7E3">GetFirstLastObs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setindices%7E3">SetIndices</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-checkvertical">CheckVertical</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-countdartqc_4d%7E2">CountDartQC_4D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-countdartqc_3d%7E2">CountDartQC_3D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-bin4d%7E2">Bin4D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-bin3d%7E3">Bin3D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-normalize4dvars%7E2">Normalize4Dvars</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-normalize3dvars%7E2">Normalize3Dvars</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writenetcdf%7E4">WriteNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-destroyvariables%7E3">DestroyVariables</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rpe%7E3">RPE</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-ipe%7E3">IPE</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writetlrv%7E2">WriteTLRV</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writelrv%7E2">WriteLRV</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/sort_mod.html'>sort_mod</a></li>
+    
+    <li><a href='../module/random_seq_mod.html'>random_seq_mod</a></li>
+    
+    <li>typeSizes</li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>The programs defines a series of epochs (periods of time) and geographic
+ regions and accumulates statistics for these epochs and regions.
+ All 'possible' observation types are treated separately.
+ The results are written to a netCDF file.</p>
+<p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>remove after verifying NbiqQC not used in plotting scripts
+@todo remove after verifying NbiqIZ not used in plotting scripts</p></div>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-source%7E114">source</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-revision%7E114">revision</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-revdate%7E114">revdate</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxlevels%7E2">MaxLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxregions%7E3">MaxRegions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxtrusted%7E3">MaxTrusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-stringlength%7E3">stringlength</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seq%7E120">seq</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-observation%7E8">observation</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-next_obs%7E7">next_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs1%7E7">obs1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsn%7E3">obsN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_def%7E45">obs_def</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_loc%7E25">obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_list%7E3">trusted_list</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_mean%7E4">prior_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_mean%7E7">posterior_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_spread%7E3">prior_spread</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_spread%7E3">posterior_spread</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_mean%7E3">pr_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_mean%7E3">po_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_sprd%7E3">pr_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_sprd%7E3">po_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs%7E2">U_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs_err_var%7E2">U_obs_err_var</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_obs_loc%7E2">U_obs_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_flavor%7E2">U_flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_type%7E2">U_type</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_pr_mean%7E2">U_pr_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_pr_sprd%7E2">U_pr_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_po_mean%7E2">U_po_mean</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_po_sprd%7E2">U_po_sprd</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-u_qc%7E2">U_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_index%7E10">obs_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_mean_index%7E5">prior_mean_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_mean_index%7E5">posterior_mean_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior_spread_index%7E5">prior_spread_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posterior_spread_index%7E5">posterior_spread_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-flavor%7E13">flavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-wflavor%7E2">wflavor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_copies%7E22">num_copies</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_qc%7E19">num_qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs%7E17">num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_obs%7E17">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_seq_file_id%7E7">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs_types%7E3">num_obs_types</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ens_size%7E115">ens_size</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-rank_histogram_bin%7E3">rank_histogram_bin</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ran_seq%7E3">ran_seq</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_error_variance%7E4">obs_error_variance</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_seq_read_format%7E7">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pre_i_format%7E18">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-key_bounds%7E10">key_bounds</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs%7E58">obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-keys%7E12">keys</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ens_copy_index%7E7">ens_copy_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-out_of_range%7E5">out_of_range</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-keeper%7E4">keeper</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-has_posteriors">has_posteriors</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-org_qc_index%7E5">org_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-dart_qc_index%7E6">dart_qc_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_value%7E4">qc_value</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_max_prior%7E3">QC_MAX_PRIOR</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc_max_posterior%7E3">QC_MAX_POSTERIOR</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-qc%7E18">qc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-copyvals%7E3">copyvals</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hist_qcs%7E3">hist_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_prior_qcs%7E3">trusted_prior_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_poste_qcs%7E3">trusted_poste_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-good_prior_qcs%7E3">good_prior_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-good_poste_qcs%7E3">good_poste_qcs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-numqcvals%7E3">numqcvals</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_input_files%7E5">max_num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-rat_cri%7E2">rat_cri</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-input_qc_threshold%7E2">input_qc_threshold</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_sequence_name%7E4">obs_sequence_name</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_sequence_list%7E5">obs_sequence_list</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-first_bin_center%7E2">first_bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-last_bin_center%7E2">last_bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_separation%7E2">bin_separation</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_width%7E2">bin_width</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-time_to_skip%7E3">time_to_skip</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_num_bins%7E3">max_num_bins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-plevel%7E4">plevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hlevel%7E2">hlevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-mlevel">mlevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-plevel_edges">plevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-hlevel_edges%7E2">hlevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-mlevel_edges">mlevel_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nregions%7E3">Nregions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-lonlim1%7E2">lonlim1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-lonlim2%7E2">lonlim2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-latlim1">latlim1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-latlim2">latlim2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-reg_names%7E3">reg_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-min_loc%7E3">min_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-max_loc%7E3">max_loc</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted_obs%7E3">trusted_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-print_mismatched_locs">print_mismatched_locs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-print_obs_locations">print_obs_locations</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-verbose%7E17">verbose</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-outliers_in_histogram%7E3">outliers_in_histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-create_rank_histogram%7E3">create_rank_histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-use_zero_error_obs%7E3">use_zero_error_obs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ncopies%7E3">Ncopies</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-copy_names%7E3">copy_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-poste%7E7">poste</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prior%7E7">prior</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-posteavg%7E2">posteAVG</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-prioravg%7E2">priorAVG</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_center%7E3">bin_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-bin_edges%7E3">bin_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-epoch_center%7E4">epoch_center</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-epoch_edges%7E4">epoch_edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_used_in_epoch%7E3">obs_used_in_epoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nplevels">Nplevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nhlevels">Nhlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nmlevels">Nmlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iregion%7E12">iregion</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iepoch%7E8">iepoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ivar%7E14">ivar</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ifile%7E49">ifile</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_obs_in_epoch%7E3">num_obs_in_epoch</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslon%7E4">obslon</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslat%7E4">obslat</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obslevel%7E3">obslevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsloc3%7E2">obsloc3</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsindex%7E4">obsindex</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-i%7E95">i</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-iunit%7E78">iunit</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ierr%7E53">ierr</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-io%7E55">io</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ikind%7E3">ikind</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seconds%7E38">seconds</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-days%7E33">days</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nepochs%7E3">Nepochs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_input_files%7E10">num_input_files</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_trusted%7E3">num_trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-trusted%7E8">trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ivert">ivert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-level_index%7E4">level_index</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nlevels%7E2">Nlevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ilev%7E3">ilev</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-which_vert%7E45">which_vert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-scale_factor%7E2">scale_factor</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-ob_defining_vert%7E2">ob_defining_vert</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_type_strings%7E3">obs_type_strings</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-maxsigmabins%7E3">MaxSigmaBins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nsigma%7E3">nsigma</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nsigmaunit%7E3">nsigmaUnit</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-indx%7E10">indx</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-pr_zscore%7E3">pr_zscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-po_zscore%7E3">po_zscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-zscoreu%7E2">zscoreU</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-timemin%7E3">TimeMin</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-timemax%7E3">TimeMax</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-beg_time%7E3">beg_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-end_time%7E3">end_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-binsep%7E2">binsep</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-binwidth%7E3">binwidth</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-halfbinwidth%7E3">halfbinwidth</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seqt1%7E3">seqT1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-seqtn%7E3">seqTN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-allseqt1%7E2">AllseqT1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-allseqtn%7E2">AllseqTN</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obs_time%7E13">obs_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-skip_time%7E3">skip_time</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string1%7E13">string1</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string2%7E11">string2</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-string3%7E7">string3</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-obsname%7E6">obsname</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-nidentity%7E3">Nidentity</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#variable-num_ambiguous%7E2">num_ambiguous</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#type-tlrv_type%7E2">TLRV_type</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#type-lrv_type%7E2">LRV_type</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-grok_observation_names%7E2">grok_observation_names</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-no_time_intersection%7E3">No_Time_Intersection</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-getenssize%7E3">GetEnsSize</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-is_observation_trusted%7E3">is_observation_trusted</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-parselevel">ParseLevel</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-innovzscore%7E3">InnovZscore</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rank_histogram%7E3">Rank_Histogram</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-checkmate%7E2">CheckMate</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rlevels2edges">Rlevels2edges</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-redges2levels">Redges2levels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-find_my_level">find_my_level</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-findvertical">FindVertical</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rremoveduplicates">RRemoveDuplicates</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-iremoveduplicates">IRemoveDuplicates</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-namelist2times%7E2">Namelist2Times</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-definetimebins%7E2">DefineTimeBins</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setheightlevels%7E2">setHeightLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setpressurelevels">setPressureLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setmodellevels">setModelLevels</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-defineregions%7E2">DefineRegions</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-counttrustedobstypes%7E2">CountTrustedObsTypes</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setscalefactors%7E2">SetScaleFactors</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-initializeallvariables">InitializeALLVariables</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-allocateonetlrvvariable">AllocateOneTLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-resetonetlrvvariable">ResetOneTLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-allocateonelrvvariable">AllocateOneLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-resetonelrvvariable">ResetOneLRVVariable</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-getfirstlastobs%7E3">GetFirstLastObs</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-setindices%7E3">SetIndices</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-checkvertical">CheckVertical</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-countdartqc_4d%7E2">CountDartQC_4D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-countdartqc_3d%7E2">CountDartQC_3D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-bin4d%7E2">Bin4D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-bin3d%7E3">Bin3D</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-normalize4dvars%7E2">Normalize4Dvars</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-normalize3dvars%7E2">Normalize3Dvars</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writenetcdf%7E4">WriteNetCDF</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-destroyvariables%7E3">DestroyVariables</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-rpe%7E3">RPE</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-ipe%7E3">IPE</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writetlrv%7E2">WriteTLRV</a>
+      
+      <a class="list-group-item" href="../program/obs_diag%7E3.html#proc-writelrv%7E2">WriteLRV</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E114"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E114"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E114"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxlevels%7E2"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MaxLevels</strong></td><td> =</td><td>50</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxregions%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MaxRegions</strong></td><td> =</td><td>50</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxtrusted%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MaxTrusted</strong></td><td> =</td><td>50</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stringlength%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>stringlength</strong></td><td> =</td><td>32</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seq%7E120"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-observation%7E8"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>observation</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-next_obs%7E7"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>next_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs1%7E7"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsn%7E3"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsN</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_def%7E45"></span>type(<a href='../type/obs_def_type.html'>obs_def_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_def</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_loc%7E25"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trusted_list%7E3"></span>character(len=stringlength),</td>
+  
+  
+  <td>dimension(MaxTrusted)</td><td>::</td>
+  <td><strong>trusted_list</strong></td><td> =</td><td>'null'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior_mean%7E4"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>prior_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-posterior_mean%7E7"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>posterior_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior_spread%7E3"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>prior_spread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-posterior_spread%7E3"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>posterior_spread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pr_mean%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pr_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-po_mean%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>po_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pr_sprd%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pr_sprd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-po_sprd%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>po_sprd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_obs%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_obs</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_obs_err_var%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_obs_err_var</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_obs_loc%7E2"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_obs_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_flavor%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_flavor</strong></td><td> =</td><td>MISSING_I</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_type%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_type</strong></td><td> =</td><td>MISSING_I</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_pr_mean%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_pr_mean</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_pr_sprd%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_pr_sprd</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_po_mean%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_po_mean</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_po_sprd%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_po_sprd</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u_qc%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>U_qc</strong></td><td> =</td><td>MISSING_I</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_index%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior_mean_index%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prior_mean_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-posterior_mean_index%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_mean_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior_spread_index%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prior_spread_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-posterior_spread_index%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_spread_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flavor%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wflavor%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wflavor</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E22"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E19"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_obs%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_file_id%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_file_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs_types%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs_types</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_size%7E115"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ens_size</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rank_histogram_bin%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rank_histogram_bin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ran_seq%7E3"></span>type(<a href='../type/random_seq_type.html'>random_seq_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ran_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_error_variance%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_error_variance</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_read_format%7E7"></span>character(len=stringlength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_read_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pre_i_format%7E18"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pre_I_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-key_bounds%7E10"></span>integer,</td>
+  
+  
+  <td>dimension(2)</td><td>::</td>
+  <td><strong>key_bounds</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E58"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(1)</td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-keys%7E12"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>keys</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_copy_index%7E7"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>ens_copy_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-out_of_range%7E5"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>out_of_range</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-keeper%7E4"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>keeper</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-has_posteriors"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>has_posteriors</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-org_qc_index%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>org_qc_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_qc_index%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_qc_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_value%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc_value</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_max_prior%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>QC_MAX_PRIOR</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_max_posterior%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>QC_MAX_POSTERIOR</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E18"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copyvals%7E3"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>copyvals</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hist_qcs%7E3"></span>integer,</td>
+  
+  
+  <td>parameter, dimension(5)</td><td>::</td>
+  <td><strong>hist_qcs</strong></td><td> =</td><td>(/0, 1, 2, 3, 7/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trusted_prior_qcs%7E3"></span>integer,</td>
+  
+  
+  <td>parameter, dimension(5)</td><td>::</td>
+  <td><strong>trusted_prior_qcs</strong></td><td> =</td><td>(/0, 1, 2, 3, 7/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trusted_poste_qcs%7E3"></span>integer,</td>
+  
+  
+  <td>parameter, dimension(3)</td><td>::</td>
+  <td><strong>trusted_poste_qcs</strong></td><td> =</td><td>(/0, 1, 7/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-good_prior_qcs%7E3"></span>integer,</td>
+  
+  
+  <td>parameter, dimension(4)</td><td>::</td>
+  <td><strong>good_prior_qcs</strong></td><td> =</td><td>(/0, 1, 2, 3/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-good_poste_qcs%7E3"></span>integer,</td>
+  
+  
+  <td>parameter, dimension(2)</td><td>::</td>
+  <td><strong>good_poste_qcs</strong></td><td> =</td><td>(/0, 1/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-numqcvals%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>numqcvals</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_input_files%7E5"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>max_num_input_files</strong></td><td> =</td><td>10000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rat_cri%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rat_cri</strong></td><td> =</td><td>5000.0_r8</td><td><p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>remove after verifying NbiqQC, NbadIZ not used in plotting scripts</p></div></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_qc_threshold%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_qc_threshold</strong></td><td> =</td><td>3.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_sequence_name%7E4"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_sequence_name</strong>(max_num_input_files)</td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_sequence_list%7E5"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_sequence_list</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_bin_center%7E2"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>first_bin_center</strong></td><td> =</td><td>(/2003, 1, 1, 0, 0, 0/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-last_bin_center%7E2"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>last_bin_center</strong></td><td> =</td><td>(/2003, 1, 2, 0, 0, 0/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bin_separation%7E2"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>bin_separation</strong></td><td> =</td><td>(/0, 0, 0, 6, 0, 0/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bin_width%7E2"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>bin_width</strong></td><td> =</td><td>(/0, 0, 0, 6, 0, 0/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_to_skip%7E3"></span>integer,</td>
+  
+  
+  <td>dimension(6)</td><td>::</td>
+  <td><strong>time_to_skip</strong></td><td> =</td><td>(/0, 0, 1, 0, 0, 0/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_bins%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_num_bins</strong></td><td> =</td><td>1000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-plevel%7E4"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels)</td><td>::</td>
+  <td><strong>plevel</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hlevel%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels)</td><td>::</td>
+  <td><strong>hlevel</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mlevel"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels)</td><td>::</td>
+  <td><strong>mlevel</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-plevel_edges"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels+1)</td><td>::</td>
+  <td><strong>plevel_edges</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hlevel_edges%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels+1)</td><td>::</td>
+  <td><strong>hlevel_edges</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mlevel_edges"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxLevels+1)</td><td>::</td>
+  <td><strong>mlevel_edges</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nregions%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nregions</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lonlim1%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>lonlim1</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lonlim2%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>lonlim2</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-latlim1"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>latlim1</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-latlim2"></span>real(kind=r8),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>latlim2</strong></td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reg_names%7E3"></span>character(len=stringlength),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>reg_names</strong></td><td> =</td><td>'null'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-min_loc%7E3"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>min_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_loc%7E3"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  
+  
+  <td>dimension(MaxRegions)</td><td>::</td>
+  <td><strong>max_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trusted_obs%7E3"></span>character(len=stringlength),</td>
+  
+  
+  <td>dimension(MaxTrusted)</td><td>::</td>
+  <td><strong>trusted_obs</strong></td><td> =</td><td>'null'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-print_mismatched_locs"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>print_mismatched_locs</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-print_obs_locations"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>print_obs_locations</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verbose%7E17"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verbose</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-outliers_in_histogram%7E3"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>outliers_in_histogram</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-create_rank_histogram%7E3"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>create_rank_histogram</strong></td><td> =</td><td>.true.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-use_zero_error_obs%7E3"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>use_zero_error_obs</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncopies%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>Ncopies</strong></td><td> =</td><td>23</td><td><p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>must be a more clever way to relate the copy_names to the components</p></div></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-copy_names%7E3"></span>character(len=stringlength),</td>
+  
+  
+  <td>dimension(Ncopies)</td><td>::</td>
+  <td><strong>copy_names</strong></td><td> =</td><td>(/'Nposs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'Nused&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'NbigQC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'NbadIZ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'NbadUV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'NbadLV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'rmse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'bias&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'spread&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 'totalspread', 'NbadDARTQC ', 'observation', 'ens_mean&nbsp;&nbsp;&nbsp;', 'N_trusted&nbsp;&nbsp;', 'N_DARTqc_0 ', 'N_DARTqc_1 ', 'N_DARTqc_2 ', 'N_DARTqc_3 ', 'N_DARTqc_4 ', 'N_DARTqc_5 ', 'N_DARTqc_6 ', 'N_DARTqc_7 ', 'N_DARTqc_8 '/)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-poste%7E7"></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>poste</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prior%7E7"></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prior</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-posteavg%7E2"></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>posteAVG</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prioravg%7E2"></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>priorAVG</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bin_center%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>bin_center</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bin_edges%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>bin_edges</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-epoch_center%7E4"></span>real(kind=digits12),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>epoch_center</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-epoch_edges%7E4"></span>real(kind=digits12),</td>
+  
+  
+  <td>allocatable, dimension(:,:)</td><td>::</td>
+  <td><strong>epoch_edges</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_used_in_epoch%7E3"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>obs_used_in_epoch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nplevels"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nplevels</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nhlevels"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nhlevels</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nmlevels"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nmlevels</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iregion%7E12"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iregion</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iepoch%7E8"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iepoch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ivar%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ivar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ifile%7E49"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ifile</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs_in_epoch%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs_in_epoch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obslon%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obslon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obslat%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obslat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obslevel%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obslevel</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsloc3%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsloc3</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsindex%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsindex</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E95"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E78"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ierr%7E53"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E55"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ikind%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ikind</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seconds%7E38"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seconds</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-days%7E33"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>days</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nepochs%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nepochs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_input_files%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_input_files</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_trusted%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_trusted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-trusted%7E8"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>trusted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ivert"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ivert</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-level_index%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>level_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlevels%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nlevels</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ilev%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ilev</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-which_vert%7E45"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>which_vert</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-scale_factor%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>scale_factor</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ob_defining_vert%7E2"></span>integer,</td>
+  
+  
+  <td>allocatable, dimension(:)</td><td>::</td>
+  <td><strong>ob_defining_vert</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_type_strings%7E3"></span>character(len=stringlength),</td>
+  
+  
+  <td>pointer, dimension(:)</td><td>::</td>
+  <td><strong>obs_type_strings</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-maxsigmabins%7E3"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>MaxSigmaBins</strong></td><td> =</td><td>100</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsigma%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nsigma</strong>(0:MaxSigmaBins)</td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsigmaunit%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>nsigmaUnit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-indx%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>indx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pr_zscore%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pr_zscore</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-po_zscore%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>po_zscore</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zscoreu%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>zscoreU</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-timemin%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>TimeMin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-timemax%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>TimeMax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-beg_time%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>beg_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-end_time%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>end_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-binsep%7E2"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>binsep</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-binwidth%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>binwidth</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-halfbinwidth%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>halfbinwidth</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seqt1%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seqT1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seqtn%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seqTN</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-allseqt1%7E2"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>AllseqT1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-allseqtn%7E2"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>AllseqTN</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_time%7E13"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-skip_time%7E3"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>skip_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E13"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string2%7E11"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string3%7E7"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obsname%7E6"></span>character(len=stringlength)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obsname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nidentity%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nidentity</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_ambiguous%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_ambiguous</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <section>
+   <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-tlrv_type%7E2"></span><h3>type :: <a href='../type/tlrv_type%7E2.html'>TLRV_type</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_dim%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>time_dim</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-level_dim%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>level_dim</strong></td><td> =</td><td>2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-region_dim%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>region_dim</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-variable_dim%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>variable_dim</strong></td><td> =</td><td>4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string%7E4"></span>character(len=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_times%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_times</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_levels%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_levels</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_regions%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_regions</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_variables%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_variables</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nposs%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>Nposs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nused%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>Nused</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ntrusted%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>Ntrusted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbigqc%7E3"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NbigQC</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbadiz%7E3"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadIZ</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbaduv%7E3"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadUV</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbadlv%7E3"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadLV</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rmse%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>rmse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bias%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>bias</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-spread%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>spread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-totspread%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>totspread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbaddartqc%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadDartQC</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-observation%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>observation</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_mean%7E4"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>ens_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_0%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_1%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_2%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_3%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_4%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_4</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_5%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_5</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_6%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_6</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_7%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_7</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_8%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_8</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hist_bin%7E3"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:,:,:), pointer</td><td>::</td>
+  <td><strong>hist_bin</strong></td><td>=> </td><td>NULL()</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-lrv_type%7E2"></span><h3>type :: <a href='../type/lrv_type%7E2.html'>LRV_type</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-level_dim%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>level_dim</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-region_dim%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>region_dim</strong></td><td> =</td><td>2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-variable_dim%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>variable_dim</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string%7E5"></span>character(len=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_levels%7E4"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_levels</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_regions%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_regions</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_variables%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_variables</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nposs%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>Nposs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nused%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>Nused</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ntrusted%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>Ntrusted</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbigqc%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NbigQC</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbadiz%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadIZ</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbaduv%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadUV</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbadlv%7E4"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadLV</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rmse%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>rmse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bias%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>bias</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-spread%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>spread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-totspread%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>totspread</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbaddartqc%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NbadDartQC</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-observation%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>observation</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ens_mean%7E5"></span>real(kind=r8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>ens_mean</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_0%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_1%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_2%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_3%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_4%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_4</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_5%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_5</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_6%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_6</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_7%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_7</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndartqc_8%7E5"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:,:), pointer</td><td>::</td>
+  <td><strong>NDartQC_8</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+    
+    </section>
+   <br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-grok_observation_names%7E2"></span><h3>
+function <a href='../proc/grok_observation_names%7E2.html'>grok_observation_names</a>(my_names)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Define/Append the 'horizontal wind' obs_kinds to supplant the list declared
+ in obs_kind_mod.f90 i.e. if there is a RADIOSONDE_U_WIND_COMPONENT
+ and a RADIOSONDE_V_WIND_COMPONENT, there must be a RADIOSONDE_HORIZONTAL_WIND
+ Replace calls to 'get_name_for_type_of_obs' with variable 'obs_type_strings'</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=stringlength),</td>
+  <td></td>
+  <td></td>
+  
+  <td>pointer</td><td>::</td>
+  <td><strong>my_names</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-no_time_intersection%7E3"></span><h3>
+function <a href='../proc/no_time_intersection%7E3.html'>No_Time_Intersection</a>(filename, sequence_T1, sequence_TN, first_time, last_time)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Function to determine if the observation sequence file has any
+ observations in the desired time window.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sequence_T1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sequence_TN</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>first_time</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>last_time</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>logical
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getenssize%7E3"></span><h3>
+function <a href='../proc/getenssize%7E3.html'>GetEnsSize</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-is_observation_trusted%7E3"></span><h3>
+function <a href='../proc/is_observation_trusted%7E3.html'>is_observation_trusted</a>(obsname)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsname</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>logical
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-parselevel"></span><h3>
+function <a href='../proc/parselevel.html'>ParseLevel</a>(obslocation, obslevel, flavor)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obslocation</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obslevel</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-innovzscore%7E3"></span><h3>
+function <a href='../proc/innovzscore%7E3.html'>InnovZscore</a>(obsval, prmean, prspred, errvar, qcval, qcmaxval)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsval</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prmean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prspred</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>errvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qcval</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qcmaxval</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-rank_histogram%7E3"></span><h3>
+function <a href='../proc/rank_histogram%7E3.html'>Rank_Histogram</a>(copyvalues, obs_index, error_variance, ens_copy_index) result(rank)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>copyvalues</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obs_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>error_variance</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>ens_copy_index</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-checkmate%7E2"></span><h3>
+function <a href='../proc/checkmate%7E2.html'>CheckMate</a>(vflavor, uflavor, obsloc1, obsloc2, flavor)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vflavor</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>uflavor</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsloc1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsloc2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-rlevels2edges"></span><h3>
+function <a href='../proc/rlevels2edges.html'>Rlevels2edges</a>(level_middle, level_edge)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>level_middle</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>level_edge</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-redges2levels"></span><h3>
+function <a href='../proc/redges2levels.html'>Redges2levels</a>(level_edge, level_middle)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>level_edge</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>level_middle</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-find_my_level"></span><h3>
+function <a href='../proc/find_my_level.html'>find_my_level</a>(level_in, leveltype)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>level_in</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>leveltype</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-findvertical"></span><h3>
+function <a href='../proc/findvertical.html'>FindVertical</a>(ncid, flav, dimid)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flav</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dimid</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-rremoveduplicates"></span><h3>
+function <a href='../proc/rremoveduplicates.html'>RRemoveDuplicates</a>(mydata)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>mydata</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-iremoveduplicates"></span><h3>
+function <a href='../proc/iremoveduplicates.html'>IRemoveDuplicates</a>(mydata)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>mydata</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-namelist2times%7E2"></span><h3>
+subroutine <a href='../proc/namelist2times%7E2.html'>Namelist2Times</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-definetimebins%7E2"></span><h3>
+subroutine <a href='../proc/definetimebins%7E2.html'>DefineTimeBins</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setheightlevels%7E2"></span><h3>
+subroutine <a href='../proc/setheightlevels%7E2.html'>setHeightLevels</a>(layerMiddles, layerEdges, nLayers)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Supported scenarios:
+ 1) they are taking the default - 11 standard layerMiddles
+ 2) they are specifying their own layerMiddles
+ 3) they are specifying their own layer interfaces (layerEdges)</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerMiddles</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerEdges</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nLayers</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setpressurelevels"></span><h3>
+subroutine <a href='../proc/setpressurelevels.html'>setPressureLevels</a>(layerMiddles, layerEdges, nLayers)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerMiddles</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerEdges</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nLayers</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setmodellevels"></span><h3>
+subroutine <a href='../proc/setmodellevels.html'>setModelLevels</a>(layerMiddles, layerEdges, nLayers)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerMiddles</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>layerEdges</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nLayers</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-defineregions%7E2"></span><h3>
+subroutine <a href='../proc/defineregions%7E2.html'>DefineRegions</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Set the min and max location_types for each region</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-counttrustedobstypes%7E2"></span><h3>
+subroutine <a href='../proc/counttrustedobstypes%7E2.html'>CountTrustedObsTypes</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setscalefactors%7E2"></span><h3>
+subroutine <a href='../proc/setscalefactors%7E2.html'>SetScaleFactors</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-initializeallvariables"></span><h3>
+subroutine <a href='../proc/initializeallvariables.html'>InitializeALLVariables</a>(ntimes, nlevs, nareas, ntypes)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nareas</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntypes</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allocateonetlrvvariable"></span><h3>
+subroutine <a href='../proc/allocateonetlrvvariable.html'>AllocateOneTLRVVariable</a>(thisvar, ntimes, nlevs, nareas, ntypes)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thisvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nareas</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntypes</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-resetonetlrvvariable"></span><h3>
+subroutine <a href='../proc/resetonetlrvvariable.html'>ResetOneTLRVVariable</a>(thisvar, ntimes, nlevs, nareas, ntypes, label)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thisvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntimes</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nareas</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntypes</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>label</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allocateonelrvvariable"></span><h3>
+subroutine <a href='../proc/allocateonelrvvariable.html'>AllocateOneLRVVariable</a>(thisvar, nlevs, nareas, ntypes)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thisvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nareas</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntypes</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-resetonelrvvariable"></span><h3>
+subroutine <a href='../proc/resetonelrvvariable.html'>ResetOneLRVVariable</a>(thisvar, nlevs, nareas, ntypes, label)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thisvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlevs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nareas</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ntypes</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>label</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getfirstlastobs%7E3"></span><h3>
+subroutine <a href='../proc/getfirstlastobs%7E3.html'>GetFirstLastObs</a>(my_fname, my_sequence, my_obs1, my_obsN, my_seqT1, my_seqTN, my_AllseqT1, my_AllseqTN)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>We need to know the time of the first and last observations in the sequence,
+ primarily just to see if they intersect the desired Epoch window.
+ We also record these times so we can report the first/last times of all
+ observations in all the obs_seq files.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_fname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_sequence</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_type.html'>obs_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_obs1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/obs_type.html'>obs_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_obsN</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_seqT1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_seqTN</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_AllseqT1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/time_type.html'>time_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>my_AllseqTN</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setindices%7E3"></span><h3>
+subroutine <a href='../proc/setindices%7E3.html'>SetIndices</a>(obs_index, org_qc_index, dart_qc_index, prior_mean_index, posterior_mean_index, prior_spread_index, posterior_spread_index, ens_copy_index)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obs_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>org_qc_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dart_qc_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prior_mean_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_mean_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prior_spread_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_spread_index</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ens_copy_index</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-checkvertical"></span><h3>
+subroutine <a href='../proc/checkvertical.html'>CheckVertical</a>(obslocation, flavor)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/location_type%7E5.html'>location_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obslocation</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-countdartqc_4d%7E2"></span><h3>
+subroutine <a href='../proc/countdartqc_4d%7E2.html'>CountDartQC_4D</a>(inqc, iepoch, ilevel, iregion, itype, prior, poste, posterior_mean, uqc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>inqc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iepoch</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ilevel</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iregion</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>itype</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prior</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>poste</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_mean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uqc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-countdartqc_3d%7E2"></span><h3>
+subroutine <a href='../proc/countdartqc_3d%7E2.html'>CountDartQC_3D</a>(inqc, ilevel, iregion, itype, prior, poste, posterior_mean, uqc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>inqc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ilevel</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iregion</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>itype</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prior</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>poste</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>posterior_mean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uqc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bin4d%7E2"></span><h3>
+subroutine <a href='../proc/bin4d%7E2.html'>Bin4D</a>(iqc, iepoch, ilevel, iregion, flavor, trusted, obsval, obserrvar, prmean, prsprd, pomean, posprd, rank, uobs, uobserrvar, uprmean, uprsprd, upomean, uposprd, uqc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>This function simply accumulates the appropriate sums.
+ The normalization occurrs after all the data has been read, naturally.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iqc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iepoch</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ilevel</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iregion</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>trusted</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsval</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obserrvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prmean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prsprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pomean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>posprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rank</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uobs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uobserrvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uprmean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uprsprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>upomean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uposprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uqc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bin3d%7E3"></span><h3>
+subroutine <a href='../proc/bin3d%7E3.html'>Bin3D</a>(iqc, ilevel, iregion, flavor, trusted, obsval, obserrvar, prmean, prsprd, pomean, posprd, uobs, uobserrvar, uprmean, uprsprd, upomean, uposprd, uqc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>This function simply accumulates the appropriate sums.
+ The normalization occurrs after all the data has been read, naturally.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iqc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ilevel</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iregion</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>flavor</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>trusted</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obsval</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>obserrvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prmean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>prsprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pomean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>posprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uobs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uobserrvar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uprmean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uprsprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>upomean</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uposprd</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>uqc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-normalize4dvars%7E2"></span><h3>
+subroutine <a href='../proc/normalize4dvars%7E2.html'>Normalize4Dvars</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-normalize3dvars%7E2"></span><h3>
+subroutine <a href='../proc/normalize3dvars%7E2.html'>Normalize3Dvars</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writenetcdf%7E4"></span><h3>
+subroutine <a href='../proc/writenetcdf%7E4.html'>WriteNetCDF</a>(fname)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-destroyvariables%7E3"></span><h3>
+subroutine <a href='../proc/destroyvariables%7E3.html'>DestroyVariables</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-rpe%7E3"></span><h3>
+subroutine <a href='../proc/rpe%7E3.html'>RPE</a>(x, y)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ipe%7E3"></span><h3>
+subroutine <a href='../proc/ipe%7E3.html'>IPE</a>(x, y)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writetlrv%7E2"></span><h3>
+subroutine <a href='../proc/writetlrv%7E2.html'>WriteTLRV</a>(ncid, vrbl, TimeDimID, CopyDimID, RegionDimID, RankDimID)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/tlrv_type%7E2.html'>TLRV_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vrbl</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>TimeDimID</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>CopyDimID</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>RegionDimID</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>RankDimID</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writelrv%7E2"></span><h3>
+subroutine <a href='../proc/writelrv%7E2.html'>WriteLRV</a>(ncid, vrbl, CopyDimID, RegionDimID)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/lrv_type%7E2.html'>LRV_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>vrbl</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>CopyDimID</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>RegionDimID</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

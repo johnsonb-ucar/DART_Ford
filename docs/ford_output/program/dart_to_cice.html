@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>dart_to_cice &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>dart_to_cice
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.3% of total for programs.">576 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/dart_to_cice.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/dart_to_cice.f90.html'>dart_to_cice.f90</a></li>
+    
+  
+     <li class="active">dart_to_cice</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-source%7E62">source</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-revision%7E62">revision</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-revdate%7E62">revdate</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-dart_to_cice_input_file">dart_to_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-original_cice_input_file">original_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-previous_cice_input_file">previous_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-balance_method">balance_method</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r_snw_name">r_snw_name</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-string1%7E7">string1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-string2%7E6">string2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-msgstring%7E5">msgstring</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-varname%7E49">varname</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-method%7E2">method</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nx%7E3">Nx</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ny%7E3">Ny</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncat%7E3">Ncat</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nilyr">Nilyr</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nslyr">Nslyr</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen_original">aicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen_original">vicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon_original">vsnon_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_original">aice_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hicen_original">hicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hsnon_original">hsnon_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen_pre">aicen_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen_pre">vicen_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon_pre">vsnon_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_pre">aice_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen">aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen">vicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon">vsnon</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tsfcn">Tsfcn</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice001">sice001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice002">sice002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice003">sice003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice004">sice004</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice005">sice005</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice006">sice006</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice007">sice007</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice008">sice008</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice001">qice001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice002">qice002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice003">qice003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice004">qice004</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice005">qice005</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice006">qice006</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice007">qice007</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice008">qice008</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno001">qsno001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno002">qsno002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno003">qsno003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice">aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r_snw">r_snw</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_temp">aice_temp</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-increment_aice">increment_aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tendency_aice">tendency_aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tendency_aicen">tendency_aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r">R</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-weight_aicen">weight_aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-i%7E75">i</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-j%7E61">j</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-n%7E19">n</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-varid%7E2">VarID</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncid%7E135">ncid</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncid2%7E2">ncid2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-iunit%7E36">iunit</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-io%7E19">io</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ndims%7E5">ndims</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-squeeze">squeeze</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-rsnw_max">rsnw_max</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-rsnw_min">rsnw_min</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-phi_init">phi_init</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-dsin0_frazil">dSin0_frazil</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sss">sss</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-c1%7E12">c1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tsmelt">Tsmelt</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc1">cc1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc2">cc2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc3">cc3</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-x1%7E3">x1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-si0new">Si0new</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qi0new">qi0new</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ti">Ti</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hin_max">hin_max</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hcat_midpoint">hcat_midpoint</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquidus_brine_salinity_mush">liquidus_brine_salinity_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquidus_temperature_mush">liquidus_temperature_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-enthalpy_mush">enthalpy_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquid_fraction">liquid_fraction</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-get_3d_variable">get_3d_variable</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-get_2d_variable">get_2d_variable</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-source%7E62">source</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-revision%7E62">revision</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-revdate%7E62">revdate</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-dart_to_cice_input_file">dart_to_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-original_cice_input_file">original_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-previous_cice_input_file">previous_cice_input_file</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-balance_method">balance_method</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r_snw_name">r_snw_name</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-string1%7E7">string1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-string2%7E6">string2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-msgstring%7E5">msgstring</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-varname%7E49">varname</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-method%7E2">method</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nx%7E3">Nx</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ny%7E3">Ny</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncat%7E3">Ncat</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nilyr">Nilyr</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-nslyr">Nslyr</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen_original">aicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen_original">vicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon_original">vsnon_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_original">aice_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hicen_original">hicen_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hsnon_original">hsnon_original</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen_pre">aicen_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen_pre">vicen_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon_pre">vsnon_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_pre">aice_pre</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aicen">aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vicen">vicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-vsnon">vsnon</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tsfcn">Tsfcn</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice001">sice001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice002">sice002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice003">sice003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice004">sice004</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice005">sice005</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice006">sice006</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice007">sice007</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sice008">sice008</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice001">qice001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice002">qice002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice003">qice003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice004">qice004</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice005">qice005</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice006">qice006</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice007">qice007</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qice008">qice008</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno001">qsno001</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno002">qsno002</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qsno003">qsno003</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice">aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r_snw">r_snw</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-aice_temp">aice_temp</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-increment_aice">increment_aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tendency_aice">tendency_aice</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tendency_aicen">tendency_aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-r">R</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-weight_aicen">weight_aicen</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-i%7E75">i</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-j%7E61">j</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-n%7E19">n</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-varid%7E2">VarID</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncid%7E135">ncid</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ncid2%7E2">ncid2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-iunit%7E36">iunit</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-io%7E19">io</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ndims%7E5">ndims</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-squeeze">squeeze</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-rsnw_max">rsnw_max</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-rsnw_min">rsnw_min</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-phi_init">phi_init</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-dsin0_frazil">dSin0_frazil</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-sss">sss</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-c1%7E12">c1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-tsmelt">Tsmelt</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc1">cc1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc2">cc2</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-cc3">cc3</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-x1%7E3">x1</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-si0new">Si0new</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-qi0new">qi0new</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-ti">Ti</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hin_max">hin_max</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#variable-hcat_midpoint">hcat_midpoint</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquidus_brine_salinity_mush">liquidus_brine_salinity_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquidus_temperature_mush">liquidus_temperature_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-enthalpy_mush">enthalpy_mush</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-liquid_fraction">liquid_fraction</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-get_3d_variable">get_3d_variable</a>
+      
+      <a class="list-group-item" href="../program/dart_to_cice.html#proc-get_2d_variable">get_2d_variable</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E62"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E62"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E62"></span>character(len=*),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dart_to_cice_input_file"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dart_to_cice_input_file</strong></td><td> =</td><td>'dart_restart.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-original_cice_input_file"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>original_cice_input_file</strong></td><td> =</td><td>'cice_restart.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-previous_cice_input_file"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>previous_cice_input_file</strong></td><td> =</td><td>'pre_restart.nc'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-balance_method"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>balance_method</strong></td><td> =</td><td>'simple_squeeze'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r_snw_name"></span>character(len=15)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>r_snw_name</strong></td><td> =</td><td>'r_snw'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string1%7E7"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string2%7E6"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring%7E5"></span>character(len=512)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-varname%7E49"></span>character(len=15)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-method%7E2"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>method</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nx%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Nx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ny%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Ny</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncat%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Ncat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nilyr"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>Nilyr</strong></td><td> =</td><td>8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nslyr"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>Nslyr</strong></td><td> =</td><td>8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aicen_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aicen_original</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vicen_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vicen_original</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vsnon_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vsnon_original</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aice_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aice_original</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hicen_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>hicen_original</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hsnon_original"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>hsnon_original</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aicen_pre"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aicen_pre</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vicen_pre"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vicen_pre</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vsnon_pre"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vsnon_pre</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aice_pre"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aice_pre</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aicen"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aicen</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vicen"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vicen</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vsnon"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>vsnon</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsfcn"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>Tsfcn</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice001"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice001</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice002"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice002</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice003"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice003</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice004"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice004</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice005"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice005</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice006"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice006</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice007"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice007</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sice008"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sice008</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice001"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice001</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice002"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice002</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice003"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice003</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice004"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice004</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice005"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice005</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice006"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice006</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice007"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice007</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qice008"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qice008</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qsno001"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qsno001</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qsno002"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qsno002</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qsno003"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qsno003</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aice"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aice</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r_snw"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>r_snw</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-aice_temp"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>aice_temp</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-increment_aice"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>increment_aice</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tendency_aice"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>tendency_aice</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tendency_aicen"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>tendency_aicen</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>R</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-weight_aicen"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>weight_aicen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E75"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E61"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E19"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-varid%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>VarID</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid%7E135"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid2%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E36"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E19"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndims%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ndims</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-squeeze"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>squeeze</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rsnw_max"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>rsnw_max</strong></td><td> =</td><td>1.6_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rsnw_min"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>rsnw_min</strong></td><td> =</td><td>-2.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-phi_init"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>phi_init</strong></td><td> =</td><td>0.75_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dsin0_frazil"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>dSin0_frazil</strong></td><td> =</td><td>3.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sss"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>sss</strong></td><td> =</td><td>34.7_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c1%7E12"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>c1</strong></td><td> =</td><td>1.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsmelt"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>Tsmelt</strong></td><td> =</td><td>0._r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cc1"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cc1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cc2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cc2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cc3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>cc3</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x1%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>x1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-si0new"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Si0new</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qi0new"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qi0new</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ti"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>Ti</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hin_max"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>hin_max</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hcat_midpoint"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>hcat_midpoint</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-liquidus_brine_salinity_mush"></span><h3>
+function <a href='../proc/liquidus_brine_salinity_mush.html'>liquidus_brine_salinity_mush</a>(zTin) result(Sbr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zTin</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-liquidus_temperature_mush"></span><h3>
+function <a href='../proc/liquidus_temperature_mush.html'>liquidus_temperature_mush</a>(Sbr) result(zTin)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Sbr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-enthalpy_mush"></span><h3>
+function <a href='../proc/enthalpy_mush.html'>enthalpy_mush</a>(zTin, zSin) result(zqin)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zTin</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zSin</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-liquid_fraction"></span><h3>
+function <a href='../proc/liquid_fraction.html'>liquid_fraction</a>(zTin, zSin) result(phi)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zTin</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zSin</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_3d_variable"></span><h3>
+subroutine <a href='../proc/get_3d_variable.html'>get_3d_variable</a>(ncid, varname, var, filename)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>var</strong>(:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-get_2d_variable"></span><h3>
+subroutine <a href='../proc/get_2d_variable.html'>get_2d_variable</a>(ncid, varname, var, filename)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>var</strong>(:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>filename</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>quality_control_mod.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>quality_control_mod.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for source files.">167 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/quality_control_mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">quality_control_mod.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/quality_control_mod.html">quality_control_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/quality_control_mod.f90.html#src">quality_control_mod.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/quality_control_mod.html">quality_control_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/quality_control_mod.f90.html#src">quality_control_mod.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-8"></a><span class="c">!&gt; quality_control_mod.f90</span>
+<a name="ln-9"></a><span class="c">!&gt;</span>
+<a name="ln-10"></a><span class="c">!&gt; This module contains routines related to quality control.</span>
+<a name="ln-11"></a><span class="c">!&gt;</span>
+<a name="ln-12"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-13"></a><span class="k">module </span><span class="n">quality_control_mod</span>
+<a name="ln-14"></a>
+<a name="ln-15"></a>
+<a name="ln-16"></a><span class="k">use     </span><span class="n">types_mod</span><span class="p">,</span>    <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span>
+<a name="ln-17"></a>
+<a name="ln-18"></a><span class="k">use </span><span class="n">utilities_mod</span><span class="p">,</span>    <span class="n">only</span> <span class="p">:</span> <span class="n">register_module</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-19"></a>                             <span class="n">do_output</span><span class="p">,</span> <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span><span class="p">,</span> <span class="n">nmlfileunit</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-20"></a>                             <span class="n">find_namelist_in_file</span><span class="p">,</span> <span class="n">check_namelist_read</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a><span class="k">use </span><span class="n">location_mod</span><span class="p">,</span>     <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span>
+<a name="ln-23"></a>
+<a name="ln-24"></a><span class="k">use </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">init_obs</span><span class="p">,</span> <span class="n">get_obs_from_key</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-25"></a>                             <span class="n">get_obs_def</span><span class="p">,</span> <span class="n">obs_type</span>
+<a name="ln-26"></a>
+<a name="ln-27"></a><span class="k">use </span><span class="n">obs_def_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">,</span> <span class="n">obs_def_type</span>
+<a name="ln-28"></a>
+<a name="ln-29"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-30"></a>
+<a name="ln-31"></a><span class="k">implicit none</span>
+<a name="ln-32"></a>
+<a name="ln-33"></a><span class="k">private</span>
+<a name="ln-34"></a>
+<a name="ln-35"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">initialize_qc</span><span class="p">,</span> <span class="n">input_qc_ok</span><span class="p">,</span> <span class="n">get_dart_qc</span><span class="p">,</span> <span class="n">check_outlier_threshold</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-36"></a>          <span class="n">good_dart_qc</span><span class="p">,</span> <span class="n">set_input_qc</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-37"></a>          <span class="n">DARTQC_ASSIM_GOOD_FOP</span><span class="p">,</span> <span class="n">DARTQC_EVAL_GOOD_FOP</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-38"></a>          <span class="n">DARTQC_ASSIM_FAILED_POST_FOP</span><span class="p">,</span> <span class="n">DARTQC_EVAL_FAILED_POST_FOP</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-39"></a>          <span class="n">DARTQC_FAILED_FOP</span><span class="p">,</span> <span class="n">DARTQC_NOT_IN_NAMELIST</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-40"></a>          <span class="n">DARTQC_BAD_INCOMING_QC</span><span class="p">,</span> <span class="n">DARTQC_FAILED_OUTLIER_TEST</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-41"></a>          <span class="n">DARTQC_FAILED_VERT_CONVERT</span>
+<a name="ln-42"></a>
+<a name="ln-43"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-44"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-45"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-46"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-47"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-48"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-49"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-50"></a>
+<a name="ln-51"></a><span class="c">! Dart quality control variables</span>
+<a name="ln-52"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_ASSIM_GOOD_FOP</span>        <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-53"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_EVAL_GOOD_FOP</span>         <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-54"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_ASSIM_FAILED_POST_FOP</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-55"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_EVAL_FAILED_POST_FOP</span>  <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-56"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_FAILED_FOP</span>            <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-57"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_NOT_IN_NAMELIST</span>       <span class="o">=</span> <span class="mi">5</span>
+<a name="ln-58"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_BAD_INCOMING_QC</span>       <span class="o">=</span> <span class="mi">6</span>
+<a name="ln-59"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_FAILED_OUTLIER_TEST</span>   <span class="o">=</span> <span class="mi">7</span>
+<a name="ln-60"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">DARTQC_FAILED_VERT_CONVERT</span>   <span class="o">=</span> <span class="mi">8</span>
+<a name="ln-61"></a><span class="c">!integer, parameter :: DARTQC_OUTSIDE_DOMAIN        = 9  ! we have no way (yet) for the model_mod to signal this</span>
+<a name="ln-62"></a>
+<a name="ln-63"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-64"></a><span class="c">! namelist parameters</span>
+<a name="ln-65"></a><span class="c">!&gt;@todo ... in the (upcoming) html ... mention that outlier_threshold = 3.0 is a good value</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">input_qc_threshold</span> <span class="o">=</span> <span class="mf">3.0_r8</span>  <span class="c">! values larger than input_qc_threshold will be rejected</span>
+<a name="ln-68"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">outlier_threshold</span>  <span class="o">=</span> <span class="o">-</span><span class="mf">1.0_r8</span>
+<a name="ln-69"></a>
+<a name="ln-70"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">enable_special_outlier_code</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span> <span class="c">! user defined outlier threshold code</span>
+<a name="ln-71"></a>
+<a name="ln-72"></a><span class="k">namelist</span> <span class="o">/</span> <span class="n">quality_control_nml</span> <span class="o">/</span> <span class="n">input_qc_threshold</span><span class="p">,</span> <span class="n">outlier_threshold</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-73"></a>   <span class="n">enable_special_outlier_code</span>
+<a name="ln-74"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-75"></a>
+<a name="ln-76"></a><span class="k">contains</span>
+<a name="ln-77"></a>
+<a name="ln-78"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-79"></a><span class="c">!&gt; Subroutine initialize_qc</span>
+<a name="ln-80"></a><span class="c">!&gt;</span>
+<a name="ln-81"></a><span class="c">!&gt; read the quality control namelist</span>
+<a name="ln-82"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-83"></a><span class="k">subroutine </span><span class="n">initialize_qc</span><span class="p">()</span>
+<a name="ln-84"></a>
+<a name="ln-85"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">msgstring</span>
+<a name="ln-86"></a>
+<a name="ln-87"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">io</span>
+<a name="ln-88"></a>
+<a name="ln-89"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-90"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;quality_control_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-91"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">quality_control_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-92"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;quality_control_nml&quot;</span><span class="p">)</span>
+<a name="ln-93"></a>
+<a name="ln-94"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-95"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">quality_control_nml</span><span class="p">)</span>
+<a name="ln-96"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">quality_control_nml</span><span class="p">)</span>
+<a name="ln-97"></a>
+<a name="ln-98"></a><span class="k">if</span><span class="p">(</span><span class="n">do_output</span><span class="p">())</span> <span class="k">then</span>
+<a name="ln-99"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A,I4)&#39;</span><span class="p">)</span> <span class="s1">&#39;Will reject obs with Data QC larger than &#39;</span><span class="p">,</span><span class="nb">nint</span><span class="p">(</span><span class="n">input_qc_threshold</span><span class="p">)</span>
+<a name="ln-100"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;quality_control_mod:&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-101"></a>
+<a name="ln-102"></a>   <span class="c">! Let user know what settings the outlier threshold has, and data qc.</span>
+<a name="ln-103"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">outlier_threshold</span> <span class="o">&lt;=</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-104"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;No observation outlier threshold rejection will be done&#39;</span>
+<a name="ln-105"></a>   <span class="k">else</span>
+<a name="ln-106"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="s1">&#39;(A,F12.6,A)&#39;</span><span class="p">)</span> <span class="s1">&#39;Will reject obs values more than&#39;</span><span class="p">,</span> <span class="n">outlier_threshold</span><span class="p">,</span> <span class="s1">&#39; sigma from mean&#39;</span>
+<a name="ln-107"></a>   <span class="n">endif</span>
+<a name="ln-108"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;quality_control_mod:&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">)</span>
+<a name="ln-109"></a>
+<a name="ln-110"></a>   <span class="c">! if doing something special with outlier threshold, say so</span>
+<a name="ln-111"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">enable_special_outlier_code</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-112"></a><span class="k">      call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;quality_control_mod:&#39;</span><span class="p">,</span> <span class="s1">&#39;special outlier threshold handling enabled&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-113"></a>         <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-114"></a>   <span class="n">endif</span>
+<a name="ln-115"></a>
+<a name="ln-116"></a><span class="n">endif</span>
+<a name="ln-117"></a>
+<a name="ln-118"></a><span class="k">end subroutine </span><span class="n">initialize_qc</span>
+<a name="ln-119"></a>
+<a name="ln-120"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-121"></a><span class="c">!&gt; Function set_input_qc</span>
+<a name="ln-122"></a><span class="c">!&gt;</span>
+<a name="ln-123"></a><span class="c">!&gt; if observation is not geing evaluated or assimilated, skip it and return</span>
+<a name="ln-124"></a><span class="c">!&gt; 1000 in qc field so the observation is not used again </span>
+<a name="ln-125"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-126"></a><span class="k">function </span><span class="n">set_input_qc</span><span class="p">(</span><span class="n">input_qc</span><span class="p">,</span> <span class="n">assimilate_this_ob</span><span class="p">,</span> <span class="n">evaluate_this_ob</span><span class="p">)</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">input_qc</span>   <span class="c">!! result from forward operator calculation </span>
+<a name="ln-129"></a><span class="kt">logical</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">assimilate_this_ob</span>  <span class="c">!! true if obs was assimilated</span>
+<a name="ln-130"></a><span class="kt">logical</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">evaluate_this_ob</span>  <span class="c">!! true if obs was evaluated</span>
+<a name="ln-131"></a><span class="kt">integer</span>              <span class="kd">::</span> <span class="n">set_input_qc</span>  <span class="c">!!  return value</span>
+<a name="ln-132"></a>
+<a name="ln-133"></a><span class="k">if</span><span class="p">(</span><span class="n">input_qc</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">(</span><span class="n">assimilate_this_ob</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">evaluate_this_ob</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-134"></a><span class="k">   </span><span class="n">set_input_qc</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-135"></a><span class="k">else</span>
+<a name="ln-136"></a><span class="k">   </span><span class="n">set_input_qc</span> <span class="o">=</span> <span class="mi">100</span><span class="mf">0.0_r8</span> <span class="o">+</span> <span class="n">input_qc</span>   <span class="c">! give some clue about why</span>
+<a name="ln-137"></a><span class="n">endif</span>
+<a name="ln-138"></a>
+<a name="ln-139"></a><span class="k">end function </span><span class="n">set_input_qc</span>
+<a name="ln-140"></a>
+<a name="ln-141"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-142"></a><span class="c">!&gt; Function input_qc_ok</span>
+<a name="ln-143"></a><span class="c">!&gt;</span>
+<a name="ln-144"></a><span class="c">!&gt; Do checks on input_qc value with namelist control</span>
+<a name="ln-145"></a><span class="c">!&gt;</span>
+<a name="ln-146"></a><span class="c">!&gt; NOTE: this code has changed since the original version.</span>
+<a name="ln-147"></a><span class="c">!&gt; qc values equal to the threshold are kept now; only qc</span>
+<a name="ln-148"></a><span class="c">!&gt; values LARGER THAN the threshold are rejected.  </span>
+<a name="ln-149"></a><span class="c">!&gt; e.g. to keep only obs with a data qc of 0, set the </span>
+<a name="ln-150"></a><span class="c">!&gt; threshold to 0.</span>
+<a name="ln-151"></a><span class="c">!&gt;</span>
+<a name="ln-152"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-153"></a><span class="k">function </span><span class="n">input_qc_ok</span><span class="p">(</span><span class="n">input_qc</span><span class="p">,</span> <span class="n">qc_to_use</span><span class="p">)</span>
+<a name="ln-154"></a>
+<a name="ln-155"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">input_qc</span>   <span class="c">!! result from forward operator calculation </span>
+<a name="ln-156"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">qc_to_use</span>  <span class="c">!! resulting DART QC</span>
+<a name="ln-157"></a><span class="kt">logical</span>               <span class="kd">::</span> <span class="n">input_qc_ok</span> <span class="c">!! true if input_qc is good</span>
+<a name="ln-158"></a>
+<a name="ln-159"></a><span class="n">qc_to_use</span> <span class="o">=</span> <span class="n">DARTQC_ASSIM_GOOD_FOP</span>
+<a name="ln-160"></a>
+<a name="ln-161"></a><span class="k">if</span><span class="p">(</span><span class="nb">nint</span><span class="p">(</span><span class="n">input_qc</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">input_qc_threshold</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-162"></a><span class="k">   </span><span class="n">input_qc_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-163"></a><span class="k">else</span>
+<a name="ln-164"></a><span class="k">   </span><span class="n">input_qc_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-165"></a>   <span class="n">qc_to_use</span> <span class="o">=</span> <span class="n">DARTQC_BAD_INCOMING_QC</span> 
+<a name="ln-166"></a><span class="n">endif</span>
+<a name="ln-167"></a>
+<a name="ln-168"></a><span class="k">end function </span><span class="n">input_qc_ok</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-171"></a><span class="c">!&gt; Subroutine get_dart_qc</span>
+<a name="ln-172"></a><span class="c">!&gt;</span>
+<a name="ln-173"></a><span class="c">!&gt; Consolidate forward operator qc</span>
+<a name="ln-174"></a><span class="c">!&gt; find the min and max istatus values across all ensemble members.  These are</span>
+<a name="ln-175"></a><span class="c">!&gt; either set by dart code, or returned by the model-specific model_interpolate()</span>
+<a name="ln-176"></a><span class="c">!&gt; routine, or by forward operator code in obs_def_xxx_mod files.</span>
+<a name="ln-177"></a><span class="c">!&gt;</span>
+<a name="ln-178"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-179"></a><span class="k">subroutine </span><span class="n">get_dart_qc</span><span class="p">(</span><span class="n">istatus</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">assimilate_this_ob</span><span class="p">,</span> <span class="n">evaluate_this_ob</span><span class="p">,</span> <span class="n">isprior</span><span class="p">,</span> <span class="n">dart_qc</span><span class="p">)</span>
+<a name="ln-180"></a>
+<a name="ln-181"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">ens_size</span> <span class="c">!!  number of ensemble members</span>
+<a name="ln-182"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span> <span class="c">!!   0=ok, &gt;0 is error, &lt;0 reserved for system use</span>
+<a name="ln-183"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">assimilate_this_ob</span> <span class="c">!!   true if obs was assimilated</span>
+<a name="ln-184"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">evaluate_this_ob</span> <span class="c">!!  true if obs was evaluated</span>
+<a name="ln-185"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">isprior</span> <span class="c">!!  true for prior pass; false for posterior</span>
+<a name="ln-186"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dart_qc</span> <span class="c">!!   resulting dart qc</span>
+<a name="ln-187"></a>
+<a name="ln-188"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">failed_fop</span><span class="p">,</span> <span class="n">inconsistent</span>
+<a name="ln-189"></a>
+<a name="ln-190"></a><span class="c">! If we didn&#39;t call the forward operators, return now.</span>
+<a name="ln-191"></a><span class="k">if</span> <span class="p">(</span><span class="n">dart_qc</span> <span class="o">==</span> <span class="n">DARTQC_BAD_INCOMING_QC</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-192"></a>
+<a name="ln-193"></a><span class="n">failed_fop</span>   <span class="o">=</span> <span class="p">(</span><span class="nb">maxval</span><span class="p">(</span><span class="n">istatus</span><span class="p">(:))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-194"></a><span class="n">inconsistent</span> <span class="o">=</span> <span class="p">(</span><span class="nb">minval</span><span class="p">(</span><span class="n">istatus</span><span class="p">(:))</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-195"></a>
+<a name="ln-196"></a><span class="c">! Now do a case statement to figure out what the qc result should be</span>
+<a name="ln-197"></a><span class="c">! For prior, have to test for a bunch of stuff</span>
+<a name="ln-198"></a><span class="c">! FIXME: note that this case statement doesn&#39;t cover every possibility;</span>
+<a name="ln-199"></a><span class="c">! if there&#39;s an error in the code and a minus value gets into the forward</span>
+<a name="ln-200"></a><span class="c">! operator istatus without being caught, it will fail all cases below.</span>
+<a name="ln-201"></a><span class="c">! add another line for &#39;internal inconsistency&#39; to be safe.</span>
+<a name="ln-202"></a>
+<a name="ln-203"></a><span class="k">if</span><span class="p">(</span><span class="n">isprior</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-204"></a>
+<a name="ln-205"></a>   <span class="c">! only do this for the priors.  the posterior failures</span>
+<a name="ln-206"></a>   <span class="c">! don&#39;t change whether the prior worked or not.</span>
+<a name="ln-207"></a>
+<a name="ln-208"></a>   <span class="k">if</span><span class="p">((.</span><span class="nb">not</span><span class="p">.</span> <span class="n">assimilate_this_ob</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">evaluate_this_ob</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-209"></a><span class="k">      </span><span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_NOT_IN_NAMELIST</span>
+<a name="ln-210"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">failed_fop</span><span class="p">)</span> <span class="k">then</span>            <span class="c">! At least one forward operator failed</span>
+<a name="ln-211"></a>      <span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_FAILED_FOP</span>
+<a name="ln-212"></a>   <span class="k">else if</span><span class="p">(</span><span class="n">evaluate_this_ob</span><span class="p">)</span> <span class="k">then</span>          <span class="c">! Observation to be evaluated only</span>
+<a name="ln-213"></a>      <span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_EVAL_GOOD_FOP</span>
+<a name="ln-214"></a>   <span class="k">else if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">inconsistent</span><span class="p">)</span> <span class="k">then</span>           <span class="c">! All clear, assimilate this ob</span>
+<a name="ln-215"></a>      <span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_ASSIM_GOOD_FOP</span>
+<a name="ln-216"></a>   
+<a name="ln-217"></a>   <span class="k">else</span>   <span class="c">! &#39;should not happen&#39;</span>
+<a name="ln-218"></a>      <span class="n">dart_qc</span> <span class="o">=</span> <span class="o">-</span><span class="mi">99</span>  <span class="c">! inconsistent istatus codes</span>
+<a name="ln-219"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;get_dart_qc: &#39;</span><span class="p">,</span> <span class="s1">&#39;internal error, should not happen: bad else in qc case&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-220"></a>                         <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-221"></a>   <span class="n">endif</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="k">else</span> <span class="c">! posterior</span>
+<a name="ln-224"></a>
+<a name="ln-225"></a>   <span class="c">! For failed posterior, only update qc if prior was successful</span>
+<a name="ln-226"></a>   <span class="k">if</span><span class="p">(</span><span class="n">failed_fop</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-227"></a>      <span class="c">! Both the following 2 tests and assignments were on single executable lines,</span>
+<a name="ln-228"></a>      <span class="c">! but one compiler (gfortran) was confused by this, so they were put in</span>
+<a name="ln-229"></a>      <span class="c">! if/endif blocks.</span>
+<a name="ln-230"></a>      <span class="k">if</span><span class="p">(</span><span class="n">dart_qc</span> <span class="o">==</span> <span class="n">DARTQC_ASSIM_GOOD_FOP</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-231"></a><span class="k">         </span><span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_ASSIM_FAILED_POST_FOP</span>
+<a name="ln-232"></a>
+<a name="ln-233"></a>      <span class="k">else if</span><span class="p">(</span><span class="n">dart_qc</span> <span class="o">==</span> <span class="n">DARTQC_EVAL_GOOD_FOP</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-234"></a><span class="k">         </span><span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_EVAL_FAILED_POST_FOP</span>
+<a name="ln-235"></a>    
+<a name="ln-236"></a>      <span class="n">endif</span>
+<a name="ln-237"></a>   <span class="n">endif</span>
+<a name="ln-238"></a>
+<a name="ln-239"></a><span class="n">endif</span>
+<a name="ln-240"></a>
+<a name="ln-241"></a><span class="k">end subroutine </span><span class="n">get_dart_qc</span>
+<a name="ln-242"></a>
+<a name="ln-243"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-244"></a><span class="c">!&gt; Subroutine check_outlier_threshold</span>
+<a name="ln-245"></a><span class="c">!&gt;</span>
+<a name="ln-246"></a><span class="c">!&gt; Check on the outlier threshold quality control.  If existing DART QC</span>
+<a name="ln-247"></a><span class="c">!&gt; is good and the obs is outside the threshold, set the QC to indicate that.</span>
+<a name="ln-248"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-249"></a><span class="k">subroutine </span><span class="n">check_outlier_threshold</span><span class="p">(</span><span class="n">obs_prior_mean</span><span class="p">,</span> <span class="n">obs_prior_var</span><span class="p">,</span> <span class="n">obs_val</span><span class="p">,</span> <span class="n">obs_err_var</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-250"></a>                                   <span class="n">obs_seq</span><span class="p">,</span> <span class="n">this_obs_key</span><span class="p">,</span> <span class="n">dart_qc</span><span class="p">)</span>
+<a name="ln-251"></a>
+<a name="ln-252"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>                <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">obs_prior_mean</span> <span class="c">!!  prior observation mean </span>
+<a name="ln-253"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>                <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">obs_prior_var</span> <span class="c">!!  prior observation variance</span>
+<a name="ln-254"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>                <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">obs_val</span> <span class="c">!!  observation value</span>
+<a name="ln-255"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>                <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">obs_err_var</span> <span class="c">!!  observation error variance</span>
+<a name="ln-256"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">obs_seq</span> <span class="c">!!  observation sequence</span>
+<a name="ln-257"></a><span class="kt">integer</span><span class="p">,</span>                 <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">this_obs_key</span> <span class="c">!!  index for this observation</span>
+<a name="ln-258"></a><span class="kt">integer</span><span class="p">,</span>                 <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dart_qc</span> <span class="c">!!  possibly modified DART QC</span>
+<a name="ln-259"></a>
+<a name="ln-260"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">error</span><span class="p">,</span> <span class="n">diff_sd</span><span class="p">,</span> <span class="n">ratio</span>
+<a name="ln-261"></a>
+<a name="ln-262"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">failed</span>
+<a name="ln-263"></a>
+<a name="ln-264"></a><span class="c">! FIX ME: could be a loop if we consider groups</span>
+<a name="ln-265"></a>
+<a name="ln-266"></a><span class="c">! Check on the outlier threshold quality control:</span>
+<a name="ln-267"></a><span class="c">! BUG FIX: this was using the incoming qc threshold before.</span>
+<a name="ln-268"></a><span class="c">! it should only be doing the outlier test on dart qc values of 0 or 1.</span>
+<a name="ln-269"></a><span class="c">! if there is already a different qc code set, leave it alone.</span>
+<a name="ln-270"></a><span class="c">! only if it is still successful (assim or eval, 0 or 1), then check</span>
+<a name="ln-271"></a><span class="c">! for failing outlier test.</span>
+<a name="ln-272"></a>
+<a name="ln-273"></a><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">outlier_threshold</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">good_dart_qc</span><span class="p">(</span><span class="n">dart_qc</span><span class="p">))</span> <span class="p">)</span> <span class="k">return</span>
+<a name="ln-274"></a>
+<a name="ln-275"></a><span class="n">error</span>   <span class="o">=</span> <span class="n">obs_prior_mean</span> <span class="o">-</span> <span class="n">obs_val</span>
+<a name="ln-276"></a><span class="n">diff_sd</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">obs_prior_var</span> <span class="o">+</span> <span class="n">obs_err_var</span><span class="p">)</span>
+<a name="ln-277"></a>
+<a name="ln-278"></a><span class="k">if</span> <span class="p">(</span><span class="n">diff_sd</span> <span class="o">/=</span> <span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-279"></a><span class="k">   </span><span class="n">ratio</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">error</span> <span class="o">/</span> <span class="n">diff_sd</span><span class="p">)</span>
+<a name="ln-280"></a><span class="k">else</span>
+<a name="ln-281"></a><span class="k">   </span><span class="n">ratio</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-282"></a><span class="n">endif</span>
+<a name="ln-283"></a>
+<a name="ln-284"></a><span class="c">! if special handling requested, pass in the outlier ratio for this obs,</span>
+<a name="ln-285"></a><span class="c">! the default outlier threshold value, and enough info to extract the specific </span>
+<a name="ln-286"></a><span class="c">! obs type for this obs. the function should return .true. if this is an </span>
+<a name="ln-287"></a><span class="c">! outlier, .false. if it is ok.</span>
+<a name="ln-288"></a><span class="k">if</span> <span class="p">(</span><span class="n">enable_special_outlier_code</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-289"></a><span class="k">   </span><span class="n">failed</span> <span class="o">=</span> <span class="n">failed_outlier</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">this_obs_key</span><span class="p">,</span> <span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-290"></a><span class="k">else </span>
+<a name="ln-291"></a><span class="k">   </span><span class="n">failed</span> <span class="o">=</span> <span class="p">(</span><span class="n">ratio</span> <span class="o">&gt;</span> <span class="n">outlier_threshold</span><span class="p">)</span>
+<a name="ln-292"></a><span class="n">endif</span>
+<a name="ln-293"></a>
+<a name="ln-294"></a><span class="k">if</span> <span class="p">(</span><span class="n">failed</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-295"></a><span class="k">   </span><span class="n">dart_qc</span> <span class="o">=</span> <span class="n">DARTQC_FAILED_OUTLIER_TEST</span>
+<a name="ln-296"></a><span class="n">endif</span>
+<a name="ln-297"></a>
+<a name="ln-298"></a><span class="k">end subroutine </span><span class="n">check_outlier_threshold</span>
+<a name="ln-299"></a>
+<a name="ln-300"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-301"></a><span class="c">!&gt; Function failed_outlier</span>
+<a name="ln-302"></a><span class="c">!&gt;</span>
+<a name="ln-303"></a><span class="c">!&gt; Intended to be easy to modify if needed to use other criteria</span>
+<a name="ln-304"></a><span class="c">!&gt; when evaluating the outlier threshold.  Set the namelist to</span>
+<a name="ln-305"></a><span class="c">!&gt; turn this call on (enable_special_outlier_code) and then add your</span>
+<a name="ln-306"></a><span class="c">!&gt; own tests to this section.  Return &#39;true&#39; if the tests fail,</span>
+<a name="ln-307"></a><span class="c">!&gt; return &#39;false&#39; if the obs is ok.</span>
+<a name="ln-308"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-309"></a><span class="k">function </span><span class="n">failed_outlier</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="n">this_obs_key</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>
+<a name="ln-310"></a>
+<a name="ln-311"></a><span class="c">! return true if the observation value is too far away from the ensemble mean</span>
+<a name="ln-312"></a><span class="c">! and should be rejected and not assimilated.</span>
+<a name="ln-313"></a>
+<a name="ln-314"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>                <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ratio</span> <span class="c">!!   observation error ratio</span>
+<a name="ln-315"></a><span class="kt">integer</span><span class="p">,</span>                 <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this_obs_key</span> <span class="c">!!  index for this observation</span>
+<a name="ln-316"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">seq</span> <span class="c">!! the observation sequence</span>
+<a name="ln-317"></a><span class="kt">logical</span>                             <span class="kd">::</span> <span class="n">failed_outlier</span> <span class="c">!! true if outlier test fails</span>
+<a name="ln-318"></a>
+<a name="ln-319"></a><span class="c">! the default test is:  if (ratio &gt; outlier_threshold) failed_outlier = .true.</span>
+<a name="ln-320"></a><span class="c">! but you can add code here to do different tests for different observation </span>
+<a name="ln-321"></a><span class="c">! types.  this function is only called if this namelist item is set to true:</span>
+<a name="ln-322"></a><span class="c">!  enable_special_outlier_code = .true.</span>
+<a name="ln-323"></a><span class="c">! in the &amp;quality_control_nml namelist.  it is intended to be customized by the user.</span>
+<a name="ln-324"></a>
+<a name="ln-325"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">this_obs_type</span>
+<a name="ln-326"></a>
+<a name="ln-327"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">obs_def</span>
+<a name="ln-328"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">),</span> <span class="k">save</span> <span class="kd">::</span> <span class="n">observation</span>
+<a name="ln-329"></a>
+<a name="ln-330"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">first_time</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-331"></a>
+<a name="ln-332"></a><span class="c">! make sure there&#39;s space to hold the observation.   this is a memory</span>
+<a name="ln-333"></a><span class="c">! leak in that we never release this space, but we only allocate it</span>
+<a name="ln-334"></a><span class="c">! one time so it doesn&#39;t grow.  if you are going to access the values</span>
+<a name="ln-335"></a><span class="c">! of the observation or the qc values, you must change the 0, 0 below</span>
+<a name="ln-336"></a><span class="c">! to match what&#39;s in your obs_seq file.  the example code below uses</span>
+<a name="ln-337"></a><span class="c">! only things in the obs_def derived type and so doesn&#39;t need space</span>
+<a name="ln-338"></a><span class="c">! allocated for either copies or qcs.</span>
+<a name="ln-339"></a><span class="k">if</span> <span class="p">(</span><span class="n">first_time</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-340"></a><span class="k">   call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-341"></a>   <span class="n">first_time</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-342"></a><span class="n">endif</span>
+<a name="ln-343"></a>
+<a name="ln-344"></a><span class="c">! if you want to do something different based on the observation specific type:</span>
+<a name="ln-345"></a><span class="k">call </span><span class="n">get_obs_from_key</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">this_obs_key</span><span class="p">,</span> <span class="n">observation</span><span class="p">)</span>
+<a name="ln-346"></a><span class="k">call </span><span class="n">get_obs_def</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">obs_def</span><span class="p">)</span>
+<a name="ln-347"></a><span class="n">this_obs_type</span> <span class="o">=</span> <span class="n">get_obs_def_type_of_obs</span><span class="p">(</span><span class="n">obs_def</span><span class="p">)</span>
+<a name="ln-348"></a>
+<a name="ln-349"></a><span class="c">! note that this example uses the specific type (e.g. RADIOSONDE_TEMPERATURE)</span>
+<a name="ln-350"></a><span class="c">! to make decisions.  you have the observation so any other part (e.g. the</span>
+<a name="ln-351"></a><span class="c">! time, the value, the error) is available to you as well.</span>
+<a name="ln-352"></a>
+<a name="ln-353"></a><span class="k">select case</span> <span class="p">(</span><span class="n">this_obs_type</span><span class="p">)</span>
+<a name="ln-354"></a>
+<a name="ln-355"></a><span class="c">! example of specifying a different threshold value for one obs type:</span>
+<a name="ln-356"></a><span class="c">!   case (RADIOSONDE_TEMPERATURE)</span>
+<a name="ln-357"></a><span class="c">!      if (ratio &gt; some_other_value) then</span>
+<a name="ln-358"></a><span class="c">!         failed_outlier = .true.</span>
+<a name="ln-359"></a><span class="c">!      else</span>
+<a name="ln-360"></a><span class="c">!         failed_outlier = .false.</span>
+<a name="ln-361"></a><span class="c">!      endif</span>
+<a name="ln-362"></a>
+<a name="ln-363"></a><span class="c">! accept all values of this observation type no matter how far</span>
+<a name="ln-364"></a><span class="c">! from the ensemble mean:</span>
+<a name="ln-365"></a><span class="c">!   case (AIRCRAFT_U_WIND_COMPONENT, AIRCRAFT_V_WIND_COMPONENT)</span>
+<a name="ln-366"></a><span class="c">!      failed_outlier = .false.</span>
+<a name="ln-367"></a>
+<a name="ln-368"></a>   <span class="k">case </span><span class="n">default</span>
+<a name="ln-369"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">ratio</span> <span class="o">&gt;</span> <span class="n">outlier_threshold</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-370"></a><span class="k">         </span><span class="n">failed_outlier</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-371"></a>      <span class="k">else</span>
+<a name="ln-372"></a><span class="k">         </span><span class="n">failed_outlier</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-373"></a>      <span class="n">endif</span>
+<a name="ln-374"></a>
+<a name="ln-375"></a><span class="k">end select</span>
+<a name="ln-376"></a>
+<a name="ln-377"></a><span class="k">end function </span><span class="n">failed_outlier</span>
+<a name="ln-378"></a>
+<a name="ln-379"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-380"></a><span class="c">!&gt; Function good_dart_qc</span>
+<a name="ln-381"></a><span class="c">!&gt;</span>
+<a name="ln-382"></a><span class="c">!&gt; Check incoming dart QC to see if the obs was processed ok.</span>
+<a name="ln-383"></a><span class="c">!&gt;</span>
+<a name="ln-384"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-385"></a><span class="k">function </span><span class="n">good_dart_qc</span><span class="p">(</span><span class="n">qc_value</span><span class="p">)</span>
+<a name="ln-386"></a>
+<a name="ln-387"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">qc_value</span>  <span class="c">!! incoming DART QC (not data qc)</span>
+<a name="ln-388"></a><span class="kt">logical</span>             <span class="kd">::</span> <span class="n">good_dart_qc</span>  <span class="c">!! whether this is a good value or not</span>
+<a name="ln-389"></a>
+<a name="ln-390"></a>
+<a name="ln-391"></a><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">qc_value</span> <span class="o">==</span> <span class="n">DARTQC_ASSIM_GOOD_FOP</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-392"></a>     <span class="p">(</span><span class="n">qc_value</span> <span class="o">==</span> <span class="n">DARTQC_EVAL_GOOD_FOP</span><span class="p">)</span>  <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-393"></a>     <span class="p">(</span><span class="n">qc_value</span> <span class="o">==</span> <span class="n">DARTQC_FAILED_OUTLIER_TEST</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-394"></a><span class="k">   </span><span class="n">good_dart_qc</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-395"></a><span class="k">else</span>
+<a name="ln-396"></a><span class="k">   </span><span class="n">good_dart_qc</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-397"></a><span class="n">endif</span>
+<a name="ln-398"></a>
+<a name="ln-399"></a><span class="k">end function </span><span class="n">good_dart_qc</span>
+<a name="ln-400"></a>
+<a name="ln-401"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-402"></a><span class="k">end module </span><span class="n">quality_control_mod</span>
+<a name="ln-403"></a>
+<a name="ln-404"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;o</span>
+<a name="ln-405"></a><span class="c">! $URL$</span>
+<a name="ln-406"></a><span class="c">! $Id$</span>
+<a name="ln-407"></a><span class="c">! $Revision$</span>
+<a name="ln-408"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

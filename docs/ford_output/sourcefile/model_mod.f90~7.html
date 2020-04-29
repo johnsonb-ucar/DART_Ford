@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>model_mod.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>model_mod.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for source files.">192 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/model_mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">model_mod.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/model_mod%7E5.html">model_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/model_mod.f90%7E7.html#src">model_mod.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/model_mod%7E5.html">model_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/model_mod.f90%7E7.html#src">model_mod.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="k">module </span><span class="n">model_mod</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a><span class="k">use </span><span class="n">types_mod</span><span class="p">,</span>             <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">i8</span><span class="p">,</span> <span class="n">i4</span>
+<a name="ln-10"></a>
+<a name="ln-11"></a><span class="k">use </span><span class="n">location_mod</span><span class="p">,</span>          <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span><span class="p">,</span> <span class="n">set_location</span><span class="p">,</span> <span class="n">get_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-12"></a>                                  <span class="n">get_close_obs</span><span class="p">,</span> <span class="n">get_close_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-13"></a>                                  <span class="n">convert_vertical_obs</span><span class="p">,</span> <span class="n">convert_vertical_state</span>
+<a name="ln-14"></a>
+<a name="ln-15"></a><span class="k">use </span><span class="n">utilities_mod</span><span class="p">,</span>         <span class="n">only</span> <span class="p">:</span> <span class="n">register_module</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="n">do_output</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-16"></a>                                  <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">find_namelist_in_file</span><span class="p">,</span> <span class="n">check_namelist_read</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-17"></a>                                  <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span>
+<a name="ln-18"></a>
+<a name="ln-19"></a><span class="k">use </span><span class="n">netcdf_utilities_mod</span><span class="p">,</span>  <span class="n">only</span> <span class="p">:</span> <span class="n">nc_add_global_attribute</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-20"></a>                                  <span class="n">nc_add_global_creation_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-21"></a>                                  <span class="n">nc_begin_define_mode</span><span class="p">,</span> <span class="n">nc_end_define_mode</span>
+<a name="ln-22"></a>
+<a name="ln-23"></a><span class="k">use </span><span class="n">location_io_mod</span><span class="p">,</span>       <span class="n">only</span> <span class="p">:</span> <span class="n">nc_write_location_atts</span><span class="p">,</span> <span class="n">nc_get_location_varids</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-24"></a>                                  <span class="n">nc_write_location</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a><span class="k">use </span><span class="n">obs_kind_mod</span><span class="p">,</span>          <span class="n">only</span> <span class="p">:</span> <span class="n">QTY_STATE_VARIABLE</span>
+<a name="ln-27"></a>
+<a name="ln-28"></a><span class="k">use </span><span class="n">ensemble_manager_mod</span><span class="p">,</span>  <span class="n">only</span> <span class="p">:</span> <span class="n">ensemble_type</span>
+<a name="ln-29"></a>
+<a name="ln-30"></a><span class="k">use </span><span class="n">distributed_state_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">get_state</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a><span class="k">use </span><span class="n">state_structure_mod</span><span class="p">,</span>   <span class="n">only</span> <span class="p">:</span> <span class="n">add_domain</span>
+<a name="ln-33"></a>
+<a name="ln-34"></a><span class="k">use </span><span class="n">dart_time_io_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">read_model_time</span><span class="p">,</span> <span class="n">write_model_time</span>
+<a name="ln-35"></a>
+<a name="ln-36"></a><span class="k">use </span><span class="n">default_model_mod</span><span class="p">,</span>     <span class="n">only</span> <span class="p">:</span> <span class="n">end_model</span><span class="p">,</span> <span class="n">pert_model_copies</span><span class="p">,</span> <span class="n">nc_write_model_vars</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-37"></a>                                  <span class="n">init_time</span>
+<a name="ln-38"></a>
+<a name="ln-39"></a><span class="k">use </span><span class="n">random_seq_mod</span><span class="p">,</span>        <span class="n">only</span> <span class="p">:</span> <span class="n">random_seq_type</span><span class="p">,</span> <span class="n">random_gaussian</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-40"></a>                                  <span class="n">init_random_seq</span><span class="p">,</span> <span class="n">several_random_gaussians</span>
+<a name="ln-41"></a>
+<a name="ln-42"></a><span class="k">use </span><span class="n">time_manager_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_time</span>
+<a name="ln-43"></a>
+<a name="ln-44"></a><span class="k">implicit none</span>
+<a name="ln-45"></a><span class="k">private</span>
+<a name="ln-46"></a>
+<a name="ln-47"></a><span class="c">!&gt; required routines with code in this module</span>
+<a name="ln-48"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">get_model_size</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-49"></a>          <span class="n">get_state_meta_data</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-50"></a>          <span class="n">model_interpolate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-51"></a>          <span class="n">shortest_time_between_assimilations</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-52"></a>          <span class="n">static_init_model</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-53"></a>          <span class="n">init_conditions</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-54"></a>          <span class="n">adv_1step</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-55"></a>          <span class="n">nc_write_model_atts</span>
+<a name="ln-56"></a>
+<a name="ln-57"></a><span class="c">!&gt; required routines where code is in other modules</span>
+<a name="ln-58"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">pert_model_copies</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-59"></a>          <span class="n">nc_write_model_vars</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-60"></a>          <span class="n">get_close_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-61"></a>          <span class="n">get_close_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-62"></a>          <span class="n">init_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-63"></a>          <span class="n">end_model</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-64"></a>          <span class="n">convert_vertical_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-65"></a>          <span class="n">convert_vertical_state</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-66"></a>          <span class="n">read_model_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-67"></a>          <span class="n">write_model_time</span>
+<a name="ln-68"></a>
+<a name="ln-69"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-70"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-71"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-72"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-73"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-74"></a>
+<a name="ln-75"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">model_size</span> <span class="o">=</span> <span class="mi">9</span>
+<a name="ln-76"></a>
+<a name="ln-77"></a><span class="c">!  define model parameters</span>
+<a name="ln-78"></a><span class="c">! c is sqrt(0.75)</span>
+<a name="ln-79"></a>
+<a name="ln-80"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">private</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span>  <span class="mf">1.0_r8</span><span class="p">,</span>  <span class="mf">1.0_r8</span><span class="p">,</span> <span class="mf">3.0_r8</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-81"></a>                                <span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span> <span class="o">-</span><span class="mf">1.5_r8</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5_r8</span><span class="p">,</span> <span class="mf">0.5_r8</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-82"></a>                                <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span> <span class="mf">0.10_r8</span><span class="p">,</span>  <span class="mf">0.0_r8</span><span class="p">,</span> <span class="mf">0.0_r8</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-83"></a>                                <span class="n">h</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span> <span class="o">-</span><span class="mf">1.0_r8</span><span class="p">,</span>  <span class="mf">0.0_r8</span><span class="p">,</span> <span class="mf">0.0_r8</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-84"></a>                                <span class="n">nu</span> <span class="o">=</span> <span class="mf">1.0_r8</span> <span class="o">/</span> <span class="mi">4</span><span class="mf">8.0_r8</span><span class="p">,</span> <span class="n">kappa</span> <span class="o">=</span> <span class="n">nu</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.8660254_r8</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="c">! Define the location of the state variables in module storage</span>
+<a name="ln-87"></a><span class="c">! This is used for distance dependence stuff in more general models but is </span>
+<a name="ln-88"></a><span class="c">! currently just set to give 0 separation distance for all 9 vars here.</span>
+<a name="ln-89"></a>
+<a name="ln-90"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">state_loc</span><span class="p">(</span><span class="n">model_size</span><span class="p">)</span>
+<a name="ln-91"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">time_step</span>
+<a name="ln-92"></a>
+<a name="ln-93"></a><span class="c">! Need reproducible sequence of noise added so that different runs</span>
+<a name="ln-94"></a><span class="c">! can be cleanly compared</span>
+<a name="ln-95"></a>
+<a name="ln-96"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">first_ran_call</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-97"></a><span class="k">type</span><span class="p">(</span><span class="n">random_seq_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ran_seq</span>
+<a name="ln-98"></a>
+<a name="ln-99"></a>
+<a name="ln-100"></a><span class="c">! Namelist with default values</span>
+<a name="ln-101"></a>
+<a name="ln-102"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">g</span> <span class="o">=</span> <span class="mf">8.0_r8</span>  <span class="c">! lorenz default; 9.90_r8 is a higher dimension attractor</span>
+<a name="ln-103"></a>
+<a name="ln-104"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">deltat</span> <span class="o">=</span> <span class="mf">1.0_r8</span> <span class="o">/</span> <span class="mi">1</span><span class="mf">2.0_r8</span>     <span class="c">! model time step</span>
+<a name="ln-105"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">time_step_days</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-106"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">time_step_seconds</span> <span class="o">=</span> <span class="mi">3600</span>
+<a name="ln-107"></a>
+<a name="ln-108"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">add_noise</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-109"></a>
+<a name="ln-110"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">model_nml</span><span class="o">/</span> <span class="n">g</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">time_step_days</span><span class="p">,</span> <span class="n">time_step_seconds</span><span class="p">,</span> <span class="n">add_noise</span>
+<a name="ln-111"></a>
+<a name="ln-112"></a>
+<a name="ln-113"></a>
+<a name="ln-114"></a><span class="k">contains</span>
+<a name="ln-115"></a>
+<a name="ln-116"></a><span class="c">!----------------------------------------------------------------------</span>
+<a name="ln-117"></a><span class="c">!&gt; Initializes class data for this model. For now, simply outputs the</span>
+<a name="ln-118"></a><span class="c">!&gt; identity info, sets the location of the state variables, and initializes</span>
+<a name="ln-119"></a><span class="c">!&gt; the time type for the time stepping (is this general enough for time???)</span>
+<a name="ln-120"></a>
+<a name="ln-121"></a><span class="k">subroutine </span><span class="n">static_init_model</span><span class="p">()</span>
+<a name="ln-122"></a>
+<a name="ln-123"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x_loc</span>
+<a name="ln-124"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">dom_id</span>
+<a name="ln-125"></a>
+<a name="ln-126"></a><span class="c">! Register the module into the logfile</span>
+<a name="ln-127"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-128"></a>
+<a name="ln-129"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-130"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;model_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-131"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">model_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-132"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;model_nml&quot;</span><span class="p">)</span>
+<a name="ln-133"></a>
+<a name="ln-134"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-135"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">model_nml</span><span class="p">)</span>
+<a name="ln-136"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">model_nml</span><span class="p">)</span>
+<a name="ln-137"></a>
+<a name="ln-138"></a><span class="c">! Define the locations of the model state variables</span>
+<a name="ln-139"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">model_size</span>
+<a name="ln-140"></a>   <span class="n">x_loc</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="o">/</span> <span class="n">model_size</span>
+<a name="ln-141"></a>   <span class="n">state_loc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span>  <span class="n">set_location</span><span class="p">(</span><span class="n">x_loc</span><span class="p">)</span>
+<a name="ln-142"></a><span class="k">end do</span>
+<a name="ln-143"></a>
+<a name="ln-144"></a><span class="c">! The time_step in terms of a time type must also be initialized. Need</span>
+<a name="ln-145"></a><span class="c">! to determine appropriate non-dimensionalization conversion for L96 from</span>
+<a name="ln-146"></a><span class="c">! Shree Khare.</span>
+<a name="ln-147"></a><span class="n">time_step</span> <span class="o">=</span> <span class="n">set_time</span><span class="p">(</span><span class="n">time_step_seconds</span><span class="p">,</span> <span class="n">time_step_days</span><span class="p">)</span>
+<a name="ln-148"></a>
+<a name="ln-149"></a><span class="c">! Tell the DART I/O routines how large the model data is so they</span>
+<a name="ln-150"></a><span class="c">! can read/write it.</span>
+<a name="ln-151"></a><span class="n">dom_id</span> <span class="o">=</span> <span class="n">add_domain</span><span class="p">(</span><span class="n">model_size</span><span class="p">)</span>
+<a name="ln-152"></a>
+<a name="ln-153"></a><span class="k">end subroutine </span><span class="n">static_init_model</span>
+<a name="ln-154"></a>
+<a name="ln-155"></a>
+<a name="ln-156"></a><span class="c">!----------------------------------------------------------------------</span>
+<a name="ln-157"></a><span class="c">!&gt; computes time tendency for the 9 variable lorenz model given the</span>
+<a name="ln-158"></a><span class="c">!&gt; current values of the 9 variables (x, y, z each with three elements)</span>
+<a name="ln-159"></a><span class="c">!&gt; and the values of a number of parameters.</span>
+<a name="ln-160"></a>
+<a name="ln-161"></a><span class="k">subroutine </span><span class="n">comp_dt</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> <span class="n">dxxx</span><span class="p">)</span>
+<a name="ln-162"></a>
+<a name="ln-163"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xxx</span><span class="p">(:)</span>
+<a name="ln-164"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dxxx</span><span class="p">(:)</span>
+<a name="ln-165"></a>
+<a name="ln-166"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">z</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">dx</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">dy</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">dz</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-167"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rnum</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-168"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a><span class="c">!  unpack the 9-vectors into the x, y and z 3-vectors</span>
+<a name="ln-171"></a>
+<a name="ln-172"></a><span class="k">call </span><span class="n">unpack9var</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<a name="ln-173"></a>
+<a name="ln-174"></a><span class="c">!  equations 33-35 from lorenz, 1980, jas, p.1688</span>
+<a name="ln-175"></a><span class="c">!  equations are defined with cyclic indices</span>
+<a name="ln-176"></a>
+<a name="ln-177"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<a name="ln-178"></a>   <span class="n">J</span> <span class="o">=</span> <span class="nb">MOD</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-179"></a>   <span class="n">K</span> <span class="o">=</span> <span class="nb">MOD</span><span class="p">(</span><span class="n">I</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-180"></a>
+<a name="ln-181"></a>   <span class="c">!  BEGIN WITH THE FIRST EQUATION (33)</span>
+<a name="ln-182"></a>
+<a name="ln-183"></a>   <span class="n">dx</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-184"></a>           <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="p">&amp;</span>
+<a name="ln-185"></a>           <span class="n">nu</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">/</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-186"></a>
+<a name="ln-187"></a>   <span class="c">!  equation (34)</span>
+<a name="ln-188"></a>
+<a name="ln-189"></a>   <span class="n">dy</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-190"></a>           <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">nu</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">/</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-191"></a>
+<a name="ln-192"></a>   <span class="c">!  equation (35)</span>
+<a name="ln-193"></a>
+<a name="ln-194"></a>   <span class="n">dz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">-</span> <span class="p">&amp;</span>
+<a name="ln-195"></a>           <span class="n">b</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">-</span><span class="n">h</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">-</span> <span class="p">&amp;</span>
+<a name="ln-196"></a>           <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="n">g</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">kappa</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-197"></a><span class="k">end do   </span>
+<a name="ln-198"></a>
+<a name="ln-199"></a><span class="k">call </span><span class="n">pack9var</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">dxxx</span><span class="p">)</span>     <span class="c">!  pack the results into 9 vector</span>
+<a name="ln-200"></a>
+<a name="ln-201"></a><span class="c">! We need to initialize the random gen for experiments to be repeatable</span>
+<a name="ln-202"></a><span class="k">if</span><span class="p">(</span><span class="n">first_ran_call</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-203"></a><span class="k">   </span><span class="n">first_ran_call</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-204"></a>   <span class="k">call </span><span class="n">init_random_seq</span><span class="p">(</span><span class="n">ran_seq</span><span class="p">)</span>
+<a name="ln-205"></a><span class="k">end if</span>
+<a name="ln-206"></a>
+<a name="ln-207"></a><span class="c">! ADDITION OF SOME NOISE AT 1/10 the amplitude of DT</span>
+<a name="ln-208"></a><span class="k">if</span> <span class="p">(</span><span class="n">add_noise</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-209"></a><span class="k">   call </span><span class="n">several_random_gaussians</span><span class="p">(</span><span class="n">ran_seq</span><span class="p">,</span> <span class="mf">0.0_r8</span><span class="p">,</span> <span class="n">dxxx</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span><span class="mf">0.0_r8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">rnum</span><span class="p">)</span>
+<a name="ln-210"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span>
+<a name="ln-211"></a>      <span class="n">dxxx</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">dxxx</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">rnum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-212"></a>   <span class="k">end do</span>
+<a name="ln-213"></a><span class="n">endif</span>
+<a name="ln-214"></a>
+<a name="ln-215"></a><span class="k">end subroutine </span><span class="n">comp_dt</span>
+<a name="ln-216"></a>
+<a name="ln-217"></a>
+<a name="ln-218"></a><span class="c">!---------------------------------------------------------------------------</span>
+<a name="ln-219"></a><span class="c">!&gt; set of routines used to switch between 3 3-variable sets and 9-variable</span>
+<a name="ln-220"></a><span class="c">!&gt; set for lorenz 9 variable pe model</span>
+<a name="ln-221"></a>
+<a name="ln-222"></a><span class="k">subroutine </span><span class="n">pack9var</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">pert</span><span class="p">)</span>
+<a name="ln-223"></a>
+<a name="ln-224"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">z</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-225"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pert</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-226"></a>
+<a name="ln-227"></a><span class="n">pert</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-228"></a><span class="n">pert</span><span class="p">(</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">)</span> <span class="o">=</span> <span class="n">y</span>
+<a name="ln-229"></a><span class="n">pert</span><span class="p">(</span><span class="mi">7</span><span class="p">:</span><span class="mi">9</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span>
+<a name="ln-230"></a>
+<a name="ln-231"></a><span class="k">end subroutine </span><span class="n">pack9var</span>
+<a name="ln-232"></a>
+<a name="ln-233"></a>
+<a name="ln-234"></a><span class="c">!---------------------------------------------------------------------------</span>
+<a name="ln-235"></a><span class="c">!&gt; inverse of pack9var above</span>
+<a name="ln-236"></a>
+<a name="ln-237"></a><span class="k">subroutine </span><span class="n">unpack9var</span><span class="p">(</span><span class="n">pert</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<a name="ln-238"></a>
+<a name="ln-239"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">pert</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-240"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">z</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-241"></a>
+<a name="ln-242"></a><span class="n">x</span> <span class="o">=</span> <span class="n">pert</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-243"></a><span class="n">y</span> <span class="o">=</span> <span class="n">pert</span><span class="p">(</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">)</span>
+<a name="ln-244"></a><span class="n">z</span> <span class="o">=</span> <span class="n">pert</span><span class="p">(</span><span class="mi">7</span><span class="p">:</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-245"></a>
+<a name="ln-246"></a><span class="k">end subroutine </span><span class="n">unpack9var</span>
+<a name="ln-247"></a>
+<a name="ln-248"></a>
+<a name="ln-249"></a><span class="c">!-------------------------------------------------------------------------</span>
+<a name="ln-250"></a><span class="c">!&gt; does one time step advance for 9 variable model using two-step rk.</span>
+<a name="ln-251"></a>
+<a name="ln-252"></a><span class="k">subroutine </span><span class="n">adv_1step</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">time</span><span class="p">)</span>
+<a name="ln-253"></a>
+<a name="ln-254"></a><span class="k">implicit none</span>
+<a name="ln-255"></a>
+<a name="ln-256"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>        <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(:)</span>
+<a name="ln-257"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="nb">time</span>
+<a name="ln-258"></a>
+<a name="ln-259"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fract</span> <span class="o">=</span> <span class="mf">1.0_r8</span>
+<a name="ln-260"></a>
+<a name="ln-261"></a><span class="k">call </span><span class="n">adv_single</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fract</span><span class="p">)</span>
+<a name="ln-262"></a>
+<a name="ln-263"></a><span class="k">end subroutine </span><span class="n">adv_1step</span>
+<a name="ln-264"></a>
+<a name="ln-265"></a>
+<a name="ln-266"></a><span class="c">!-------------------------------------------------------------------------</span>
+<a name="ln-267"></a><span class="c">!&gt; does one time step advance for 9 variable model using two-step rk</span>
+<a name="ln-268"></a>
+<a name="ln-269"></a><span class="k">subroutine </span><span class="n">adv_single</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fract</span><span class="p">)</span>
+<a name="ln-270"></a>
+<a name="ln-271"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(:)</span>
+<a name="ln-272"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">fract</span>
+<a name="ln-273"></a>
+<a name="ln-274"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x1</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span> <span class="n">x2</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span> <span class="n">dx</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-275"></a>
+<a name="ln-276"></a><span class="c">!  compute the first intermediate step</span>
+<a name="ln-277"></a>
+<a name="ln-278"></a><span class="k">call </span><span class="n">comp_dt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+<a name="ln-279"></a><span class="n">x1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">fract</span> <span class="o">*</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">dx</span>
+<a name="ln-280"></a>
+<a name="ln-281"></a><span class="c">!  compute the second intermediate step</span>
+<a name="ln-282"></a>
+<a name="ln-283"></a><span class="k">call </span><span class="n">comp_dt</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+<a name="ln-284"></a><span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">fract</span> <span class="o">*</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">dx</span>
+<a name="ln-285"></a>
+<a name="ln-286"></a><span class="c">!  new value for x is average of original value and second intermediate</span>
+<a name="ln-287"></a>
+<a name="ln-288"></a><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0_r8</span>
+<a name="ln-289"></a>
+<a name="ln-290"></a><span class="k">end subroutine </span><span class="n">adv_single</span>
+<a name="ln-291"></a>
+<a name="ln-292"></a>
+<a name="ln-293"></a><span class="c">!----------------------------------------------------------------------</span>
+<a name="ln-294"></a><span class="c">!&gt; generates set of random off-attractor initial conditions for 9 variable</span>
+<a name="ln-295"></a>
+<a name="ln-296"></a><span class="k">subroutine </span><span class="n">init_conditions</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a name="ln-297"></a>
+<a name="ln-298"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span>  <span class="n">x</span><span class="p">(:)</span>
+<a name="ln-299"></a>
+<a name="ln-300"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.10_r8</span>
+<a name="ln-301"></a>
+<a name="ln-302"></a><span class="k">end subroutine </span><span class="n">init_conditions</span>
+<a name="ln-303"></a>
+<a name="ln-304"></a>
+<a name="ln-305"></a><span class="c">!---------------------------------------------------------------------------</span>
+<a name="ln-306"></a><span class="c">!&gt; unused?</span>
+<a name="ln-307"></a><span class="c">! application of balance eqtn as initialization method</span>
+<a name="ln-308"></a><span class="c">! to the 9 variable lorenz model given the</span>
+<a name="ln-309"></a><span class="c">! current values of the 9 variables (x, y, z each with three elements)</span>
+<a name="ln-310"></a><span class="c">! and the values of a number of parameters.</span>
+<a name="ln-311"></a>
+<a name="ln-312"></a><span class="k">subroutine </span><span class="n">balance_init</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> <span class="n">init_xxx</span><span class="p">)</span>
+<a name="ln-313"></a>
+<a name="ln-314"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xxx</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-315"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">init_xxx</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<a name="ln-316"></a>
+<a name="ln-317"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">z</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-318"></a><span class="c">!!!real(r8) :: wkspce(3)</span>
+<a name="ln-319"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lhs</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">rhs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-320"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span>
+<a name="ln-321"></a><span class="c">!!!integer  :: ifail</span>
+<a name="ln-322"></a>
+<a name="ln-323"></a><span class="c">!  unpack the 9-vectors into the x, y and z 3-vectors</span>
+<a name="ln-324"></a>
+<a name="ln-325"></a><span class="k">call </span><span class="n">unpack9var</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<a name="ln-326"></a>
+<a name="ln-327"></a><span class="c">! application of balance eqtn as initialization method, curry ET.AL, tellus,</span>
+<a name="ln-328"></a><span class="c">!    1995, p. 153-154, section 3.3</span>
+<a name="ln-329"></a><span class="c">! equation 11 from gent &amp; mcwilliams, 1982, jas, p.4</span>
+<a name="ln-330"></a>
+<a name="ln-331"></a><span class="k">DO </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<a name="ln-332"></a>   <span class="n">j</span>    <span class="o">=</span> <span class="nb">mod</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-333"></a>   <span class="n">k</span>    <span class="o">=</span> <span class="nb">mod</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-334"></a>   <span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-335"></a><span class="k">end do</span>
+<a name="ln-336"></a>
+<a name="ln-337"></a><span class="c">!  equation 29/30 from gent &amp; mcwilliams, 1982, jas, p.6</span>
+<a name="ln-338"></a>
+<a name="ln-339"></a><span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<a name="ln-340"></a>   <span class="n">j</span> <span class="o">=</span> <span class="nb">mod</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-341"></a>   <span class="n">k</span> <span class="o">=</span> <span class="nb">mod</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-342"></a>   <span class="n">lhs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span> <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">g</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-343"></a>      <span class="n">b</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<a name="ln-344"></a>   <span class="n">lhs</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span> <span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-345"></a>      <span class="n">b</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">h</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>  <span class="p">)</span>
+<a name="ln-346"></a>   <span class="n">lhs</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span> <span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-347"></a>      <span class="n">b</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">))</span> <span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>  <span class="p">)</span>
+<a name="ln-348"></a>   <span class="n">rhs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span>  <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span> <span class="p">&amp;</span>
+<a name="ln-349"></a>      <span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">h</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span> <span class="n">nu</span><span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-350"></a>      <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">-</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>  <span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span>  <span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-351"></a>      <span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-352"></a>      <span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">nu</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>  <span class="p">)</span>
+<a name="ln-353"></a><span class="k">end do</span>
+<a name="ln-354"></a>
+<a name="ln-355"></a><span class="c">!!!ifail=0</span>
+<a name="ln-356"></a><span class="c">!  n.a.g. ROUTINE TO CALCULATE APPROXIMATE SOLUTION X TO aX=B (I.E. lhs*X=rhs)</span>
+<a name="ln-357"></a><span class="c">!!!call f04arf_wrap(lhs,3,rhs,3,x,wkspce,ifail)</span>
+<a name="ln-358"></a><span class="c">!        print *,&#39;XINIT=&#39;,X</span>
+<a name="ln-359"></a>
+<a name="ln-360"></a><span class="c">!  pack the results into 9 vector</span>
+<a name="ln-361"></a>
+<a name="ln-362"></a><span class="k">call </span><span class="n">pack9var</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">init_xxx</span><span class="p">)</span>
+<a name="ln-363"></a>
+<a name="ln-364"></a><span class="k">end subroutine </span><span class="n">balance_init</span>
+<a name="ln-365"></a>
+<a name="ln-366"></a>
+<a name="ln-367"></a><span class="c">!-------------------------------------------------------------------------</span>
+<a name="ln-368"></a><span class="c">! Returns number of items in state vector</span>
+<a name="ln-369"></a>
+<a name="ln-370"></a><span class="k">function </span><span class="n">get_model_size</span><span class="p">()</span>
+<a name="ln-371"></a>
+<a name="ln-372"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">get_model_size</span>
+<a name="ln-373"></a>
+<a name="ln-374"></a><span class="n">get_model_size</span> <span class="o">=</span> <span class="n">model_size</span>
+<a name="ln-375"></a>
+<a name="ln-376"></a><span class="k">end function </span><span class="n">get_model_size</span>
+<a name="ln-377"></a>
+<a name="ln-378"></a>
+<a name="ln-379"></a>
+<a name="ln-380"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-381"></a>
+<a name="ln-382"></a><span class="k">function </span><span class="n">shortest_time_between_assimilations</span><span class="p">()</span>
+<a name="ln-383"></a>
+<a name="ln-384"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">shortest_time_between_assimilations</span>
+<a name="ln-385"></a>
+<a name="ln-386"></a><span class="n">shortest_time_between_assimilations</span> <span class="o">=</span> <span class="n">time_step</span>
+<a name="ln-387"></a>
+<a name="ln-388"></a><span class="k">end function </span><span class="n">shortest_time_between_assimilations</span>
+<a name="ln-389"></a>
+<a name="ln-390"></a>
+<a name="ln-391"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-392"></a>
+<a name="ln-393"></a><span class="k">subroutine </span><span class="n">model_interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">itype</span><span class="p">,</span> <span class="n">expected_obs</span><span class="p">,</span> <span class="n">istatus</span><span class="p">)</span>
+<a name="ln-394"></a>
+<a name="ln-395"></a><span class="k">type</span><span class="p">(</span><span class="n">ensemble_type</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">state_handle</span>
+<a name="ln-396"></a><span class="kt">integer</span><span class="p">,</span>              <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ens_size</span>
+<a name="ln-397"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-398"></a><span class="kt">integer</span><span class="p">,</span>              <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">itype</span>
+<a name="ln-399"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>            <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">expected_obs</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-400"></a><span class="kt">integer</span><span class="p">,</span>             <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-401"></a>
+<a name="ln-402"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">lower_index</span><span class="p">,</span> <span class="n">upper_index</span>
+<a name="ln-403"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lctn</span><span class="p">,</span> <span class="n">lctnfrac</span>
+<a name="ln-404"></a>
+<a name="ln-405"></a><span class="c">! All obs okay for now</span>
+<a name="ln-406"></a><span class="n">istatus</span><span class="p">(:)</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-407"></a>
+<a name="ln-408"></a><span class="c">! Convert location to real</span>
+<a name="ln-409"></a><span class="n">lctn</span> <span class="o">=</span> <span class="n">get_location</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+<a name="ln-410"></a><span class="c">! Multiply by model size assuming domain is [0, 1] cyclic</span>
+<a name="ln-411"></a><span class="n">lctn</span> <span class="o">=</span> <span class="n">model_size</span> <span class="o">*</span> <span class="n">lctn</span>
+<a name="ln-412"></a>
+<a name="ln-413"></a><span class="n">lower_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lctn</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-414"></a><span class="n">upper_index</span> <span class="o">=</span> <span class="n">lower_index</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-415"></a><span class="k">if</span><span class="p">(</span><span class="n">lower_index</span> <span class="o">&gt;</span> <span class="n">model_size</span><span class="p">)</span> <span class="n">lower_index</span> <span class="o">=</span> <span class="n">lower_index</span> <span class="o">-</span> <span class="n">model_size</span>
+<a name="ln-416"></a><span class="k">if</span><span class="p">(</span><span class="n">upper_index</span> <span class="o">&gt;</span> <span class="n">model_size</span><span class="p">)</span> <span class="n">upper_index</span> <span class="o">=</span> <span class="n">upper_index</span> <span class="o">-</span> <span class="n">model_size</span>
+<a name="ln-417"></a>
+<a name="ln-418"></a><span class="n">lctnfrac</span> <span class="o">=</span> <span class="n">lctn</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">lctn</span><span class="p">)</span>
+<a name="ln-419"></a><span class="n">expected_obs</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0_r8</span> <span class="o">-</span> <span class="n">lctnfrac</span><span class="p">)</span> <span class="o">*</span> <span class="n">get_state</span><span class="p">(</span><span class="n">lower_index</span><span class="p">,</span> <span class="n">state_handle</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>
+<a name="ln-420"></a>                         <span class="n">lctnfrac</span>  <span class="o">*</span> <span class="n">get_state</span><span class="p">(</span><span class="n">upper_index</span><span class="p">,</span> <span class="n">state_handle</span><span class="p">)</span>
+<a name="ln-421"></a>
+<a name="ln-422"></a><span class="k">end subroutine </span><span class="n">model_interpolate</span>
+<a name="ln-423"></a>
+<a name="ln-424"></a>
+<a name="ln-425"></a><span class="c">!---------------------------------------------------------------------</span>
+<a name="ln-426"></a><span class="c">!&gt; Given an integer index into the state vector structure, returns the</span>
+<a name="ln-427"></a><span class="c">!&gt; associated location.</span>
+<a name="ln-428"></a>
+<a name="ln-429"></a><span class="k">subroutine </span><span class="n">get_state_meta_data</span><span class="p">(</span><span class="n">index_in</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">var_type</span><span class="p">)</span>
+<a name="ln-430"></a>
+<a name="ln-431"></a><span class="kt">integer</span><span class="p">(</span><span class="n">i8</span><span class="p">),</span>         <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">index_in</span>
+<a name="ln-432"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-433"></a><span class="kt">integer</span><span class="p">,</span>             <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">var_type</span>
+<a name="ln-434"></a>
+<a name="ln-435"></a><span class="n">location</span> <span class="o">=</span> <span class="n">state_loc</span><span class="p">(</span><span class="n">index_in</span><span class="p">)</span>
+<a name="ln-436"></a><span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">var_type</span><span class="p">))</span> <span class="n">var_type</span> <span class="o">=</span> <span class="n">QTY_STATE_VARIABLE</span>    <span class="c">! default variable quantity</span>
+<a name="ln-437"></a>
+<a name="ln-438"></a><span class="k">end subroutine </span><span class="n">get_state_meta_data</span>
+<a name="ln-439"></a>
+<a name="ln-440"></a>
+<a name="ln-441"></a><span class="c">!------------------------------------------------------------------</span>
+<a name="ln-442"></a><span class="c">!&gt; Writes the model-specific attributes to a netCDF file</span>
+<a name="ln-443"></a>
+<a name="ln-444"></a><span class="k">subroutine </span><span class="n">nc_write_model_atts</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">domain_id</span><span class="p">)</span>
+<a name="ln-445"></a>
+<a name="ln-446"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ncid</span>      <span class="c">! netCDF file identifier</span>
+<a name="ln-447"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">domain_id</span>
+<a name="ln-448"></a>
+<a name="ln-449"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">msize</span>
+<a name="ln-450"></a>
+<a name="ln-451"></a><span class="c">! other parts of the dart system will write the state into the file</span>
+<a name="ln-452"></a><span class="c">! so this routine just needs to write any model-specific</span>
+<a name="ln-453"></a><span class="c">! attributes it wants to record.</span>
+<a name="ln-454"></a>
+<a name="ln-455"></a><span class="n">msize</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">i4</span><span class="p">)</span>
+<a name="ln-456"></a>
+<a name="ln-457"></a><span class="c">! Write Global Attributes</span>
+<a name="ln-458"></a>
+<a name="ln-459"></a><span class="k">call </span><span class="n">nc_begin_define_mode</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-460"></a>
+<a name="ln-461"></a><span class="k">call </span><span class="n">nc_add_global_creation_time</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-462"></a>
+<a name="ln-463"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_source&quot;</span><span class="p">,</span> <span class="n">source</span> <span class="p">)</span>
+<a name="ln-464"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_revision&quot;</span><span class="p">,</span> <span class="n">revision</span> <span class="p">)</span>
+<a name="ln-465"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_revdate&quot;</span><span class="p">,</span> <span class="n">revdate</span> <span class="p">)</span>
+<a name="ln-466"></a>
+<a name="ln-467"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;9var&quot;</span><span class="p">)</span>
+<a name="ln-468"></a>
+<a name="ln-469"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_g&quot;</span><span class="p">,</span> <span class="n">g</span> <span class="p">)</span>
+<a name="ln-470"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_deltat&quot;</span><span class="p">,</span> <span class="n">deltat</span> <span class="p">)</span>
+<a name="ln-471"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_a&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="p">)</span>
+<a name="ln-472"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_b&quot;</span><span class="p">,</span> <span class="n">b</span> <span class="p">)</span>
+<a name="ln-473"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_f&quot;</span><span class="p">,</span> <span class="n">f</span> <span class="p">)</span>
+<a name="ln-474"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_h&quot;</span><span class="p">,</span> <span class="n">h</span> <span class="p">)</span>
+<a name="ln-475"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_nu&quot;</span><span class="p">,</span> <span class="n">nu</span> <span class="p">)</span>
+<a name="ln-476"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_kappa&quot;</span><span class="p">,</span> <span class="n">kappa</span> <span class="p">)</span>
+<a name="ln-477"></a><span class="k">call </span><span class="n">nc_add_global_attribute</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;model_c&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="p">)</span>
+<a name="ln-478"></a>
+<a name="ln-479"></a><span class="k">call </span><span class="n">nc_write_location_atts</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">msize</span><span class="p">)</span>
+<a name="ln-480"></a><span class="k">call </span><span class="n">nc_end_define_mode</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-481"></a><span class="k">call </span><span class="n">nc_write_location</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">state_loc</span><span class="p">,</span> <span class="n">msize</span><span class="p">)</span>
+<a name="ln-482"></a>
+<a name="ln-483"></a><span class="k">end subroutine </span><span class="n">nc_write_model_atts</span>
+<a name="ln-484"></a>
+<a name="ln-485"></a><span class="c">!--------------------------------------------------------------------</span>
+<a name="ln-486"></a>
+<a name="ln-487"></a><span class="c">!===================================================================</span>
+<a name="ln-488"></a><span class="c">! End of 9var model_mod </span>
+<a name="ln-489"></a><span class="c">!===================================================================</span>
+<a name="ln-490"></a><span class="k">end module </span><span class="n">model_mod</span>
+<a name="ln-491"></a>
+<a name="ln-492"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-493"></a><span class="c">! $URL$</span>
+<a name="ln-494"></a><span class="c">! $Id$</span>
+<a name="ln-495"></a><span class="c">! $Revision$</span>
+<a name="ln-496"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

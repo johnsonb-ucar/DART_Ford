@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>snow_to_obs_netcdf &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>snow_to_obs_netcdf
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for programs.">121 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/snow_to_obs_netcdf.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/snow_to_obs_netcdf.f90.html'>snow_to_obs_netcdf.f90</a></li>
+    
+  
+     <li class="active">snow_to_obs_netcdf</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs_out_file%7E14">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-n%7E31">n</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-i%7E134">i</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-j%7E95">j</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-oday%7E29">oday</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-osec%7E29">osec</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-rcio%7E14">rcio</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-iunit%7E134">iunit</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-otype%7E7">otype</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-io%7E98">io</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-num_copies%7E61">num_copies</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-num_qc%7E56">num_qc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-max_obs%7E21">max_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-iacc%7E3">iacc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-ialo%7E3">ialo</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-ncid%7E151">ncid</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-varid%7E11">varid</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-along%7E2">along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-across%7E2">across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-coarse_along">coarse_along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-coarse_across">coarse_across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-per_along">per_along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-per_across">per_across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-along_base%7E3">along_base</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-across_base%7E3">across_base</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-qc_array%7E3">qc_array</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-snowcover_type">snowcover_type</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-sn_byte">sn_byte</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-varname%7E53">varname</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-file_exist%7E23">file_exist</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-first_obs%7E36">first_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-temp%7E18">temp</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-terr%7E11">terr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-qc%7E45">qc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-wdir%7E7">wdir</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-wspeed%7E4">wspeed</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-werr%7E4">werr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-vert%7E10">vert</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-uwnd%7E7">uwnd</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-uerr%7E4">uerr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-vwnd%7E7">vwnd</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-verr%7E4">verr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-dlon%7E6">dlon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-dlat%7E7">dlat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-thislon%7E3">thislon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-thislat%7E3">thislat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-lat%7E109">lat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-lon%7E111">lon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-fsnowcover">fsnowcover</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs_seq%7E36">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs%7E94">obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-prev_obs%7E44">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-comp_day0%7E7">comp_day0</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-time_obs%7E27">time_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-prev_time%7E38">prev_time</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-year%7E50">year</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-doy%7E6">doy</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-snow_input_file">snow_input_file</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-debug%7E50">debug</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/netcdf_utilities_mod.html'>netcdf_utilities_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li>netcdf</li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>all obs in a single file are the same time.
+ check the lat/lon values to see if they are ok</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs_out_file%7E14">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-n%7E31">n</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-i%7E134">i</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-j%7E95">j</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-oday%7E29">oday</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-osec%7E29">osec</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-rcio%7E14">rcio</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-iunit%7E134">iunit</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-otype%7E7">otype</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-io%7E98">io</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-num_copies%7E61">num_copies</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-num_qc%7E56">num_qc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-max_obs%7E21">max_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-iacc%7E3">iacc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-ialo%7E3">ialo</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-ncid%7E151">ncid</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-varid%7E11">varid</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-along%7E2">along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-across%7E2">across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-coarse_along">coarse_along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-coarse_across">coarse_across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-per_along">per_along</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-per_across">per_across</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-along_base%7E3">along_base</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-across_base%7E3">across_base</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-qc_array%7E3">qc_array</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-snowcover_type">snowcover_type</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-sn_byte">sn_byte</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-varname%7E53">varname</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-file_exist%7E23">file_exist</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-first_obs%7E36">first_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-temp%7E18">temp</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-terr%7E11">terr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-qc%7E45">qc</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-wdir%7E7">wdir</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-wspeed%7E4">wspeed</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-werr%7E4">werr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-vert%7E10">vert</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-uwnd%7E7">uwnd</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-uerr%7E4">uerr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-vwnd%7E7">vwnd</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-verr%7E4">verr</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-dlon%7E6">dlon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-dlat%7E7">dlat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-thislon%7E3">thislon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-thislat%7E3">thislat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-lat%7E109">lat</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-lon%7E111">lon</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-fsnowcover">fsnowcover</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs_seq%7E36">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-obs%7E94">obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-prev_obs%7E44">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-comp_day0%7E7">comp_day0</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-time_obs%7E27">time_obs</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-prev_time%7E38">prev_time</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-year%7E50">year</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-doy%7E6">doy</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-snow_input_file">snow_input_file</a>
+      
+      <a class="list-group-item" href="../program/snow_to_obs_netcdf.html#variable-debug%7E50">debug</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_out_file%7E14"></span>character(len=64),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>obs_out_file</strong></td><td> =</td><td>'obs_seq.out'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E31"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E134"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E95"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E29"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E29"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rcio%7E14"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rcio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E134"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-otype%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>otype</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E98"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E61"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E56"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_obs%7E21"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iacc%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iacc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ialo%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ialo</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid%7E151"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-varid%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>varid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-along%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>along</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-across%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>across</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-coarse_along"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>coarse_along</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-coarse_across"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>coarse_across</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-per_along"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>per_along</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-per_across"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>per_across</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-along_base%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>along_base</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-across_base%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>across_base</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc_array%7E3"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>qc_array</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-snowcover_type"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>snowcover_type</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sn_byte"></span>integer(kind=1),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>sn_byte</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-varname%7E53"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_exist%7E23"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_exist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E36"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-temp%7E18"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>temp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-terr%7E11"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>terr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E45"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wdir%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wdir</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wspeed%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wspeed</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-werr%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>werr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vert%7E10"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>vert</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-uwnd%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>uwnd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-uerr%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>uerr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vwnd%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>vwnd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-verr%7E4"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>verr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dlon%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dlon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dlat%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dlat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thislon%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>thislon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thislat%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>thislat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat%7E109"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lat</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon%7E111"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lon</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fsnowcover"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>fsnowcover</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E36"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E94"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E44"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comp_day0%7E7"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>comp_day0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_obs%7E27"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E38"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-year%7E50"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>year</strong></td><td> =</td><td>2000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-doy%7E6"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>doy</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-snow_input_file"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>snow_input_file</strong></td><td> =</td><td>'snowdata.input'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E50"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

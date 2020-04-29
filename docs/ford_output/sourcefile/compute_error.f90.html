@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>compute_error.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>compute_error.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.2% of total for source files.">334 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/compute_error.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">compute_error.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/compute_error.html">compute_error</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/compute_error.f90.html#src">compute_error.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/compute_error.html">compute_error</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/compute_error.f90.html#src">compute_error.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="c">!&gt; Program to read true_state.nc and preassim.nc (or analysis.nc)</span>
+<a name="ln-8"></a><span class="c">!&gt; and print out the time-mean total error and spread.  The matlab macros </span>
+<a name="ln-9"></a><span class="c">!&gt; do this with graphics, but if you want numerical output suitable for </span>
+<a name="ln-10"></a><span class="c">!&gt; shell scripting/automation this should be easier to incorporate.</span>
+<a name="ln-11"></a><span class="c">!&gt; </span>
+<a name="ln-12"></a><span class="c">!&gt; Unlike the Matlab routine, this program treats every value in the state</span>
+<a name="ln-13"></a><span class="c">!&gt; vector the same.  There is no distinction between variables of different</span>
+<a name="ln-14"></a><span class="c">!&gt; types (and possibly magnitudes), no weighting by area or volume based on</span>
+<a name="ln-15"></a><span class="c">!&gt; the underlying grid, and no computing values by model level.</span>
+<a name="ln-16"></a><span class="c">!&gt;</span>
+<a name="ln-17"></a><span class="c">!&gt; The output includes other text; to collect just the error and spread lines</span>
+<a name="ln-18"></a><span class="c">!&gt; grep standard output for &#39;Total&#39;.  This program also uses the standard</span>
+<a name="ln-19"></a><span class="c">!&gt; DART utility routines that log both the output in dart_log.out and optionally</span>
+<a name="ln-20"></a><span class="c">!&gt; the namelist values in dart_log.nml.  If you are running this in a script</span>
+<a name="ln-21"></a><span class="c">!&gt; or repeatedly in a loop, you may want to delete or truncate those files</span>
+<a name="ln-22"></a><span class="c">!&gt; periodically.</span>
+<a name="ln-23"></a><span class="c">!&gt;</span>
+<a name="ln-24"></a><span class="c">!&gt; This program does compute any weighted errors.</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a><span class="k">program </span><span class="n">compute_error</span>
+<a name="ln-27"></a>
+<a name="ln-28"></a><span class="k">use </span><span class="n">types_mod</span><span class="p">,</span>     <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">metadatalength</span>
+<a name="ln-29"></a>
+<a name="ln-30"></a><span class="k">use </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">initialize_utilities</span><span class="p">,</span> <span class="n">register_module</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-31"></a>                          <span class="n">error_handler</span><span class="p">,</span> <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-32"></a>                          <span class="n">find_namelist_in_file</span><span class="p">,</span> <span class="n">nc_check</span><span class="p">,</span>           <span class="p">&amp;</span>
+<a name="ln-33"></a>                          <span class="n">check_namelist_read</span><span class="p">,</span> <span class="n">finalize_utilities</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-34"></a>                          <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span>
+<a name="ln-35"></a>                                
+<a name="ln-36"></a><span class="k">use </span><span class="n">netcdf</span>
+<a name="ln-37"></a>
+<a name="ln-38"></a><span class="k">implicit none</span>
+<a name="ln-39"></a>
+<a name="ln-40"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-41"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span> <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-42"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-43"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-44"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-45"></a>
+<a name="ln-46"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span> <span class="o">=</span> <span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">message1</span><span class="p">,</span> <span class="n">message2</span>
+<a name="ln-47"></a>
+<a name="ln-48"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">model_size</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">ierr</span>
+<a name="ln-49"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ntimes</span><span class="p">,</span> <span class="n">skip_start</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span>
+<a name="ln-50"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">true_copy</span><span class="p">,</span> <span class="n">ens_mean_copy</span><span class="p">,</span> <span class="n">ens_spread_copy</span>
+<a name="ln-51"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">VarID</span>
+<a name="ln-52"></a>
+<a name="ln-53"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">truth</span><span class="p">(:,:),</span> <span class="n">ens_mean</span><span class="p">(:,:),</span> <span class="n">ens_spread</span><span class="p">(:,:),</span> <span class="n">zeros</span><span class="p">(:,:)</span>
+<a name="ln-54"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">err_array</span><span class="p">(:),</span> <span class="n">spread_array</span><span class="p">(:)</span>
+<a name="ln-55"></a>
+<a name="ln-56"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">total_error</span><span class="p">,</span> <span class="n">total_spread</span>
+<a name="ln-57"></a>
+<a name="ln-58"></a><span class="k">type </span><span class="n">fileinfo</span>
+<a name="ln-59"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ncid</span>
+<a name="ln-60"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">numcopies</span>
+<a name="ln-61"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">model_size</span>
+<a name="ln-62"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">metadatacount</span>
+<a name="ln-63"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ntimes</span>
+<a name="ln-64"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">sindex</span>
+<a name="ln-65"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">eindex</span>
+<a name="ln-66"></a>  <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">timevals</span><span class="p">(:)</span>
+<a name="ln-67"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">metadatalength</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">metadata</span><span class="p">(:)</span>
+<a name="ln-68"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fname</span>
+<a name="ln-69"></a><span class="k">end type </span><span class="n">fileinfo</span>
+<a name="ln-70"></a>
+<a name="ln-71"></a><span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span><span class="p">,</span> <span class="n">d</span>
+<a name="ln-72"></a>
+<a name="ln-73"></a>
+<a name="ln-74"></a><span class="c">! Namelist variables</span>
+<a name="ln-75"></a>
+<a name="ln-76"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">diag_file_name</span>  <span class="o">=</span> <span class="s1">&#39;preassim.nc&#39;</span>
+<a name="ln-77"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">truth_file_name</span> <span class="o">=</span> <span class="s1">&#39;true_state.nc&#39;</span>
+<a name="ln-78"></a><span class="kt">integer</span>            <span class="kd">::</span> <span class="n">skip_first_ntimes</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-79"></a>
+<a name="ln-80"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">compute_error_nml</span><span class="o">/</span>  <span class="p">&amp;</span>
+<a name="ln-81"></a>   <span class="n">diag_file_name</span><span class="p">,</span>            <span class="p">&amp;</span>
+<a name="ln-82"></a>   <span class="n">truth_file_name</span><span class="p">,</span>           <span class="p">&amp;</span>
+<a name="ln-83"></a>   <span class="n">skip_first_ntimes</span>
+<a name="ln-84"></a>
+<a name="ln-85"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-86"></a><span class="c">! start of executable code</span>
+<a name="ln-87"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-88"></a>
+<a name="ln-89"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">(</span><span class="s1">&#39;compute_error&#39;</span><span class="p">)</span>
+<a name="ln-90"></a>
+<a name="ln-91"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="n">revision</span><span class="p">,</span><span class="n">revdate</span><span class="p">)</span>
+<a name="ln-92"></a>
+<a name="ln-93"></a><span class="c">! Read the namelist entry and print it</span>
+<a name="ln-94"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;compute_error_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-95"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">compute_error_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-96"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;compute_error_nml&quot;</span><span class="p">)</span>
+<a name="ln-97"></a>
+<a name="ln-98"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">compute_error_nml</span><span class="p">)</span>
+<a name="ln-99"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">compute_error_nml</span><span class="p">)</span>
+<a name="ln-100"></a>
+<a name="ln-101"></a><span class="c">! record names for error messages, mostly.</span>
+<a name="ln-102"></a><span class="n">t</span><span class="p">%</span><span class="n">fname</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="n">truth_file_name</span><span class="p">)</span>
+<a name="ln-103"></a><span class="n">d</span><span class="p">%</span><span class="n">fname</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="n">diag_file_name</span><span class="p">)</span>
+<a name="ln-104"></a>
+<a name="ln-105"></a><span class="c">! open truth, diag file</span>
+<a name="ln-106"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_open</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">truth_file_name</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="n">nf90_nowrite</span><span class="p">,</span> <span class="n">ncid</span><span class="o">=</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-107"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;opening truth file&#39;</span><span class="p">)</span>
+<a name="ln-108"></a>
+<a name="ln-109"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_open</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">diag_file_name</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="n">nf90_nowrite</span><span class="p">,</span> <span class="n">ncid</span><span class="o">=</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-110"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;opening diagnostic file&#39;</span><span class="p">)</span>
+<a name="ln-111"></a>
+<a name="ln-112"></a>
+<a name="ln-113"></a><span class="c">! collect the dimension ids and lengths we are going to use from the truth file:  </span>
+<a name="ln-114"></a><span class="c">!   copy, metadatalength, time and StateVariable.</span>
+<a name="ln-115"></a>
+<a name="ln-116"></a><span class="k">call </span><span class="n">findlengths</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a name="ln-117"></a><span class="k">call </span><span class="n">findlengths</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<a name="ln-118"></a>
+<a name="ln-119"></a><span class="k">if</span> <span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-120"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;file &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">fname</span><span class="p">)</span>
+<a name="ln-121"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;time dimension must have at least 1 value&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-122"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message1</span><span class="p">)</span>
+<a name="ln-123"></a><span class="n">endif</span>
+<a name="ln-124"></a><span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-125"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;file &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">fname</span><span class="p">)</span>
+<a name="ln-126"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;time dimension must have at least 1 value&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-127"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message1</span><span class="p">)</span>
+<a name="ln-128"></a><span class="n">endif</span>
+<a name="ln-129"></a>
+<a name="ln-130"></a><span class="k">call </span><span class="n">confirm_modelsizes_match</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<a name="ln-131"></a>
+<a name="ln-132"></a><span class="c">! allocate space for data we are going to read, except for &#39;truth&#39;.</span>
+<a name="ln-133"></a>
+<a name="ln-134"></a><span class="k">allocate</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">metadata</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">numcopies</span><span class="p">),</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ntimes</span><span class="p">))</span>
+<a name="ln-135"></a><span class="k">allocate</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">metadata</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">numcopies</span><span class="p">),</span> <span class="n">d</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ntimes</span><span class="p">))</span>
+<a name="ln-136"></a>
+<a name="ln-137"></a><span class="k">call </span><span class="n">getchardata_nc</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;CopyMetaData&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">metadata</span><span class="p">)</span>
+<a name="ln-138"></a><span class="k">call </span><span class="n">getchardata_nc</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;CopyMetaData&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">metadata</span><span class="p">)</span>
+<a name="ln-139"></a>
+<a name="ln-140"></a><span class="k">call </span><span class="n">getrealdata1d_nc</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">)</span>
+<a name="ln-141"></a><span class="k">call </span><span class="n">getrealdata1d_nc</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">timevals</span><span class="p">)</span>
+<a name="ln-142"></a>
+<a name="ln-143"></a><span class="k">call </span><span class="n">findtimesubset</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">)</span>
+<a name="ln-144"></a><span class="n">model_size</span> <span class="o">=</span> <span class="n">t</span><span class="p">%</span><span class="n">model_size</span>
+<a name="ln-145"></a>
+<a name="ln-146"></a><span class="c">! allocate space for data now that we know the time overlap.</span>
+<a name="ln-147"></a><span class="k">allocate</span><span class="p">(</span><span class="n">truth</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">))</span>
+<a name="ln-148"></a><span class="k">allocate</span><span class="p">(</span><span class="n">ens_mean</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">),</span> <span class="n">ens_spread</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">))</span>
+<a name="ln-149"></a><span class="k">allocate</span><span class="p">(</span><span class="n">zeros</span><span class="p">(</span><span class="n">model_size</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">),</span> <span class="n">err_array</span><span class="p">(</span><span class="n">ntimes</span><span class="p">),</span> <span class="n">spread_array</span><span class="p">(</span><span class="n">ntimes</span><span class="p">))</span>
+<a name="ln-150"></a>
+<a name="ln-151"></a><span class="c">! findcopyindex() dies with an error if the copy name is not found.</span>
+<a name="ln-152"></a><span class="k">call </span><span class="n">findcopyindex</span><span class="p">(</span><span class="s1">&#39;CopyMetaData&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">metadata</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">numcopies</span><span class="p">,</span> <span class="s1">&#39;true state&#39;</span><span class="p">,</span>      <span class="n">t</span><span class="p">%</span><span class="n">fname</span><span class="p">,</span> <span class="n">true_copy</span><span class="p">)</span>
+<a name="ln-153"></a><span class="k">call </span><span class="n">findcopyindex</span><span class="p">(</span><span class="s1">&#39;CopyMetaData&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">metadata</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">numcopies</span><span class="p">,</span> <span class="s1">&#39;ensemble mean&#39;</span><span class="p">,</span>   <span class="n">d</span><span class="p">%</span><span class="n">fname</span><span class="p">,</span> <span class="n">ens_mean_copy</span><span class="p">)</span>
+<a name="ln-154"></a><span class="k">call </span><span class="n">findcopyindex</span><span class="p">(</span><span class="s1">&#39;CopyMetaData&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">metadata</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">numcopies</span><span class="p">,</span> <span class="s1">&#39;ensemble spread&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">fname</span><span class="p">,</span> <span class="n">ens_spread_copy</span><span class="p">)</span>
+<a name="ln-155"></a>
+<a name="ln-156"></a>
+<a name="ln-157"></a><span class="c">! get the data - truth, mean, spread - needed for the error calculation</span>
+<a name="ln-158"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">,</span> <span class="n">VarID</span><span class="p">)</span>
+<a name="ln-159"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid state&#39;</span><span class="p">)</span>
+<a name="ln-160"></a>
+<a name="ln-161"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">VarID</span><span class="p">,</span> <span class="n">truth</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-162"></a>                    <span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="mi">1</span><span class="p">,</span> <span class="n">true_copy</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">sindex</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-163"></a>                    <span class="nb">count</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="n">model_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">/</span><span class="p">))</span>
+<a name="ln-164"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var true state&#39;</span><span class="p">)</span>
+<a name="ln-165"></a>
+<a name="ln-166"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">,</span> <span class="n">VarID</span><span class="p">)</span>
+<a name="ln-167"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid state&#39;</span><span class="p">)</span>
+<a name="ln-168"></a>
+<a name="ln-169"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">VarID</span><span class="p">,</span> <span class="n">ens_mean</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-170"></a>                    <span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ens_mean_copy</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">sindex</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-171"></a>                    <span class="nb">count</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="n">model_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">/</span><span class="p">))</span>
+<a name="ln-172"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var state mean&#39;</span><span class="p">)</span>
+<a name="ln-173"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">VarID</span><span class="p">,</span> <span class="n">ens_spread</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-174"></a>                    <span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ens_spread_copy</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">sindex</span> <span class="o">/</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-175"></a>                    <span class="nb">count</span><span class="o">=</span><span class="p">(</span><span class="o">/</span> <span class="n">model_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">/</span><span class="p">))</span>
+<a name="ln-176"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var state spread&#39;</span><span class="p">)</span>
+<a name="ln-177"></a>
+<a name="ln-178"></a>
+<a name="ln-179"></a><span class="c">! compute the error.  array is &#39;ntimes&#39; long, each entry should be</span>
+<a name="ln-180"></a><span class="c">!  sqrt of sum of (truth - diag) squared.</span>
+<a name="ln-181"></a><span class="c">!  truth for spread is 0</span>
+<a name="ln-182"></a><span class="c">! then avg error value is err array / ntimes</span>
+<a name="ln-183"></a><span class="c">!</span>
+<a name="ln-184"></a><span class="c">! weighted error would be:  sqrt of sum of ((truth - diag)^2 * weights)</span>
+<a name="ln-185"></a><span class="c">! this codes does not do weights.</span>
+<a name="ln-186"></a>
+<a name="ln-187"></a><span class="n">zeros</span><span class="p">(:,:)</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-188"></a>
+<a name="ln-189"></a><span class="k">call </span><span class="n">find_error</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">ens_mean</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="n">total_error</span><span class="p">)</span>
+<a name="ln-190"></a><span class="k">call </span><span class="n">find_error</span><span class="p">(</span><span class="n">zeros</span><span class="p">,</span> <span class="n">ens_spread</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">,</span> <span class="n">total_spread</span><span class="p">)</span>
+<a name="ln-191"></a>
+<a name="ln-192"></a><span class="c">! output</span>
+<a name="ln-193"></a>
+<a name="ln-194"></a><span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="s1">&#39;Time-mean Ensemble Total  Error: &#39;</span><span class="p">,</span> <span class="n">total_error</span><span class="p">,</span>  <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-195"></a>              <span class="s1">&#39;Time-mean Ensemble Total Spread: &#39;</span><span class="p">,</span> <span class="n">total_spread</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0_r8</span><span class="p">)</span>
+<a name="ln-196"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a name="ln-197"></a>
+<a name="ln-198"></a><span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="s1">&#39;First  Error Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">err_array</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>    <span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-199"></a>              <span class="s1">&#39;First Spread Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="p">))</span>
+<a name="ln-200"></a>
+<a name="ln-201"></a><span class="n">i1</span> <span class="o">=</span> <span class="nb">minloc</span><span class="p">(</span><span class="n">err_array</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-202"></a><span class="n">i2</span> <span class="o">=</span> <span class="nb">minloc</span><span class="p">(</span><span class="n">spread_array</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-203"></a><span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="s1">&#39;Min    Error Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">err_array</span><span class="p">(</span><span class="n">i1</span><span class="p">),</span>    <span class="n">i1</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="o">+</span><span class="n">i1</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-204"></a>              <span class="s1">&#39;Min   Spread Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="n">i2</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="o">+</span><span class="n">i2</span><span class="p">))</span>
+<a name="ln-205"></a>
+<a name="ln-206"></a><span class="n">i1</span> <span class="o">=</span> <span class="nb">maxloc</span><span class="p">(</span><span class="n">err_array</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-207"></a><span class="n">i2</span> <span class="o">=</span> <span class="nb">maxloc</span><span class="p">(</span><span class="n">spread_array</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-208"></a><span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="s1">&#39;Max    Error Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">err_array</span><span class="p">(</span><span class="n">i1</span><span class="p">),</span>    <span class="n">i1</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="o">+</span><span class="n">i1</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-209"></a>              <span class="s1">&#39;Max   Spread Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">(</span><span class="n">i1</span><span class="p">),</span> <span class="n">i2</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">sindex</span><span class="o">+</span><span class="n">i2</span><span class="p">))</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a><span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="s1">&#39;Last   Error Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">err_array</span><span class="p">(</span><span class="n">ntimes</span><span class="p">),</span>    <span class="n">ntimes</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">eindex</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-212"></a>              <span class="s1">&#39;Last  Spread Value, Time Index/Value: &#39;</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">(</span><span class="n">ntimes</span><span class="p">),</span> <span class="n">ntimes</span><span class="p">,</span> <span class="n">t</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">eindex</span><span class="p">))</span>
+<a name="ln-213"></a>
+<a name="ln-214"></a><span class="c">! if the namelist &#39;skip_first_ntimes&#39; is greater than 0, compute error again</span>
+<a name="ln-215"></a><span class="c">! without those values.  intended use is to skip spinup spikes in error values.</span>
+<a name="ln-216"></a>
+<a name="ln-217"></a><span class="k">if</span> <span class="p">(</span><span class="n">skip_first_ntimes</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">ntimes</span> <span class="o">&gt;</span> <span class="n">skip_first_ntimes</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-218"></a><span class="k">   </span><span class="n">skip_start</span> <span class="o">=</span> <span class="n">skip_first_ntimes</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-219"></a>   <span class="k">call </span><span class="n">find_error</span><span class="p">(</span><span class="n">truth</span><span class="p">(:,</span> <span class="n">skip_start</span><span class="p">:</span><span class="n">ntimes</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-220"></a>                   <span class="n">ens_mean</span><span class="p">(:,</span> <span class="n">skip_start</span><span class="p">:</span><span class="n">ntimes</span><span class="p">),</span> <span class="n">err_array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ntimes</span><span class="o">-</span><span class="n">skip_start</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">total_error</span><span class="p">)</span>
+<a name="ln-221"></a>   <span class="k">call </span><span class="n">find_error</span><span class="p">(</span><span class="n">zeros</span><span class="p">(:,</span> <span class="n">skip_start</span><span class="p">:</span><span class="n">ntimes</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-222"></a>                   <span class="n">ens_spread</span><span class="p">(:,</span> <span class="n">skip_start</span><span class="p">:</span><span class="n">ntimes</span><span class="p">),</span> <span class="n">spread_array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">ntimes</span><span class="o">-</span><span class="n">skip_start</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">total_spread</span><span class="p">)</span>
+<a name="ln-223"></a>
+<a name="ln-224"></a>
+<a name="ln-225"></a>   <span class="n">message1</span> <span class="o">=</span> <span class="n">construct_msg_string</span><span class="p">(</span><span class="s2">&quot;Skip First&quot;</span><span class="p">,</span> <span class="n">skip_first_ntimes</span><span class="p">,</span> <span class="s2">&quot;Times,&quot;</span><span class="p">)</span>
+<a name="ln-226"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a name="ln-227"></a>   <span class="k">call </span><span class="n">printout</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; Mean  Error: &#39;</span><span class="p">,</span> <span class="n">total_error</span><span class="p">,</span>  <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-228"></a>                 <span class="nb">trim</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; Mean Spread: &#39;</span><span class="p">,</span> <span class="n">total_spread</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0_r8</span><span class="p">)</span>
+<a name="ln-229"></a><span class="n">endif</span>
+<a name="ln-230"></a>
+<a name="ln-231"></a><span class="c">! FIXME: make an error handler call that just prints a blank line?  or error_handler(E_BLANK)</span>
+<a name="ln-232"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a name="ln-233"></a>
+<a name="ln-234"></a><span class="c">! clean up</span>
+<a name="ln-235"></a>
+<a name="ln-236"></a><span class="k">deallocate</span><span class="p">(</span><span class="n">truth</span><span class="p">)</span>
+<a name="ln-237"></a><span class="k">deallocate</span><span class="p">(</span><span class="n">ens_mean</span><span class="p">,</span> <span class="n">ens_spread</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="n">spread_array</span><span class="p">)</span>
+<a name="ln-238"></a>
+<a name="ln-239"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_close</span><span class="p">(</span><span class="n">t</span><span class="p">%</span><span class="n">ncid</span><span class="p">)</span>
+<a name="ln-240"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;nc_close truth&#39;</span><span class="p">)</span>
+<a name="ln-241"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_close</span><span class="p">(</span><span class="n">d</span><span class="p">%</span><span class="n">ncid</span><span class="p">)</span> 
+<a name="ln-242"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;compute_error&#39;</span><span class="p">,</span> <span class="s1">&#39;nc_close diag&#39;</span><span class="p">)</span>
+<a name="ln-243"></a>
+<a name="ln-244"></a>
+<a name="ln-245"></a><span class="k">call </span><span class="n">finalize_utilities</span><span class="p">(</span><span class="s1">&#39;compute_error&#39;</span><span class="p">)</span>
+<a name="ln-246"></a>
+<a name="ln-247"></a><span class="k">contains</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a><span class="c">!---------------------------------------------------</span>
+<a name="ln-250"></a>
+<a name="ln-251"></a><span class="c">! the routine that computes the time-series error array,</span>
+<a name="ln-252"></a><span class="c">! plus returning the mean of that array.</span>
+<a name="ln-253"></a>
+<a name="ln-254"></a><span class="k">subroutine </span><span class="n">find_error</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">diag</span><span class="p">,</span> <span class="n">err_array</span><span class="p">,</span> <span class="n">total_err</span><span class="p">)</span>
+<a name="ln-255"></a>
+<a name="ln-256"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">truth</span><span class="p">(:,:)</span>
+<a name="ln-257"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">diag</span><span class="p">(:,:)</span>
+<a name="ln-258"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">err_array</span><span class="p">(:)</span>
+<a name="ln-259"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">total_err</span>
+<a name="ln-260"></a>
+<a name="ln-261"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">model_size</span><span class="p">,</span> <span class="n">num_times</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
+<a name="ln-262"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">sumsq</span><span class="p">(:)</span>
+<a name="ln-263"></a> 
+<a name="ln-264"></a><span class="n">model_size</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-265"></a><span class="n">num_times</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-266"></a>
+<a name="ln-267"></a><span class="c">!FIXME: are missing values in the truth or state possible?</span>
+<a name="ln-268"></a><span class="c">! check pop or clm to test this.</span>
+<a name="ln-269"></a>
+<a name="ln-270"></a><span class="k">allocate</span><span class="p">(</span><span class="n">sumsq</span><span class="p">(</span><span class="n">num_times</span><span class="p">))</span>
+<a name="ln-271"></a>
+<a name="ln-272"></a><span class="c">! in matlab:</span>
+<a name="ln-273"></a><span class="c">!   err = sqrt( sum( (pred - verif).^2, 2) );</span>
+<a name="ln-274"></a>
+<a name="ln-275"></a><span class="n">sumsq</span><span class="p">(:)</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-276"></a><span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_times</span>
+<a name="ln-277"></a>   <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">model_size</span>
+<a name="ln-278"></a>      <span class="n">sumsq</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">sumsq</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">truth</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="n">diag</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+<a name="ln-279"></a>   <span class="n">enddo</span>
+<a name="ln-280"></a><span class="n">enddo</span>
+<a name="ln-281"></a>
+<a name="ln-282"></a><span class="n">err_array</span><span class="p">(:)</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">sumsq</span><span class="p">)</span>
+<a name="ln-283"></a>
+<a name="ln-284"></a><span class="n">total_err</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">err_array</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_times</span>
+<a name="ln-285"></a>
+<a name="ln-286"></a><span class="k">deallocate</span><span class="p">(</span><span class="n">sumsq</span><span class="p">)</span>
+<a name="ln-287"></a>
+<a name="ln-288"></a><span class="k">end subroutine </span><span class="n">find_error</span>
+<a name="ln-289"></a>
+<a name="ln-290"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-291"></a>
+<a name="ln-292"></a><span class="c">! given an array of string names and a string to find, return which index</span>
+<a name="ln-293"></a><span class="c">! in that array it matches.  it is a fatal error to not find the given</span>
+<a name="ln-294"></a><span class="c">! string in the array.</span>
+<a name="ln-295"></a>
+<a name="ln-296"></a><span class="k">subroutine </span><span class="n">findcopyindex</span><span class="p">(</span><span class="n">copyarrayname</span><span class="p">,</span> <span class="n">copyarray</span><span class="p">,</span> <span class="n">copylen</span><span class="p">,</span> <span class="n">tofind</span><span class="p">,</span> <span class="n">infile</span><span class="p">,</span> <span class="n">foundindex</span><span class="p">)</span>
+<a name="ln-297"></a>
+<a name="ln-298"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">copyarrayname</span>
+<a name="ln-299"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">copyarray</span><span class="p">(:)</span>
+<a name="ln-300"></a><span class="kt">integer</span><span class="p">,</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">copylen</span>
+<a name="ln-301"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">tofind</span>
+<a name="ln-302"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">infile</span>
+<a name="ln-303"></a><span class="kt">integer</span><span class="p">,</span>          <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foundindex</span>
+<a name="ln-304"></a>
+<a name="ln-305"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span>
+<a name="ln-306"></a>
+<a name="ln-307"></a><span class="n">foundindex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-308"></a><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">copylen</span>
+<a name="ln-309"></a>   <span class="k">if</span> <span class="p">(</span><span class="nb">index</span><span class="p">(</span><span class="n">copyarray</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">tofind</span><span class="p">)</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-310"></a><span class="k">      </span><span class="n">foundindex</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-311"></a>      <span class="k">exit</span>
+<a name="ln-312"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-313"></a><span class="n">enddo</span>
+<a name="ln-314"></a>
+<a name="ln-315"></a><span class="k">if</span> <span class="p">(</span><span class="n">foundindex</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-316"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;does not contain a copy labeled &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">tofind</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-317"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message2</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;Use &quot;ncdump -v &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">copyarrayname</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot; to see existing copy names&#39;</span>
+<a name="ln-318"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;findcopyindex&#39;</span><span class="p">,</span> <span class="s1">&#39;error in file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-319"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message1</span><span class="p">,</span> <span class="n">text3</span><span class="o">=</span><span class="n">message2</span><span class="p">)</span>
+<a name="ln-320"></a><span class="n">endif</span>
+<a name="ln-321"></a>
+<a name="ln-322"></a><span class="k">end subroutine </span><span class="n">findcopyindex</span>
+<a name="ln-323"></a>
+<a name="ln-324"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-325"></a>
+<a name="ln-326"></a><span class="c">! find the dimension lengths for a set of hardcoded dimension names </span>
+<a name="ln-327"></a><span class="c">! that i know should be in a dart diagnostic file.  it&#39;s a fatal error</span>
+<a name="ln-328"></a><span class="c">! if any of these are missing.</span>
+<a name="ln-329"></a>
+<a name="ln-330"></a><span class="k">subroutine </span><span class="n">findlengths</span><span class="p">(</span><span class="n">this</span><span class="p">)</span>
+<a name="ln-331"></a> <span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this</span>
+<a name="ln-332"></a>
+<a name="ln-333"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span><span class="p">,</span> <span class="n">dimid</span>
+<a name="ln-334"></a>
+<a name="ln-335"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;copy&quot;</span><span class="p">,</span> <span class="n">dimid</span><span class="o">=</span><span class="n">dimid</span><span class="p">)</span>
+<a name="ln-336"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_dimid copy&#39;</span><span class="p">)</span>
+<a name="ln-337"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">dimid</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">this</span><span class="p">%</span><span class="n">numcopies</span><span class="p">)</span>
+<a name="ln-338"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inquire_dimension copy&#39;</span><span class="p">)</span>
+<a name="ln-339"></a>
+<a name="ln-340"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;metadatalength&quot;</span><span class="p">,</span> <span class="n">dimid</span><span class="o">=</span><span class="n">dimid</span><span class="p">)</span>
+<a name="ln-341"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_dimid metadatalength&#39;</span><span class="p">)</span>
+<a name="ln-342"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">dimid</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">this</span><span class="p">%</span><span class="n">metadatacount</span><span class="p">)</span>
+<a name="ln-343"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inquire_dimension metadatalength&#39;</span><span class="p">)</span>
+<a name="ln-344"></a>
+<a name="ln-345"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">dimid</span><span class="o">=</span><span class="n">dimid</span><span class="p">)</span>
+<a name="ln-346"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_dimid time&#39;</span><span class="p">)</span>
+<a name="ln-347"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">dimid</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">this</span><span class="p">%</span><span class="n">ntimes</span><span class="p">)</span>
+<a name="ln-348"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inquire_dimension time&#39;</span><span class="p">)</span>
+<a name="ln-349"></a>
+<a name="ln-350"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;StateVariable&quot;</span><span class="p">,</span> <span class="n">dimid</span><span class="o">=</span><span class="n">dimid</span><span class="p">)</span>
+<a name="ln-351"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_dimid StateVariable&#39;</span><span class="p">)</span>
+<a name="ln-352"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ncid</span><span class="p">,</span> <span class="n">dimid</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">this</span><span class="p">%</span><span class="n">model_size</span><span class="p">)</span>
+<a name="ln-353"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;findlengths&#39;</span><span class="p">,</span> <span class="s1">&#39;inquire_dimension statelen&#39;</span><span class="p">)</span>
+<a name="ln-354"></a>
+<a name="ln-355"></a><span class="k">end subroutine </span><span class="n">findlengths</span>
+<a name="ln-356"></a>
+<a name="ln-357"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-358"></a>
+<a name="ln-359"></a><span class="c">! make sure model sizes are the same between the two files.  we can deal</span>
+<a name="ln-360"></a><span class="c">! with different length time series (assuming the times overlap at least</span>
+<a name="ln-361"></a><span class="c">! some) but the model sizes have to match identically before we proceeed.</span>
+<a name="ln-362"></a>
+<a name="ln-363"></a><span class="k">subroutine </span><span class="n">confirm_modelsizes_match</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">that</span><span class="p">)</span>
+<a name="ln-364"></a>
+<a name="ln-365"></a><span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this</span>
+<a name="ln-366"></a><span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">that</span>
+<a name="ln-367"></a>
+<a name="ln-368"></a><span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">model_size</span> <span class="o">/=</span> <span class="n">that</span><span class="p">%</span><span class="n">model_size</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-369"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;model sizes must be identical in input files&#39;</span>
+<a name="ln-370"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message2</span><span class="p">,</span> <span class="s1">&#39;(A,I10)&#39;</span><span class="p">)</span> <span class="s1">&#39;sizes are &#39;</span><span class="p">,</span> <span class="n">this</span><span class="p">%</span><span class="n">model_size</span><span class="p">,</span> <span class="n">that</span><span class="p">%</span><span class="n">model_size</span>
+<a name="ln-371"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;confirm_modelsizes_match&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-372"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message2</span><span class="p">)</span>
+<a name="ln-373"></a><span class="n">endif</span>
+<a name="ln-374"></a>
+<a name="ln-375"></a><span class="k">end subroutine </span><span class="n">confirm_modelsizes_match</span>
+<a name="ln-376"></a>
+<a name="ln-377"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-378"></a>
+<a name="ln-379"></a><span class="c">! small cover routine to inquire and then return character data.</span>
+<a name="ln-380"></a>
+<a name="ln-381"></a><span class="k">subroutine </span><span class="n">getchardata_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">chardata</span><span class="p">)</span>
+<a name="ln-382"></a>
+<a name="ln-383"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ncid</span>
+<a name="ln-384"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">varname</span>
+<a name="ln-385"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">chardata</span><span class="p">(:)</span>
+<a name="ln-386"></a>
+<a name="ln-387"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span><span class="p">,</span> <span class="n">varid</span>
+<a name="ln-388"></a>
+<a name="ln-389"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">varname</span><span class="p">),</span> <span class="n">varid</span><span class="o">=</span><span class="n">varid</span><span class="p">)</span>
+<a name="ln-390"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getchardata_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid chardata&#39;</span><span class="p">)</span>
+<a name="ln-391"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">chardata</span><span class="p">)</span>
+<a name="ln-392"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getchardata_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var chardata&#39;</span><span class="p">)</span>
+<a name="ln-393"></a>
+<a name="ln-394"></a><span class="k">end subroutine </span><span class="n">getchardata_nc</span>
+<a name="ln-395"></a>
+<a name="ln-396"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-397"></a>
+<a name="ln-398"></a><span class="c">! small cover routine to inquire and then return a 1d integer array.</span>
+<a name="ln-399"></a>
+<a name="ln-400"></a><span class="k">subroutine </span><span class="n">getintdata1d_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">intdata</span><span class="p">)</span>
+<a name="ln-401"></a>
+<a name="ln-402"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ncid</span>
+<a name="ln-403"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">varname</span>
+<a name="ln-404"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">intdata</span><span class="p">(:)</span>
+<a name="ln-405"></a>
+<a name="ln-406"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span><span class="p">,</span> <span class="n">varid</span>
+<a name="ln-407"></a>
+<a name="ln-408"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">varid</span><span class="o">=</span><span class="n">varid</span><span class="p">)</span>
+<a name="ln-409"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getintdata_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid intdata&#39;</span><span class="p">)</span>
+<a name="ln-410"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">intdata</span><span class="p">)</span>
+<a name="ln-411"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getintdata_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var intdata&#39;</span><span class="p">)</span>
+<a name="ln-412"></a>
+<a name="ln-413"></a><span class="k">end subroutine </span><span class="n">getintdata1d_nc</span>
+<a name="ln-414"></a>
+<a name="ln-415"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-416"></a>
+<a name="ln-417"></a><span class="c">! small cover routine to inquire and then return a 1d real array.</span>
+<a name="ln-418"></a>
+<a name="ln-419"></a><span class="k">subroutine </span><span class="n">getrealdata1d_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">realdata</span><span class="p">)</span>
+<a name="ln-420"></a>
+<a name="ln-421"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ncid</span>
+<a name="ln-422"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">varname</span>
+<a name="ln-423"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">realdata</span><span class="p">(:)</span>
+<a name="ln-424"></a>
+<a name="ln-425"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span><span class="p">,</span> <span class="n">varid</span>
+<a name="ln-426"></a>
+<a name="ln-427"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">varid</span><span class="o">=</span><span class="n">varid</span><span class="p">)</span>
+<a name="ln-428"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getrealdata1d_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid realdata&#39;</span><span class="p">)</span>
+<a name="ln-429"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">realdata</span><span class="p">)</span>
+<a name="ln-430"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getrealdata1d_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var realdata&#39;</span><span class="p">)</span>
+<a name="ln-431"></a>
+<a name="ln-432"></a><span class="k">end subroutine </span><span class="n">getrealdata1d_nc</span>
+<a name="ln-433"></a>
+<a name="ln-434"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-435"></a>
+<a name="ln-436"></a><span class="c">! small cover routine to inquire and then return a 2d real array.</span>
+<a name="ln-437"></a>
+<a name="ln-438"></a><span class="k">subroutine </span><span class="n">getrealdata2d_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">realdata</span><span class="p">)</span>
+<a name="ln-439"></a>
+<a name="ln-440"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ncid</span>
+<a name="ln-441"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">varname</span>
+<a name="ln-442"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">realdata</span><span class="p">(:,:)</span>
+<a name="ln-443"></a>
+<a name="ln-444"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span><span class="p">,</span> <span class="n">varid</span>
+<a name="ln-445"></a>
+<a name="ln-446"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">varid</span><span class="o">=</span><span class="n">varid</span><span class="p">)</span>
+<a name="ln-447"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getrealdata2d_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;inq_varid realdata&#39;</span><span class="p">)</span>
+<a name="ln-448"></a><span class="n">ierr</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">varid</span><span class="p">,</span> <span class="n">realdata</span><span class="p">)</span>
+<a name="ln-449"></a><span class="k">call </span><span class="n">nc_check</span><span class="p">(</span><span class="n">ierr</span><span class="p">,</span> <span class="s1">&#39;getrealdata2d_nc&#39;</span><span class="p">,</span> <span class="s1">&#39;get_var realdata&#39;</span><span class="p">)</span>
+<a name="ln-450"></a>
+<a name="ln-451"></a><span class="k">end subroutine </span><span class="n">getrealdata2d_nc</span>
+<a name="ln-452"></a>
+<a name="ln-453"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-454"></a>
+<a name="ln-455"></a><span class="c">! sets ntimes to the number of time vals in the common time array,</span>
+<a name="ln-456"></a><span class="c">! and also sets sindex and eindex in both this and that to indicate</span>
+<a name="ln-457"></a><span class="c">! the exact times which are overlapped.</span>
+<a name="ln-458"></a>
+<a name="ln-459"></a><span class="k">subroutine </span><span class="n">findtimesubset</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">that</span><span class="p">,</span> <span class="n">ntimes</span><span class="p">)</span>
+<a name="ln-460"></a>
+<a name="ln-461"></a><span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this</span>
+<a name="ln-462"></a><span class="k">type</span><span class="p">(</span><span class="n">fileinfo</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">that</span>
+<a name="ln-463"></a><span class="kt">integer</span><span class="p">,</span>        <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">ntimes</span>
+<a name="ln-464"></a>
+<a name="ln-465"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
+<a name="ln-466"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">thistime</span>
+<a name="ln-467"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">timematch</span>
+<a name="ln-468"></a>
+<a name="ln-469"></a><span class="c">! set all the outputs here</span>
+<a name="ln-470"></a>
+<a name="ln-471"></a><span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-472"></a><span class="n">this</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-473"></a><span class="n">that</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-474"></a><span class="n">that</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-475"></a><span class="n">ntimes</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-476"></a>
+<a name="ln-477"></a><span class="c">!DEBUG print *, &#39;truth: &#39;, this%ntimes, this%timevals(1), this%timevals(this%ntimes)</span>
+<a name="ln-478"></a><span class="c">!DEBUG print *, &#39; diag: &#39;, that%ntimes, that%timevals(1), that%timevals(that%ntimes)</span>
+<a name="ln-479"></a>
+<a name="ln-480"></a><span class="c">! see if the common case is true: that both time arrays are the same</span>
+<a name="ln-481"></a><span class="c">! length and equal. if so, return happily.</span>
+<a name="ln-482"></a>
+<a name="ln-483"></a><span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">==</span> <span class="n">that</span><span class="p">%</span><span class="n">ntimes</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-484"></a><span class="k">   </span><span class="n">timematch</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-485"></a>   <span class="n">LOOP1</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span>
+<a name="ln-486"></a>      <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">&gt;</span> <span class="nb">epsilon</span><span class="p">(</span><span class="n">thistime</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-487"></a><span class="k">         </span><span class="n">timematch</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-488"></a>         <span class="k">exit </span><span class="n">LOOP1</span>
+<a name="ln-489"></a>      <span class="n">endif</span>
+<a name="ln-490"></a>   <span class="n">enddo</span> <span class="n">LOOP1</span>
+<a name="ln-491"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">timematch</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-492"></a><span class="k">      </span><span class="n">ntimes</span> <span class="o">=</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span>
+<a name="ln-493"></a>      <span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-494"></a>      <span class="n">that</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-495"></a>      <span class="n">this</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="n">ntimes</span>
+<a name="ln-496"></a>      <span class="n">that</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="n">ntimes</span>
+<a name="ln-497"></a>      <span class="k">return</span>
+<a name="ln-498"></a><span class="k">   </span><span class="n">endif</span> 
+<a name="ln-499"></a><span class="n">endif</span>
+<a name="ln-500"></a>
+<a name="ln-501"></a><span class="c">! see if another case is true - that these time lists are disjoint sets.</span>
+<a name="ln-502"></a>
+<a name="ln-503"></a><span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">that</span><span class="p">%</span><span class="n">ntimes</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-504"></a>   <span class="c">!DEBUG print *, this%timevals(1), that%timevals(that%ntimes), &#39; a &gt; b &#39;</span>
+<a name="ln-505"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;all times in the diag file are before times in the truth file&#39;</span>
+<a name="ln-506"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message2</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;no common times in the two input files&#39;</span>
+<a name="ln-507"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_lengths&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-508"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message2</span><span class="p">)</span>
+<a name="ln-509"></a><span class="n">endif</span>
+<a name="ln-510"></a>
+<a name="ln-511"></a><span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">ntimes</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-512"></a>   <span class="c">!DEBUG print *, this%timevals(this%ntimes), that%timevals(1), &#39; a &lt; b &#39;</span>
+<a name="ln-513"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;all times in the diag file are after times in the truth file&#39;</span>
+<a name="ln-514"></a>   <span class="k">write</span><span class="p">(</span><span class="n">message2</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;no common times in the two input files&#39;</span>
+<a name="ln-515"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_lengths&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-516"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message2</span><span class="p">)</span>
+<a name="ln-517"></a><span class="n">endif</span>
+<a name="ln-518"></a>
+<a name="ln-519"></a><span class="c">! find which one has the earliest time and loop over the other looking for</span>
+<a name="ln-520"></a><span class="c">! a match of the start time.</span>
+<a name="ln-521"></a>
+<a name="ln-522"></a><span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-523"></a>
+<a name="ln-524"></a><span class="k">   </span><span class="n">LOOP2</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span>
+<a name="ln-525"></a>      <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="nb">epsilon</span><span class="p">(</span><span class="n">thistime</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-526"></a><span class="k">         </span><span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-527"></a>         <span class="n">that</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-528"></a>         <span class="k">exit </span><span class="n">LOOP2</span> 
+<a name="ln-529"></a>      <span class="n">endif</span>
+<a name="ln-530"></a>   <span class="n">enddo</span> <span class="n">LOOP2</span>
+<a name="ln-531"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">goto </span><span class="mi">10</span>  <span class="c">! error</span>
+<a name="ln-532"></a>
+<a name="ln-533"></a><span class="k">else</span>
+<a name="ln-534"></a>
+<a name="ln-535"></a><span class="k">   </span><span class="n">LOOP3</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span>
+<a name="ln-536"></a>      <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="nb">epsilon</span><span class="p">(</span><span class="n">thistime</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-537"></a><span class="k">         </span><span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-538"></a>         <span class="n">that</span><span class="p">%</span><span class="n">sindex</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-539"></a>         <span class="k">exit </span><span class="n">LOOP3</span> 
+<a name="ln-540"></a>      <span class="n">endif</span>
+<a name="ln-541"></a>   <span class="n">enddo</span> <span class="n">LOOP3</span>
+<a name="ln-542"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">goto </span><span class="mi">10</span>  <span class="c">! error</span>
+<a name="ln-543"></a>
+<a name="ln-544"></a><span class="n">endif</span>
+<a name="ln-545"></a>
+<a name="ln-546"></a><span class="c">!DEBUG print *, &#39;set sindex ok, to vals&#39;, this%sindex, that%sindex</span>
+<a name="ln-547"></a>
+<a name="ln-548"></a><span class="c">! sindex is now set.  start from sindex and stop when</span>
+<a name="ln-549"></a><span class="c">! you run out of times or the values differ.</span>
+<a name="ln-550"></a>
+<a name="ln-551"></a><span class="n">i</span> <span class="o">=</span> <span class="n">this</span><span class="p">%</span><span class="n">sindex</span>
+<a name="ln-552"></a><span class="n">j</span> <span class="o">=</span> <span class="n">that</span><span class="p">%</span><span class="n">sindex</span>
+<a name="ln-553"></a><span class="n">LOOP4</span><span class="p">:</span> <span class="k">do</span> 
+<a name="ln-554"></a>   <span class="c">!DEBUG print *, i,j, this%timevals(i), that%timevals(j)</span>
+<a name="ln-555"></a>
+<a name="ln-556"></a>   <span class="c">! check to make sure the time intervals are the same in both files</span>
+<a name="ln-557"></a>   <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">this</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">that</span><span class="p">%</span><span class="n">timevals</span><span class="p">(</span><span class="n">j</span><span class="p">))</span> <span class="o">&gt;</span> <span class="nb">epsilon</span><span class="p">(</span><span class="n">thistime</span><span class="p">))</span> <span class="k">goto </span><span class="mi">10</span> <span class="c">! error</span>
+<a name="ln-558"></a>
+<a name="ln-559"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span><span class="p">)</span> <span class="k">exit </span><span class="n">LOOP4</span>
+<a name="ln-560"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="n">that</span><span class="p">%</span><span class="n">ntimes</span><span class="p">)</span> <span class="k">exit </span><span class="n">LOOP4</span>
+<a name="ln-561"></a>
+<a name="ln-562"></a>   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-563"></a>   <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-564"></a>
+<a name="ln-565"></a><span class="n">enddo</span> <span class="n">LOOP4</span>
+<a name="ln-566"></a>
+<a name="ln-567"></a><span class="n">this</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-568"></a><span class="n">that</span><span class="p">%</span><span class="n">eindex</span> <span class="o">=</span> <span class="n">j</span>
+<a name="ln-569"></a>
+<a name="ln-570"></a><span class="c">!DEBUG print *, &#39;set eindex ok, to vals&#39;, this%eindex, that%eindex</span>
+<a name="ln-571"></a>
+<a name="ln-572"></a><span class="n">this</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">=</span> <span class="n">this</span><span class="p">%</span><span class="n">eindex</span> <span class="o">-</span> <span class="n">this</span><span class="p">%</span><span class="n">sindex</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-573"></a><span class="n">that</span><span class="p">%</span><span class="n">ntimes</span> <span class="o">=</span> <span class="n">that</span><span class="p">%</span><span class="n">eindex</span> <span class="o">-</span> <span class="n">that</span><span class="p">%</span><span class="n">sindex</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-574"></a>
+<a name="ln-575"></a><span class="n">ntimes</span> <span class="o">=</span> <span class="n">this</span><span class="p">%</span><span class="n">ntimes</span>
+<a name="ln-576"></a><span class="c">!DEBUG print *, &#39;set ntimes to &#39;, ntimes</span>
+<a name="ln-577"></a><span class="k">return</span>
+<a name="ln-578"></a>
+<a name="ln-579"></a><span class="c">! you only get here via an error goto</span>
+<a name="ln-580"></a>
+<a name="ln-581"></a><span class="mi">10</span> <span class="k">continue</span>
+<a name="ln-582"></a>
+<a name="ln-583"></a><span class="k">write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;there is an overlapping time period, but the exact times do not match&#39;</span>
+<a name="ln-584"></a><span class="k">write</span><span class="p">(</span><span class="n">message2</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="s1">&#39;mismatched times between the two input files&#39;</span>
+<a name="ln-585"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;compare_lengths&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-586"></a>                   <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="n">text2</span><span class="o">=</span><span class="n">message2</span><span class="p">)</span>
+<a name="ln-587"></a>
+<a name="ln-588"></a><span class="k">end subroutine </span><span class="n">findtimesubset</span>
+<a name="ln-589"></a>
+<a name="ln-590"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-591"></a>
+<a name="ln-592"></a><span class="k">subroutine </span><span class="n">printout</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">rval1</span><span class="p">,</span> <span class="n">ival1</span><span class="p">,</span> <span class="n">rval1a</span><span class="p">,</span> <span class="n">str2</span><span class="p">,</span> <span class="n">rval2</span><span class="p">,</span> <span class="n">ival2</span><span class="p">,</span> <span class="n">rval2a</span><span class="p">)</span>
+<a name="ln-593"></a>
+<a name="ln-594"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">str1</span>
+<a name="ln-595"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rval1</span>
+<a name="ln-596"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ival1</span>
+<a name="ln-597"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rval1a</span>
+<a name="ln-598"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">str2</span>
+<a name="ln-599"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rval2</span>
+<a name="ln-600"></a><span class="kt">integer</span><span class="p">,</span>           <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ival2</span>
+<a name="ln-601"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rval2a</span>
+<a name="ln-602"></a>
+<a name="ln-603"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a name="ln-604"></a><span class="k">if</span> <span class="p">(</span><span class="n">ival1</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-605"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">str1</span><span class="p">,</span> <span class="n">rval1</span><span class="p">,</span> <span class="n">ival1</span><span class="p">,</span> <span class="n">rval1a</span>
+<a name="ln-606"></a><span class="k">else</span>
+<a name="ln-607"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">str1</span><span class="p">,</span> <span class="n">rval1</span>
+<a name="ln-608"></a><span class="n">endif</span>
+<a name="ln-609"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">)</span>
+<a name="ln-610"></a><span class="k">if</span> <span class="p">(</span><span class="n">ival2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-611"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">str2</span><span class="p">,</span> <span class="n">rval2</span><span class="p">,</span> <span class="n">ival2</span><span class="p">,</span> <span class="n">rval2a</span>
+<a name="ln-612"></a><span class="k">else</span>
+<a name="ln-613"></a><span class="k">   write</span><span class="p">(</span><span class="n">message1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">str2</span><span class="p">,</span> <span class="n">rval2</span>
+<a name="ln-614"></a><span class="n">endif</span>
+<a name="ln-615"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">message1</span><span class="p">)</span>
+<a name="ln-616"></a>
+<a name="ln-617"></a><span class="k">end subroutine </span><span class="n">printout</span>
+<a name="ln-618"></a>
+<a name="ln-619"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-620"></a>
+<a name="ln-621"></a><span class="c">! a bunch of messing around to construct a string from 2 strings</span>
+<a name="ln-622"></a><span class="c">! plus an integer, where i want the integer to be left justified</span>
+<a name="ln-623"></a><span class="c">! with no additional spaces.  you&#39;d think there&#39;d be a language</span>
+<a name="ln-624"></a><span class="c">! construct to do this, but no.  and there&#39;s additional messing</span>
+<a name="ln-625"></a><span class="c">! around because some compilers apparently have a problem with</span>
+<a name="ln-626"></a><span class="c">! nesting adjustl() and trim() even though nesting these functions</span>
+<a name="ln-627"></a><span class="c">! is perfectly legal in the language.</span>
+<a name="ln-628"></a>
+<a name="ln-629"></a><span class="k">function </span><span class="n">construct_msg_string</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">skipcount</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+<a name="ln-630"></a>
+<a name="ln-631"></a><span class="kt">integer</span><span class="p">,</span>          <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">skipcount</span>
+<a name="ln-632"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">s1</span>
+<a name="ln-633"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">s2</span>
+<a name="ln-634"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">construct_msg_string</span>
+<a name="ln-635"></a>
+<a name="ln-636"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span> <span class="kd">::</span> <span class="n">string1</span><span class="p">,</span> <span class="n">string2</span>
+<a name="ln-637"></a>
+<a name="ln-638"></a><span class="c">! some versions of some compilers (possibly absoft, pgi) have problems</span>
+<a name="ln-639"></a><span class="c">! with some nested combinations of adjustl() and trim(). avoid the</span>
+<a name="ln-640"></a><span class="c">! whole issue by bouncing between 2 strings and using them separately.</span>
+<a name="ln-641"></a>
+<a name="ln-642"></a><span class="c">! the * format adds an initial blank space for the &#39;hollerith&#39; character.</span>
+<a name="ln-643"></a><span class="c">! the second write will fail because string1 plus 1 character is longer</span>
+<a name="ln-644"></a><span class="c">! than string2.  it is ok with &quot;(A)&quot; because that keeps the original length.</span>
+<a name="ln-645"></a>
+<a name="ln-646"></a><span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">skip_first_ntimes</span>
+<a name="ln-647"></a><span class="k">write</span><span class="p">(</span><span class="n">string2</span><span class="p">,</span> <span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="nb">adjustl</span><span class="p">(</span><span class="n">string1</span><span class="p">)</span>
+<a name="ln-648"></a><span class="k">write</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="s1">&#39;(3(A,1X))&#39;</span><span class="p">)</span> <span class="n">s1</span><span class="p">,</span> <span class="nb">trim</span><span class="p">(</span><span class="n">string2</span><span class="p">),</span> <span class="n">s2</span>
+<a name="ln-649"></a>
+<a name="ln-650"></a><span class="n">construct_msg_string</span> <span class="o">=</span> <span class="n">string1</span>
+<a name="ln-651"></a>
+<a name="ln-652"></a><span class="k">end function </span><span class="n">construct_msg_string</span>
+<a name="ln-653"></a>
+<a name="ln-654"></a><span class="c">!-----------------------------------------------------------------------</span>
+<a name="ln-655"></a>
+<a name="ln-656"></a><span class="k">end program </span><span class="n">compute_error</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

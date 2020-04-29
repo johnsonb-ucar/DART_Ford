@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>obs_def_tpw_mod.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>obs_def_tpw_mod.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for source files.">118 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/obs_def_tpw_mod.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">obs_def_tpw_mod.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/obs_def_tpw_mod.html">obs_def_tpw_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/obs_def_tpw_mod.f90.html#src">obs_def_tpw_mod.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/obs_def_tpw_mod.html">obs_def_tpw_mod</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/obs_def_tpw_mod.f90.html#src">obs_def_tpw_mod.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="c">! Forward operator to compute total precipitable water in a column,</span>
+<a name="ln-8"></a><span class="c">! in centimeters, over the ocean.   Can be used as an example of a</span>
+<a name="ln-9"></a><span class="c">! forward operator that loops over either fixed pressure levels or</span>
+<a name="ln-10"></a><span class="c">! over model levels.</span>
+<a name="ln-11"></a>
+<a name="ln-12"></a><span class="c">! This code is only correct for TPW over the ocean where the surface</span>
+<a name="ln-13"></a><span class="c">! is at 0m elevation.  For TWP over land you must be able to compute</span>
+<a name="ln-14"></a><span class="c">! the surface elevation for any given lat/lon location.  This code</span>
+<a name="ln-15"></a><span class="c">! assumes the model can return the surface pressure for any given</span>
+<a name="ln-16"></a><span class="c">! lat/lon location, and the specific humidity for a given location</span>
+<a name="ln-17"></a><span class="c">! where the vertical is either pressure or model levels.</span>
+<a name="ln-18"></a>
+<a name="ln-19"></a><span class="c">! keep in mind that fortran allows only 31 characters in parameter</span>
+<a name="ln-20"></a><span class="c">! definitions (which is what this string is going to be used for).</span>
+<a name="ln-21"></a><span class="c">! if the platform name gets longer than 5 chars, consider going</span>
+<a name="ln-22"></a><span class="c">! to something like xxx_TOTAL_PRECIP_WATER to give you room to</span>
+<a name="ln-23"></a><span class="c">! put in more descriptive platform names.</span>
+<a name="ln-24"></a>
+<a name="ln-25"></a><span class="c">! BEGIN DART PREPROCESS KIND LIST</span>
+<a name="ln-26"></a><span class="c">!  AQUA_TOTAL_PRECIPITABLE_WATER, QTY_TOTAL_PRECIPITABLE_WATER</span>
+<a name="ln-27"></a><span class="c">! TERRA_TOTAL_PRECIPITABLE_WATER, QTY_TOTAL_PRECIPITABLE_WATER</span>
+<a name="ln-28"></a><span class="c">!  AMSR_TOTAL_PRECIPITABLE_WATER, QTY_TOTAL_PRECIPITABLE_WATER</span>
+<a name="ln-29"></a><span class="c">! MODIS_TOTAL_PRECIPITABLE_WATER, QTY_TOTAL_PRECIPITABLE_WATER</span>
+<a name="ln-30"></a><span class="c">!   GPS_TOTAL_PRECIPITABLE_WATER, QTY_TOTAL_PRECIPITABLE_WATER</span>
+<a name="ln-31"></a><span class="c">! END DART PREPROCESS KIND LIST</span>
+<a name="ln-32"></a>
+<a name="ln-33"></a><span class="c">! BEGIN DART PREPROCESS USE OF SPECIAL OBS_DEF MODULE</span>
+<a name="ln-34"></a><span class="c">!  use obs_def_tpw_mod, only : get_expected_tpw</span>
+<a name="ln-35"></a><span class="c">! END DART PREPROCESS USE OF SPECIAL OBS_DEF MODULE</span>
+<a name="ln-36"></a>
+<a name="ln-37"></a><span class="c">! BEGIN DART PREPROCESS GET_EXPECTED_OBS_FROM_DEF</span>
+<a name="ln-38"></a><span class="c">!         case(AQUA_TOTAL_PRECIPITABLE_WATER,TERRA_TOTAL_PRECIPITABLE_WATER,GPS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-39"></a><span class="c">!            call get_expected_tpw(state_handle, ens_size, location, expected_obs, istatus)</span>
+<a name="ln-40"></a><span class="c">!         case(AMSR_TOTAL_PRECIPITABLE_WATER,MODIS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-41"></a><span class="c">!            call get_expected_tpw(state_handle, ens_size, location, expected_obs, istatus)</span>
+<a name="ln-42"></a><span class="c">! END DART PREPROCESS GET_EXPECTED_OBS_FROM_DEF</span>
+<a name="ln-43"></a>
+<a name="ln-44"></a><span class="c">! BEGIN DART PREPROCESS READ_OBS_DEF</span>
+<a name="ln-45"></a><span class="c">!         case(AQUA_TOTAL_PRECIPITABLE_WATER,TERRA_TOTAL_PRECIPITABLE_WATER,GPS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-46"></a><span class="c">!           continue</span>
+<a name="ln-47"></a><span class="c">!         case(AMSR_TOTAL_PRECIPITABLE_WATER,MODIS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-48"></a><span class="c">!           continue</span>
+<a name="ln-49"></a><span class="c">! END DART PREPROCESS READ_OBS_DEF</span>
+<a name="ln-50"></a>
+<a name="ln-51"></a><span class="c">! BEGIN DART PREPROCESS WRITE_OBS_DEF</span>
+<a name="ln-52"></a><span class="c">!         case(AQUA_TOTAL_PRECIPITABLE_WATER,TERRA_TOTAL_PRECIPITABLE_WATER,GPS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-53"></a><span class="c">!           continue</span>
+<a name="ln-54"></a><span class="c">!         case(AMSR_TOTAL_PRECIPITABLE_WATER,MODIS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-55"></a><span class="c">!           continue</span>
+<a name="ln-56"></a><span class="c">! END DART PREPROCESS WRITE_OBS_DEF</span>
+<a name="ln-57"></a>
+<a name="ln-58"></a><span class="c">! BEGIN DART PREPROCESS INTERACTIVE_OBS_DEF</span>
+<a name="ln-59"></a><span class="c">!         case(AQUA_TOTAL_PRECIPITABLE_WATER,TERRA_TOTAL_PRECIPITABLE_WATER,GPS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-60"></a><span class="c">!           continue</span>
+<a name="ln-61"></a><span class="c">!         case(AMSR_TOTAL_PRECIPITABLE_WATER,MODIS_TOTAL_PRECIPITABLE_WATER)</span>
+<a name="ln-62"></a><span class="c">!           continue</span>
+<a name="ln-63"></a><span class="c">! END DART PREPROCESS INTERACTIVE_OBS_DEF</span>
+<a name="ln-64"></a>
+<a name="ln-65"></a><span class="c">! BEGIN DART PREPROCESS MODULE CODE</span>
+<a name="ln-66"></a><span class="k">module </span><span class="n">obs_def_tpw_mod</span>
+<a name="ln-67"></a>
+<a name="ln-68"></a><span class="k">use        </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">missing_r8</span><span class="p">,</span> <span class="n">RAD2DEG</span><span class="p">,</span> <span class="n">DEG2RAD</span><span class="p">,</span> <span class="n">PI</span>
+<a name="ln-69"></a><span class="k">use    </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">register_module</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-70"></a>                             <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">do_nml_file</span><span class="p">,</span> <span class="n">do_nml_term</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-71"></a>                             <span class="n">check_namelist_read</span><span class="p">,</span> <span class="n">find_namelist_in_file</span>
+<a name="ln-72"></a><span class="k">use     </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">location_type</span><span class="p">,</span> <span class="n">set_location</span><span class="p">,</span> <span class="n">get_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-73"></a>                             <span class="n">write_location</span><span class="p">,</span> <span class="n">read_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-74"></a>                             <span class="n">VERTISLEVEL</span><span class="p">,</span> <span class="n">VERTISPRESSURE</span><span class="p">,</span> <span class="n">VERTISSURFACE</span>
+<a name="ln-75"></a><span class="k">use </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">read_time</span><span class="p">,</span> <span class="n">write_time</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-76"></a>                             <span class="n">set_time</span><span class="p">,</span> <span class="n">set_time_missing</span>
+<a name="ln-77"></a><span class="k">use  </span><span class="n">assim_model_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">interpolate</span>
+<a name="ln-78"></a><span class="k">use     </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">QTY_SURFACE_PRESSURE</span><span class="p">,</span> <span class="n">QTY_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-79"></a>                             <span class="n">QTY_TOTAL_PRECIPITABLE_WATER</span><span class="p">,</span> <span class="n">QTY_PRESSURE</span>
+<a name="ln-80"></a><span class="k">use </span><span class="n">ensemble_manager_mod</span><span class="p">,</span>  <span class="n">only</span> <span class="p">:</span> <span class="n">ensemble_type</span>
+<a name="ln-81"></a><span class="k">use </span><span class="n">obs_def_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">track_status</span>
+<a name="ln-82"></a>
+<a name="ln-83"></a><span class="k">implicit none</span>
+<a name="ln-84"></a><span class="k">private</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="k">public</span> <span class="kd">::</span>  <span class="n">get_expected_tpw</span>
+<a name="ln-87"></a>
+<a name="ln-88"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-89"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-90"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-91"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-92"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-93"></a>
+<a name="ln-94"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">save</span> <span class="kd">::</span> <span class="n">module_initialized</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-95"></a>
+<a name="ln-96"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">129</span><span class="p">)</span> <span class="kd">::</span> <span class="n">msgstring</span>
+<a name="ln-97"></a>
+<a name="ln-98"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">gravity</span> <span class="o">=</span> <span class="mf">9.81_r8</span>     <span class="c">! gravitational acceleration (m s^-2)</span>
+<a name="ln-99"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">density</span> <span class="o">=</span> <span class="mi">100</span><span class="mf">0.0_r8</span>   <span class="c">! water density in kg/m^3</span>
+<a name="ln-100"></a>
+<a name="ln-101"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">max_pressure_intervals</span> <span class="o">=</span> <span class="mi">1000</span>   <span class="c">! increase as needed</span>
+<a name="ln-102"></a>
+<a name="ln-103"></a><span class="c">! default samples the atmosphere between the surface and 200 hPa </span>
+<a name="ln-104"></a><span class="c">! at the model level numbers.  if model_levels is set false,</span>
+<a name="ln-105"></a><span class="c">! then the default samples at 40 heights, evenly divided in</span>
+<a name="ln-106"></a><span class="c">! linear steps in pressure between the surface and top.</span>
+<a name="ln-107"></a>
+<a name="ln-108"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">model_levels</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>        <span class="c">! if true, use model levels, ignores num_pres_int</span>
+<a name="ln-109"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pressure_top</span> <span class="o">=</span> <span class="mi">2000</span><span class="mf">0.0</span>       <span class="c">! top pressure in pascals</span>
+<a name="ln-110"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">separate_surface_level</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>  <span class="c">! false: level 1 of 3d grid is sfc</span>
+<a name="ln-111"></a>                                             <span class="c">! true: sfc is separate from 3d grid</span>
+<a name="ln-112"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">num_pressure_intervals</span> <span class="o">=</span> <span class="mi">40</span>  <span class="c">! number of intervals if model_levels is F</span>
+<a name="ln-113"></a>
+<a name="ln-114"></a>
+<a name="ln-115"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">obs_def_tpw_nml</span><span class="o">/</span> <span class="n">model_levels</span><span class="p">,</span> <span class="n">pressure_top</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-116"></a>                           <span class="n">separate_surface_level</span><span class="p">,</span> <span class="n">num_pressure_intervals</span>
+<a name="ln-117"></a>
+<a name="ln-118"></a><span class="k">contains</span>
+<a name="ln-119"></a>
+<a name="ln-120"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-121"></a><span class="k">subroutine </span><span class="n">initialize_module</span><span class="p">()</span>
+<a name="ln-122"></a>
+<a name="ln-123"></a><span class="c">! should be called once by the other routines in this file to be sure</span>
+<a name="ln-124"></a><span class="c">! the namelist has been read and any initialization code is run.</span>
+<a name="ln-125"></a>
+<a name="ln-126"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">rc</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="k">if</span> <span class="p">(</span><span class="n">module_initialized</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-129"></a>
+<a name="ln-130"></a><span class="k">call </span><span class="n">register_module</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-131"></a><span class="n">module_initialized</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-132"></a>
+<a name="ln-133"></a><span class="c">! Read the namelist entry</span>
+<a name="ln-134"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;obs_def_tpw_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-135"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">obs_def_tpw_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">rc</span><span class="p">)</span>
+<a name="ln-136"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">rc</span><span class="p">,</span> <span class="s2">&quot;obs_def_tpw_nml&quot;</span><span class="p">)</span>
+<a name="ln-137"></a>
+<a name="ln-138"></a><span class="c">! Record the namelist values used for the run ...</span>
+<a name="ln-139"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">obs_def_tpw_nml</span><span class="p">)</span>
+<a name="ln-140"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">obs_def_tpw_nml</span><span class="p">)</span>
+<a name="ln-141"></a>
+<a name="ln-142"></a><span class="k">end subroutine </span><span class="n">initialize_module</span>
+<a name="ln-143"></a>
+<a name="ln-144"></a>
+<a name="ln-145"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-146"></a><span class="k">subroutine </span><span class="n">get_expected_tpw</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">)</span>
+<a name="ln-147"></a>
+<a name="ln-148"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-149"></a><span class="c">! Purpose:  To calculate total precipitable water in a column over oceans.</span>
+<a name="ln-150"></a><span class="c">! inputs:</span>
+<a name="ln-151"></a><span class="c">!    state_vector:    DART state vector</span>
+<a name="ln-152"></a><span class="c">!    location:        Observation location</span>
+<a name="ln-153"></a><span class="c">!</span>
+<a name="ln-154"></a><span class="c">! output parameters:</span>
+<a name="ln-155"></a><span class="c">!    tpw:     total amount of liquid water (in cm) if all atmospheric water </span>
+<a name="ln-156"></a><span class="c">!               vapor in the column was condensed.</span>
+<a name="ln-157"></a><span class="c">!    istatus: 0 if ok, a positive value for error</span>
+<a name="ln-158"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-159"></a><span class="c">!  Author: Hui Liu ,  Version 1.1: May 25, 2011 for WRF</span>
+<a name="ln-160"></a><span class="c">!  updated by n. collins  14 june 2012</span>
+<a name="ln-161"></a><span class="c">!------------------------------------------------------------------------------</span>
+<a name="ln-162"></a>
+<a name="ln-163"></a><span class="k">type</span><span class="p">(</span><span class="n">ensemble_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">state_handle</span>
+<a name="ln-164"></a><span class="kt">integer</span><span class="p">,</span>             <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">ens_size</span>
+<a name="ln-165"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">location</span>
+<a name="ln-166"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span>            <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tpw</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-167"></a><span class="kt">integer</span><span class="p">,</span>             <span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-168"></a>
+<a name="ln-169"></a><span class="c">! local variables</span>
+<a name="ln-170"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">obsloc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-171"></a><span class="k">type</span><span class="p">(</span><span class="n">location_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">location2</span>
+<a name="ln-172"></a>
+<a name="ln-173"></a><span class="c">! we&#39;ll compute the midpoint value for each pressure range, so allocate one</span>
+<a name="ln-174"></a><span class="c">! more than the number of expected values.</span>
+<a name="ln-175"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pressure</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">max_pressure_intervals</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">qv</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">max_pressure_intervals</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-176"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pressure_interval</span><span class="p">(</span><span class="n">ens_size</span><span class="p">),</span> <span class="n">psfc</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-177"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">which_vert</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">lastk</span><span class="p">,</span> <span class="n">first_non_surface_level</span>
+<a name="ln-178"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">this_istatus</span><span class="p">(</span><span class="n">ens_size</span><span class="p">)</span>
+<a name="ln-179"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">return_now</span>
+<a name="ln-180"></a>
+<a name="ln-181"></a><span class="k">if</span> <span class="p">(</span> <span class="p">.</span><span class="nb">not</span><span class="p">.</span> <span class="n">module_initialized</span> <span class="p">)</span> <span class="k">call </span><span class="n">initialize_module</span>
+<a name="ln-182"></a>
+<a name="ln-183"></a><span class="n">tpw</span> <span class="o">=</span> <span class="n">missing_r8</span>
+<a name="ln-184"></a><span class="n">istatus</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-185"></a>
+<a name="ln-186"></a><span class="c">! check for bad values in the namelist which exceed the size of the</span>
+<a name="ln-187"></a><span class="c">! arrays that are hardcoded here.</span>
+<a name="ln-188"></a>
+<a name="ln-189"></a><span class="k">if</span> <span class="p">(</span><span class="n">num_pressure_intervals</span> <span class="o">&gt;</span> <span class="n">max_pressure_intervals</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-190"></a><span class="k">   call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;get_expected_tpw&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-191"></a>                      <span class="s1">&#39;num_pressure_intervals greater than max allowed&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-192"></a>                      <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-193"></a>                      <span class="n">text2</span><span class="o">=</span><span class="s1">&#39;increase max_pressure_intervals in obs_def_tpw_mod.f90&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-194"></a>                      <span class="n">text3</span><span class="o">=</span><span class="s1">&#39;and recompile.&#39;</span><span class="p">);</span>
+<a name="ln-195"></a><span class="n">endif</span>
+<a name="ln-196"></a>
+<a name="ln-197"></a><span class="c">! location is the lat/lon where we need to compute the column quantity</span>
+<a name="ln-198"></a><span class="n">obsloc</span>   <span class="o">=</span> <span class="n">get_location</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+<a name="ln-199"></a><span class="n">lon</span>      <span class="o">=</span> <span class="n">obsloc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>                       <span class="c">! degree: 0 to 360</span>
+<a name="ln-200"></a><span class="n">lat</span>      <span class="o">=</span> <span class="n">obsloc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                       <span class="c">! degree: -90 to 90</span>
+<a name="ln-201"></a>
+<a name="ln-202"></a><span class="c">! get the pressure at the surface first.</span>
+<a name="ln-203"></a>
+<a name="ln-204"></a><span class="c">! This assumes the column is over an ocean where the surface</span>
+<a name="ln-205"></a><span class="c">! is at 0m elevation.  If you are going to use this over land, the</span>
+<a name="ln-206"></a><span class="c">! height below must be the elevation (in m) of the surface at this location.</span>
+<a name="ln-207"></a><span class="n">which_vert</span> <span class="o">=</span> <span class="n">VERTISSURFACE</span>
+<a name="ln-208"></a><span class="n">height</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-209"></a><span class="n">location2</span> <span class="o">=</span> <span class="n">set_location</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span>  <span class="n">which_vert</span><span class="p">)</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a><span class="c">! interpolate the surface pressure and specific humidity at the desired location</span>
+<a name="ln-212"></a><span class="c">! assumes the values returned from the interpolation will be in these units:</span>
+<a name="ln-213"></a><span class="c">!   surface pressure :  Pa</span>
+<a name="ln-214"></a><span class="c">!   moisture         :  kg/kg</span>
+<a name="ln-215"></a><span class="k">call </span><span class="n">interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location2</span><span class="p">,</span> <span class="n">QTY_SURFACE_PRESSURE</span><span class="p">,</span> <span class="n">pressure</span><span class="p">(:,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">this_istatus</span><span class="p">)</span>
+<a name="ln-216"></a><span class="k">call </span><span class="n">track_status</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">this_istatus</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">return_now</span><span class="p">)</span>
+<a name="ln-217"></a><span class="k">if</span> <span class="p">(</span><span class="n">return_now</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-218"></a>
+<a name="ln-219"></a><span class="k">call </span><span class="n">interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location2</span><span class="p">,</span> <span class="n">QTY_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="n">qv</span><span class="p">(:,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">this_istatus</span><span class="p">)</span>
+<a name="ln-220"></a><span class="k">call </span><span class="n">track_status</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">this_istatus</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">return_now</span><span class="p">)</span>
+<a name="ln-221"></a><span class="k">if</span> <span class="p">(</span><span class="n">return_now</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="c">! save this for use below</span>
+<a name="ln-224"></a><span class="n">psfc</span> <span class="o">=</span> <span class="n">pressure</span><span class="p">(:,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-225"></a>
+<a name="ln-226"></a><span class="c">! there are two options for constructing the column of values.  if &#39;model_levels&#39;</span>
+<a name="ln-227"></a><span class="c">! is true, we query the model by vertical level number.  the &#39;separate_surface_level&#39;</span>
+<a name="ln-228"></a><span class="c">! flag should be set to indicate if the lowest level of the 3d grid is the</span>
+<a name="ln-229"></a><span class="c">! surface or if the surface values are a separate quantity below the 3d grid.</span>
+<a name="ln-230"></a>
+<a name="ln-231"></a><span class="k">if</span> <span class="p">(</span><span class="n">model_levels</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-232"></a>   
+<a name="ln-233"></a>   <span class="c">! some models have a 3d grid of values and the lowest level contains</span>
+<a name="ln-234"></a>   <span class="c">! the surface quantities.  others have a separate field for the</span>
+<a name="ln-235"></a>   <span class="c">! surface values and the 3d grid starts at some given elevation.</span>
+<a name="ln-236"></a>   <span class="c">! if the namelist value &#39;separate_surface_level&#39;  is true, we will</span>
+<a name="ln-237"></a>   <span class="c">! ask to interpolate a surface pressure first and then work up the</span>
+<a name="ln-238"></a>   <span class="c">! 3d column starting at level 1.  if it is false, we assume level 1</span>
+<a name="ln-239"></a>   <span class="c">! was the surface pressure and we start here at level 2.</span>
+<a name="ln-240"></a>
+<a name="ln-241"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">separate_surface_level</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-242"></a><span class="k">      </span><span class="n">first_non_surface_level</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-243"></a>   <span class="k">else</span>
+<a name="ln-244"></a><span class="k">      </span><span class="n">first_non_surface_level</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-245"></a>   <span class="n">endif</span>
+<a name="ln-246"></a>
+<a name="ln-247"></a>   <span class="c">! construct a pressure column on model levels</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a>   <span class="c">! call the model until the interpolation call fails (above the top level)</span>
+<a name="ln-250"></a>   <span class="c">! (this is not a fatal error unless the first call fails).</span>
+<a name="ln-251"></a>   <span class="c">! also exit the loop if the pressure is above the namelist-specified pressure top</span>
+<a name="ln-252"></a>
+<a name="ln-253"></a>   <span class="n">lastk</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-254"></a>   <span class="n">LEVELS</span><span class="p">:</span> <span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="n">first_non_surface_level</span><span class="p">,</span> <span class="mi">10000</span>   <span class="c">! something unreasonably large</span>
+<a name="ln-255"></a>   
+<a name="ln-256"></a>      <span class="c">! call the model_mod to get the pressure and specific humidity at each level </span>
+<a name="ln-257"></a>      <span class="c">! from the model and fill out the pressure and qv arrays.  the model must</span>
+<a name="ln-258"></a>      <span class="c">! support a vertical type of level number.</span>
+<a name="ln-259"></a>
+<a name="ln-260"></a>      <span class="n">which_vert</span> <span class="o">=</span> <span class="n">VERTISLEVEL</span>
+<a name="ln-261"></a>      <span class="n">location2</span> <span class="o">=</span> <span class="n">set_location</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="kt">real</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">r8</span><span class="p">),</span>  <span class="n">which_vert</span><span class="p">)</span>
+<a name="ln-262"></a><span class="c">!&gt;@todo --- This may be different for each ensemble memeber ---</span>
+<a name="ln-263"></a>      <span class="k">call </span><span class="n">interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location2</span><span class="p">,</span> <span class="n">QTY_PRESSURE</span><span class="p">,</span> <span class="n">pressure</span><span class="p">(:,</span> <span class="n">lastk</span><span class="p">),</span> <span class="n">this_istatus</span><span class="p">)</span>
+<a name="ln-264"></a>      <span class="k">call </span><span class="n">track_status</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">this_istatus</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">return_now</span><span class="p">)</span>
+<a name="ln-265"></a>      <span class="k">if</span> <span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">pressure</span><span class="p">(:,</span> <span class="n">lastk</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">pressure_top</span><span class="p">))</span> <span class="k">exit </span><span class="n">LEVELS</span>
+<a name="ln-266"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">return_now</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-267"></a>
+<a name="ln-268"></a><span class="k">      call </span><span class="n">interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location2</span><span class="p">,</span> <span class="n">QTY_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="n">qv</span><span class="p">(:,</span> <span class="n">lastk</span><span class="p">),</span> <span class="n">this_istatus</span><span class="p">)</span>
+<a name="ln-269"></a>      <span class="k">call </span><span class="n">track_status</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">this_istatus</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">return_now</span><span class="p">)</span>
+<a name="ln-270"></a><span class="c">!--------------------------------------------------------------</span>
+<a name="ln-271"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">return_now</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-272"></a><span class="k">   </span>
+<a name="ln-273"></a><span class="k">      </span><span class="n">lastk</span> <span class="o">=</span> <span class="n">lastk</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-274"></a>   <span class="n">enddo</span> <span class="n">LEVELS</span>
+<a name="ln-275"></a>
+<a name="ln-276"></a>   <span class="n">lastk</span> <span class="o">=</span> <span class="n">lastk</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-277"></a>
+<a name="ln-278"></a>   <span class="c">! if we got no valid values, set istatus and return here.</span>
+<a name="ln-279"></a>   <span class="c">! &#39;tpw&#39; return value is already set to missing_r8</span>
+<a name="ln-280"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">lastk</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then </span>
+<a name="ln-281"></a><span class="k">      </span><span class="n">istatus</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-282"></a>      <span class="k">return</span>
+<a name="ln-283"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-284"></a>
+<a name="ln-285"></a><span class="k">else</span>
+<a name="ln-286"></a>
+<a name="ln-287"></a>   <span class="c">! construct an explicit pressure column and get qv at each pressure level.</span>
+<a name="ln-288"></a>   <span class="c">! each column will be at a different set of heights because it</span>
+<a name="ln-289"></a>   <span class="c">! divides the surface pressure and &#39;pressure_top&#39; evenly into </span>
+<a name="ln-290"></a>   <span class="c">! &#39;num_pressure_intervals&#39;.  so each column will have the same</span>
+<a name="ln-291"></a>   <span class="c">! number of samples, but each may be at different pressure values</span>
+<a name="ln-292"></a>   <span class="c">! depending on the surface pressure.</span>
+<a name="ln-293"></a>   <span class="n">pressure_interval</span> <span class="o">=</span> <span class="p">(</span><span class="n">psfc</span> <span class="o">-</span> <span class="n">pressure_top</span><span class="p">)</span><span class="o">/</span><span class="n">num_pressure_intervals</span>
+<a name="ln-294"></a>   <span class="n">lastk</span> <span class="o">=</span> <span class="n">num_pressure_intervals</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-295"></a>   
+<a name="ln-296"></a>   <span class="c">! construct a pressure column at fixed pressure intervals</span>
+<a name="ln-297"></a>   <span class="c">! pressure(:, 1) is always the surface pressure.</span>
+<a name="ln-298"></a>
+<a name="ln-299"></a>   <span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">lastk</span>
+<a name="ln-300"></a>      <span class="k">where</span> <span class="p">(</span><span class="n">istatus</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="n">pressure</span><span class="p">(:,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span>  <span class="n">pressure</span><span class="p">(:,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">pressure_interval</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-301"></a>   <span class="k">end do</span>
+<a name="ln-302"></a>   
+<a name="ln-303"></a>   <span class="c">! call the model_mod to get the specific humidity at each location from the model</span>
+<a name="ln-304"></a>   <span class="c">! and fill out the qv array.</span>
+<a name="ln-305"></a>   <span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">lastk</span>
+<a name="ln-306"></a>
+<a name="ln-307"></a>      <span class="n">which_vert</span> <span class="o">=</span> <span class="n">VERTISPRESSURE</span>
+<a name="ln-308"></a>      <span class="c">!&gt;@todo - there should be only a single location here.  for now, use 1</span>
+<a name="ln-309"></a>      <span class="c">!&gt; but what to do in the general case?  set a fixed top and bottom pressure??</span>
+<a name="ln-310"></a>      <span class="n">location2</span> <span class="o">=</span> <span class="n">set_location</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">pressure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">),</span>  <span class="n">which_vert</span><span class="p">)</span>
+<a name="ln-311"></a>   
+<a name="ln-312"></a>      <span class="k">call </span><span class="n">interpolate</span><span class="p">(</span><span class="n">state_handle</span><span class="p">,</span> <span class="n">ens_size</span><span class="p">,</span> <span class="n">location2</span><span class="p">,</span>  <span class="n">QTY_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="n">qv</span><span class="p">(:,</span> <span class="n">k</span><span class="p">),</span> <span class="n">this_istatus</span><span class="p">)</span>
+<a name="ln-313"></a>      <span class="k">call </span><span class="n">track_status</span><span class="p">(</span><span class="n">ens_size</span><span class="p">,</span> <span class="n">this_istatus</span><span class="p">,</span> <span class="n">tpw</span><span class="p">,</span> <span class="n">istatus</span><span class="p">,</span> <span class="n">return_now</span><span class="p">)</span>
+<a name="ln-314"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">return_now</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-315"></a><span class="k">   </span>
+<a name="ln-316"></a><span class="k">   </span><span class="n">enddo</span>
+<a name="ln-317"></a><span class="n">endif</span>
+<a name="ln-318"></a>
+<a name="ln-319"></a><span class="c">! whichever way the column was made (pressure levels or model levels),</span>
+<a name="ln-320"></a><span class="c">! sum the values in the column, computing the area under the curve.</span>
+<a name="ln-321"></a><span class="c">! pressure is in pascals (not hPa or mb), and moisture is in kg/kg.</span>
+<a name="ln-322"></a><span class="n">tpw</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-323"></a><span class="k">do </span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lastk</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-324"></a>   <span class="k">where</span> <span class="p">(</span><span class="n">istatus</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-325"></a>      <span class="n">tpw</span> <span class="o">=</span> <span class="n">tpw</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">qv</span><span class="p">(:,</span> <span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="n">qv</span><span class="p">(:,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">pressure</span><span class="p">(:,</span> <span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">pressure</span><span class="p">(:,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>  
+<a name="ln-326"></a><span class="n">enddo</span>
+<a name="ln-327"></a>
+<a name="ln-328"></a><span class="c">! convert to centimeters of water and return</span>
+<a name="ln-329"></a><span class="k">where</span> <span class="p">(</span><span class="n">istatus</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-330"></a>   <span class="n">tpw</span> <span class="o">=</span> <span class="mi">10</span><span class="mf">0.0</span> <span class="o">*</span> <span class="n">tpw</span> <span class="o">/</span><span class="p">(</span><span class="n">density</span><span class="o">*</span><span class="n">gravity</span><span class="p">)</span>   <span class="c">! -&gt; cm</span>
+<a name="ln-331"></a><span class="n">elsewhere</span>
+<a name="ln-332"></a>   <span class="n">tpw</span> <span class="o">=</span> <span class="n">missing_r8</span>
+<a name="ln-333"></a><span class="n">endwhere</span>
+<a name="ln-334"></a>
+<a name="ln-335"></a><span class="k">end subroutine </span><span class="n">get_expected_tpw</span>
+<a name="ln-336"></a>
+<a name="ln-337"></a>
+<a name="ln-338"></a><span class="k">end module </span><span class="n">obs_def_tpw_mod</span>
+<a name="ln-339"></a>
+<a name="ln-340"></a><span class="c">! END DART PREPROCESS MODULE CODE</span>
+<a name="ln-341"></a>
+<a name="ln-342"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-343"></a><span class="c">! $URL$</span>
+<a name="ln-344"></a><span class="c">! $Id$</span>
+<a name="ln-345"></a><span class="c">! $Revision$</span>
+<a name="ln-346"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

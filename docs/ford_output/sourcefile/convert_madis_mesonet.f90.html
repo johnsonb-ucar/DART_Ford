@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_madis_mesonet.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_madis_mesonet.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for source files.">192 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_madis_mesonet.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">convert_madis_mesonet.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_madis_mesonet.html">convert_madis_mesonet</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_madis_mesonet.f90.html#src">convert_madis_mesonet.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_madis_mesonet.html">convert_madis_mesonet</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_madis_mesonet.f90.html#src">convert_madis_mesonet.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="k">program </span><span class="n">convert_madis_mesonet</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-10"></a><span class="c">!</span>
+<a name="ln-11"></a><span class="c">!   convert_madis_mesonet - program that reads a MADIS netCDF land </span>
+<a name="ln-12"></a><span class="c">!                         surface observation file and writes a DART</span>
+<a name="ln-13"></a><span class="c">!                         obs_seq file using the DART library routines.</span>
+<a name="ln-14"></a><span class="c">!                           This version works on generic MESONET files.</span>
+<a name="ln-15"></a><span class="c">!</span>
+<a name="ln-16"></a><span class="c">!     created Dec. 2007 Ryan Torn, NCAR/MMM</span>
+<a name="ln-17"></a><span class="c">!     modified Dec. 2008 Soyoung Ha and David Dowell, NCAR/MMM</span>
+<a name="ln-18"></a><span class="c">!     - added dewpoint as an output variable</span>
+<a name="ln-19"></a><span class="c">!     - added relative humidity as an output variable</span>
+<a name="ln-20"></a><span class="c">!</span>
+<a name="ln-21"></a><span class="c">!     modified to include QC_flag check (Soyoung Ha, NCAR/MMM, 08-04-2009)</span>
+<a name="ln-22"></a><span class="c">!     split from generic surface converter since the METAR and MESONET</span>
+<a name="ln-23"></a><span class="c">!     files differ slightly in format.  (Glen Romine, NCAR/MMM  Feb 2010)</span>
+<a name="ln-24"></a><span class="c">!</span>
+<a name="ln-25"></a><span class="c">!     modified to use a common set of utilities, better netcdf error checks,</span>
+<a name="ln-26"></a><span class="c">!     able to insert obs with any time correctly (not only monotonically</span>
+<a name="ln-27"></a><span class="c">!     increasing times)    nancy collins,  ncar/image   11 march 2010</span>
+<a name="ln-28"></a><span class="c">!     </span>
+<a name="ln-29"></a><span class="c">!     keep original obs times, make source for all converters as similar</span>
+<a name="ln-30"></a><span class="c">!     as possbile.   nancy collins,  ncar/image   26 march 2010</span>
+<a name="ln-31"></a><span class="c">!</span>
+<a name="ln-32"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-33"></a>
+<a name="ln-34"></a><span class="k">use         </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span> <span class="n">missing_r8</span>
+<a name="ln-35"></a><span class="k">use     </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">initialize_utilities</span><span class="p">,</span> <span class="n">finalize_utilities</span>
+<a name="ln-36"></a><span class="k">use  </span><span class="n">netcdf_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">nc_open_file_readonly</span><span class="p">,</span> <span class="n">nc_close_file</span>
+<a name="ln-37"></a><span class="k">use  </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_calendar_type</span><span class="p">,</span> <span class="n">set_date</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-38"></a>                              <span class="n">increment_time</span><span class="p">,</span> <span class="n">get_time</span><span class="p">,</span> <span class="n">operator</span><span class="p">(</span><span class="o">-</span><span class="p">),</span> <span class="n">GREGORIAN</span>
+<a name="ln-39"></a><span class="k">use      </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">VERTISSURFACE</span>
+<a name="ln-40"></a><span class="k">use  </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">read_obs_seq</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-41"></a>                              <span class="n">static_init_obs_sequence</span><span class="p">,</span> <span class="n">init_obs</span><span class="p">,</span> <span class="n">write_obs_seq</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-42"></a>                              <span class="n">init_obs_sequence</span><span class="p">,</span> <span class="n">get_num_obs</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-43"></a>                              <span class="n">set_copy_meta_data</span><span class="p">,</span> <span class="n">set_qc_meta_data</span>
+<a name="ln-44"></a><span class="k">use        </span><span class="n">meteor_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">sat_vapor_pressure</span><span class="p">,</span> <span class="n">specific_humidity</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-45"></a>                              <span class="n">wind_dirspd_to_uv</span><span class="p">,</span> <span class="n">invert_altimeter</span><span class="p">,</span> <span class="n">pres_alt_to_pres</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-46"></a>                              <span class="n">temp_and_dewpoint_to_rh</span>
+<a name="ln-47"></a><span class="k">use       </span><span class="n">obs_err_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">land_temp_error</span><span class="p">,</span> <span class="n">land_wind_error</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-48"></a>                              <span class="n">land_pres_error</span><span class="p">,</span> <span class="n">land_rel_hum_error</span>
+<a name="ln-49"></a><span class="k">use </span><span class="n">dewpoint_obs_err_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">dewpt_error_from_rh_and_temp</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-50"></a>                                 <span class="n">rh_error_from_dewpt_and_temp</span>
+<a name="ln-51"></a><span class="k">use      </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">LAND_SFC_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">LAND_SFC_V_WIND_COMPONENT</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-52"></a>                              <span class="n">LAND_SFC_TEMPERATURE</span><span class="p">,</span> <span class="n">LAND_SFC_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-53"></a>                              <span class="n">LAND_SFC_DEWPOINT</span><span class="p">,</span> <span class="n">LAND_SFC_RELATIVE_HUMIDITY</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-54"></a>                              <span class="n">LAND_SFC_ALTIMETER</span>                
+<a name="ln-55"></a><span class="k">use          </span><span class="n">sort_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">index_sort</span>
+<a name="ln-56"></a><span class="k">use </span><span class="n">obs_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">getvar_real</span><span class="p">,</span> <span class="n">get_or_fill_QC</span><span class="p">,</span> <span class="n">add_obs_to_seq</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-57"></a>                              <span class="n">create_3d_obs</span><span class="p">,</span> <span class="n">getvar_int</span><span class="p">,</span> <span class="n">getdimlen</span><span class="p">,</span> <span class="n">set_missing_name</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-58"></a>                              <span class="n">is_variable_integer</span>
+<a name="ln-59"></a>
+<a name="ln-60"></a><span class="k">use           </span><span class="n">netcdf</span>
+<a name="ln-61"></a>
+<a name="ln-62"></a><span class="k">implicit none</span>
+<a name="ln-63"></a>
+<a name="ln-64"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">16</span><span class="p">),</span>  <span class="k">parameter</span> <span class="kd">::</span> <span class="n">surface_netcdf_file</span> <span class="o">=</span> <span class="s1">&#39;mesonet_input.nc&#39;</span>
+<a name="ln-65"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">129</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">surface_out_file</span>    <span class="o">=</span> <span class="s1">&#39;obs_seq.mesonet&#39;</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="c">! the following logical parameters control which water-vapor variables appear in the output file,</span>
+<a name="ln-68"></a><span class="c">! whether to use the NCEP error or Lin and Hubbard (2004) moisture error model, and if the</span>
+<a name="ln-69"></a><span class="c">! input file has data quality control fields, whether to use or ignore them.</span>
+<a name="ln-70"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">LH_err</span>                    <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-71"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">include_specific_humidity</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-72"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">include_relative_humidity</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-73"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">include_dewpoint</span>          <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-74"></a><span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">use_input_qc</span>              <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span> 
+<a name="ln-75"></a>
+<a name="ln-76"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">num_copies</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>   <span class="p">&amp;</span>   <span class="c">! number of copies in sequence</span>
+<a name="ln-77"></a>                      <span class="n">num_qc</span>     <span class="o">=</span> <span class="mi">1</span>        <span class="c">! number of QC entries</span>
+<a name="ln-78"></a>
+<a name="ln-79"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">nvars</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">nused</span>
+<a name="ln-80"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">file_exist</span><span class="p">,</span> <span class="n">first_obs</span>
+<a name="ln-81"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alti_miss</span><span class="p">,</span> <span class="n">tair_miss</span><span class="p">,</span> <span class="n">tdew_miss</span><span class="p">,</span> <span class="n">wdir_miss</span><span class="p">,</span> <span class="n">wspd_miss</span><span class="p">,</span> <span class="n">uwnd</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-82"></a>            <span class="n">vwnd</span><span class="p">,</span> <span class="n">palt</span><span class="p">,</span> <span class="n">qobs</span><span class="p">,</span> <span class="n">qsat</span><span class="p">,</span> <span class="n">rh</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">pres</span><span class="p">,</span> <span class="n">qerr</span><span class="p">,</span> <span class="n">qc</span>
+<a name="ln-83"></a>
+<a name="ln-84"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tobs</span><span class="p">(:),</span> <span class="n">tused</span><span class="p">(:),</span> <span class="n">used</span><span class="p">(:),</span> <span class="n">sorted_used</span><span class="p">(:)</span>
+<a name="ln-85"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">lat</span><span class="p">(:),</span> <span class="n">lon</span><span class="p">(:),</span> <span class="n">elev</span><span class="p">(:),</span> <span class="n">alti</span><span class="p">(:),</span> <span class="n">tair</span><span class="p">(:),</span> <span class="p">&amp;</span> 
+<a name="ln-86"></a>                         <span class="n">tdew</span><span class="p">(:),</span> <span class="n">wdir</span><span class="p">(:),</span> <span class="n">wspd</span><span class="p">(:),</span> <span class="n">tobs_r</span><span class="p">(:)</span>
+<a name="ln-87"></a><span class="kt">integer</span><span class="p">,</span>  <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">qc_alti</span><span class="p">(:),</span> <span class="n">qc_tair</span><span class="p">(:),</span> <span class="n">qc_tdew</span><span class="p">(:),</span> <span class="n">qc_wdir</span><span class="p">(:),</span> <span class="n">qc_wspd</span><span class="p">(:)</span>
+<a name="ln-88"></a>  
+<a name="ln-89"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_seq</span>
+<a name="ln-90"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span><span class="p">,</span> <span class="n">prev_obs</span>
+<a name="ln-91"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">comp_day0</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_time</span>
+<a name="ln-92"></a>
+<a name="ln-93"></a>
+<a name="ln-94"></a><span class="c">!----------------------------------------------------------------</span>
+<a name="ln-95"></a>
+<a name="ln-96"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">(</span><span class="s1">&#39;convert_madis_mesonet&#39;</span><span class="p">)</span>
+<a name="ln-97"></a>
+<a name="ln-98"></a>
+<a name="ln-99"></a><span class="c">! put the reference date into DART format</span>
+<a name="ln-100"></a><span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">GREGORIAN</span><span class="p">)</span>
+<a name="ln-101"></a><span class="n">comp_day0</span> <span class="o">=</span> <span class="n">set_date</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-102"></a>
+<a name="ln-103"></a><span class="n">first_obs</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-104"></a>
+<a name="ln-105"></a>
+<a name="ln-106"></a><span class="n">ncid</span> <span class="o">=</span> <span class="n">nc_open_file_readonly</span><span class="p">(</span><span class="n">surface_netcdf_file</span><span class="p">,</span> <span class="s1">&#39;convert_madis_mesonet&#39;</span><span class="p">)</span>
+<a name="ln-107"></a>
+<a name="ln-108"></a><span class="k">call </span><span class="n">getdimlen</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;recNum&quot;</span><span class="p">,</span> <span class="n">nobs</span><span class="p">)</span>
+<a name="ln-109"></a><span class="k">call </span><span class="n">set_missing_name</span><span class="p">(</span><span class="s2">&quot;missing_value&quot;</span><span class="p">)</span>
+<a name="ln-110"></a>
+<a name="ln-111"></a><span class="k">allocate</span><span class="p">(</span> <span class="n">lat</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span> <span class="n">lon</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-112"></a><span class="k">allocate</span><span class="p">(</span><span class="n">elev</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">alti</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-113"></a><span class="k">allocate</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">tdew</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-114"></a><span class="k">allocate</span><span class="p">(</span><span class="n">wdir</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">wspd</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-115"></a><span class="k">allocate</span><span class="p">(</span><span class="n">used</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">sorted_used</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-116"></a><span class="k">allocate</span><span class="p">(</span><span class="n">tobs</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>  <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">tobs_r</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-117"></a><span class="k">allocate</span><span class="p">(</span><span class="n">tused</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-118"></a>
+<a name="ln-119"></a><span class="n">nvars</span> <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-120"></a><span class="k">if</span> <span class="p">(</span><span class="n">include_specific_humidity</span><span class="p">)</span> <span class="n">nvars</span> <span class="o">=</span> <span class="n">nvars</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-121"></a><span class="k">if</span> <span class="p">(</span><span class="n">include_relative_humidity</span><span class="p">)</span> <span class="n">nvars</span> <span class="o">=</span> <span class="n">nvars</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-122"></a><span class="k">if</span> <span class="p">(</span><span class="n">include_dewpoint</span><span class="p">)</span>          <span class="n">nvars</span> <span class="o">=</span> <span class="n">nvars</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-123"></a>
+<a name="ln-124"></a><span class="k">allocate</span><span class="p">(</span><span class="n">qc_alti</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-125"></a><span class="k">allocate</span><span class="p">(</span><span class="n">qc_tair</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span> <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">qc_tdew</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-126"></a><span class="k">allocate</span><span class="p">(</span><span class="n">qc_wdir</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span> <span class="p">;</span>  <span class="k">allocate</span><span class="p">(</span><span class="n">qc_wspd</span><span class="p">(</span><span class="n">nobs</span><span class="p">))</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="c">! read in the data arrays</span>
+<a name="ln-129"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">,</span>        <span class="n">lat</span>            <span class="p">)</span> <span class="c">! latitude</span>
+<a name="ln-130"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">,</span>       <span class="n">lon</span>            <span class="p">)</span> <span class="c">! longitude</span>
+<a name="ln-131"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;elevation&quot;</span><span class="p">,</span>       <span class="n">elev</span>           <span class="p">)</span> <span class="c">! elevation</span>
+<a name="ln-132"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;altimeter&quot;</span><span class="p">,</span>       <span class="n">alti</span><span class="p">,</span> <span class="n">alti_miss</span><span class="p">)</span> <span class="c">! altimeter setting</span>
+<a name="ln-133"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">,</span>     <span class="n">tair</span><span class="p">,</span> <span class="n">tair_miss</span><span class="p">)</span> <span class="c">! air temperature</span>
+<a name="ln-134"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;dewpoint&quot;</span><span class="p">,</span>        <span class="n">tdew</span><span class="p">,</span> <span class="n">tdew_miss</span><span class="p">)</span> <span class="c">! dew-point temperature</span>
+<a name="ln-135"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;windDir&quot;</span><span class="p">,</span>         <span class="n">wdir</span><span class="p">,</span> <span class="n">wdir_miss</span><span class="p">)</span> <span class="c">! wind direction</span>
+<a name="ln-136"></a><span class="k">call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;windSpeed&quot;</span><span class="p">,</span>       <span class="n">wspd</span><span class="p">,</span> <span class="n">wspd_miss</span><span class="p">)</span> <span class="c">! wind speed</span>
+<a name="ln-137"></a>
+<a name="ln-138"></a><span class="c">! recent versions of MADIS files seem to have changed time to a real</span>
+<a name="ln-139"></a><span class="c">! perhaps to avoid overflowing an integer value?</span>
+<a name="ln-140"></a><span class="k">if</span> <span class="p">(</span><span class="n">is_variable_integer</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;observationTime&quot;</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-141"></a><span class="k">   call </span><span class="n">getvar_int</span> <span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;observationTime&quot;</span><span class="p">,</span> <span class="n">tobs</span>           <span class="p">)</span> <span class="c">! observation time as integer</span>
+<a name="ln-142"></a><span class="k">else</span>
+<a name="ln-143"></a><span class="k">   call </span><span class="n">getvar_real</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;observationTime&quot;</span><span class="p">,</span> <span class="n">tobs_r</span>         <span class="p">)</span> <span class="c">! observation time as real</span>
+<a name="ln-144"></a>   <span class="n">tobs</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">tobs_r</span><span class="p">)</span>                                        <span class="c">! and convert to nearest second</span>
+<a name="ln-145"></a><span class="n">endif</span>
+<a name="ln-146"></a>
+<a name="ln-147"></a><span class="c">! if user says to use them, read in QCs if present</span>
+<a name="ln-148"></a><span class="k">if</span> <span class="p">(</span><span class="n">use_input_qc</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-149"></a><span class="k">   call </span><span class="n">get_or_fill_QC</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;altimeterQCR&quot;</span><span class="p">,</span>   <span class="n">qc_alti</span><span class="p">)</span>
+<a name="ln-150"></a>   <span class="k">call </span><span class="n">get_or_fill_QC</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;temperatureQCR&quot;</span><span class="p">,</span> <span class="n">qc_tair</span><span class="p">)</span>
+<a name="ln-151"></a>   <span class="k">call </span><span class="n">get_or_fill_QC</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;dewpointQCR&quot;</span><span class="p">,</span>    <span class="n">qc_tdew</span><span class="p">)</span>
+<a name="ln-152"></a>   <span class="k">call </span><span class="n">get_or_fill_QC</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;windDirQCR&quot;</span><span class="p">,</span>     <span class="n">qc_wdir</span><span class="p">)</span>
+<a name="ln-153"></a>   <span class="k">call </span><span class="n">get_or_fill_QC</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s2">&quot;windSpeedQCR&quot;</span><span class="p">,</span>   <span class="n">qc_wspd</span><span class="p">)</span>
+<a name="ln-154"></a><span class="k">else</span>
+<a name="ln-155"></a><span class="k">   </span><span class="n">qc_alti</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-156"></a>   <span class="n">qc_tair</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>  <span class="n">qc_tdew</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-157"></a>   <span class="n">qc_wdir</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>  <span class="n">qc_wspd</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-158"></a><span class="n">endif</span>
+<a name="ln-159"></a>
+<a name="ln-160"></a><span class="k">call </span><span class="n">nc_close_file</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="s1">&#39;convert_madis_mesonet&#39;</span><span class="p">)</span>
+<a name="ln-161"></a>
+<a name="ln-162"></a>
+<a name="ln-163"></a><span class="c">!  either read existing obs_seq or create a new one</span>
+<a name="ln-164"></a><span class="k">call </span><span class="n">static_init_obs_sequence</span><span class="p">()</span>
+<a name="ln-165"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span>      <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-166"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">prev_obs</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-167"></a>
+<a name="ln-168"></a><span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="n">surface_out_file</span><span class="p">,</span> <span class="n">exist</span><span class="o">=</span><span class="n">file_exist</span><span class="p">)</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a><span class="k">if</span> <span class="p">(</span> <span class="n">file_exist</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-171"></a>
+<a name="ln-172"></a>  <span class="c">! existing file found, append to it</span>
+<a name="ln-173"></a>  <span class="k">call </span><span class="n">read_obs_seq</span><span class="p">(</span><span class="n">surface_out_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nvars</span><span class="o">*</span><span class="n">nobs</span><span class="p">,</span> <span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-174"></a>
+<a name="ln-175"></a><span class="k">else</span>
+<a name="ln-176"></a>
+<a name="ln-177"></a>  <span class="c">! create a new one</span>
+<a name="ln-178"></a>  <span class="k">call </span><span class="n">init_obs_sequence</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">nvars</span><span class="o">*</span><span class="n">nobs</span><span class="p">)</span>
+<a name="ln-179"></a>  <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_copies</span>
+<a name="ln-180"></a>    <span class="k">call </span><span class="n">set_copy_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;MADIS observation&#39;</span><span class="p">)</span>
+<a name="ln-181"></a>  <span class="k">end do</span>
+<a name="ln-182"></a><span class="k">  do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_qc</span>
+<a name="ln-183"></a>    <span class="k">call </span><span class="n">set_qc_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;Data QC&#39;</span><span class="p">)</span>
+<a name="ln-184"></a>  <span class="k">end do</span>
+<a name="ln-185"></a>
+<a name="ln-186"></a><span class="n">endif</span>
+<a name="ln-187"></a>
+<a name="ln-188"></a><span class="c">! Set the DART data quality control.  Be consistent with NCEP codes;</span>
+<a name="ln-189"></a><span class="c">! 0 is &#39;must use&#39;, 1 is good, no reason not to use it.</span>
+<a name="ln-190"></a><span class="n">qc</span> <span class="o">=</span> <span class="mf">1.0_r8</span>
+<a name="ln-191"></a>
+<a name="ln-192"></a><span class="n">nused</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-193"></a><span class="n">obsloop1</span><span class="p">:</span> <span class="k">do </span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nobs</span>
+<a name="ln-194"></a>
+<a name="ln-195"></a>  <span class="c">! check the lat/lon values to see if they are ok</span>
+<a name="ln-196"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span>  <span class="mi">9</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span>  <span class="o">-</span><span class="mi">9</span><span class="mf">0.0_r8</span> <span class="p">)</span> <span class="k">cycle </span><span class="n">obsloop1</span>
+<a name="ln-197"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">18</span><span class="mf">0.0_r8</span> <span class="p">)</span> <span class="k">cycle </span><span class="n">obsloop1</span>
+<a name="ln-198"></a>
+<a name="ln-199"></a>  <span class="c">! change lon from -180 to 180 into 0-360</span>
+<a name="ln-200"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span> <span class="p">)</span>  <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="mi">36</span><span class="mf">0.0_r8</span>
+<a name="ln-201"></a>
+<a name="ln-202"></a>  <span class="c">! check for duplicate observations</span>
+<a name="ln-203"></a>  <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nused</span>
+<a name="ln-204"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">lon</span><span class="p">(</span><span class="n">used</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-205"></a>         <span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">lat</span><span class="p">(</span><span class="n">used</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-206"></a>        <span class="n">tobs</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">tobs</span><span class="p">(</span><span class="n">used</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">)</span> <span class="k">cycle </span><span class="n">obsloop1</span>
+<a name="ln-207"></a>  <span class="n">enddo</span>
+<a name="ln-208"></a>
+<a name="ln-209"></a>  <span class="n">nused</span> <span class="o">=</span> <span class="n">nused</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-210"></a>  <span class="n">used</span><span class="p">(</span><span class="n">nused</span><span class="p">)</span> <span class="o">=</span>  <span class="n">n</span>
+<a name="ln-211"></a>  <span class="n">tused</span><span class="p">(</span><span class="n">nused</span><span class="p">)</span> <span class="o">=</span> <span class="n">tobs</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="ln-212"></a>
+<a name="ln-213"></a><span class="n">enddo</span> <span class="n">obsloop1</span>
+<a name="ln-214"></a>
+<a name="ln-215"></a><span class="c">! sort into time order</span>
+<a name="ln-216"></a><span class="k">call </span><span class="n">index_sort</span><span class="p">(</span><span class="n">tused</span><span class="p">,</span> <span class="n">sorted_used</span><span class="p">,</span> <span class="n">nused</span><span class="p">)</span>
+<a name="ln-217"></a>
+<a name="ln-218"></a><span class="n">obsloop2</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nused</span>
+<a name="ln-219"></a>
+<a name="ln-220"></a>  <span class="c">! get the next unique observation in sorted time order</span>
+<a name="ln-221"></a>  <span class="n">n</span> <span class="o">=</span> <span class="n">used</span><span class="p">(</span><span class="n">sorted_used</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a>
+<a name="ln-224"></a>  <span class="c">! compute time of observation</span>
+<a name="ln-225"></a>  <span class="n">time_obs</span> <span class="o">=</span> <span class="n">increment_time</span><span class="p">(</span><span class="n">comp_day0</span><span class="p">,</span> <span class="n">tobs</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-226"></a>
+<a name="ln-227"></a>  <span class="n">palt</span> <span class="o">=</span> <span class="n">pres_alt_to_pres</span><span class="p">(</span><span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">*</span> <span class="mf">0.01_r8</span>
+<a name="ln-228"></a>
+<a name="ln-229"></a>  <span class="c">! extract actual time of observation in file into oday, osec.</span>
+<a name="ln-230"></a>  <span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="n">time_obs</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">oday</span><span class="p">)</span>
+<a name="ln-231"></a>
+<a name="ln-232"></a>  <span class="c">! add altimeter data to obs_seq</span>
+<a name="ln-233"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">alti_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-234"></a>
+<a name="ln-235"></a><span class="k">    </span><span class="n">pres</span> <span class="o">=</span> <span class="n">invert_altimeter</span><span class="p">(</span><span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01_r8</span><span class="p">,</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-236"></a>    <span class="n">oerr</span> <span class="o">=</span> <span class="n">land_pres_error</span><span class="p">(</span><span class="n">palt</span><span class="p">)</span>
+<a name="ln-237"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;=</span>  <span class="mi">8900</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-238"></a>         <span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">11000</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">oerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-239"></a>
+<a name="ln-240"></a><span class="k">      call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-241"></a>                         <span class="n">LAND_SFC_ALTIMETER</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-242"></a>      <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-243"></a>
+<a name="ln-244"></a>    <span class="n">endif</span>
+<a name="ln-245"></a>
+<a name="ln-246"></a>  <span class="n">endif</span>
+<a name="ln-247"></a>
+<a name="ln-248"></a>  <span class="c">! add wind component data to obs_seq</span>
+<a name="ln-249"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">wdir</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">wdir_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_wdir</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-250"></a>       <span class="n">wspd</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">wspd_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_wspd</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="p">)</span> <span class="k">then</span>
+<a name="ln-251"></a>
+<a name="ln-252"></a><span class="k">    call </span><span class="n">wind_dirspd_to_uv</span><span class="p">(</span><span class="n">wdir</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">wspd</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">uwnd</span><span class="p">,</span> <span class="n">vwnd</span><span class="p">)</span>
+<a name="ln-253"></a>    <span class="n">oerr</span> <span class="o">=</span> <span class="n">land_wind_error</span><span class="p">(</span><span class="n">palt</span><span class="p">)</span>
+<a name="ln-254"></a>    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">uwnd</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">vwnd</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">oerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-255"></a>
+<a name="ln-256"></a><span class="k">      call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">uwnd</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-257"></a>                         <span class="n">LAND_SFC_U_WIND_COMPONENT</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-258"></a>      <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-259"></a>
+<a name="ln-260"></a>      <span class="k">call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">vwnd</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-261"></a>                         <span class="n">LAND_SFC_V_WIND_COMPONENT</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-262"></a>      <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-263"></a>
+<a name="ln-264"></a>    <span class="n">endif</span>
+<a name="ln-265"></a>
+<a name="ln-266"></a>  <span class="n">endif</span>
+<a name="ln-267"></a>
+<a name="ln-268"></a>  <span class="c">! add air temperature data to obs_seq</span>
+<a name="ln-269"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">tair_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then </span>
+<a name="ln-270"></a>
+<a name="ln-271"></a><span class="k">    </span><span class="n">oerr</span> <span class="o">=</span> <span class="n">land_temp_error</span><span class="p">(</span><span class="n">palt</span><span class="p">)</span>
+<a name="ln-272"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">33</span><span class="mf">5.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">oerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-273"></a>
+<a name="ln-274"></a><span class="k">      call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-275"></a>                         <span class="n">LAND_SFC_TEMPERATURE</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-276"></a>      <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-277"></a>
+<a name="ln-278"></a>    <span class="n">endif</span>
+<a name="ln-279"></a>
+<a name="ln-280"></a>  <span class="n">endif</span>
+<a name="ln-281"></a>
+<a name="ln-282"></a>  <span class="c">! if the air, dewpoint are ok, then see which of</span>
+<a name="ln-283"></a>  <span class="c">! the three types of moisture obs to generate.</span>
+<a name="ln-284"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">tair_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-285"></a>       <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">tdew_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="p">)</span> <span class="k">then</span>
+<a name="ln-286"></a>
+<a name="ln-287"></a>    <span class="c">! before we start computing things based on the dewpoint,</span>
+<a name="ln-288"></a>    <span class="c">! make sure it isn&#39;t larger than the air temp.  if it is</span>
+<a name="ln-289"></a>    <span class="c">! more than a degree larger, skip it completely.  if it is</span>
+<a name="ln-290"></a>    <span class="c">! less, set them equal and continue.</span>
+<a name="ln-291"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-292"></a><span class="k">       if</span> <span class="p">(</span><span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0_r8</span><span class="p">)</span> <span class="k">cycle </span><span class="n">obsloop2</span>
+<a name="ln-293"></a>       <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a name="ln-294"></a>    <span class="n">endif</span>
+<a name="ln-295"></a>
+<a name="ln-296"></a>    <span class="c">! add specific humidity to obs_seq</span>
+<a name="ln-297"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">include_specific_humidity</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-298"></a>         <span class="n">alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/=</span> <span class="n">alti_miss</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qc_alti</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-299"></a>
+<a name="ln-300"></a><span class="k">      </span><span class="n">qobs</span> <span class="o">=</span> <span class="n">specific_humidity</span><span class="p">(</span><span class="n">sat_vapor_pressure</span><span class="p">(</span><span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> <span class="n">pres</span> <span class="o">*</span> <span class="mi">10</span><span class="mf">0.0_r8</span><span class="p">)</span>
+<a name="ln-301"></a>      <span class="n">qsat</span> <span class="o">=</span> <span class="n">specific_humidity</span><span class="p">(</span><span class="n">sat_vapor_pressure</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">)),</span> <span class="n">pres</span> <span class="o">*</span> <span class="mi">10</span><span class="mf">0.0_r8</span><span class="p">)</span>
+<a name="ln-302"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">LH_err</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-303"></a><span class="k">        </span><span class="n">qerr</span> <span class="o">=</span> <span class="n">rh_error_from_dewpt_and_temp</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-304"></a>      <span class="k">else</span>
+<a name="ln-305"></a><span class="k">        </span><span class="n">qerr</span> <span class="o">=</span> <span class="n">land_rel_hum_error</span><span class="p">(</span><span class="n">pres</span><span class="p">,</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">qobs</span> <span class="o">/</span> <span class="n">qsat</span><span class="p">)</span>
+<a name="ln-306"></a>      <span class="n">endif</span>
+<a name="ln-307"></a>      <span class="n">oerr</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">qerr</span> <span class="o">*</span> <span class="n">qsat</span><span class="p">,</span> <span class="mf">0.0001_r8</span><span class="p">)</span>
+<a name="ln-308"></a>  
+<a name="ln-309"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">qobs</span> <span class="o">&gt;</span>  <span class="mf">0.0_r8</span>  <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-310"></a>           <span class="n">qobs</span> <span class="o">&lt;=</span> <span class="mf">0.07_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">qerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-311"></a><span class="k">  </span>
+<a name="ln-312"></a><span class="k">        call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">qobs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-313"></a>                           <span class="n">LAND_SFC_SPECIFIC_HUMIDITY</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-314"></a>        <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-315"></a>  
+<a name="ln-316"></a>      <span class="n">endif</span>
+<a name="ln-317"></a>  
+<a name="ln-318"></a>    <span class="n">endif</span>
+<a name="ln-319"></a>  
+<a name="ln-320"></a>    <span class="c">! add relative humidity data to obs_seq</span>
+<a name="ln-321"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">include_relative_humidity</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-322"></a><span class="k">  </span>
+<a name="ln-323"></a><span class="k">      </span><span class="n">rh</span> <span class="o">=</span> <span class="n">temp_and_dewpoint_to_rh</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-324"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">LH_err</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-325"></a><span class="k">        </span><span class="n">oerr</span> <span class="o">=</span> <span class="n">rh_error_from_dewpt_and_temp</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-326"></a>      <span class="k">else</span>
+<a name="ln-327"></a><span class="k">        </span><span class="n">oerr</span> <span class="o">=</span> <span class="n">land_rel_hum_error</span><span class="p">(</span><span class="n">pres</span><span class="p">,</span> <span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">rh</span><span class="p">)</span>    
+<a name="ln-328"></a>      <span class="n">endif</span>
+<a name="ln-329"></a>  
+<a name="ln-330"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">rh</span> <span class="o">&gt;</span>  <span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-331"></a>           <span class="n">rh</span> <span class="o">&lt;=</span> <span class="mf">1.5_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">oerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-332"></a><span class="k">  </span>
+<a name="ln-333"></a><span class="k">        call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">rh</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-334"></a>                           <span class="n">LAND_SFC_RELATIVE_HUMIDITY</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-335"></a>        <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-336"></a>  
+<a name="ln-337"></a>      <span class="n">endif</span>
+<a name="ln-338"></a>  
+<a name="ln-339"></a>    <span class="n">endif</span>
+<a name="ln-340"></a>  
+<a name="ln-341"></a>    <span class="c">! add dew-point temperature data to obs_seq</span>
+<a name="ln-342"></a>    <span class="k">if</span> <span class="p">(</span> <span class="n">include_dewpoint</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-343"></a><span class="k">  </span>
+<a name="ln-344"></a><span class="k">      </span><span class="n">rh</span> <span class="o">=</span> <span class="n">temp_and_dewpoint_to_rh</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a name="ln-345"></a>      <span class="n">oerr</span> <span class="o">=</span> <span class="n">dewpt_error_from_rh_and_temp</span><span class="p">(</span><span class="n">tair</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">rh</span><span class="p">)</span>
+<a name="ln-346"></a>  
+<a name="ln-347"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">rh</span> <span class="o">&gt;</span>  <span class="mf">0.0_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="p">&amp;</span>
+<a name="ln-348"></a>           <span class="n">rh</span> <span class="o">&lt;=</span> <span class="mf">1.5_r8</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">oerr</span> <span class="o">/=</span> <span class="n">missing_r8</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-349"></a><span class="k">  </span>
+<a name="ln-350"></a><span class="k">        call </span><span class="n">create_3d_obs</span><span class="p">(</span><span class="n">lat</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">lon</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">elev</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">VERTISSURFACE</span><span class="p">,</span> <span class="n">tdew</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-351"></a>                           <span class="n">LAND_SFC_DEWPOINT</span><span class="p">,</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+<a name="ln-352"></a>        <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">time_obs</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-353"></a>  
+<a name="ln-354"></a>      <span class="n">endif</span>
+<a name="ln-355"></a>  
+<a name="ln-356"></a>  <span class="c">!    print*, &#39;temp (C), rh (%), oerr:  &#39;, tair(n)-273.15_r8, rh*100.0_r8, oerr</span>
+<a name="ln-357"></a>  
+<a name="ln-358"></a>    <span class="n">endif</span>
+<a name="ln-359"></a>
+<a name="ln-360"></a>  <span class="n">endif</span>  <span class="c">! quality control/missing check on tair, tdew</span>
+<a name="ln-361"></a>
+<a name="ln-362"></a><span class="k">end do </span><span class="n">obsloop2</span>
+<a name="ln-363"></a>
+<a name="ln-364"></a><span class="c">! if we added any obs to the sequence, write it now.</span>
+<a name="ln-365"></a><span class="k">if</span> <span class="p">(</span> <span class="n">get_num_obs</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>  <span class="k">call </span><span class="n">write_obs_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">surface_out_file</span><span class="p">)</span>
+<a name="ln-366"></a>
+<a name="ln-367"></a><span class="c">! end of main program</span>
+<a name="ln-368"></a><span class="k">call </span><span class="n">finalize_utilities</span><span class="p">()</span>
+<a name="ln-369"></a>
+<a name="ln-370"></a>
+<a name="ln-371"></a><span class="k">end program </span><span class="n">convert_madis_mesonet</span>
+<a name="ln-372"></a>
+<a name="ln-373"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-374"></a><span class="c">! $URL$</span>
+<a name="ln-375"></a><span class="c">! $Id$</span>
+<a name="ln-376"></a><span class="c">! $Revision$</span>
+<a name="ln-377"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>tc_to_obs &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>tc_to_obs
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for programs.">112 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/tc_to_obs.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/tc_to_obs.f90.html'>tc_to_obs.f90</a></li>
+    
+  
+     <li class="active">tc_to_obs</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-source%7E162">source</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-revision%7E162">revision</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-revdate%7E162">revdate</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_pos_error">tc_pos_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_pmin_error">tc_pmin_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_wmax_error">tc_wmax_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-file_exist%7E15">file_exist</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-first_obs%7E20">first_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-lat%7E98">lat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-lon%7E100">lon</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-qc%7E33">qc</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-mslp">mslp</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-mwnd">mwnd</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-wsval">wsval</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-fhr">fhr</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-istat%7E8">istat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-io%7E89">io</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iyear%7E15">iyear</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-imonth%7E11">imonth</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iday%7E17">iday</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ihour%7E10">ihour</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-oday%7E17">oday</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-osec%7E17">osec</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-rcio%7E5">rcio</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iunit%7E118">iunit</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-num_copies%7E46">num_copies</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-num_qc%7E41">num_qc</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-max_obs%7E10">max_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-input_line%7E5">input_line</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-msgstring%7E36">msgstring</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-yyyymmddhh">yyyymmddhh</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ftype">ftype</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-basin">basin</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tcnum">tcnum</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-stypei">stypei</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ew">ew</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ns%7E2">ns</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs_seq%7E22">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs%7E78">obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-prev_obs%7E28">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-time_obs%7E15">time_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-prev_time%7E23">prev_time</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-input_atcf_file">input_atcf_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-fileformat">fileformat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs_out_file%7E5">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-append_to_existing_file">append_to_existing_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-debug%7E40">debug</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/obs_utilities_mod.html'>obs_utilities_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-source%7E162">source</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-revision%7E162">revision</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-revdate%7E162">revdate</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_pos_error">tc_pos_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_pmin_error">tc_pmin_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tc_wmax_error">tc_wmax_error</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-file_exist%7E15">file_exist</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-first_obs%7E20">first_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-lat%7E98">lat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-lon%7E100">lon</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-qc%7E33">qc</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-mslp">mslp</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-mwnd">mwnd</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-wsval">wsval</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-fhr">fhr</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-istat%7E8">istat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-io%7E89">io</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iyear%7E15">iyear</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-imonth%7E11">imonth</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iday%7E17">iday</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ihour%7E10">ihour</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-oday%7E17">oday</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-osec%7E17">osec</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-rcio%7E5">rcio</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-iunit%7E118">iunit</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-num_copies%7E46">num_copies</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-num_qc%7E41">num_qc</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-max_obs%7E10">max_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-input_line%7E5">input_line</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-msgstring%7E36">msgstring</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-yyyymmddhh">yyyymmddhh</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ftype">ftype</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-basin">basin</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-tcnum">tcnum</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-stypei">stypei</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ew">ew</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-ns%7E2">ns</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs_seq%7E22">obs_seq</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs%7E78">obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-prev_obs%7E28">prev_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-time_obs%7E15">time_obs</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-prev_time%7E23">prev_time</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-input_atcf_file">input_atcf_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-fileformat">fileformat</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-obs_out_file%7E5">obs_out_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-append_to_existing_file">append_to_existing_file</a>
+      
+      <a class="list-group-item" href="../program/tc_to_obs.html#variable-debug%7E40">debug</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E162"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E162"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E162"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tc_pos_error"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>tc_pos_error</strong></td><td> =</td><td>0.30_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tc_pmin_error"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>tc_pmin_error</strong></td><td> =</td><td>3.00_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tc_wmax_error"></span>real(kind=r8),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>tc_wmax_error</strong></td><td> =</td><td>3.00_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-file_exist%7E15"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>file_exist</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-first_obs%7E20"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>first_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat%7E98"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon%7E100"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qc%7E33"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mslp"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mslp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mwnd"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>mwnd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wsval"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wsval</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fhr"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>fhr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-istat%7E8"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>istat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-io%7E89"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>io</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iyear%7E15"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iyear</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imonth%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>imonth</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iday%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ihour%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ihour</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oday%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>oday</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-osec%7E17"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>osec</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rcio%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>rcio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit%7E118"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E46"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E41"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_obs%7E10"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_line%7E5"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_line</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring%7E36"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-yyyymmddhh"></span>character(len=10)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>yyyymmddhh</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ftype"></span>character(len=4)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ftype</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-basin"></span>character(len=2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>basin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tcnum"></span>character(len=2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>tcnum</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stypei"></span>character(len=2)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>stypei</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ew"></span>character(len=1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ew</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ns%7E2"></span>character(len=1)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ns</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq%7E22"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs%7E78"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_obs%7E28"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-time_obs%7E15"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>time_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-prev_time%7E23"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>prev_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-input_atcf_file"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>input_atcf_file</strong></td><td> =</td><td>'input.txt'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fileformat"></span>character(len=128)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>fileformat</strong></td><td> =</td><td>'b-deck'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_out_file%7E5"></span>character(len=256)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_out_file</strong></td><td> =</td><td>'obs_seq.out'</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-append_to_existing_file"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>append_to_existing_file</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E40"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

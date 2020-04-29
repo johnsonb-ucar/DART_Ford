@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>convert_gpsro_bufr.f90 &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>convert_gpsro_bufr.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for source files.">469 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/convert_gpsro_bufr.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">convert_gpsro_bufr.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-0">Programs</a></h3></div>
+  <div id="progs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html">convert_gpsro_bufr</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_gpsro_bufr.f90.html#src">convert_gpsro_bufr.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#progs-1">Programs</a></h3></div>
+  <div id="progs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/convert_gpsro_bufr.html">convert_gpsro_bufr</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/convert_gpsro_bufr.f90.html#src">convert_gpsro_bufr.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">! DART software - Copyright UCAR. This open source software is provided</span>
+<a name="ln-2"></a><span class="c">! by UCAR, &quot;as is&quot;, without charge, subject to all terms of use at</span>
+<a name="ln-3"></a><span class="c">! http://www.image.ucar.edu/DAReS/DART/DART_download</span>
+<a name="ln-4"></a><span class="c">!</span>
+<a name="ln-5"></a><span class="c">! $Id$</span>
+<a name="ln-6"></a>
+<a name="ln-7"></a><span class="k">program </span><span class="n">convert_gpsro_bufr</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-10"></a><span class="c">!</span>
+<a name="ln-11"></a><span class="c">!   convert_gpsro_bufr - program that reads a COSMIC GPS observation </span>
+<a name="ln-12"></a><span class="c">!                        in BUFR format and writes the data to a DART </span>
+<a name="ln-13"></a><span class="c">!                        observation sequence file. </span>
+<a name="ln-14"></a><span class="c">!</span>
+<a name="ln-15"></a><span class="c">!   For platforms with little-endian binary file format (e.g. Intel, AMD®, and</span>
+<a name="ln-16"></a><span class="c">!   non-MIPS SGI processors), you may need to first run the byte-swapping program</span>
+<a name="ln-17"></a><span class="c">!   DART/observations/NCEP/prep_bufr/exe/grabbufr.x over the bufr file </span>
+<a name="ln-18"></a><span class="c">!   before running this program. For the info, check</span>
+<a name="ln-19"></a><span class="c">!   DART/observations/NCEP/prep_bufr/prep_bufr.html. </span>
+<a name="ln-20"></a><span class="c">!</span>
+<a name="ln-21"></a><span class="c">!   created August 2015 Soyoung Ha, NCAR/MMM</span>
+<a name="ln-22"></a><span class="c">!</span>
+<a name="ln-23"></a><span class="c">!   Tested with gdas.gpsro.2012060100 for local operator only.</span>
+<a name="ln-24"></a><span class="c">!</span>
+<a name="ln-25"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-26"></a>
+<a name="ln-27"></a><span class="k">use          </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span><span class="p">,</span><span class="n">r4</span><span class="p">,</span><span class="n">digits12</span>
+<a name="ln-28"></a><span class="k">use   </span><span class="n">time_manager_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">time_type</span><span class="p">,</span> <span class="n">set_calendar_type</span><span class="p">,</span> <span class="n">GREGORIAN</span><span class="p">,</span> <span class="n">set_time</span><span class="p">,&amp;</span>
+<a name="ln-29"></a>                               <span class="n">increment_time</span><span class="p">,</span> <span class="n">get_time</span><span class="p">,</span> <span class="n">set_date</span><span class="p">,</span> <span class="n">operator</span><span class="p">(</span><span class="o">-</span><span class="p">),</span>  <span class="p">&amp;</span>
+<a name="ln-30"></a>                               <span class="n">operator</span><span class="p">(</span><span class="o">&gt;=</span><span class="p">),</span> <span class="n">operator</span><span class="p">(</span><span class="o">&lt;</span><span class="p">),</span> <span class="n">operator</span><span class="p">(</span><span class="o">&gt;</span><span class="p">),</span> <span class="n">operator</span><span class="p">(</span><span class="o">&lt;=</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-31"></a>                               <span class="n">print_date</span><span class="p">,</span> <span class="n">decrement_time</span>
+<a name="ln-32"></a><span class="k">use      </span><span class="n">utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">initialize_utilities</span><span class="p">,</span> <span class="n">find_namelist_in_file</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-33"></a>                               <span class="n">check_namelist_read</span><span class="p">,</span> <span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">do_nml_file</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-34"></a>                               <span class="n">get_next_filename</span><span class="p">,</span> <span class="n">error_handler</span><span class="p">,</span> <span class="n">E_ERR</span><span class="p">,</span> <span class="n">E_MSG</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-35"></a>                               <span class="n">find_textfile_dims</span><span class="p">,</span> <span class="n">do_nml_term</span>
+<a name="ln-36"></a><span class="k">use  </span><span class="n">netcdf_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">nc_check</span>
+<a name="ln-37"></a><span class="k">use       </span><span class="n">location_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">VERTISHEIGHT</span><span class="p">,</span> <span class="n">set_location</span>
+<a name="ln-38"></a><span class="k">use   </span><span class="n">obs_sequence_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">obs_sequence_type</span><span class="p">,</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">read_obs_seq</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-39"></a>                               <span class="n">static_init_obs_sequence</span><span class="p">,</span> <span class="n">init_obs</span><span class="p">,</span> <span class="n">destroy_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-40"></a>                               <span class="n">write_obs_seq</span><span class="p">,</span> <span class="n">init_obs_sequence</span><span class="p">,</span> <span class="n">get_num_obs</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-41"></a>                               <span class="n">insert_obs_in_seq</span><span class="p">,</span> <span class="n">destroy_obs_sequence</span><span class="p">,</span>         <span class="p">&amp;</span>
+<a name="ln-42"></a>                               <span class="n">set_copy_meta_data</span><span class="p">,</span> <span class="n">set_qc_meta_data</span><span class="p">,</span> <span class="n">set_qc</span><span class="p">,</span>    <span class="p">&amp;</span> 
+<a name="ln-43"></a>                               <span class="n">set_obs_values</span><span class="p">,</span> <span class="n">set_obs_def</span><span class="p">,</span> <span class="n">read_obs_seq_header</span>
+<a name="ln-44"></a><span class="k">use   </span><span class="n">obs_def_mod</span><span class="p">,</span>      <span class="n">only</span> <span class="p">:</span> <span class="n">obs_def_type</span><span class="p">,</span> <span class="n">set_obs_def_time</span><span class="p">,</span> <span class="n">set_obs_def_type_of_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-45"></a>                               <span class="n">set_obs_def_error_variance</span><span class="p">,</span> <span class="n">set_obs_def_location</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-46"></a>                               <span class="n">set_obs_def_key</span>
+<a name="ln-47"></a><span class="k">use    </span><span class="n">obs_def_gps_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">set_gpsro_ref</span>
+<a name="ln-48"></a><span class="k">use       </span><span class="n">obs_kind_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">GPSRO_REFRACTIVITY</span>
+<a name="ln-49"></a><span class="k">use  </span><span class="n">obs_utilities_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">add_obs_to_seq</span>
+<a name="ln-50"></a>
+<a name="ln-51"></a><span class="k">implicit none</span>
+<a name="ln-52"></a>
+<a name="ln-53"></a><span class="c">! version controlled file description for error handling, do not edit</span>
+<a name="ln-54"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">source</span>   <span class="o">=</span> <span class="p">&amp;</span>
+<a name="ln-55"></a>   <span class="s2">&quot;$URL$&quot;</span>
+<a name="ln-56"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span> <span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revision</span> <span class="o">=</span> <span class="s2">&quot;$Revision$&quot;</span>
+<a name="ln-57"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">revdate</span>  <span class="o">=</span> <span class="s2">&quot;$Date$&quot;</span>
+<a name="ln-58"></a>
+<a name="ln-59"></a><span class="c">! routines used from the bufrlib.a library:</span>
+<a name="ln-60"></a><span class="c">!    openbf, datelen, readmg,  ireadmg, ireadsb</span>
+<a name="ln-61"></a><span class="c">!    ufbint, ireadsb, ireadmg, closbf</span>
+<a name="ln-62"></a><span class="c">!    upftbv, ufbint,  ufbseq</span>
+<a name="ln-63"></a><span class="c">! be careful about passing real values across to these routines.</span>
+<a name="ln-64"></a><span class="c">! they are compiled without using our r4 and r8 kinds.  if r8=r4</span>
+<a name="ln-65"></a><span class="c">! you must use digits12 when passing real arrays.</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span>   <span class="n">num_copies</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>   <span class="p">&amp;</span>   <span class="c">! number of copies in sequence</span>
+<a name="ln-68"></a>                        <span class="n">num_qc</span>     <span class="o">=</span> <span class="mi">1</span>        <span class="c">! number of QC entries</span>
+<a name="ln-69"></a>
+<a name="ln-70"></a><span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span> <span class="kd">::</span> <span class="n">msgstring</span>
+<a name="ln-71"></a><span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">next_infile</span>
+<a name="ln-72"></a><span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">subset</span>
+<a name="ln-73"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">nlevels</span><span class="p">,</span> <span class="n">nfiles</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="n">oday</span><span class="p">,</span> <span class="n">osec</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-74"></a>           <span class="n">iyear</span><span class="p">,</span> <span class="n">imonth</span><span class="p">,</span> <span class="n">iday</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="n">obs_count</span><span class="p">,</span> <span class="n">gps_obs_num</span><span class="p">,</span> <span class="n">obs_num_byfile</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-75"></a>           <span class="n">io</span><span class="p">,</span> <span class="n">iunit</span><span class="p">,</span> <span class="n">filenum</span><span class="p">,</span> <span class="n">dummy</span>
+<a name="ln-76"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">file_exist</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">,</span> <span class="n">from_list</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-77"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">oerr</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nz</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-78"></a>            <span class="n">rfict</span><span class="p">,</span> <span class="n">obsval</span><span class="p">,</span> <span class="n">obs_val</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">qc_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-79"></a>
+<a name="ln-80"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_def_type</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">obs_def</span>
+<a name="ln-81"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_sequence_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_seq</span>
+<a name="ln-82"></a><span class="k">type</span><span class="p">(</span><span class="n">obs_type</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">obs</span><span class="p">,</span> <span class="n">prev_obs</span>
+<a name="ln-83"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">obs_time</span><span class="p">,</span> <span class="n">prev_time</span>
+<a name="ln-84"></a><span class="k">type</span><span class="p">(</span><span class="n">time_type</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">anal_time</span><span class="p">,</span> <span class="n">window_min</span><span class="p">,</span> <span class="n">window_max</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">gday</span><span class="p">,</span> <span class="n">gsec</span><span class="p">,</span> <span class="n">dsec</span><span class="p">,</span> <span class="n">bsec</span><span class="p">,</span> <span class="n">bday</span><span class="p">,</span> <span class="n">esec</span><span class="p">,</span> <span class="n">eday</span><span class="p">,</span> <span class="n">num_excluded_bytime</span>
+<a name="ln-87"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">existing_obs</span>
+<a name="ln-88"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">use_bending_angle</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>      <span class="c">! Reserve for later.</span>
+<a name="ln-89"></a>
+<a name="ln-90"></a><span class="c">! unused vars required by an interface that doesn&#39;t allow optional args</span>
+<a name="ln-91"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">dummy_a</span><span class="p">,</span> <span class="n">dummy_b</span><span class="p">,</span> <span class="n">dummy_c</span><span class="p">,</span> <span class="n">dummy_d</span>
+<a name="ln-92"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">dummy_tf</span>
+<a name="ln-93"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dummy_str</span>
+<a name="ln-94"></a>
+<a name="ln-95"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-96"></a><span class="c">! Array for bufr data</span>
+<a name="ln-97"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-98"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>  <span class="n">hdr1a</span>
+<a name="ln-99"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  <span class="n">nemo</span>
+<a name="ln-100"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>   <span class="n">subsetb</span>
+<a name="ln-101"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>   <span class="n">cflg</span>
+<a name="ln-102"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>   <span class="n">obstype</span>
+<a name="ln-103"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span> <span class="n">crecord</span>
+<a name="ln-104"></a>
+<a name="ln-105"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">unit_in</span><span class="o">=</span><span class="mi">91</span>
+<a name="ln-106"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">unit_aux</span><span class="o">=</span><span class="mi">92</span>
+<a name="ln-107"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">n1ahdr</span><span class="o">=</span><span class="mi">10</span>
+<a name="ln-108"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">maxlevs</span><span class="o">=</span><span class="mi">500</span>    <span class="c">! max number of observation levels (no longer namelist parameter)</span>
+<a name="ln-109"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">maxinfo</span><span class="o">=</span><span class="mi">16</span>
+<a name="ln-110"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">mxib</span><span class="o">=</span><span class="mi">31</span>
+<a name="ln-111"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="kd">::</span> <span class="n">isats</span>
+<a name="ln-112"></a>
+<a name="ln-113"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ireadmg</span><span class="p">,</span><span class="n">ireadsb</span>   <span class="c">! functions from bufr routines that return integers</span>
+<a name="ln-114"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_satid</span><span class="p">,</span> <span class="n">nk</span>
+<a name="ln-115"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="nb">idate</span><span class="p">,</span><span class="n">iret</span><span class="p">,</span><span class="n">num_message</span><span class="p">,</span><span class="n">num_subset</span>
+<a name="ln-116"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ikx</span><span class="p">,</span> <span class="n">nlevs</span><span class="p">,</span> <span class="n">nreps_ROSEQ1</span>
+<a name="ln-117"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">said</span><span class="p">,</span><span class="n">ptid</span>
+<a name="ln-118"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">nprof_gps</span><span class="p">,</span><span class="n">nprof_bytime</span><span class="p">,</span><span class="n">nprof_bad</span>
+<a name="ln-119"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">nprof_nosat</span><span class="p">,</span><span class="n">nprof_cdaac_bad</span><span class="p">,</span><span class="n">nprof_gras_bad</span><span class="p">,</span><span class="n">nprof_levs_bad</span>
+<a name="ln-120"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ibit</span><span class="p">(</span><span class="n">mxib</span><span class="p">),</span><span class="n">nib</span>
+<a name="ln-121"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">nsatid</span><span class="p">,</span><span class="n">nlines</span><span class="p">,</span><span class="n">istat</span>
+<a name="ln-122"></a><span class="kt">integer</span> <span class="kd">::</span> <span class="n">isatid</span><span class="p">,</span><span class="n">isub</span><span class="p">,</span><span class="n">iuse</span>
+<a name="ln-123"></a>
+<a name="ln-124"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pcc</span><span class="p">,</span> <span class="n">roc</span><span class="p">,</span> <span class="n">impact</span><span class="p">,</span> <span class="n">geopot</span>
+<a name="ln-125"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">height</span><span class="p">,</span><span class="n">rlat</span><span class="p">,</span><span class="n">rlon</span><span class="p">,</span><span class="n">ref</span><span class="p">,</span><span class="n">referr</span><span class="p">,</span><span class="n">ref_pccf</span>
+<a name="ln-126"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">freq_chk</span><span class="p">,</span><span class="n">freq</span><span class="p">,</span><span class="n">bend</span><span class="p">,</span><span class="n">bend_error</span><span class="p">,</span><span class="n">bend_pccf</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a><span class="c">! these are passed to the bufr library and must be 8 bytes even</span>
+<a name="ln-129"></a><span class="c">! if this converter is compiled with reals = r4</span>
+<a name="ln-130"></a><span class="kt">real</span><span class="p">(</span><span class="n">digits12</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="n">n1ahdr</span><span class="p">)</span><span class="kd">::</span> <span class="n">hdr</span>
+<a name="ln-131"></a><span class="kt">real</span><span class="p">(</span><span class="n">digits12</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">qfro</span>
+<a name="ln-132"></a><span class="kt">real</span><span class="p">(</span><span class="n">digits12</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="n">maxlevs</span><span class="p">)</span><span class="kd">::</span> <span class="n">nreps_this_ROSEQ2</span>
+<a name="ln-133"></a><span class="kt">real</span><span class="p">(</span><span class="n">digits12</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="n">maxlevs</span><span class="p">)</span><span class="kd">::</span> <span class="n">data1b</span>
+<a name="ln-134"></a><span class="kt">real</span><span class="p">(</span><span class="n">digits12</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="n">maxlevs</span><span class="p">)</span><span class="kd">::</span> <span class="n">data2a</span>
+<a name="ln-135"></a>
+<a name="ln-136"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">allocatable</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:)</span><span class="kd">::</span> <span class="n">gps_satid</span>
+<a name="ln-137"></a>
+<a name="ln-138"></a><span class="c">! not in namelist anymore?  doesn&#39;t have to be a parameter;</span>
+<a name="ln-139"></a><span class="c">! could be added back to namelist if needed.</span>
+<a name="ln-140"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="kd">::</span> <span class="n">max_num_obs</span><span class="o">=</span><span class="mi">200000</span>    <span class="c">! max number of observations / input file</span>
+<a name="ln-141"></a>
+<a name="ln-142"></a><span class="kt">logical</span> <span class="kd">::</span> <span class="n">lone</span><span class="p">,</span> <span class="n">good</span>
+<a name="ln-143"></a>
+<a name="ln-144"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-145"></a><span class="c">!  Declare namelist parameters</span>
+<a name="ln-146"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-147"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ray_hbot</span> <span class="o">=</span>  <span class="mi">300</span><span class="mf">0.0_r8</span>     <span class="c">! lowest level (meter)</span>
+<a name="ln-148"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ray_htop</span> <span class="o">=</span> <span class="mi">3000</span><span class="mf">0.0_r8</span>     <span class="c">! highest level (m) for observation</span>
+<a name="ln-149"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ray_ds</span>                    <span class="c">! No longer used. Just keep for set_gpsro_ref now.</span>
+<a name="ln-150"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">obs_window_hr</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>      <span class="c">! observation time window (+/-hours); A negative value means taking all the observations regardless of their report time.</span>
+<a name="ln-151"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gsi_error_inv_factor</span> <span class="o">=</span> <span class="mf">1.0</span>     <span class="c">! scale factor for the inverse of gsi error</span>
+<a name="ln-152"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">if_global</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>               <span class="c">! Is your forecast model a regional or a global model?</span>
+<a name="ln-153"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">obs_error_in_gsi</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>        <span class="c">! obs error is overwritten as one percent of the refractivity obs value</span>
+<a name="ln-154"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">convert_to_geopotential_height</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>  <span class="c">! convert geometric height in bufr data to geopotential height?</span>
+<a name="ln-155"></a><span class="kt">logical</span>  <span class="kd">::</span> <span class="n">debug</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-156"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gpsro_bufr_file</span>     <span class="o">=</span> <span class="s1">&#39;gdas.gpsro.bufr&#39;</span>
+<a name="ln-157"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gpsro_bufr_filelist</span> <span class="o">=</span> <span class="s1">&#39;list_gpsro_bufr&#39;</span>
+<a name="ln-158"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gpsro_out_file</span>      <span class="o">=</span> <span class="s1">&#39;obs_seq.gpsro&#39;</span>
+<a name="ln-159"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gpsro_aux_file</span>      <span class="o">=</span> <span class="s1">&#39;convinfo.txt&#39;</span>         <span class="c">! gps satellite info (from GSI)</span>
+<a name="ln-160"></a>
+<a name="ln-161"></a><span class="k">namelist</span> <span class="o">/</span><span class="n">convert_gpsro_bufr_nml</span><span class="o">/</span> <span class="n">ray_htop</span><span class="p">,</span> <span class="n">ray_hbot</span><span class="p">,</span> <span class="n">obs_window_hr</span><span class="p">,</span> <span class="n">if_global</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-162"></a>                                  <span class="n">obs_error_in_gsi</span><span class="p">,</span> <span class="n">convert_to_geopotential_height</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-163"></a>                                  <span class="n">gsi_error_inv_factor</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-164"></a>                                  <span class="n">gpsro_bufr_file</span><span class="p">,</span> <span class="n">gpsro_bufr_filelist</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-165"></a>                                  <span class="n">gpsro_out_file</span><span class="p">,</span>  <span class="n">gpsro_aux_file</span><span class="p">,</span> <span class="n">debug</span>
+<a name="ln-166"></a>
+<a name="ln-167"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-168"></a><span class="c">! start of executable code</span>
+<a name="ln-169"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-170"></a>
+<a name="ln-171"></a> <span class="c">! these are unused with the local operator, but would be required if</span>
+<a name="ln-172"></a> <span class="c">! you wanted to do the computation for the non-local operator.</span>
+<a name="ln-173"></a> <span class="n">nx</span>        <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-174"></a> <span class="n">ny</span>        <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-175"></a> <span class="n">nz</span>        <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-176"></a> <span class="n">rfict</span>     <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-177"></a> <span class="k">data </span><span class="n">hdr1a</span> <span class="o">/</span> <span class="s1">&#39;YEAR MNTH DAYS HOUR MINU PCCF ELRC SAID PTID GEODU&#39;</span> <span class="o">/</span>
+<a name="ln-178"></a> <span class="k">data </span><span class="n">nemo</span> <span class="o">/</span><span class="s1">&#39;QFRO&#39;</span><span class="o">/</span>
+<a name="ln-179"></a>
+<a name="ln-180"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-181"></a><span class="c">! Open and read the auxiliary info (mainly for satellite id to be used)</span>
+<a name="ln-182"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-183"></a> <span class="k">open</span><span class="p">(</span><span class="n">unit_aux</span><span class="p">,</span><span class="k">file</span><span class="o">=</span><span class="n">gpsro_aux_file</span><span class="p">,</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="s1">&#39;formatted&#39;</span><span class="p">)</span>
+<a name="ln-184"></a>
+<a name="ln-185"></a> <span class="k">rewind</span><span class="p">(</span><span class="n">unit_aux</span><span class="p">)</span>
+<a name="ln-186"></a> <span class="n">nsatid</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-187"></a> <span class="n">nlines</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-188"></a> <span class="n">read1</span><span class="p">:</span> <span class="k">do</span>
+<a name="ln-189"></a><span class="k">        read</span><span class="p">(</span><span class="n">unit_aux</span><span class="p">,</span><span class="mi">1030</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">istat</span><span class="p">,</span><span class="k">end</span><span class="o">=</span><span class="mi">1130</span><span class="p">)</span> <span class="n">cflg</span><span class="p">,</span><span class="n">obstype</span><span class="p">,</span><span class="n">crecord</span>
+<a name="ln-190"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">istat</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">exit</span>
+<a name="ln-191"></a><span class="k">        </span><span class="n">nlines</span><span class="o">=</span><span class="n">nlines</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-192"></a>        <span class="k">if</span><span class="p">(</span><span class="n">cflg</span> <span class="o">==</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span> <span class="k">cycle</span>
+<a name="ln-193"></a><span class="k">        if</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">obstype</span><span class="p">)</span> <span class="o">/=</span> <span class="s1">&#39;gps&#39;</span><span class="p">)</span> <span class="k">cycle</span>    <span class="c">! We process gps only.</span>
+<a name="ln-194"></a>        <span class="k">read</span><span class="p">(</span><span class="n">crecord</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="n">isatid</span><span class="p">,</span><span class="n">isub</span><span class="p">,</span><span class="n">iuse</span>
+<a name="ln-195"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">iuse</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">cycle</span>       <span class="c">! Soyoung: -1 for monitoring. We skip it.</span>
+<a name="ln-196"></a>        <span class="n">nsatid</span><span class="o">=</span><span class="n">nsatid</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-197"></a>        <span class="n">isats</span><span class="p">(</span><span class="n">nsatid</span><span class="p">)</span><span class="o">=</span><span class="n">isatid</span>
+<a name="ln-198"></a> <span class="n">enddo</span> <span class="n">read1</span>
+<a name="ln-199"></a> <span class="mi">1030</span> <span class="k">format</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="mi">2</span><span class="n">x</span><span class="p">,</span><span class="n">a120</span><span class="p">)</span>
+<a name="ln-200"></a> <span class="mi">1130</span> <span class="k">continue</span>
+<a name="ln-201"></a><span class="k"> if</span> <span class="p">(</span><span class="n">istat</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-202"></a><span class="k">    write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;error reading convinfo from file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_aux_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39; istat=&#39;</span><span class="p">,</span><span class="n">istat</span>
+<a name="ln-203"></a>    <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-204"></a>                       <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-205"></a> <span class="n">endif</span>
+<a name="ln-206"></a>
+<a name="ln-207"></a> <span class="n">num_satid</span><span class="o">=</span><span class="n">nsatid</span>
+<a name="ln-208"></a> <span class="k">allocate</span><span class="p">(</span><span class="n">gps_satid</span><span class="p">(</span><span class="n">num_satid</span><span class="p">))</span>
+<a name="ln-209"></a> <span class="n">gps_satid</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">num_satid</span><span class="p">)</span><span class="o">=</span><span class="n">isats</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">num_satid</span><span class="p">)</span>
+<a name="ln-210"></a> <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(A,20I5)&#39;</span><span class="p">)</span> <span class="s1">&#39;convert_gpsro_bufr: satellite id:&#39;</span><span class="p">,</span><span class="n">gps_satid</span>
+<a name="ln-211"></a>
+<a name="ln-212"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-213"></a><span class="c">! initialize some values</span>
+<a name="ln-214"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-215"></a><span class="n">obs_count</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-216"></a><span class="n">qc</span> <span class="o">=</span> <span class="mf">0.0_r8</span>
+<a name="ln-217"></a><span class="n">first_obs</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-218"></a><span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">GREGORIAN</span><span class="p">)</span>
+<a name="ln-219"></a>
+<a name="ln-220"></a><span class="c">!  read the necessary parameters from input.nml</span>
+<a name="ln-221"></a><span class="k">call </span><span class="n">initialize_utilities</span><span class="p">()</span>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="k">call </span><span class="n">find_namelist_in_file</span><span class="p">(</span><span class="s2">&quot;input.nml&quot;</span><span class="p">,</span> <span class="s2">&quot;convert_gpsro_bufr_nml&quot;</span><span class="p">,</span> <span class="n">iunit</span><span class="p">)</span>
+<a name="ln-224"></a><span class="k">read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">nml</span> <span class="o">=</span> <span class="n">convert_gpsro_bufr_nml</span><span class="p">,</span> <span class="n">iostat</span> <span class="o">=</span> <span class="n">io</span><span class="p">)</span>
+<a name="ln-225"></a><span class="k">call </span><span class="n">check_namelist_read</span><span class="p">(</span><span class="n">iunit</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="s2">&quot;convert_gpsro_bufr_nml&quot;</span><span class="p">)</span>
+<a name="ln-226"></a>
+<a name="ln-227"></a><span class="c">! Record the namelist values used for the run </span>
+<a name="ln-228"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_file</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span><span class="n">nmlfileunit</span><span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">convert_gpsro_bufr_nml</span><span class="p">)</span>
+<a name="ln-229"></a><span class="k">if</span> <span class="p">(</span><span class="n">do_nml_term</span><span class="p">())</span> <span class="k">write</span><span class="p">(</span>     <span class="o">*</span>     <span class="p">,</span> <span class="n">nml</span><span class="o">=</span><span class="n">convert_gpsro_bufr_nml</span><span class="p">)</span>
+<a name="ln-230"></a>
+<a name="ln-231"></a><span class="c">!  FIXME: We take all the native observation levels (instead of interpolating to</span>
+<a name="ln-232"></a><span class="c">!  the levels at regular intervals. </span>
+<a name="ln-233"></a><span class="c">!  Then, how to count observation levels from each profile? (e.g., nlevels)</span>
+<a name="ln-234"></a><span class="c">!  For now, we take maxlevs as num_new_obs, and are not sure if gpsro_bufr_filelist </span>
+<a name="ln-235"></a><span class="c">!  would work with it.</span>
+<a name="ln-236"></a><span class="c">!nlevels = maxlevs</span>
+<a name="ln-237"></a>
+<a name="ln-238"></a><span class="c">! namelist checks for sanity</span>
+<a name="ln-239"></a>
+<a name="ln-240"></a><span class="c">! cannot have both a single filename and a list; the namelist must</span>
+<a name="ln-241"></a><span class="c">! shut one off.</span>
+<a name="ln-242"></a><span class="k">if</span> <span class="p">(</span><span class="n">gpsro_bufr_file</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">gpsro_bufr_filelist</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-243"></a><span class="k">  call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_ERR</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span>                     <span class="p">&amp;</span>
+<a name="ln-244"></a>                    <span class="s1">&#39;One of gpsro_bufr_file or filelist must be NULL&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-245"></a>                     <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-246"></a><span class="n">endif</span>
+<a name="ln-247"></a><span class="k">if</span> <span class="p">(</span><span class="n">gpsro_bufr_filelist</span> <span class="o">/=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="n">from_list</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-248"></a>
+<a name="ln-249"></a><span class="k">if</span> <span class="p">(</span> <span class="n">obs_window_hr</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-250"></a><span class="k">     print</span> <span class="s1">&#39;(A,F5.2)&#39;</span><span class="p">,</span> <span class="s2">&quot;Limit gpsro data within the time window (+/- hours): &quot;</span><span class="p">,</span> <span class="n">obs_window_hr</span>
+<a name="ln-251"></a>     <span class="k">print</span><span class="o">*</span><span class="p">,</span> <span class="s2">&quot;Enter target assimilation time (gregorian day, second): &quot;</span>
+<a name="ln-252"></a>     <span class="k">read</span><span class="o">*</span><span class="p">,</span> <span class="n">gday</span><span class="p">,</span><span class="n">gsec</span>
+<a name="ln-253"></a>
+<a name="ln-254"></a>     <span class="k">call </span><span class="n">set_calendar_type</span><span class="p">(</span><span class="n">GREGORIAN</span><span class="p">)</span>
+<a name="ln-255"></a>     <span class="n">anal_time</span> <span class="o">=</span> <span class="n">set_time</span><span class="p">(</span><span class="n">gsec</span><span class="p">,</span> <span class="n">gday</span><span class="p">)</span>
+<a name="ln-256"></a>     <span class="n">dsec</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">obs_window_hr</span> <span class="o">*</span> <span class="mi">360</span><span class="mf">0.</span><span class="p">)</span>
+<a name="ln-257"></a>     <span class="n">window_min</span> <span class="o">=</span> <span class="n">decrement_time</span><span class="p">(</span><span class="n">anal_time</span><span class="p">,</span> <span class="n">dsec</span><span class="p">)</span>
+<a name="ln-258"></a>     <span class="n">window_max</span> <span class="o">=</span> <span class="n">increment_time</span><span class="p">(</span><span class="n">anal_time</span><span class="p">,</span> <span class="n">dsec</span><span class="p">)</span>
+<a name="ln-259"></a>     <span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="n">window_min</span><span class="p">,</span><span class="n">bsec</span><span class="p">,</span><span class="n">bday</span><span class="p">)</span>
+<a name="ln-260"></a>     <span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="n">window_max</span><span class="p">,</span><span class="n">esec</span><span class="p">,</span><span class="n">eday</span><span class="p">)</span>
+<a name="ln-261"></a>
+<a name="ln-262"></a>     <span class="k">print</span> <span class="s1">&#39;(2(A,2I8))&#39;</span><span class="p">,</span> <span class="s1">&#39;Observations are taken between &#39;</span><span class="p">,</span><span class="n">bday</span><span class="p">,</span><span class="n">bsec</span><span class="p">,</span><span class="s1">&#39; and &#39;</span><span class="p">,</span><span class="n">eday</span><span class="p">,</span><span class="n">esec</span>
+<a name="ln-263"></a>     <span class="n">num_excluded_bytime</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c">! total number of obs beyond the time window</span>
+<a name="ln-264"></a><span class="n">endif</span>
+<a name="ln-265"></a>
+<a name="ln-266"></a><span class="c">! need to know a reasonable max number of obs that could be added here.</span>
+<a name="ln-267"></a><span class="k">if</span> <span class="p">(</span><span class="n">from_list</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-268"></a><span class="k">   call </span><span class="n">find_textfile_dims</span><span class="p">(</span><span class="n">gpsro_bufr_filelist</span><span class="p">,</span> <span class="n">nfiles</span><span class="p">,</span> <span class="n">dummy</span><span class="p">)</span>
+<a name="ln-269"></a>   <span class="n">num_new_obs</span> <span class="o">=</span> <span class="n">max_num_obs</span> <span class="o">*</span> <span class="n">nfiles</span>
+<a name="ln-270"></a><span class="k">else</span>
+<a name="ln-271"></a><span class="k">   </span><span class="n">num_new_obs</span> <span class="o">=</span> <span class="n">max_num_obs</span>           <span class="c">!maxlevs</span>
+<a name="ln-272"></a><span class="n">endif</span>
+<a name="ln-273"></a>
+<a name="ln-274"></a><span class="c">!  either read existing obs_seq or create a new one</span>
+<a name="ln-275"></a><span class="k">call </span><span class="n">static_init_obs_sequence</span><span class="p">()</span>
+<a name="ln-276"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-277"></a><span class="k">call </span><span class="n">init_obs</span><span class="p">(</span><span class="n">prev_obs</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">)</span>
+<a name="ln-278"></a><span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="n">gpsro_out_file</span><span class="p">,</span> <span class="n">exist</span><span class="o">=</span><span class="n">file_exist</span><span class="p">)</span>
+<a name="ln-279"></a>
+<a name="ln-280"></a><span class="c">! blank line for readability</span>
+<a name="ln-281"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-282"></a>
+<a name="ln-283"></a><span class="k">if</span> <span class="p">(</span> <span class="n">file_exist</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-284"></a>
+<a name="ln-285"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Found existing obs_seq file, will append obs to &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-286"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-287"></a>
+<a name="ln-288"></a>   <span class="c">! open the file and figure out how many obs are already there</span>
+<a name="ln-289"></a>   <span class="k">call </span><span class="n">read_obs_seq_header</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">,</span> <span class="n">dummy_a</span><span class="p">,</span> <span class="n">dummy_b</span><span class="p">,</span> <span class="n">existing_obs</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-290"></a>      <span class="n">dummy_c</span><span class="p">,</span> <span class="n">dummy_d</span><span class="p">,</span> <span class="n">dummy_str</span><span class="p">,</span> <span class="n">dummy_tf</span><span class="p">,</span> <span class="n">close_the_file</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.)</span>
+<a name="ln-291"></a>
+<a name="ln-292"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s2">&quot;Existing file already contains &quot;</span><span class="p">,</span> <span class="n">existing_obs</span><span class="p">,</span> <span class="s2">&quot; observations.&quot;</span>
+<a name="ln-293"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-294"></a>
+<a name="ln-295"></a>   <span class="c">! blank line</span>
+<a name="ln-296"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-297"></a>
+<a name="ln-298"></a>   <span class="c">! reopen the file and tell it how many obs we potentially will be adding</span>
+<a name="ln-299"></a>   <span class="k">call </span><span class="n">read_obs_seq</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">,</span> <span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-300"></a>
+<a name="ln-301"></a><span class="k">else</span>
+<a name="ln-302"></a>
+<a name="ln-303"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Creating new obs_seq file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-304"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-305"></a>
+<a name="ln-306"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Maximum observation count to be added is &#39;</span><span class="p">,</span> <span class="n">num_new_obs</span>
+<a name="ln-307"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-308"></a> 
+<a name="ln-309"></a>   <span class="c">! blank line</span>
+<a name="ln-310"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-311"></a>
+<a name="ln-312"></a>   <span class="c">! create the new obs sequence here</span>
+<a name="ln-313"></a>   <span class="k">call </span><span class="n">init_obs_sequence</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">num_copies</span><span class="p">,</span> <span class="n">num_qc</span><span class="p">,</span> <span class="n">num_new_obs</span><span class="p">)</span>
+<a name="ln-314"></a>
+<a name="ln-315"></a>   <span class="k">call </span><span class="n">set_copy_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;COSMIC GPS observation&#39;</span><span class="p">)</span>
+<a name="ln-316"></a>   <span class="k">call </span><span class="n">set_qc_meta_data</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;COSMIC QC&#39;</span><span class="p">)</span>
+<a name="ln-317"></a>
+<a name="ln-318"></a><span class="k">end if</span>
+<a name="ln-319"></a>
+<a name="ln-320"></a>
+<a name="ln-321"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-322"></a><span class="c">! main loop that does either a single file or a list of files</span>
+<a name="ln-323"></a><span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-324"></a>
+<a name="ln-325"></a><span class="n">filenum</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-326"></a><span class="n">fileloop</span><span class="p">:</span> <span class="k">do</span>      <span class="c">! until out of files</span>
+<a name="ln-327"></a>
+<a name="ln-328"></a>   <span class="c">! do some bookkeeping to see how many scans are ignored and for what reason.</span>
+<a name="ln-329"></a>   <span class="c">! the print for these is inside the fileloop so the reset has to be inside</span>
+<a name="ln-330"></a>   <span class="c">! as well.  if you want totals for the entire run (including multiple files)</span>
+<a name="ln-331"></a>   <span class="c">! take these out of the loop and move the prints out of the loop at the bottom</span>
+<a name="ln-332"></a>    
+<a name="ln-333"></a>   <span class="n">obs_num_byfile</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-334"></a>   <span class="n">nprof_gps</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-335"></a>   <span class="n">nprof_bytime</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-336"></a>   <span class="n">nprof_cdaac_bad</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-337"></a>   <span class="n">nprof_gras_bad</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-338"></a>   <span class="n">nprof_levs_bad</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-339"></a>   <span class="n">nprof_nosat</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-340"></a>
+<a name="ln-341"></a>   <span class="c">! get the single name, or the next name from a list</span>
+<a name="ln-342"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">from_list</span><span class="p">)</span> <span class="k">then </span>
+<a name="ln-343"></a><span class="k">      </span><span class="n">next_infile</span> <span class="o">=</span> <span class="n">get_next_filename</span><span class="p">(</span><span class="n">gpsro_bufr_filelist</span><span class="p">,</span> <span class="n">filenum</span><span class="p">)</span>
+<a name="ln-344"></a>   <span class="k">else</span>
+<a name="ln-345"></a><span class="k">      </span><span class="n">next_infile</span> <span class="o">=</span> <span class="n">gpsro_bufr_file</span>
+<a name="ln-346"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">filenum</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">next_infile</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a name="ln-347"></a>   <span class="n">endif</span>
+<a name="ln-348"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">next_infile</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">exit </span><span class="n">fileloop</span>
+<a name="ln-349"></a>  
+<a name="ln-350"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-351"></a>   <span class="c">! Open file for input</span>
+<a name="ln-352"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-353"></a>   <span class="k">open</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="k">file</span><span class="o">=</span><span class="n">next_infile</span><span class="p">,</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="s1">&#39;unformatted&#39;</span><span class="p">)</span>
+<a name="ln-354"></a>
+<a name="ln-355"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-356"></a>   <span class="c">! Reading bufr data</span>
+<a name="ln-357"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-358"></a>   <span class="k">call </span><span class="n">openbf</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="s1">&#39;IN&#39;</span><span class="p">,</span><span class="n">unit_in</span><span class="p">)</span>          <span class="c">! BUFRLIB</span>
+<a name="ln-359"></a>   <span class="k">call </span><span class="n">datelen</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                           <span class="c">! BUFRLIB</span>
+<a name="ln-360"></a>   <span class="k">call </span><span class="n">readmg</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">subsetb</span><span class="p">,</span><span class="nb">idate</span><span class="p">,</span><span class="n">iret</span><span class="p">)</span>    <span class="c">! BUFRLIB</span>
+<a name="ln-361"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">iret</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">goto </span><span class="mi">1010</span>
+<a name="ln-362"></a>
+<a name="ln-363"></a>   <span class="c">! Big loop over the bufr file</span>
+<a name="ln-364"></a>   <span class="n">num_message</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-365"></a>   <span class="n">msg_report</span><span class="p">:</span> <span class="k">do while</span> <span class="p">(</span><span class="n">ireadmg</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">subsetb</span><span class="p">,</span><span class="nb">idate</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>   <span class="c">! BUFRLIB</span>
+<a name="ln-366"></a>     <span class="n">num_message</span> <span class="o">=</span> <span class="n">num_message</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-367"></a>     <span class="n">num_subset</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-368"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(I10,I5,a10)&#39;</span><span class="p">)</span> <span class="nb">idate</span><span class="p">,</span><span class="n">num_message</span><span class="p">,</span><span class="n">subsetb</span>
+<a name="ln-369"></a>
+<a name="ln-370"></a>     <span class="n">read_loop</span><span class="p">:</span> <span class="k">do while</span> <span class="p">(</span><span class="n">ireadsb</span><span class="p">(</span><span class="n">unit_in</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>                <span class="c">! BUFRLIB</span>
+<a name="ln-371"></a>       <span class="n">num_subset</span> <span class="o">=</span> <span class="n">num_subset</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-372"></a>
+<a name="ln-373"></a>       <span class="c">! Extract header information</span>
+<a name="ln-374"></a>       <span class="k">call </span><span class="n">ufbint</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">hdr</span><span class="p">,</span><span class="n">n1ahdr</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">iret</span><span class="p">,</span><span class="n">hdr1a</span><span class="p">)</span>             <span class="c">! BUFRLIB</span>
+<a name="ln-375"></a>       <span class="k">call </span><span class="n">ufbint</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">qfro</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">iret</span><span class="p">,</span><span class="n">nemo</span><span class="p">)</span>                  <span class="c">! BUFRLIB</span>
+<a name="ln-376"></a>
+<a name="ln-377"></a>       <span class="c">! observation time in minutes</span>
+<a name="ln-378"></a>       <span class="n">iyear</span>  <span class="o">=</span> <span class="n">hdr</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c">! year</span>
+<a name="ln-379"></a>       <span class="n">imonth</span> <span class="o">=</span> <span class="n">hdr</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c">! month</span>
+<a name="ln-380"></a>       <span class="n">iday</span>   <span class="o">=</span> <span class="n">hdr</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c">! day</span>
+<a name="ln-381"></a>       <span class="n">ihour</span>  <span class="o">=</span> <span class="n">hdr</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c">! hour</span>
+<a name="ln-382"></a>       <span class="n">imin</span>   <span class="o">=</span> <span class="n">hdr</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c">! minute</span>
+<a name="ln-383"></a>       <span class="n">pcc</span><span class="o">=</span><span class="n">hdr</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>         <span class="c">! profile per cent confidence</span>
+<a name="ln-384"></a>       <span class="n">roc</span><span class="o">=</span><span class="n">hdr</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>         <span class="c">! Earth local radius of curvature</span>
+<a name="ln-385"></a>       <span class="n">said</span><span class="o">=</span><span class="n">hdr</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>        <span class="c">! Satellite identifier (receiver)</span>
+<a name="ln-386"></a>       <span class="n">ptid</span><span class="o">=</span><span class="n">hdr</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>        <span class="c">! Platform transmitter ID number</span>
+<a name="ln-387"></a>
+<a name="ln-388"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="n">iyear</span><span class="p">,</span> <span class="n">imonth</span><span class="p">,</span> <span class="n">iday</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span>
+<a name="ln-389"></a>       <span class="n">obs_time</span> <span class="o">=</span> <span class="n">set_date</span><span class="p">(</span><span class="n">iyear</span><span class="p">,</span> <span class="n">imonth</span><span class="p">,</span> <span class="n">iday</span><span class="p">,</span> <span class="n">ihour</span><span class="p">,</span> <span class="n">imin</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-390"></a>       <span class="k">call </span><span class="n">get_time</span><span class="p">(</span><span class="n">obs_time</span><span class="p">,</span>  <span class="n">osec</span><span class="p">,</span> <span class="n">oday</span><span class="p">)</span>
+<a name="ln-391"></a>
+<a name="ln-392"></a>       <span class="c">! Check the satellite list in convinfo</span>
+<a name="ln-393"></a>       <span class="n">ikx</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-394"></a>       <span class="n">find_loop</span><span class="p">:</span> <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_satid</span>
+<a name="ln-395"></a>          <span class="k">if</span> <span class="p">(</span> <span class="n">said</span> <span class="o">==</span> <span class="n">gps_satid</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-396"></a><span class="k">               </span><span class="n">ikx</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-397"></a>               <span class="k">exit </span><span class="n">find_loop</span>
+<a name="ln-398"></a>          <span class="n">endif</span>
+<a name="ln-399"></a>       <span class="n">enddo</span> <span class="n">find_loop</span>
+<a name="ln-400"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">ikx</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-401"></a><span class="k">           </span><span class="n">nprof_nosat</span> <span class="o">=</span> <span class="n">nprof_nosat</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-402"></a>           <span class="k">cycle </span><span class="n">read_loop</span>
+<a name="ln-403"></a>       <span class="n">endif</span>
+<a name="ln-404"></a>
+<a name="ln-405"></a>       <span class="c">! Check profile quality flags</span>
+<a name="ln-406"></a>       <span class="k">if</span> <span class="p">(</span> <span class="p">((</span><span class="n">said</span> <span class="o">&gt;</span> <span class="mi">739</span><span class="p">).</span><span class="nb">and</span><span class="p">.(</span><span class="n">said</span> <span class="o">&lt;</span> <span class="mi">746</span><span class="p">)).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">820</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">786</span><span class="p">))</span> <span class="k">then</span>  <span class="c">!CDAAC processing</span>
+<a name="ln-407"></a>           <span class="k">if</span><span class="p">(</span><span class="n">pcc</span><span class="o">==</span><span class="mf">0.0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-408"></a><span class="k">              if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;convert_gpsro_bufr: 1 bad profile said=&#39;</span><span class="p">,</span><span class="n">said</span><span class="p">,</span><span class="s1">&#39;ptid=&#39;</span><span class="p">,</span><span class="n">ptid</span><span class="p">,&amp;</span>
+<a name="ln-409"></a>                                   <span class="s1">&#39; SKIP this report&#39;</span>
+<a name="ln-410"></a>              <span class="n">nprof_cdaac_bad</span> <span class="o">=</span> <span class="n">nprof_cdaac_bad</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-411"></a>              <span class="k">cycle </span><span class="n">read_loop</span>
+<a name="ln-412"></a>           <span class="n">endif</span>
+<a name="ln-413"></a>        <span class="n">endif</span>
+<a name="ln-414"></a>
+<a name="ln-415"></a>        <span class="k">if</span> <span class="p">((</span><span class="n">said</span> <span class="o">==</span> <span class="mi">4</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">3</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">421</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">440</span><span class="p">).</span><span class="nb">or</span><span class="p">.&amp;</span>
+<a name="ln-416"></a>            <span class="p">(</span><span class="n">said</span> <span class="o">==</span> <span class="mi">821</span><span class="p">))</span> <span class="k">then</span> <span class="c">! GRAS SAF processing</span>
+<a name="ln-417"></a>           <span class="k">call </span><span class="n">upftbv</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">nemo</span><span class="p">,</span><span class="n">qfro</span><span class="p">,</span><span class="n">mxib</span><span class="p">,</span><span class="n">ibit</span><span class="p">,</span><span class="n">nib</span><span class="p">)</span>         <span class="c">! BUFRLIB</span>
+<a name="ln-418"></a>           <span class="n">lone</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-419"></a>           <span class="k">if</span><span class="p">(</span><span class="n">nib</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-420"></a><span class="k">              do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nib</span>
+<a name="ln-421"></a>                 <span class="k">if</span><span class="p">(</span><span class="n">ibit</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-422"></a><span class="k">                    </span><span class="n">lone</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-423"></a>                    <span class="k">exit</span>
+<a name="ln-424"></a><span class="k">                 </span><span class="n">endif</span>
+<a name="ln-425"></a>              <span class="n">enddo</span>
+<a name="ln-426"></a>           <span class="n">endif</span>
+<a name="ln-427"></a>           <span class="k">if</span><span class="p">(</span><span class="n">lone</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-428"></a><span class="k">              if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;convert_gpsro_bufr: 2 bad profile said=&#39;</span><span class="p">,</span><span class="n">said</span><span class="p">,</span><span class="s1">&#39;ptid=&#39;</span><span class="p">,</span><span class="n">ptid</span><span class="p">,&amp;</span>
+<a name="ln-429"></a>                                    <span class="s1">&#39; SKIP this report&#39;</span>
+<a name="ln-430"></a>              <span class="n">nprof_gras_bad</span> <span class="o">=</span> <span class="n">nprof_gras_bad</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-431"></a>              <span class="k">cycle </span><span class="n">read_loop</span>
+<a name="ln-432"></a>           <span class="n">endif</span>
+<a name="ln-433"></a>        <span class="n">endif</span>
+<a name="ln-434"></a>
+<a name="ln-435"></a>       <span class="c">! Read observations</span>
+<a name="ln-436"></a>       <span class="k">call </span><span class="n">ufbint</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">nreps_this_ROSEQ2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">maxlevs</span><span class="p">,</span><span class="n">nreps_ROSEQ1</span><span class="p">,</span><span class="s1">&#39;{ROSEQ2}&#39;</span><span class="p">)</span>        <span class="c">! BUFRLIB</span>
+<a name="ln-437"></a>       <span class="k">call </span><span class="n">ufbseq</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">data1b</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="n">maxlevs</span><span class="p">,</span>  <span class="n">nlevs</span><span class="p">,</span><span class="s1">&#39;ROSEQ1&#39;</span><span class="p">)</span>    <span class="c">! bending angle      ! BUFRLIB</span>
+<a name="ln-438"></a>       <span class="k">call </span><span class="n">ufbseq</span><span class="p">(</span><span class="n">unit_in</span><span class="p">,</span><span class="n">data2a</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="n">maxlevs</span><span class="p">,</span><span class="n">nlevels</span><span class="p">,</span><span class="s1">&#39;ROSEQ3&#39;</span><span class="p">)</span>    <span class="c">! refractivity       ! BUFRLIB</span>
+<a name="ln-439"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">nlevs</span><span class="o">/=</span><span class="n">nlevels</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-440"></a><span class="k">          if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(A,2I5,2(A,I5),A)&#39;</span><span class="p">)</span> <span class="s1">&#39;convert_gpsro_bufr:  *WARNING* said,ptid=&#39;</span><span class="p">,</span><span class="n">said</span><span class="p">,</span><span class="n">ptid</span><span class="p">,&amp;</span>
+<a name="ln-441"></a>                                                  <span class="s1">&#39; with gps_bnd nlevs=&#39;</span><span class="p">,</span> <span class="n">nlevs</span><span class="p">,&amp;</span>
+<a name="ln-442"></a>                                                  <span class="s1">&#39; and gps_ref nlevels=&#39;</span><span class="p">,</span><span class="n">nlevels</span><span class="p">,&amp;</span>
+<a name="ln-443"></a>                                                  <span class="s1">&#39; SKIP this report&#39;</span>
+<a name="ln-444"></a>          <span class="n">nprof_levs_bad</span> <span class="o">=</span> <span class="n">nprof_levs_bad</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-445"></a>          <span class="k">cycle </span><span class="n">read_loop</span>
+<a name="ln-446"></a>       <span class="n">endif</span>
+<a name="ln-447"></a>
+<a name="ln-448"></a>       <span class="c">! Exclude observations outside the time window.</span>
+<a name="ln-449"></a>       <span class="k">if</span> <span class="p">(</span> <span class="n">obs_window_hr</span> <span class="o">&gt;</span> <span class="mf">0.0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-450"></a><span class="k">          if</span> <span class="p">(</span><span class="n">obs_time</span> <span class="o">&lt;=</span> <span class="n">window_min</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">obs_time</span> <span class="o">&gt;</span> <span class="n">window_max</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-451"></a><span class="k">              </span><span class="n">num_excluded_bytime</span> <span class="o">=</span> <span class="n">num_excluded_bytime</span> <span class="o">+</span> <span class="n">nlevels</span>
+<a name="ln-452"></a>              <span class="n">nprof_bytime</span> <span class="o">=</span> <span class="n">nprof_bytime</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-453"></a>              <span class="k">cycle </span><span class="n">read_loop</span>
+<a name="ln-454"></a>          <span class="k">end if</span>
+<a name="ln-455"></a><span class="k">       end if</span>
+<a name="ln-456"></a>   
+<a name="ln-457"></a>       <span class="c">! Increment report counters</span>
+<a name="ln-458"></a>       <span class="n">nprof_gps</span> <span class="o">=</span> <span class="n">nprof_gps</span> <span class="o">+</span> <span class="mi">1</span>      <span class="c">! count reports in bufr file</span>
+<a name="ln-459"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(5(A8,I5))&#39;</span><span class="p">)</span> <span class="s1">&#39; nprof =&#39;</span><span class="p">,</span><span class="n">nprof_gps</span><span class="p">,</span><span class="s1">&#39; said =&#39;</span><span class="p">,</span><span class="n">said</span><span class="p">,</span><span class="s1">&#39; ptid=&#39;</span><span class="p">,</span><span class="n">ptid</span><span class="p">,&amp;</span>
+<a name="ln-460"></a>                                        <span class="s1">&#39; nlevs =&#39;</span><span class="p">,</span><span class="n">nlevs</span><span class="p">,</span><span class="s1">&#39; nlevels =&#39;</span><span class="p">,</span><span class="n">nlevels</span>
+<a name="ln-461"></a>
+<a name="ln-462"></a>       <span class="c">! Loop over nlevels in profile</span>
+<a name="ln-463"></a>       <span class="n">obsloop2</span><span class="p">:</span> <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nlevels</span>
+<a name="ln-464"></a>
+<a name="ln-465"></a>          <span class="n">rlat</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>      <span class="c">! earth relative latitude (degrees)</span>
+<a name="ln-466"></a>          <span class="n">rlon</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>      <span class="c">! earth relative longitude (degrees)</span>
+<a name="ln-467"></a>          <span class="n">height</span><span class="o">=</span><span class="n">data2a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>    <span class="c">! geometric height above geoid (m)</span>
+<a name="ln-468"></a>          <span class="n">ref</span><span class="o">=</span><span class="n">data2a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>       <span class="c">! refractivity obs (units of N)</span>
+<a name="ln-469"></a>          <span class="n">referr</span><span class="o">=</span><span class="n">data2a</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>    <span class="c">! gps ref obs error (units of N)</span>
+<a name="ln-470"></a>          <span class="n">ref_pccf</span><span class="o">=</span><span class="n">data2a</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>  <span class="c">! percent confidence (%)</span>
+<a name="ln-471"></a>
+<a name="ln-472"></a>          <span class="k">if</span><span class="p">(</span><span class="n">use_bending_angle</span><span class="p">)</span> <span class="k">then</span>        <span class="c">! for later</span>
+<a name="ln-473"></a>
+<a name="ln-474"></a>          <span class="c">! Loop over number of replications of ROSEQ2 nested inside ROSEQ1</span>
+<a name="ln-475"></a>          <span class="n">nk</span> <span class="o">=</span> <span class="n">nreps_this_ROSEQ2</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-476"></a>          <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nk</span>
+<a name="ln-477"></a>              <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span>
+<a name="ln-478"></a>              <span class="n">freq_chk</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>          <span class="c">! frequency (hertz)</span>
+<a name="ln-479"></a>              <span class="k">if</span><span class="p">(</span><span class="nb">nint</span><span class="p">(</span><span class="n">freq_chk</span><span class="p">).</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span> <span class="k">cycle</span> <span class="c">! do not want non-zero freq., go on</span>
+<a name="ln-480"></a>                                            <span class="c">! to next replication of ROSEQ2</span>
+<a name="ln-481"></a>              <span class="n">freq</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+<a name="ln-482"></a>              <span class="n">impact</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>      <span class="c">! impact parameter (m)</span>
+<a name="ln-483"></a>              <span class="n">bend</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>        <span class="c">! bending angle (rad)</span>
+<a name="ln-484"></a>              <span class="n">bend_error</span><span class="o">=</span><span class="n">data1b</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>  <span class="c">! RMSE in bending angle (rad)</span>
+<a name="ln-485"></a>          <span class="n">enddo</span>
+<a name="ln-486"></a>          <span class="n">bend_pccf</span><span class="o">=</span><span class="n">data1b</span><span class="p">((</span><span class="mi">6</span><span class="o">*</span><span class="n">nk</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>  <span class="c">! percent confidence for this ROSEQ1 replication</span>
+<a name="ln-487"></a>
+<a name="ln-488"></a>          <span class="n">endif</span>     <span class="c">!if(use_bending_angle) then</span>
+<a name="ln-489"></a>
+<a name="ln-490"></a>          <span class="c">! Preliminary (sanity) checks for bad and missing data</span>
+<a name="ln-491"></a>          <span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-492"></a>          <span class="k">if</span> <span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">rlat</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">9</span><span class="mf">0.0_r8</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="nb">abs</span><span class="p">(</span><span class="n">rlon</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">36</span><span class="mf">0.0_r8</span><span class="p">))</span> <span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-493"></a>          <span class="k">if</span> <span class="p">((</span><span class="n">ref</span><span class="o">&gt;=</span><span class="mf">1.e+9_r8</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">ref</span><span class="o">&lt;=</span><span class="mf">0.0_r8</span><span class="p">))</span>            <span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-494"></a>          <span class="k">if</span> <span class="p">((</span><span class="n">height</span><span class="o">&lt;=</span><span class="n">ray_hbot</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">height</span><span class="o">&gt;=</span><span class="n">ray_htop</span><span class="p">))</span>    <span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-495"></a>          <span class="c">! Remove MetOP/GRAS ata below 8 km (following GSI)</span>
+<a name="ln-496"></a>          <span class="k">if</span> <span class="p">((</span><span class="n">height</span><span class="o">&lt;=</span><span class="mi">800</span><span class="mf">0.0_r8</span><span class="p">).</span><span class="nb">and</span><span class="p">.((</span><span class="n">said</span><span class="o">==</span><span class="mi">4</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">said</span><span class="o">==</span><span class="mi">3</span><span class="p">)))</span> <span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-497"></a>
+<a name="ln-498"></a>          <span class="k">if</span><span class="p">(</span><span class="n">use_bending_angle</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-499"></a><span class="k">          if</span> <span class="p">((</span><span class="n">bend</span><span class="o">&gt;=</span><span class="mf">1.e+9_r8</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">bend</span><span class="o">&lt;=</span><span class="mf">0.0</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">impact</span><span class="o">&gt;=</span><span class="mf">1.e+9_r8</span><span class="p">).</span><span class="nb">or</span><span class="p">.(</span><span class="n">impact</span><span class="o">&lt;</span><span class="n">roc</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-500"></a><span class="k">               </span><span class="n">good</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-501"></a>          <span class="n">endif</span>
+<a name="ln-502"></a>          <span class="n">endif</span>
+<a name="ln-503"></a>
+<a name="ln-504"></a>          <span class="c">! If observation is &quot;good&quot; print out sample data</span>
+<a name="ln-505"></a>          <span class="k">if</span><span class="p">(</span><span class="n">good</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-506"></a>
+<a name="ln-507"></a><span class="k">            </span><span class="n">obsval</span> <span class="o">=</span> <span class="n">ref</span>    <span class="c">! unit &quot;N&quot;</span>
+<a name="ln-508"></a>
+<a name="ln-509"></a>            <span class="n">geopot</span> <span class="o">=</span> <span class="n">compute_geopotential_height</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="n">rlat</span><span class="p">)</span>
+<a name="ln-510"></a>          
+<a name="ln-511"></a>            <span class="k">if</span><span class="p">(</span><span class="n">obs_error_in_gsi</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-512"></a>               <span class="c">!oerr   = 0.01_r8 * obsval</span>
+<a name="ln-513"></a>               <span class="n">oerr</span>   <span class="o">=</span> <span class="n">gsi_refractivity_error</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">rlat</span><span class="p">,</span> <span class="n">if_global</span><span class="p">,</span> <span class="n">gsi_error_inv_factor</span><span class="p">)</span>
+<a name="ln-514"></a>            <span class="k">else</span>
+<a name="ln-515"></a><span class="k">               </span><span class="n">oerr</span>   <span class="o">=</span> <span class="mf">0.01_r8</span> <span class="o">*</span> <span class="n">ref_obserr_kuo_percent</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.001_r8</span><span class="p">)</span> <span class="o">*</span> <span class="n">obsval</span>
+<a name="ln-516"></a>            <span class="n">endif</span>
+<a name="ln-517"></a>            <span class="n">subset</span> <span class="o">=</span> <span class="s1">&#39;GPSREF&#39;</span>
+<a name="ln-518"></a>   
+<a name="ln-519"></a>            <span class="k">if</span><span class="p">(</span><span class="n">use_bending_angle</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-520"></a><span class="k">               </span><span class="n">obsval</span> <span class="o">=</span> <span class="n">bend</span>
+<a name="ln-521"></a>               <span class="k">if</span><span class="p">((</span><span class="n">impact</span><span class="o">-</span><span class="n">roc</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1000</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-522"></a><span class="k">                   </span><span class="n">oerr</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="n">bend</span><span class="o">*</span><span class="mf">0.09</span><span class="o">/</span><span class="mi">1000</span><span class="mf">0.0_r8</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">impact</span><span class="o">-</span><span class="n">roc</span><span class="p">)</span><span class="o">+</span><span class="n">bend</span><span class="o">*</span><span class="mf">1.e-1_r8</span>
+<a name="ln-523"></a>               <span class="k">else</span>
+<a name="ln-524"></a><span class="k">                   </span><span class="n">oerr</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="mf">7.e-6_r8</span><span class="p">,</span><span class="n">bend</span><span class="o">*</span><span class="mf">1.e-2_r8</span><span class="p">)</span>
+<a name="ln-525"></a>               <span class="n">endif</span>
+<a name="ln-526"></a>            <span class="n">endif</span>
+<a name="ln-527"></a>
+<a name="ln-528"></a>            <span class="k">if</span><span class="p">(</span><span class="n">rlon</span><span class="o">==</span><span class="mi">36</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="n">rlon</span><span class="o">=</span><span class="mf">0.0_r8</span>
+<a name="ln-529"></a>            <span class="k">if</span><span class="p">(</span><span class="n">rlon</span> <span class="o">&lt;</span> <span class="mf">0.0_r8</span><span class="p">)</span>  <span class="n">rlon</span><span class="o">=</span><span class="n">rlon</span><span class="o">+</span><span class="mi">36</span><span class="mf">0.0_r8</span>
+<a name="ln-530"></a>
+<a name="ln-531"></a>            <span class="k">if</span><span class="p">(</span><span class="n">debug</span><span class="p">.</span><span class="nb">and</span><span class="p">.(</span><span class="n">k</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">10</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-532"></a><span class="k">               if</span><span class="p">(</span><span class="n">use_bending_angle</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-533"></a><span class="k">                  write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(A2,I5,4f9.2,f20.3)&#39;</span><span class="p">)</span> <span class="s1">&#39;k=&#39;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">rlat</span><span class="p">,</span><span class="n">rlon</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="n">bend</span><span class="p">,</span><span class="n">oerr</span>
+<a name="ln-534"></a>               <span class="k">else</span>
+<a name="ln-535"></a><span class="k">                  write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(A2,I5,6f9.2)&#39;</span><span class="p">)</span> <span class="s1">&#39;k=&#39;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">rlat</span><span class="p">,</span><span class="n">rlon</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="n">ref</span><span class="p">,</span><span class="n">oerr</span><span class="p">,</span><span class="n">referr</span>
+<a name="ln-536"></a>               <span class="n">endif</span>
+<a name="ln-537"></a>            <span class="n">endif</span>
+<a name="ln-538"></a>
+<a name="ln-539"></a>            <span class="k">if</span><span class="p">(</span><span class="n">convert_to_geopotential_height</span><span class="p">)</span> <span class="n">height</span> <span class="o">=</span> <span class="n">geopot</span>
+<a name="ln-540"></a>
+<a name="ln-541"></a>            <span class="c">! the first arg here is intent(out), and is passed back in to set_obs_def_key()</span>
+<a name="ln-542"></a>            <span class="k">call </span><span class="n">set_gpsro_ref</span><span class="p">(</span><span class="n">gps_obs_num</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nz</span><span class="p">,</span> <span class="n">rfict</span><span class="p">,</span> <span class="n">ray_ds</span><span class="p">,</span> <span class="n">ray_htop</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span>
+<a name="ln-543"></a>            <span class="k">call </span><span class="n">set_obs_def_location</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span><span class="n">set_location</span><span class="p">(</span><span class="n">rlon</span><span class="p">,</span><span class="n">rlat</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="n">VERTISHEIGHT</span><span class="p">))</span>
+<a name="ln-544"></a>            <span class="k">call </span><span class="n">set_obs_def_type_of_obs</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">GPSRO_REFRACTIVITY</span><span class="p">)</span>
+<a name="ln-545"></a>            <span class="k">call </span><span class="n">set_obs_def_time</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">set_time</span><span class="p">(</span><span class="n">osec</span><span class="p">,</span> <span class="n">oday</span><span class="p">))</span>
+<a name="ln-546"></a>            <span class="k">call </span><span class="n">set_obs_def_error_variance</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">oerr</span> <span class="o">*</span> <span class="n">oerr</span><span class="p">)</span>
+<a name="ln-547"></a>            <span class="k">call </span><span class="n">set_obs_def_key</span><span class="p">(</span><span class="n">obs_def</span><span class="p">,</span> <span class="n">gps_obs_num</span><span class="p">)</span>
+<a name="ln-548"></a>            <span class="k">call </span><span class="n">set_obs_def</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">obs_def</span><span class="p">)</span>
+<a name="ln-549"></a>   
+<a name="ln-550"></a>            <span class="n">obs_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">obsval</span>
+<a name="ln-551"></a>            <span class="k">call </span><span class="n">set_obs_values</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">obs_val</span><span class="p">)</span>
+<a name="ln-552"></a>            <span class="n">qc_val</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="o">=</span> <span class="n">qc</span>
+<a name="ln-553"></a>            <span class="k">call </span><span class="n">set_qc</span><span class="p">(</span><span class="n">obs</span><span class="p">,</span> <span class="n">qc_val</span><span class="p">)</span>
+<a name="ln-554"></a>       
+<a name="ln-555"></a>            <span class="k">call </span><span class="n">add_obs_to_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">obs</span><span class="p">,</span> <span class="n">obs_time</span><span class="p">,</span> <span class="n">prev_obs</span><span class="p">,</span> <span class="n">prev_time</span><span class="p">,</span> <span class="n">first_obs</span><span class="p">)</span>
+<a name="ln-556"></a>       
+<a name="ln-557"></a>            <span class="n">obs_count</span> <span class="o">=</span> <span class="n">obs_count</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-558"></a>            <span class="n">obs_num_byfile</span> <span class="o">=</span> <span class="n">obs_num_byfile</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-559"></a>
+<a name="ln-560"></a>          <span class="n">endif</span>    <span class="c">!(good) then</span>
+<a name="ln-561"></a>       <span class="k">end do </span><span class="n">obsloop2</span>                   <span class="c">! End of k loop over nlevels</span>
+<a name="ln-562"></a>
+<a name="ln-563"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span> <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span>
+<a name="ln-564"></a>     <span class="n">enddo</span> <span class="n">read_loop</span>            <span class="c">! subsets</span>
+<a name="ln-565"></a>   <span class="n">enddo</span> <span class="n">msg_report</span>             <span class="c">! messages</span>
+<a name="ln-566"></a>
+<a name="ln-567"></a><span class="mi">1010</span> <span class="k">continue</span>
+<a name="ln-568"></a>
+<a name="ln-569"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-570"></a>   <span class="c">! Close unit to input file and write out some summary statistics for</span>
+<a name="ln-571"></a>   <span class="c">! this file.</span>
+<a name="ln-572"></a>   <span class="c">!------------------------------------------------------------------------</span>
+<a name="ln-573"></a>   <span class="k">call </span><span class="n">closbf</span><span class="p">(</span><span class="n">unit_in</span><span class="p">)</span>     <span class="c">! BUFRLIB</span>
+<a name="ln-574"></a>
+<a name="ln-575"></a>   <span class="c">! blank line</span>
+<a name="ln-576"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-577"></a>
+<a name="ln-578"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Processed input file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">next_infile</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;, summary:&#39;</span>
+<a name="ln-579"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-580"></a>
+<a name="ln-581"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Number of obs created = &#39;</span><span class="p">,</span><span class="n">obs_num_byfile</span>
+<a name="ln-582"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-583"></a>
+<a name="ln-584"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Total number of profiles = &#39;</span><span class="p">,</span> <span class="n">nprof_gps</span>
+<a name="ln-585"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-586"></a>
+<a name="ln-587"></a>   <span class="n">nprof_bad</span> <span class="o">=</span> <span class="n">nprof_cdaac_bad</span> <span class="o">+</span> <span class="n">nprof_gras_bad</span> <span class="o">+</span> <span class="n">nprof_levs_bad</span> <span class="o">+</span> <span class="n">nprof_bytime</span> <span class="o">+</span> <span class="n">nprof_nosat</span>
+<a name="ln-588"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Total number of skipped profiles = &#39;</span><span class="p">,</span> <span class="n">nprof_bad</span>
+<a name="ln-589"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-590"></a>
+<a name="ln-591"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;Skipped profile summary:&#39;</span>
+<a name="ln-592"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-593"></a>
+<a name="ln-594"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Bad CDAAC code: &#39;</span><span class="p">,</span> <span class="n">nprof_cdaac_bad</span>
+<a name="ln-595"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-596"></a>   
+<a name="ln-597"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Bad GRAS code: &#39;</span><span class="p">,</span> <span class="n">nprof_gras_bad</span>
+<a name="ln-598"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-599"></a>   
+<a name="ln-600"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Bad level counts: &#39;</span><span class="p">,</span> <span class="n">nprof_levs_bad</span>
+<a name="ln-601"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-602"></a>   
+<a name="ln-603"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Excluded by time: &#39;</span><span class="p">,</span> <span class="n">nprof_bytime</span>
+<a name="ln-604"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-605"></a>
+<a name="ln-606"></a>   <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;  Excluded by satellite id: &#39;</span><span class="p">,</span> <span class="n">nprof_nosat</span>
+<a name="ln-607"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-608"></a>   
+<a name="ln-609"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-610"></a>   
+<a name="ln-611"></a>   
+<a name="ln-612"></a>   <span class="c">! move on to the next file</span>
+<a name="ln-613"></a>   <span class="n">filenum</span> <span class="o">=</span> <span class="n">filenum</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-614"></a>
+<a name="ln-615"></a><span class="k">end do </span><span class="n">fileloop</span>
+<a name="ln-616"></a>
+<a name="ln-617"></a><span class="c">! done with main loop.  if we added any new obs to the sequence, write it out.</span>
+<a name="ln-618"></a><span class="k">if</span> <span class="p">(</span><span class="n">obs_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-619"></a><span class="k">   call </span><span class="n">write_obs_seq</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">,</span> <span class="n">gpsro_out_file</span><span class="p">)</span>
+<a name="ln-620"></a>
+<a name="ln-621"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">file_exist</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-622"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">obs_count</span><span class="p">,</span> <span class="s1">&#39; observations added to obs_seq file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-623"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-624"></a>
+<a name="ln-625"></a>      <span class="k">write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;File should now contain &#39;</span><span class="p">,</span> <span class="n">obs_count</span> <span class="o">+</span> <span class="n">existing_obs</span><span class="p">,</span> <span class="s1">&#39; observations.&#39;</span>
+<a name="ln-626"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-627"></a>   <span class="k">else</span>
+<a name="ln-628"></a><span class="k">      write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="n">obs_count</span><span class="p">,</span> <span class="s1">&#39; observations written to obs_seq file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-629"></a>      <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-630"></a>   <span class="n">endif</span>
+<a name="ln-631"></a><span class="k">else</span>
+<a name="ln-632"></a><span class="k">   write</span><span class="p">(</span><span class="n">msgstring</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span> <span class="s1">&#39;No observations found. None written to obs_seq file &quot;&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">gpsro_out_file</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;&#39;</span>
+<a name="ln-633"></a>   <span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;convert_gpsro_bufr&#39;</span><span class="p">,</span> <span class="n">msgstring</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-634"></a><span class="n">endif</span>
+<a name="ln-635"></a>
+<a name="ln-636"></a><span class="c">! blank line</span>
+<a name="ln-637"></a><span class="k">call </span><span class="n">error_handler</span><span class="p">(</span><span class="n">E_MSG</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span> <span class="n">revdate</span><span class="p">)</span>
+<a name="ln-638"></a>
+<a name="ln-639"></a><span class="c">! cleanup memory</span>
+<a name="ln-640"></a><span class="k">call </span><span class="n">destroy_obs_sequence</span><span class="p">(</span><span class="n">obs_seq</span><span class="p">)</span>
+<a name="ln-641"></a><span class="k">call </span><span class="n">destroy_obs</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>   <span class="c">! do not destroy prev_obs, which is same as obs</span>
+<a name="ln-642"></a><span class="k">deallocate</span><span class="p">(</span><span class="n">gps_satid</span><span class="p">)</span>
+<a name="ln-643"></a>
+<a name="ln-644"></a><span class="c">! END OF MAIN ROUTINE</span>
+<a name="ln-645"></a>
+<a name="ln-646"></a><span class="k">contains</span>
+<a name="ln-647"></a>
+<a name="ln-648"></a><span class="c">! local subroutines/functions follow</span>
+<a name="ln-649"></a>
+<a name="ln-650"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-651"></a><span class="c">!</span>
+<a name="ln-652"></a><span class="c">!   ref_obserr_kuo_percent - function that computes the observation </span>
+<a name="ln-653"></a><span class="c">!                            error for a refractivity observation.</span>
+<a name="ln-654"></a><span class="c">!                            These numbers are taken from a Kuo paper.</span>
+<a name="ln-655"></a><span class="c">!</span>
+<a name="ln-656"></a><span class="c">!    hght - height of refractivity observation</span>
+<a name="ln-657"></a><span class="c">!</span>
+<a name="ln-658"></a><span class="c">!     created Hui Liu NCAR/MMM</span>
+<a name="ln-659"></a><span class="c">!     modified June 2008, Ryan Torn NCAR/MMM</span>
+<a name="ln-660"></a><span class="c">!     modified August 2015, Soyoung Ha NCAR/MMM</span>
+<a name="ln-661"></a><span class="c">!</span>
+<a name="ln-662"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-663"></a><span class="k">function </span><span class="n">ref_obserr_kuo_percent</span><span class="p">(</span><span class="n">hght</span><span class="p">)</span>
+<a name="ln-664"></a>
+<a name="ln-665"></a><span class="k">use   </span><span class="n">types_mod</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">r8</span>
+<a name="ln-666"></a>
+<a name="ln-667"></a><span class="k">implicit none</span>
+<a name="ln-668"></a>
+<a name="ln-669"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">nobs_level</span> <span class="o">=</span> <span class="mi">22</span>  <span class="c">!  maximum number of obs levels</span>
+<a name="ln-670"></a>
+<a name="ln-671"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">hght</span>
+<a name="ln-672"></a>
+<a name="ln-673"></a><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">k</span><span class="p">,</span> <span class="n">k0</span>
+<a name="ln-674"></a><span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">hght0</span><span class="p">,</span> <span class="n">ref_err</span><span class="p">(</span><span class="n">nobs_level</span><span class="p">),</span> <span class="n">obs_ht</span><span class="p">(</span><span class="n">nobs_level</span><span class="p">),</span> <span class="n">ref_obserr_kuo_percent</span>
+<a name="ln-675"></a>
+<a name="ln-676"></a><span class="c">!   observation error heights (km) and errors</span>
+<a name="ln-677"></a><span class="k">data </span><span class="n">obs_ht</span><span class="o">/</span><span class="mi">1</span><span class="mf">7.98_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">6.39_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">4.97_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">3.65_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">2.39_r8</span><span class="p">,</span> <span class="mi">1</span><span class="mf">1.15_r8</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-678"></a>             <span class="mf">9.95_r8</span><span class="p">,</span>  <span class="mf">8.82_r8</span><span class="p">,</span>  <span class="mf">7.82_r8</span><span class="p">,</span>  <span class="mf">6.94_r8</span><span class="p">,</span>  <span class="mf">6.15_r8</span><span class="p">,</span>  <span class="mf">5.45_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-679"></a>             <span class="mf">4.83_r8</span><span class="p">,</span>  <span class="mf">4.27_r8</span><span class="p">,</span>  <span class="mf">3.78_r8</span><span class="p">,</span>  <span class="mf">3.34_r8</span><span class="p">,</span>  <span class="mf">2.94_r8</span><span class="p">,</span>  <span class="mf">2.59_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-680"></a>             <span class="mf">2.28_r8</span><span class="p">,</span>  <span class="mf">1.99_r8</span><span class="p">,</span>  <span class="mf">1.00_r8</span><span class="p">,</span>  <span class="mf">0.00_r8</span><span class="o">/</span>
+<a name="ln-681"></a>
+<a name="ln-682"></a><span class="k">data </span><span class="n">ref_err</span><span class="o">/</span><span class="mf">0.48_r8</span><span class="p">,</span>  <span class="mf">0.56_r8</span><span class="p">,</span>  <span class="mf">0.36_r8</span><span class="p">,</span>  <span class="mf">0.28_r8</span><span class="p">,</span>  <span class="mf">0.33_r8</span><span class="p">,</span>  <span class="mf">0.41_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-683"></a>             <span class="mf">0.57_r8</span><span class="p">,</span>  <span class="mf">0.73_r8</span><span class="p">,</span>  <span class="mf">0.90_r8</span><span class="p">,</span>  <span class="mf">1.11_r8</span><span class="p">,</span>  <span class="mf">1.18_r8</span><span class="p">,</span>  <span class="mf">1.26_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-684"></a>             <span class="mf">1.53_r8</span><span class="p">,</span>  <span class="mf">1.85_r8</span><span class="p">,</span>  <span class="mf">1.81_r8</span><span class="p">,</span>  <span class="mf">2.08_r8</span><span class="p">,</span>  <span class="mf">2.34_r8</span><span class="p">,</span>  <span class="mf">2.43_r8</span><span class="p">,</span> <span class="p">&amp;</span> 
+<a name="ln-685"></a>             <span class="mf">2.43_r8</span><span class="p">,</span>  <span class="mf">2.43_r8</span><span class="p">,</span>  <span class="mf">2.43_r8</span><span class="p">,</span>  <span class="mf">2.43_r8</span><span class="o">/</span>
+<a name="ln-686"></a>
+<a name="ln-687"></a><span class="n">hght0</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">hght</span><span class="p">,</span> <span class="mf">0.0_r8</span><span class="p">)</span>
+<a name="ln-688"></a>
+<a name="ln-689"></a><span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nobs_level</span>
+<a name="ln-690"></a>  
+<a name="ln-691"></a>  <span class="n">k0</span> <span class="o">=</span> <span class="n">k</span>
+<a name="ln-692"></a>  <span class="k">if</span> <span class="p">(</span> <span class="n">hght0</span> <span class="o">&gt;=</span> <span class="n">obs_ht</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">)</span>  <span class="k">exit</span>
+<a name="ln-693"></a>
+<a name="ln-694"></a><span class="k">end do </span>
+<a name="ln-695"></a>
+<a name="ln-696"></a><span class="k">if</span><span class="p">(</span><span class="n">k0</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>    <span class="c">! HA</span>
+<a name="ln-697"></a>   <span class="n">ref_obserr_kuo_percent</span> <span class="o">=</span> <span class="n">ref_err</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span>
+<a name="ln-698"></a><span class="k">else</span>
+<a name="ln-699"></a><span class="k">   </span><span class="n">ref_obserr_kuo_percent</span> <span class="o">=</span> <span class="n">ref_err</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">ref_err</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span> <span class="o">-</span> <span class="n">ref_err</span><span class="p">(</span><span class="n">k0</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-700"></a>                           <span class="p">(</span><span class="n">obs_ht</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span><span class="o">-</span><span class="n">obs_ht</span><span class="p">(</span><span class="n">k0</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">hght0</span><span class="o">-</span><span class="n">obs_ht</span><span class="p">(</span><span class="n">k0</span><span class="p">))</span>
+<a name="ln-701"></a><span class="n">endif</span>
+<a name="ln-702"></a>
+<a name="ln-703"></a><span class="k">return</span>
+<a name="ln-704"></a><span class="k">end function </span><span class="n">ref_obserr_kuo_percent</span>
+<a name="ln-705"></a>
+<a name="ln-706"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-707"></a><span class="c">!</span>
+<a name="ln-708"></a><span class="c">!    compute_geopotential_height </span>
+<a name="ln-709"></a><span class="c">!    subroutine converts geometric height to geopotential height</span>
+<a name="ln-710"></a><span class="c">!</span>
+<a name="ln-711"></a><span class="c">!    Input:</span>
+<a name="ln-712"></a><span class="c">!    H   -- input real value geometric height [m]</span>
+<a name="ln-713"></a><span class="c">!    lat -- latitude in degree </span>
+<a name="ln-714"></a><span class="c">!</span>
+<a name="ln-715"></a><span class="c">!    Output:</span>
+<a name="ln-716"></a><span class="c">!    Z -- output real value geopotential height [m]</span>
+<a name="ln-717"></a><span class="c">!</span>
+<a name="ln-718"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-719"></a><span class="k">function </span><span class="n">compute_geopotential_height</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+<a name="ln-720"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">H</span> 
+<a name="ln-721"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">lat</span>
+<a name="ln-722"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">compute_geopotential_height</span>
+<a name="ln-723"></a>
+<a name="ln-724"></a><span class="c">! -----------------------------------------------------------------------*/</span>
+<a name="ln-725"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pi2</span><span class="p">,</span> <span class="n">latr</span>
+<a name="ln-726"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">semi_major_axis</span><span class="p">,</span> <span class="n">semi_minor_axis</span><span class="p">,</span> <span class="n">grav_polar</span><span class="p">,</span> <span class="n">grav_equator</span>
+<a name="ln-727"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">earth_omega</span><span class="p">,</span> <span class="n">grav_constant</span><span class="p">,</span> <span class="n">flattening</span><span class="p">,</span> <span class="n">somigliana</span>
+<a name="ln-728"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">grav_ratio</span><span class="p">,</span> <span class="n">sin2</span><span class="p">,</span> <span class="n">termg</span><span class="p">,</span> <span class="n">termr</span><span class="p">,</span> <span class="n">grav</span><span class="p">,</span> <span class="n">eccentricity</span>
+<a name="ln-729"></a>
+<a name="ln-730"></a><span class="c">!  Parameters below from WGS-84 model software inside GPS receivers.</span>
+<a name="ln-731"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">semi_major_axis</span> <span class="o">=</span> <span class="mi">637</span><span class="mf">8.1370d3</span><span class="p">)</span>    <span class="c">! (m)</span>
+<a name="ln-732"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">semi_minor_axis</span> <span class="o">=</span> <span class="mi">635</span><span class="mf">6.7523142d3</span><span class="p">)</span> <span class="c">! (m)</span>
+<a name="ln-733"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">grav_polar</span> <span class="o">=</span> <span class="mf">9.8321849378</span><span class="p">)</span>        <span class="c">! (m/s2)</span>
+<a name="ln-734"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">grav_equator</span> <span class="o">=</span> <span class="mf">9.7803253359</span><span class="p">)</span>      <span class="c">! (m/s2)</span>
+<a name="ln-735"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">earth_omega</span> <span class="o">=</span> <span class="mf">7.292115d-5</span><span class="p">)</span>        <span class="c">! (rad/s)</span>
+<a name="ln-736"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">grav_constant</span> <span class="o">=</span> <span class="mf">3.986004418d14</span><span class="p">)</span>   <span class="c">! (m3/s2)</span>
+<a name="ln-737"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">grav</span> <span class="o">=</span> <span class="mf">9.80665d0</span><span class="p">)</span>                 <span class="c">! (m/s2) WMO std g at 45 deg lat</span>
+<a name="ln-738"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">eccentricity</span> <span class="o">=</span> <span class="mf">0.081819d0</span><span class="p">)</span>        <span class="c">! unitless</span>
+<a name="ln-739"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">pi2</span> <span class="o">=</span> <span class="mf">3.14159265358979d0</span><span class="o">/</span><span class="mi">18</span><span class="mf">0.d0</span><span class="p">)</span>
+<a name="ln-740"></a>
+<a name="ln-741"></a><span class="c">!  Derived geophysical constants</span>
+<a name="ln-742"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">flattening</span> <span class="o">=</span> <span class="p">(</span><span class="n">semi_major_axis</span><span class="o">-</span><span class="n">semi_minor_axis</span><span class="p">)</span> <span class="o">/</span> <span class="n">semi_major_axis</span><span class="p">)</span>
+<a name="ln-743"></a>
+<a name="ln-744"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">somigliana</span> <span class="o">=</span> <span class="p">(</span><span class="n">semi_minor_axis</span><span class="o">/</span><span class="n">semi_major_axis</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">grav_polar</span><span class="o">/</span><span class="n">grav_equator</span><span class="p">)</span><span class="o">-</span><span class="mf">1.d0</span><span class="p">)</span>
+<a name="ln-745"></a>
+<a name="ln-746"></a>   <span class="k">parameter</span><span class="p">(</span><span class="n">grav_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">earth_omega</span><span class="o">*</span><span class="n">earth_omega</span> <span class="o">*</span> <span class="p">&amp;</span>
+<a name="ln-747"></a>                <span class="n">semi_major_axis</span><span class="o">*</span><span class="n">semi_major_axis</span> <span class="o">*</span> <span class="n">semi_minor_axis</span><span class="p">)</span><span class="o">/</span><span class="n">grav_constant</span><span class="p">)</span>
+<a name="ln-748"></a>
+<a name="ln-749"></a><span class="c">!  Sanity Check</span>
+<a name="ln-750"></a>   <span class="k">if</span><span class="p">(</span><span class="n">lat</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">90</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">lat</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-751"></a><span class="k">      print</span><span class="o">*</span><span class="p">,</span> <span class="s1">&#39;compute_geopotential_height: Latitude is not between -90 and 90 degrees: &#39;</span><span class="p">,</span><span class="n">lat</span>
+<a name="ln-752"></a>      <span class="k">return</span>
+<a name="ln-753"></a><span class="k">   </span><span class="n">endif</span>
+<a name="ln-754"></a>
+<a name="ln-755"></a>   <span class="n">latr</span> <span class="o">=</span> <span class="n">lat</span> <span class="o">*</span> <span class="p">(</span><span class="n">pi2</span><span class="p">)</span>        <span class="c">! in radians</span>
+<a name="ln-756"></a>   <span class="n">sin2</span>  <span class="o">=</span> <span class="nb">sin</span><span class="p">(</span><span class="n">latr</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sin</span><span class="p">(</span><span class="n">latr</span><span class="p">)</span>
+<a name="ln-757"></a>   <span class="n">termg</span> <span class="o">=</span> <span class="n">grav_equator</span> <span class="o">*</span> <span class="p">(</span> <span class="p">(</span><span class="mf">1.d0</span><span class="o">+</span><span class="n">somigliana</span><span class="o">*</span><span class="n">sin2</span><span class="p">)</span> <span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-758"></a>           <span class="nb">sqrt</span><span class="p">(</span><span class="mf">1.d0</span><span class="o">-</span><span class="n">eccentricity</span><span class="o">*</span><span class="n">eccentricity</span><span class="o">*</span><span class="n">sin2</span><span class="p">)</span> <span class="p">)</span>
+<a name="ln-759"></a>   <span class="n">termr</span> <span class="o">=</span> <span class="n">semi_major_axis</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.d0</span> <span class="o">+</span> <span class="n">flattening</span> <span class="o">+</span> <span class="n">grav_ratio</span> <span class="o">-</span> <span class="mf">2.d0</span><span class="o">*</span><span class="n">flattening</span><span class="o">*</span><span class="n">sin2</span><span class="p">)</span>
+<a name="ln-760"></a>
+<a name="ln-761"></a>   <span class="n">compute_geopotential_height</span> <span class="o">=</span> <span class="p">(</span><span class="n">termg</span><span class="o">/</span><span class="n">grav</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">termr</span><span class="o">*</span><span class="n">H</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">termr</span><span class="o">+</span><span class="n">H</span><span class="p">))</span>
+<a name="ln-762"></a>   <span class="c">!print &#39;(A,3f15.5)&#39;,&#39;compute_geopotential_height:&#39;,&amp;</span>
+<a name="ln-763"></a>   <span class="c">!                   H,compute_geopotential_height,H-compute_geopotential_height</span>
+<a name="ln-764"></a>
+<a name="ln-765"></a><span class="k">end function </span><span class="n">compute_geopotential_height</span>
+<a name="ln-766"></a>
+<a name="ln-767"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-768"></a><span class="c">!</span>
+<a name="ln-769"></a><span class="c">!   gsi_refractivity_error - function that computes the observation </span>
+<a name="ln-770"></a><span class="c">!                            error as in GSI</span>
+<a name="ln-771"></a><span class="c">!</span>
+<a name="ln-772"></a><span class="c">!    Input:</span>
+<a name="ln-773"></a><span class="c">!    H   -- input real value geometric height [m]</span>
+<a name="ln-774"></a><span class="c">!    lat -- latitude in degree </span>
+<a name="ln-775"></a><span class="c">!    is_it_global -- is your forecast model regional or global? (T or F)</span>
+<a name="ln-776"></a><span class="c">!</span>
+<a name="ln-777"></a><span class="c">!    Output:</span>
+<a name="ln-778"></a><span class="c">!    gsi_refractivity_error -- output refractivity observation error [N]</span>
+<a name="ln-779"></a><span class="c">!</span>
+<a name="ln-780"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-781"></a><span class="k">function </span><span class="n">gsi_refractivity_error</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">is_it_global</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+<a name="ln-782"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">H</span>
+<a name="ln-783"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">lat</span>
+<a name="ln-784"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">factor</span>
+<a name="ln-785"></a> <span class="kt">logical</span><span class="p">,</span>  <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">is_it_global</span>
+<a name="ln-786"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">gsi_refractivity_error</span>
+<a name="ln-787"></a>
+<a name="ln-788"></a> <span class="kt">real</span><span class="p">(</span><span class="n">r8</span><span class="p">)</span> <span class="kd">::</span> <span class="n">zkm</span><span class="p">,</span> <span class="n">rerr</span>
+<a name="ln-789"></a> 
+<a name="ln-790"></a> <span class="n">zkm</span> <span class="o">=</span> <span class="n">H</span> <span class="o">*</span> <span class="mf">0.001</span>       <span class="c">! height in km</span>
+<a name="ln-791"></a> <span class="n">rerr</span> <span class="o">=</span> <span class="mf">1.0_r8</span>
+<a name="ln-792"></a>
+<a name="ln-793"></a> <span class="k">if</span><span class="p">(</span><span class="n">is_it_global</span><span class="p">)</span> <span class="k">then</span>    <span class="c">! for global</span>
+<a name="ln-794"></a>
+<a name="ln-795"></a> <span class="k">if</span><span class="p">((</span><span class="n">lat</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">(</span><span class="n">lat</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">2</span><span class="mf">0.0_r8</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-796"></a><span class="k">    </span><span class="n">rerr</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.321_r8</span> <span class="o">+</span> <span class="mf">0.341_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">-</span> <span class="mf">0.005_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">**</span> <span class="mi">2</span>
+<a name="ln-797"></a> <span class="k">else</span>
+<a name="ln-798"></a><span class="k">    if</span><span class="p">(</span><span class="n">zkm</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-799"></a><span class="k">       </span><span class="n">rerr</span> <span class="o">=</span> <span class="mf">2.013_r8</span> <span class="o">-</span> <span class="mf">0.060_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">+</span> <span class="mf">0.0045_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">**</span> <span class="mi">2</span>
+<a name="ln-800"></a>    <span class="k">else</span>
+<a name="ln-801"></a><span class="k">       </span><span class="n">rerr</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.18_r8</span> <span class="o">+</span> <span class="mf">0.058_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">+</span> <span class="mf">0.025_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">**</span> <span class="mi">2</span>
+<a name="ln-802"></a>    <span class="n">endif</span>
+<a name="ln-803"></a> <span class="n">endif</span>
+<a name="ln-804"></a>
+<a name="ln-805"></a> <span class="k">else</span>     <span class="c">! for regional </span>
+<a name="ln-806"></a>
+<a name="ln-807"></a> <span class="k">if</span><span class="p">((</span><span class="n">lat</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">(</span><span class="n">lat</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">2</span><span class="mf">0.0_r8</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-808"></a><span class="k">    if</span><span class="p">(</span><span class="n">zkm</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="mf">0.0_r8</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-809"></a><span class="k">       </span><span class="n">rerr</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.321_r8</span> <span class="o">+</span> <span class="mf">0.341_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">-</span> <span class="mf">0.005_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">**</span> <span class="mi">2</span>
+<a name="ln-810"></a>    <span class="k">else</span>
+<a name="ln-811"></a><span class="k">       </span><span class="n">rerr</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.2_r8</span> <span class="o">+</span> <span class="mf">0.065_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">+</span> <span class="mf">0.021_r8</span> <span class="o">*</span> <span class="n">zkm</span> <span class="o">**</span> <span class="mi">2</span>
+<a name="ln-812"></a>    <span class="n">endif</span>
+<a name="ln-813"></a> <span class="n">endif</span>
+<a name="ln-814"></a>
+<a name="ln-815"></a> <span class="n">endif</span>    <span class="c">! if(is_it_global) then</span>
+<a name="ln-816"></a>
+<a name="ln-817"></a> <span class="n">gsi_refractivity_error</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">rerr</span><span class="p">))</span><span class="o">*</span><span class="n">factor</span><span class="p">)</span>
+<a name="ln-818"></a> <span class="c">!gsi_refractivity_error = 1./abs(exp(rerr))</span>
+<a name="ln-819"></a>
+<a name="ln-820"></a> <span class="k">return</span>
+<a name="ln-821"></a><span class="k">end function </span><span class="n">gsi_refractivity_error</span>
+<a name="ln-822"></a>
+<a name="ln-823"></a><span class="c">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<a name="ln-824"></a><span class="k">end program</span>
+<a name="ln-825"></a>
+<a name="ln-826"></a><span class="c">! &lt;next few lines under version control, do not edit&gt;</span>
+<a name="ln-827"></a><span class="c">! $URL$</span>
+<a name="ln-828"></a><span class="c">! $Id$</span>
+<a name="ln-829"></a><span class="c">! $Revision$</span>
+<a name="ln-830"></a><span class="c">! $Date$</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

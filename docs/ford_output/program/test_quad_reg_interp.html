@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_quad_reg_interp &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>test_quad_reg_interp
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for programs.">175 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/test_quad_reg_interp.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/test_quad_reg_interp.f90.html'>test_quad_reg_interp.f90</a></li>
+    
+  
+     <li class="active">test_quad_reg_interp</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-debug%7E16">debug</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-h%7E5">h</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ndx">ndx</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ndy">ndy</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_start_lon">data_start_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_end_lon">data_end_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_start_lat">data_start_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_end_lat">data_end_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_lons">grid_lons</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_lats">grid_lats</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_data">grid_data</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_choice">data_choice</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-miss_percent">miss_percent</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-nsx">nsx</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-nsy">nsy</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_lons">sample_lons</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_lats">sample_lats</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_start_lon">sample_start_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_end_lon">sample_end_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_start_lat">sample_start_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_end_lat">sample_end_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-angle">angle</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_def">lon_def</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_def">lat_def</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-interp_data">interp_data</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ran">ran</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-i%7E54">i</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-j%7E53">j</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_del_lon">data_del_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_del_lat">data_del_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_del_lon">sample_del_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_del_lat">sample_del_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_indices">lon_indices</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_indices">lat_indices</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_fract">lon_fract</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_fract">lat_fract</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-istatus%7E114">istatus</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-invals">invals</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-outval">outval</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-iunit_orig">iunit_orig</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-iunit_interp">iunit_interp</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-deform">deform</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-rotate">rotate</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-writeit_1d">writeit_1d</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-writeit_2d">writeit_2d</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li><a href='../module/random_seq_mod.html'>random_seq_mod</a></li>
+    
+    <li><a href='../module/quad_utils_mod.html'>quad_utils_mod</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    <p></p><div class="alert alert-success" role="alert"><h4>Todo</h4><p>FIXME include the state struct or fold this into a version of model_mod_check
+this interface now returns an array of 4 index combinations 
+so the calling code can do loops from 1 to 4 instead of making 
+combinations of lat/lon bot/top in the right order for eval.</p></div>
+    
+    <br>
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-debug%7E16">debug</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-h%7E5">h</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ndx">ndx</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ndy">ndy</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_start_lon">data_start_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_end_lon">data_end_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_start_lat">data_start_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_end_lat">data_end_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_lons">grid_lons</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_lats">grid_lats</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-grid_data">grid_data</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_choice">data_choice</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-miss_percent">miss_percent</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-nsx">nsx</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-nsy">nsy</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_lons">sample_lons</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_lats">sample_lats</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_start_lon">sample_start_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_end_lon">sample_end_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_start_lat">sample_start_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_end_lat">sample_end_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-angle">angle</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_def">lon_def</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_def">lat_def</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-interp_data">interp_data</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-ran">ran</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-i%7E54">i</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-j%7E53">j</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_del_lon">data_del_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-data_del_lat">data_del_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_del_lon">sample_del_lon</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-sample_del_lat">sample_del_lat</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_indices">lon_indices</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_indices">lat_indices</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lon_fract">lon_fract</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-lat_fract">lat_fract</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-istatus%7E114">istatus</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-invals">invals</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-outval">outval</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-iunit_orig">iunit_orig</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#variable-iunit_interp">iunit_interp</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-deform">deform</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-rotate">rotate</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-writeit_1d">writeit_1d</a>
+      
+      <a class="list-group-item" href="../program/test_quad_reg_interp.html#proc-writeit_2d">writeit_2d</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-debug%7E16"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>debug</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h%7E5"></span>type(<a href='../type/quad_interp_handle.html'>quad_interp_handle</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>h</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndx"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>ndx</strong></td><td> =</td><td>9</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndy"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>ndy</strong></td><td> =</td><td>5</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_start_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_start_lon</strong></td><td> =</td><td>100.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_end_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_end_lon</strong></td><td> =</td><td>150.5_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_start_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_start_lat</strong></td><td> =</td><td>-11.4_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_end_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_end_lat</strong></td><td> =</td><td>34.1_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-grid_lons"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>grid_lons</strong>(ndx)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-grid_lats"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>grid_lats</strong>(ndy)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-grid_data"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>grid_data</strong>(ndx,ndy)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_choice"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_choice</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-miss_percent"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>miss_percent</strong></td><td> =</td><td>3.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsx"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>nsx</strong></td><td> =</td><td>210</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsy"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>nsy</strong></td><td> =</td><td>150</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_lons"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_lons</strong>(nsx,nsy)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_lats"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_lats</strong>(nsx,nsy)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_start_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_start_lon</strong></td><td> =</td><td>110.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_end_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_end_lon</strong></td><td> =</td><td>140.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_start_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_start_lat</strong></td><td> =</td><td>-20.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_end_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_end_lat</strong></td><td> =</td><td>30.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angle"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>angle</strong></td><td> =</td><td>-65.0_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon_def"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lon_def</strong></td><td> =</td><td>0.01_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat_def"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lat_def</strong></td><td> =</td><td>0.01_r8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-interp_data"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>interp_data</strong>(nsx,nsy)</td><td> =</td><td>MISSING_R8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ran"></span>type(<a href='../type/random_seq_type.html'>random_seq_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ran</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E54"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E53"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_del_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_del_lon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-data_del_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>data_del_lat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_del_lon"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_del_lon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sample_del_lat"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sample_del_lat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon_indices"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lon_indices</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat_indices"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lat_indices</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon_fract"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lon_fract</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat_fract"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>lat_fract</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-istatus%7E114"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>istatus</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-invals"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>invals</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-outval"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>outval</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit_orig"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit_orig</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iunit_interp"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iunit_interp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-deform"></span><h3>
+function <a href='../proc/deform.html'>deform</a>(width, fraction, seq)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>width</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fraction</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/random_seq_type.html'>random_seq_type</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=r8)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-rotate"></span><h3>
+subroutine <a href='../proc/rotate.html'>rotate</a>(x, y, theta, x0, y0)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>theta</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y0</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writeit_1d"></span><h3>
+subroutine <a href='../proc/writeit_1d.html'>writeit_1d</a>(fname, nx, dataarray)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nx</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dataarray</strong>(:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-writeit_2d"></span><h3>
+subroutine <a href='../proc/writeit_2d.html'>writeit_2d</a>(fname, nx, ny, dataarray)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nx</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ny</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=r8),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dataarray</strong>(nx,ny)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>

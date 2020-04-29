@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Data Assimilation Research Testbed">
+    
+    <meta name="author" content="DAReS" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>grid_refl_obs &ndash; DART</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DART </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>grid_refl_obs
+    <small>Program</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.6% of total for programs.">248 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/grid_refl_obs.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/grid_refl_obs.f90.html'>grid_refl_obs.f90</a></li>
+    
+  
+     <li class="active">grid_refl_obs</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-source%7E54">source</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-revision%7E54">revision</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-revdate%7E54">revdate</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_file">obs_seq_file</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-refl_min">refl_min</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seconds_begin">seconds_begin</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-days_begin">days_begin</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seconds_end">seconds_end</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-days_end">days_end</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-wrf_file%7E2">wrf_file</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seq%7E112">seq</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_def%7E39">obs_def</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-beg_time">beg_time</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-end_time">end_time</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob%7E3">ob</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob_loc%7E2">ob_loc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_copies%7E16">num_copies</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_qc%7E13">num_qc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_obs%7E11">num_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-max_num_obs%7E4">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_file_id%7E3">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_read_format%7E3">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-pre_i_format%7E5">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-out_of_range%7E2">out_of_range</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-key_bounds%7E7">key_bounds</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_obs_in_time_period">num_obs_in_time_period</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_refl_obs">num_refl_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_refl_obs_in_domain">num_refl_obs_in_domain</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-keys%7E9">keys</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_kind_ind%7E5">obs_kind_ind</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_index%7E7">obs_index</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob_value">ob_value</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-lat%7E80">lat</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-lon%7E82">lon</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-phb%7E6">phb</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ht%7E3">ht</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-proj%7E68">proj</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_sphere">map_sphere</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_lambert">map_lambert</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_polar_stereo">map_polar_stereo</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_mercator">map_mercator</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_proj%7E5">map_proj</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-proj_code%7E3">proj_code</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-dx%7E11">dx</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-stdlon%7E6">stdlon</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-truelat1%7E7">truelat1</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-truelat2%7E7">truelat2</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-xyz_loc%7E2">xyz_loc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-iloc%7E8">iloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-jloc%7E6">jloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-kloc%7E3">kloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-refl_ob%7E2">refl_ob</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-bt%7E13">bt</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-sn%7E13">sn</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-we%7E13">we</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-msgstring%7E3">msgstring</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-i%7E71">i</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-j%7E59">j</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-k%7E12">k</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-o%7E2">o</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-var_id%7E30">var_id</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ncid%7E132">ncid</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ierr%7E45">ierr</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-varname%7E47">varname</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-status%7E13">status</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-length%7E4">length</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-string%7E8">string</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#proc-check%7E3">check</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/types_mod.html'>types_mod</a></li>
+    
+    <li><a href='../module/obs_sequence_mod.html'>obs_sequence_mod</a></li>
+    
+    <li><a href='../module/obs_def_mod.html'>obs_def_mod</a></li>
+    
+    <li><a href='../module/obs_kind_mod.html'>obs_kind_mod</a></li>
+    
+    <li><a href='../module/map_utils.html'>map_utils</a></li>
+    
+    <li><a href='../module/location_mod%7E7.html'>location_mod</a></li>
+    
+    <li><a href='../module/time_manager_mod.html'>time_manager_mod</a></li>
+    
+    <li><a href='../module/utilities_mod.html'>utilities_mod</a></li>
+    
+    <li>netcdf</li>
+    
+    <li><a href='../module/f2kcli.html'>F2KCLI</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+       
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-source%7E54">source</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-revision%7E54">revision</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-revdate%7E54">revdate</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_file">obs_seq_file</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-refl_min">refl_min</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seconds_begin">seconds_begin</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-days_begin">days_begin</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seconds_end">seconds_end</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-days_end">days_end</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-wrf_file%7E2">wrf_file</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-seq%7E112">seq</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_def%7E39">obs_def</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-beg_time">beg_time</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-end_time">end_time</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob%7E3">ob</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob_loc%7E2">ob_loc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_copies%7E16">num_copies</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_qc%7E13">num_qc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_obs%7E11">num_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-max_num_obs%7E4">max_num_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_file_id%7E3">obs_seq_file_id</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_seq_read_format%7E3">obs_seq_read_format</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-pre_i_format%7E5">pre_I_format</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-out_of_range%7E2">out_of_range</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-key_bounds%7E7">key_bounds</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_obs_in_time_period">num_obs_in_time_period</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_refl_obs">num_refl_obs</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-num_refl_obs_in_domain">num_refl_obs_in_domain</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-keys%7E9">keys</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_kind_ind%7E5">obs_kind_ind</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-obs_index%7E7">obs_index</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ob_value">ob_value</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-lat%7E80">lat</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-lon%7E82">lon</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-phb%7E6">phb</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ht%7E3">ht</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-proj%7E68">proj</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_sphere">map_sphere</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_lambert">map_lambert</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_polar_stereo">map_polar_stereo</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_mercator">map_mercator</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-map_proj%7E5">map_proj</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-proj_code%7E3">proj_code</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-dx%7E11">dx</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-stdlon%7E6">stdlon</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-truelat1%7E7">truelat1</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-truelat2%7E7">truelat2</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-xyz_loc%7E2">xyz_loc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-iloc%7E8">iloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-jloc%7E6">jloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-kloc%7E3">kloc</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-refl_ob%7E2">refl_ob</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-bt%7E13">bt</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-sn%7E13">sn</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-we%7E13">we</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-msgstring%7E3">msgstring</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-i%7E71">i</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-j%7E59">j</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-k%7E12">k</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-o%7E2">o</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-var_id%7E30">var_id</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ncid%7E132">ncid</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-ierr%7E45">ierr</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-varname%7E47">varname</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-status%7E13">status</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-length%7E4">length</a>
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#variable-string%7E8">string</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../program/grid_refl_obs.html#proc-check%7E3">check</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+     
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-source%7E54"></span>character(len=256),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>source</strong></td><td> =</td><td>"$URL$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revision%7E54"></span>character(len=32),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revision</strong></td><td> =</td><td>"$Revision$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-revdate%7E54"></span>character(len=128),</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>revdate</strong></td><td> =</td><td>"$Date$"</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_file"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-refl_min"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>refl_min</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seconds_begin"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seconds_begin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-days_begin"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>days_begin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seconds_end"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seconds_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-days_end"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>days_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wrf_file%7E2"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>wrf_file</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-seq%7E112"></span>type(<a href='../type/obs_sequence_type.html'>obs_sequence_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>seq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_def%7E39"></span>type(<a href='../type/obs_def_type.html'>obs_def_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_def</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-beg_time"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>beg_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-end_time"></span>type(<a href='../type/time_type.html'>time_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>end_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ob%7E3"></span>type(<a href='../type/obs_type.html'>obs_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ob</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ob_loc%7E2"></span>type(<a href='../type/location_type%7E5.html'>location_type</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ob_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_copies%7E16"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_copies</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_qc%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_qc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs%7E11"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_num_obs%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>max_num_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_file_id%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_file_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_seq_read_format%7E3"></span>character(len=129)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_seq_read_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pre_i_format%7E5"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>pre_I_format</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-out_of_range%7E2"></span>logical</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>out_of_range</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-key_bounds%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>key_bounds</strong>(2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_obs_in_time_period"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_obs_in_time_period</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_refl_obs"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_refl_obs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_refl_obs_in_domain"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>num_refl_obs_in_domain</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-keys%7E9"></span>integer,</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>keys</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_kind_ind%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_kind_ind</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-obs_index%7E7"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>obs_index</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ob_value"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ob_value</strong>(1)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lat%7E80"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lat</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lon%7E82"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>lon</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-phb%7E6"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>phb</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ht%7E3"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>ht</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-proj%7E68"></span>type(<a href='../type/proj_info.html'>proj_info</a>)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>proj</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-map_sphere"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>map_sphere</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-map_lambert"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>map_lambert</strong></td><td> =</td><td>1</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-map_polar_stereo"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>map_polar_stereo</strong></td><td> =</td><td>2</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-map_mercator"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>map_mercator</strong></td><td> =</td><td>3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-map_proj%7E5"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>map_proj</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-proj_code%7E3"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>proj_code</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dx%7E11"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>dx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stdlon%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>stdlon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-truelat1%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>truelat1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-truelat2%7E7"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>truelat2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xyz_loc%7E2"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>xyz_loc</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iloc%7E8"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iloc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jloc%7E6"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>jloc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-kloc%7E3"></span>real(kind=r8)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>kloc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-refl_ob%7E2"></span>real(kind=r8),</td>
+  
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>refl_ob</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bt%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>bt</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sn%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>sn</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-we%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>we</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-msgstring%7E3"></span>character(len=150)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>msgstring</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i%7E71"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j%7E59"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>j</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k%7E12"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>k</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-o%7E2"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>o</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-var_id%7E30"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>var_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid%7E132"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ierr%7E45"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-varname%7E47"></span>character(len=80)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>varname</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-status%7E13"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>status</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-length%7E4"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-string%7E8"></span>character(len=120)</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-check%7E3"></span><h3>
+subroutine <a href='../proc/check%7E3.html'>check</a>(istatus)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>istatus</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> DART was developed by DAReS</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>
