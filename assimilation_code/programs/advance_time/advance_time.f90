@@ -11,9 +11,15 @@
 !> expressed in days, hours, minutes or seconds.  The output can be
 !> formatted as native WRF, CESM, Julian or Gregorian format.
 !>
+!> Style 1 links to the html doc page [[closest_member_tool]]
+!> Style 2 links to the source file [[closest_member_tool.f90]]
+!>
+!>
+!> Additionally we test what happens when we link to a redundant file [[text_to_obs.f90]]
+!>
 !> Reads input from standard input to be more portable, since older
 !> versions of iargc() weren't standardized.
-!> 
+!>
 !> Based on the WRF da_advance_cymdh utility.
 !>
 !> All time computations call DART time manager.
@@ -21,7 +27,7 @@
 !>   - has accuracy down to second,
 !>   - can use day/hour/minute/second (with/without +/- sign) to advance time,
 !>   - can digest various input date format if it still has the right order (ie. cc yy mm dd hh nn ss)
-!>   - can digest flexible time increment 
+!>   - can digest flexible time increment
 !>   - can output in wrf date format (ccyy-mm-dd_hh:nn:ss)
 !>   - can specify output date format
 !>   - can output Julian day
@@ -102,7 +108,7 @@ call initialize_utilities('advance_time', output_flag = .false.)
 
 call set_calendar_type(GREGORIAN)
 
-! this routine reads a line from standard input and parses it up 
+! this routine reads a line from standard input and parses it up
 ! into blank-separated words.
 read(*, '(A)') in_string
 call get_args_from_string(in_string, nargum, argum)
@@ -129,7 +135,7 @@ if ( nargum < 2 ) then
    write(unit=stdout, fmt='(a)') &
       '         echo 2007-07-30_12:00:00 2d1s -w | advance_time              # same as previous example'
    write(unit=stdout, fmt='(a)') &
-      '         echo 200707301200  2d1s -f ccyy-mm-dd_hh:nn:ss | advance_time # same as previous' 
+      '         echo 200707301200  2d1s -f ccyy-mm-dd_hh:nn:ss | advance_time # same as previous'
    write(unit=stdout, fmt='(a)') &
       '         echo 2007073006    120 -j     | advance_time    # advance 120 h, and print year and Julian day'
    write(unit=stdout, fmt='(a)') &
@@ -185,31 +191,31 @@ call parsedt(dtime,dday,dh,dn,ds)
 
 !print*, 'delta t: ', dday, dh, dn, ds
 
-! each part can be positive or negative, or 0. 
+! each part can be positive or negative, or 0.
 if (dday > 0) then
    base_time = increment_time(base_time, 0, dday)
 else if (dday < 0) then
    base_time = decrement_time(base_time, 0, -dday)
 endif
-   
+
 if (dh > 0) then
    base_time = increment_time(base_time, dh*3600)
 else if (dh < 0) then
    base_time = decrement_time(base_time, -dh*3600)
 endif
-   
+
 if (dn > 0) then
    base_time = increment_time(base_time, dn*60)
 else if (dn < 0) then
    base_time = decrement_time(base_time, -dn*60)
 endif
-   
+
 if (ds > 0) then
    base_time = increment_time(base_time, ds)
 else if (ds < 0) then
    base_time = decrement_time(base_time, -ds)
 endif
-   
+
 
 call get_date(base_time, ccyy, mm, dd, hh, nn, ss)
 
@@ -419,4 +425,3 @@ end function formatCESMdate
 
 
 end program advance_time
-
